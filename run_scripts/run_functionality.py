@@ -1,0 +1,68 @@
+import os
+from settings import CUSTOM_ROOT_DIR
+
+os.environ["DSPY_CACHEDIR"] = os.path.join(CUSTOM_ROOT_DIR, "dspy_cache")
+
+from lib.core.other_methodology_mappers import Job
+from lib.load_data import BaseDataHandler
+from lib.utils import parse_arguments, configure_dspy, create_experiment_dir, \
+    log_child_experiment, log_experiment_parameters, \
+    log_completed_run, save_pred_to_csv
+import neptune
+from config import NeptuneConfig
+
+import logging
+
+# Suppress LiteLLM logging to avoid a large number of output cells
+logging.getLogger("LiteLLM").setLevel(logging.CRITICAL)
+
+args = parse_arguments()
+
+mapping_method = "functionality"
+
+configure_dspy(args.path_model, temperature=args.temperature, cache=False)
+data_handler = BaseDataHandler(args, mapping_method)
+
+# Used for logging
+num_cves = len(data_handler.cves_split) if args.num_cves is None else args.num_cves
+
+neptune_run = neptune.init_run(project=NeptuneConfig.PROJECT_1, api_token=NeptuneConfig.API_TOKEN,
+                               mode=args.neptune_mode)
+neptune_id = neptune_run["sys/id"].fetch()
+
+if mapping_method == "functionality":
+    neptune_run["use_functionality_demos"] = args.use_functionality_demos
+log_experiment_parameters(neptune_run, mapping_method, args=args)
+log_completed_run(neptune_run, completed=False)
+
+experiment_dir = create_experiment_dir(neptune_run)
+
+job = Job(args, neptune_run, data_handler)
+job.run_experiment()
+print(job.df_pred_intermediate)
+
+# Save df_pred_intermediate to csv
+save_pred_to_csv(job.df_pred_intermediate, experiment_dir, mapping_method, args.tmp_dir)
+
+# Update with experiment ID
+
+with open(os.path.join(experiment_dir, f"question_history.txt"), "w") as file:
+    for element in job.question_history:
+        file.write(element + "\n\n")
+
+with open(os.path.join(experiment_dir, f"reasoning_history.txt"), "w") as file:
+    for element in job.reasoning_history:
+        file.write(element + "\n\n")
+
+# Log child experiments
+if args.neptune_mode == "async":
+    df_pred_final = job.df_pred_final
+    df_attack_labels = job.df_attack_labels
+    attack_techniques = job.attack_techniques
+    log_child_experiment(df_pred_final, df_attack_labels, attack_techniques,
+                         mapping_type="primary_impact", args=args, parent_id=neptune_id,
+                         mapping_method=mapping_method)
+    log_child_experiment(df_pred_final, df_attack_labels, attack_techniques,
+                         mapping_type="secondary_impact", args=args, parent_id=neptune_id,
+                         mapping_method=mapping_method)
+log_completed_run(neptune_run, completed=True)

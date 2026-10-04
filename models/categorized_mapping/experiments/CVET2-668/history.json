@@ -1,0 +1,379 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068",
+            "T1078",
+            "T1548",
+            "T1211",
+            "T1059",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1003",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described is a \"Windows DWM Core Library Elevation of Privilege Vulnerability.\" Elevation of privilege vulnerabilities typically allow an attacker to gain higher-level access to a system than they are authorized for, often through exploiting weaknesses in the operating system or applications. \n\nIn this case, the relevant exploitation techniques that could be associated with such a vulnerability include methods that allow an attacker to exploit the system for privilege escalation. Based on the provided attack techniques, the following techniques are relevant:\n\n1. **T1068** - Exploitation for Privilege Escalation: This directly relates to the nature of the vulnerability.\n2. **T1078** - Valid Accounts: This technique can be relevant as attackers may use valid accounts to exploit the vulnerability.\n3. **T1548** - Abuse Elevation Control Mechanism: This is also relevant as it pertains to methods of gaining elevated privileges.\n4. **T1211** - Exploitation for Defense Evasion: This can be relevant in the context of maintaining access after exploiting the vulnerability.\n5. **T1059** - Command and Scripting Interpreter: This technique is often used in conjunction with exploitation techniques to execute commands.\n6. **T1486** - Data Encrypted for Impact: This could be a secondary impact of exploiting the vulnerability.\n7. **T1496** - Resource Hijacking: This could be a potential secondary impact as well.\n8. **T1499** - Endpoint Denial of Service: This could also be a potential secondary impact.\n9. **T1003** - OS Credential Dumping: This is relevant as attackers may seek to gather credentials after exploiting the vulnerability.\n10. **None**: This is included to fulfill the requirement of having ten entries.\n\nBased on the above reasoning, the ranked list of relevant attack techniques is as follows."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1203",
+            "T1210",
+            "T1068",
+            "T1078",
+            "T1496",
+            "T1486",
+            "T1485",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described indicates that a remote attacker can execute commands on the host by manipulating the input stream of the XStream library. This suggests that the exploitation technique is likely related to exploiting public-facing applications, as the attacker is manipulating input to execute arbitrary commands. Based on the context, the most relevant attack techniques that fit this scenario are:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly relevant as it involves exploiting vulnerabilities in applications that are accessible over the internet.\n2. **T1059 - Command and Scripting Interpreter**: This technique is relevant because the exploitation involves executing commands, which aligns with the use of command interpreters.\n3. **T1203 - Exploitation for Client Execution**: This technique could also be relevant if the exploitation involves client-side execution.\n4. **T1210 - Exploitation of Remote Services**: This technique may apply if the vulnerability allows for remote service exploitation.\n5. **T1068 - Exploitation for Privilege Escalation**: If the exploitation leads to privilege escalation, this technique would be relevant.\n6. **T1078 - Valid Accounts**: If the attacker uses valid accounts to exploit the vulnerability, this technique would apply.\n7. **T1496 - Resource Hijacking**: If the exploitation allows the attacker to hijack resources, this could be relevant.\n8. **T1486 - Data Encrypted for Impact**: If the exploitation leads to data being encrypted for impact, this could be relevant.\n9. **T1485 - Data Destruction**: If the exploitation results in data destruction, this could be relevant.\n10. **None**: Given the context, there may be scenarios where no relevant exploitation techniques apply, but in this case, we have enough techniques to fill the list.\n\nThus, the ranked list of techniques is as follows: ['T1190', 'T1059', 'T1203', 'T1210', 'T1068', 'T1078', 'T1496', 'T1486', 'T1485', None]."
+    },
+    {
+        "target_cve": "CVE-2018-7600",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1203",
+            "T1210",
+            "T1068",
+            "T1078",
+            "T1496",
+            "T1486",
+            "T1505",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability in Drupal allows remote attackers to execute arbitrary code, which is typically associated with the exploitation of public-facing applications. The most relevant attack techniques for this type of vulnerability include those that involve exploiting public-facing applications, command execution, and potentially other methods that could lead to remote code execution. Based on the provided data, the following techniques are identified as relevant:\n\n1. T1190 - Exploit Public-Facing Application\n2. T1059 - Command and Scripting Interpreter\n3. T1203 - Exploitation for Client Execution\n4. T1210 - Exploitation of Remote Services\n5. T1068 - Exploitation for Privilege Escalation\n6. T1078 - Valid Accounts\n7. T1496 - Resource Hijacking\n8. T1486 - Data Encrypted for Impact\n9. T1505 - Server Software Component\n10. None (as a placeholder for the tenth position)\n\nThe techniques are ranked based on their relevance to the described vulnerability, with 'None' included to fulfill the requirement of having ten entries."
+    },
+    {
+        "target_cve": "CVE-2021-45046",
+        "predictions": [
+            "T1190",
+            "T1486",
+            "T1496",
+            "T1608",
+            "T1505",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for CVE-2021-44228, it is clear that the exploitation involves the use of JNDI features in Apache Log4j that can lead to remote code execution. The primary attack technique relevant to this vulnerability is \"Exploit Public-Facing Application\" (T1190), as it allows attackers to exploit the application through crafted log messages. Other techniques that could be relevant include those that involve command execution and data manipulation, but they are not as directly applicable as T1190. Therefore, the top relevant techniques are ranked based on their direct association with the exploitation method described.\n\nThe relevant techniques identified are:\n1. T1190 - Exploit Public-Facing Application\n2. T1486 - Data Encrypted for Impact\n3. T1496 - Resource Hijacking\n4. T1608 - Stage Capabilities\n5. T1505 - Server Software Component\n\nSince there are fewer than ten techniques directly applicable, the remaining slots will be filled with 'None' to maintain the required output format."
+    },
+    {
+        "target_cve": "CVE-2023-7101",
+        "predictions": [
+            "T1190",
+            "T1203",
+            "T1059",
+            "T1210",
+            "T1068",
+            "T1486",
+            "T1496",
+            "T1485",
+            "T1574",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "Given the vulnerability description for Spreadsheet::ParseExcel version 0.65, which is susceptible to arbitrary code execution due to unvalidated input being passed into an eval function, the most relevant attack techniques of type exploitation_technique would primarily involve exploiting public-facing applications and command execution vulnerabilities. The following techniques are particularly relevant:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability allows for exploitation through crafted input to a public-facing application.\n2. **T1203 - Exploitation for Client Execution**: This technique is relevant as it involves executing arbitrary code, which aligns with the nature of the vulnerability.\n3. **T1059 - Command and Scripting Interpreter**: This technique is also applicable as it involves executing commands through scripting interpreters, which is relevant to the arbitrary code execution aspect of the vulnerability.\n4. **T1210 - Exploitation of Remote Services**: This technique could be relevant in scenarios where the vulnerability is exploited over a network service.\n5. **T1068 - Exploitation for Privilege Escalation**: While not directly related to the initial exploitation, it could be a subsequent step after gaining access.\n6. **T1486 - Data Encrypted for Impact**: This could be a secondary impact after exploiting the vulnerability.\n7. **T1496 - Resource Hijacking**: This could also be a potential secondary impact.\n8. **T1485 - Data Destruction**: This could be a potential secondary impact as well.\n9. **T1574 - Hijack Execution Flow**: This technique is relevant as it involves taking control of execution flow, which could be a method of exploiting the vulnerability.\n10. **None**: Since there are many relevant techniques, including a None value to indicate that not all slots are filled with specific techniques is appropriate.\n\nThus, the top 10 relevant attack techniques in descending order are:\n- T1190\n- T1203\n- T1059\n- T1210\n- T1068\n- T1486\n- T1496\n- T1485\n- T1574\n- None"
+    },
+    {
+        "target_cve": "CVE-2021-39226",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1078",
+            "T1486",
+            "T1489",
+            "T1005",
+            "T1041",
+            "T1068",
+            "T1213",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "Given the vulnerability description for Grafana, the relevant exploitation techniques primarily revolve around the ability of both authenticated and unauthenticated users to manipulate the snapshot API endpoints. The techniques that are most applicable here include those that involve exploiting public-facing applications, as the vulnerability allows for unauthorized access and manipulation of data through crafted requests. The top techniques that fit this scenario include:\n\n1. **T1190 - Exploit Public-Facing Application**: This is the most relevant technique as the vulnerability allows exploitation through public API endpoints.\n2. **T1059 - Command and Scripting Interpreter**: This technique is relevant as it may be used to execute commands through the API.\n3. **T1078 - Valid Accounts**: This technique is applicable since authenticated users can also exploit the vulnerability.\n4. **T1486 - Data Encrypted for Impact**: This technique may apply if the attacker aims to manipulate or delete snapshots.\n5. **T1489 - Service Stop**: This could be relevant if the attacker aims to disrupt services by deleting snapshots.\n6. **T1005 - Data from Local System**: This technique may apply if the attacker retrieves sensitive data from the snapshots.\n7. **T1041 - Exfiltration Over C2 Channel**: This could be relevant if the attacker exfiltrates data after exploiting the vulnerability.\n8. **T1068 - Exploitation for Privilege Escalation**: This may apply if the attacker gains elevated privileges through the exploitation.\n9. **T1213 - Data from Information Repositories**: This could be relevant if the snapshots are considered information repositories.\n10. **None**: This is included to fulfill the requirement of having ten entries.\n\nThus, the ranked list of techniques is as follows."
+    },
+    {
+        "target_cve": "CVE-2012-0754",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1189",
+            "T1059",
+            "T1068",
+            "T1499",
+            "T1486",
+            "T1553",
+            "T1078",
+            null
+        ],
+        "true labels": [
+            "T1204"
+        ],
+        "reasoning": "The vulnerability described allows attackers to execute arbitrary code or cause a denial of service (memory corruption) through unspecified vectors in Adobe Flash Player. This indicates that the relevant exploitation techniques would primarily involve methods that allow for code execution or manipulation of the application environment. Based on the context of the vulnerability and the techniques available, the following techniques are most relevant:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability allows for exploitation through the application itself.\n2. **T1204 - User Execution**: This technique is relevant because exploitation requires user interaction, such as opening a malicious file.\n3. **T1189 - Drive-by Compromise**: This technique applies as the vulnerability can be exploited through crafted content that a user may inadvertently execute.\n4. **T1059 - Command and Scripting Interpreter**: This technique is relevant as it involves executing commands through the application, which aligns with the arbitrary code execution aspect of the vulnerability.\n5. **T1068 - Exploitation for Privilege Escalation**: While this is more about gaining higher privileges, it can be relevant in the context of executing arbitrary code.\n6. **T1499 - Endpoint Denial of Service**: This technique is relevant as the vulnerability can lead to denial of service.\n7. **T1486 - Data Encrypted for Impact**: This technique can be relevant as a secondary impact of exploiting the vulnerability could involve encrypting data.\n8. **T1553 - Subvert Trust Controls**: This technique may apply if the exploitation involves bypassing security mechanisms.\n9. **T1078 - Valid Accounts**: This technique is relevant as attackers may need valid accounts to exploit the vulnerability effectively.\n10. **None**: This is included to fulfill the requirement of having ten entries.\n\nBased on the above reasoning, the top 10 techniques in descending order are as follows."
+    },
+    {
+        "target_cve": "CVE-2014-6271",
+        "predictions": [
+            "T1190",
+            "T1133",
+            "T1059",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1190",
+            "T1133"
+        ],
+        "reasoning": "The vulnerability described is related to GNU Bash, specifically the \"ShellShock\" vulnerability, which allows remote attackers to execute arbitrary code through crafted environment variables. This indicates that the primary exploitation technique is likely to involve exploiting public-facing applications or services that utilize Bash in their execution environment. \n\nBased on the provided attack techniques, the following techniques are relevant for this vulnerability:\n1. **T1190 - Exploit Public-Facing Application**: This is the primary technique as the vulnerability allows remote code execution through public-facing applications.\n2. **T1133 - External Remote Services**: This technique is relevant as the exploitation can occur through services like OpenSSH that interact with Bash.\n3. **T1059 - Command and Scripting Interpreter**: This technique is relevant because the exploitation involves executing commands through the Bash interpreter.\n\nGiven that the task requires the top 10 techniques, I will include these three techniques and fill the remaining slots with 'None' to indicate no additional relevant techniques.\n\nThe final ranked list will be:\n1. T1190\n2. T1133\n3. T1059\n4. None\n5. None\n6. None\n7. None\n8. None\n9. None\n10. None"
+    },
+    {
+        "target_cve": "CVE-2012-2034",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1189",
+            "T1068",
+            "T1059",
+            "T1499",
+            "T1486",
+            "T1078",
+            "T1556",
+            null
+        ],
+        "true labels": [
+            "T1189"
+        ],
+        "reasoning": "The vulnerability in Adobe Flash Player allows attackers to execute arbitrary code or cause a denial of service through unspecified vectors. Based on the context of this vulnerability, the most relevant attack techniques that could be associated with exploitation include:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is highly relevant as the vulnerability allows for exploitation through user interaction with a public-facing application (Adobe Flash Player).\n2. **T1204 - User Execution**: This technique is also relevant since exploitation requires user interaction to open a malicious file.\n3. **T1189 - Drive-by Compromise**: This technique is applicable as the exploitation can occur through crafted content that users may inadvertently execute.\n4. **T1068 - Exploitation for Privilege Escalation**: While this is more about privilege escalation, it can be relevant if the arbitrary code execution leads to such an escalation.\n5. **T1059 - Command and Scripting Interpreter**: This technique is relevant as the exploitation could involve executing commands through scripts.\n6. **T1499 - Endpoint Denial of Service**: This could be relevant as the vulnerability can also lead to a denial of service condition.\n7. **T1486 - Data Encrypted for Impact**: If the exploitation leads to data being encrypted maliciously, this technique may apply.\n8. **T1078 - Valid Accounts**: If the exploitation allows for the use of valid accounts, this technique could be relevant.\n9. **T1556 - Modify Authentication Process**: If the exploitation allows for modifications to authentication processes, this could also be relevant.\n10. **None**: As a placeholder for the tenth position.\n\nBased on the analysis, the top 10 techniques in descending order are: ['T1190', 'T1204', 'T1189', 'T1068', 'T1059', 'T1499', 'T1486', 'T1078', 'T1556', None]."
+    },
+    {
+        "target_cve": "CVE-2012-5054",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1059",
+            "T1203",
+            "T1566",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1189"
+        ],
+        "reasoning": "The vulnerability described involves an integer overflow in the Adobe Flash Player, which allows remote attackers to execute arbitrary code. This type of vulnerability typically corresponds to exploitation techniques that facilitate remote code execution. Based on the provided list of attack techniques, the most relevant techniques for this vulnerability would include those that relate to exploiting public-facing applications, command execution, and potentially user execution. \n\nThe following techniques are particularly relevant:\n1. T1190 - Exploit Public-Facing Application\n2. T1204 - User Execution\n3. T1059 - Command and Scripting Interpreter\n4. T1203 - Exploitation for Client Execution\n5. T1566 - Phishing (as a potential vector for exploitation)\n\nGiven the nature of the vulnerability and the techniques available, I will rank the top techniques based on their relevance to the exploitation of this vulnerability, while also including 'None' to indicate the absence of additional relevant techniques."
+    },
+    {
+        "target_cve": "CVE-2024-34102",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1203",
+            "T1078",
+            "T1068",
+            "T1486",
+            "T1496",
+            "T1505",
+            "T1048",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described is an Improper Restriction of XML External Entity Reference (XXE) which can lead to arbitrary code execution. This type of vulnerability is often exploited through public-facing applications where crafted XML documents can be sent to the server. The most relevant attack techniques for this scenario include:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability can be exploited through a public-facing application that processes XML.\n2. **T1059 - Command and Scripting Interpreter**: This technique is relevant as the exploitation could lead to the execution of arbitrary commands.\n3. **T1203 - Exploitation for Client Execution**: This technique may apply if the exploitation leads to scenarios where client-side execution is possible.\n4. **T1078 - Valid Accounts**: If the attacker gains access to valid accounts through the exploitation, this technique becomes relevant.\n5. **T1068 - Exploitation for Privilege Escalation**: If the exploitation allows the attacker to escalate privileges, this technique is applicable.\n6. **T1486 - Data Encrypted for Impact**: If the exploitation leads to data being encrypted or manipulated, this technique is relevant.\n7. **T1496 - Resource Hijacking**: If the attacker uses the exploited system resources for their own purposes, this technique applies.\n8. **T1505 - Server Software Component**: If the exploitation involves manipulating server components, this technique is relevant.\n9. **T1048 - Exfiltration Over Alternative Protocol**: If the exploitation allows for data exfiltration, this technique may apply.\n10. **None**: This is included to fulfill the requirement of having ten entries.\n\nBased on the analysis, the top techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-35464",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1203",
+            "T1210",
+            "T1068",
+            "T1574",
+            "T1496",
+            "T1486",
+            "T1499",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described is a Java deserialization vulnerability that allows remote code execution without authentication. This type of vulnerability typically falls under the category of exploiting public-facing applications. The most relevant attack techniques for this scenario include:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability allows exploitation through a crafted request to a public-facing application.\n2. **T1059 - Command and Scripting Interpreter**: This technique is relevant because the exploitation can lead to executing arbitrary commands on the server.\n3. **T1203 - Exploitation for Client Execution**: Although this is more related to client-side execution, it can still be relevant in the context of deserialization leading to arbitrary code execution.\n4. **T1210 - Exploitation of Remote Services**: This technique is applicable as the vulnerability can be exploited remotely.\n5. **T1068 - Exploitation for Privilege Escalation**: If the exploitation leads to privilege escalation, this technique may also be relevant.\n6. **T1574 - Hijack Execution Flow**: This technique can be relevant if the exploitation allows the attacker to hijack the execution flow of the application.\n7. **T1496 - Resource Hijacking**: If the exploitation allows for resource hijacking, this technique may apply.\n8. **T1486 - Data Encrypted for Impact**: If the exploitation leads to data being encrypted or manipulated, this technique could be relevant.\n9. **T1499 - Endpoint Denial of Service**: If the exploitation can lead to a denial of service, this technique may also apply.\n10. **None**: Given the nature of the vulnerability, there may not be ten distinct techniques that apply, so including a 'None' value is appropriate.\n\nBased on the analysis, the top relevant attack techniques are ranked as follows:\n\n1. T1190\n2. T1059\n3. T1203\n4. T1210\n5. T1068\n6. T1574\n7. T1496\n8. T1486\n9. T1499\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-3519",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1059",
+            "T1078",
+            "T1566",
+            "T1574",
+            "T1210",
+            "T1068",
+            "T1496",
+            null
+        ],
+        "true labels": [
+            "T1574",
+            "T1190"
+        ],
+        "reasoning": "Given the vulnerability description \"Unauthenticated remote code execution,\" the most relevant attack techniques that correspond to exploitation techniques would primarily involve methods that allow an attacker to execute arbitrary code without authentication. Based on the provided data, the following techniques are particularly relevant:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as it involves exploiting vulnerabilities in applications that are accessible over the internet, which aligns perfectly with the description of remote code execution without authentication.\n\n2. **T1204 - User Execution**: This technique is relevant as it involves scenarios where user interaction is required to execute malicious code, which can be a common method in remote code execution scenarios.\n\n3. **T1059 - Command and Scripting Interpreter**: This technique is also relevant as it involves the use of command interpreters to execute commands, which is often a method used in remote code execution.\n\n4. **T1078 - Valid Accounts**: Although this technique typically involves the use of valid credentials, it can sometimes be relevant in scenarios where an attacker has gained access to an account that allows them to execute commands.\n\n5. **T1566 - Phishing**: This technique can be relevant as it involves tricking users into executing malicious code, which can lead to remote code execution.\n\n6. **T1574 - Hijack Execution Flow**: This technique can be relevant in scenarios where an attacker manipulates the execution flow to execute arbitrary code.\n\n7. **T1210 - Exploitation of Remote Services**: This technique is relevant as it involves exploiting vulnerabilities in remote services, which can lead to remote code execution.\n\n8. **T1068 - Exploitation for Privilege Escalation**: This technique is relevant as it involves exploiting vulnerabilities to gain higher privileges, which can be a step in executing arbitrary code.\n\n9. **T1496 - Resource Hijacking**: This technique can be relevant in scenarios where resources are hijacked for malicious purposes, including executing arbitrary code.\n\n10. **None**: Since there are many relevant techniques, including a 'None' value is appropriate to indicate that not all techniques may apply.\n\nBased on this analysis, the top 10 techniques in descending order are as follows:\n\n1. T1190\n2. T1204\n3. T1059\n4. T1078\n5. T1566\n6. T1574\n7. T1210\n8. T1068\n9. T1496\n10. None"
+    },
+    {
+        "target_cve": "CVE-2022-29464",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1068",
+            "T1210",
+            "T1078",
+            "T1496",
+            "T1486",
+            "T1505",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described involves unrestricted file upload leading to remote code execution through a specific endpoint with a directory traversal sequence. This indicates that the exploitation technique is likely related to exploiting public-facing applications. Based on the context of the vulnerability and the examples provided, the most relevant attack techniques for this scenario would include techniques that involve exploiting public-facing applications and potentially other methods related to remote code execution. The following techniques are identified as relevant:\n\n1. **T1190** - Exploit Public-Facing Application: This is the primary technique as the vulnerability allows an attacker to exploit a public-facing application.\n2. **T1059** - Command and Scripting Interpreter: This technique is relevant as the exploitation could involve executing commands through the application.\n3. **T1068** - Exploitation for Privilege Escalation: While not the primary focus, this technique may be applicable if the attacker gains elevated privileges during the exploit.\n4. **T1210** - Exploitation of Remote Services: This could be relevant if the attack involves exploiting remote services as part of the attack vector.\n5. **T1078** - Valid Accounts: If the attacker uses valid accounts to exploit the application, this technique would be applicable.\n6. **T1496** - Resource Hijacking: This could be relevant if the attacker hijacks resources during the exploitation.\n7. **T1486** - Data Encrypted for Impact: This may be applicable if the exploitation leads to data being encrypted maliciously.\n8. **T1505** - Server Software Component: This could be relevant if the attack involves manipulating server components.\n9. **None**: This is included to meet the requirement of having ten entries in the output.\n\nBased on the analysis, the top techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2022-26138",
+        "predictions": [
+            "T1190",
+            "T1078",
+            "T1059",
+            "T1552",
+            "T1554",
+            "T1068",
+            "T1210",
+            "T1486",
+            "T1489",
+            null
+        ],
+        "true labels": [
+            "T1552"
+        ],
+        "reasoning": "Given the vulnerability description, the exploitation technique involves an unauthenticated attacker exploiting a hardcoded password to gain access to a Confluence user account. The most relevant attack techniques that could be associated with this type of exploitation include techniques that involve exploiting public-facing applications, gaining valid accounts, and potentially using command and scripting interpreters. Based on the context of the vulnerability, the following techniques are relevant:\n\n1. T1190 - Exploit Public-Facing Application\n2. T1078 - Valid Accounts\n3. T1059 - Command and Scripting Interpreter\n4. T1552 - Unsecured Credentials\n5. T1554 - Compromise Client Software Binary\n6. T1068 - Exploitation for Privilege Escalation\n7. T1210 - Exploitation of Remote Services\n8. T1486 - Data Encrypted for Impact\n9. T1489 - Service Stop\n10. None (indicating no additional relevant techniques)\n\nThis leads to a ranked list of techniques that reflects the most applicable exploitation techniques for the given vulnerability."
+    },
+    {
+        "target_cve": "CVE-2021-37415",
+        "predictions": [
+            "T1190",
+            "T1078",
+            "T1068",
+            "T1059",
+            "T1505",
+            "T1218",
+            "T1003",
+            "T1136",
+            "T1047",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described indicates that Zoho ManageEngine ServiceDesk Plus is susceptible to an authentication bypass, allowing access to certain REST-API URLs without authentication. This type of vulnerability typically falls under the category of exploiting public-facing applications, where an attacker can leverage the lack of authentication to perform unauthorized actions. \n\nGiven the context of the vulnerability, the most relevant attack techniques from the provided list that correspond to exploitation techniques include:\n\n1. **T1190 - Exploit Public-Facing Application**: This is the most directly relevant technique as it describes exploiting vulnerabilities in applications that are accessible over the internet.\n2. **T1078 - Valid Accounts**: This technique could also be relevant as the attacker may use valid accounts to exploit the application further.\n3. **T1068 - Exploitation for Privilege Escalation**: If the attacker gains access, they may attempt to escalate privileges.\n4. **T1059 - Command and Scripting Interpreter**: This technique is relevant as attackers may use command execution to exploit the application further.\n5. **T1505 - Server Software Component**: This could be relevant if the attacker modifies or interacts with server components.\n6. **T1218 - System Binary Proxy Execution**: This could be relevant if the attacker executes binaries on the system.\n7. **T1003 - OS Credential Dumping**: If the attacker gains access, they may attempt to dump credentials.\n8. **T1136 - Create Account**: This could be relevant if the attacker creates new accounts.\n9. **T1047 - Windows Management Instrumentation**: This could be relevant if the attacker uses WMI for further exploitation.\n10. **None**: This is included as a placeholder for the tenth position.\n\nThe final ranked list of techniques will be based on their relevance to the described vulnerability."
+    },
+    {
+        "target_cve": "CVE-2009-1862",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1189",
+            "T1059",
+            "T1068",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1204"
+        ],
+        "reasoning": "The vulnerability described allows remote attackers to execute arbitrary code or cause a denial of service through crafted Flash applications embedded in PDF files or standalone SWF files. This indicates that the exploitation techniques primarily involve exploiting public-facing applications, particularly those that handle Flash content. \n\nFrom the provided list of attack techniques, the most relevant techniques for this vulnerability include:\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly relevant as the vulnerability allows exploitation through crafted files that are public-facing.\n2. **T1204 - User Execution**: This technique is also relevant since the exploitation requires user interaction to open the malicious files.\n3. **T1189 - Drive-by Compromise**: This technique is applicable as it involves executing arbitrary code through malicious content that users may inadvertently access.\n4. **T1059 - Command and Scripting Interpreter**: This technique is relevant as it relates to executing commands through the exploited application.\n5. **T1068 - Exploitation for Privilege Escalation**: While not the primary impact, if the code execution leads to privilege escalation, this technique may also be relevant.\n\nGiven the context of the vulnerability and the techniques available, the top techniques that can be associated with this vulnerability are:\n- T1190\n- T1204\n- T1189\n- T1059\n- T1068\n\nSince we need to provide a total of ten techniques, we can fill the remaining slots with 'None' to indicate that there are no further relevant techniques.\n\nThus, the final ranked list of techniques is:\n1. T1190\n2. T1204\n3. T1189\n4. T1059\n5. T1068\n6. None\n7. None\n8. None\n9. None\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-40044",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1078",
+            "T1210",
+            "T1068",
+            "T1574",
+            "T1496",
+            "T1505",
+            null,
+            "T1486"
+        ],
+        "true labels": [
+            "T1059"
+        ],
+        "reasoning": "The vulnerability described involves a .NET deserialization issue that allows for remote command execution. The most relevant attack techniques for exploiting such a vulnerability typically include methods that allow an attacker to execute arbitrary commands on a system. Based on the provided list of attack techniques, the following techniques are relevant:\n\n1. **T1190** - Exploit Public-Facing Application: This technique is applicable as the vulnerability allows exploitation via a public-facing application.\n2. **T1059** - Command and Scripting Interpreter: This technique is relevant because the exploitation involves executing commands on the server.\n3. **T1078** - Valid Accounts: This technique may apply if the attacker uses valid credentials to exploit the vulnerability.\n4. **T1210** - Exploitation of Remote Services: This technique is relevant as it involves exploiting services that are accessible remotely.\n5. **T1068** - Exploitation for Privilege Escalation: This technique can be relevant if the exploitation leads to privilege escalation.\n6. **T1574** - Hijack Execution Flow: This technique may be applicable if the exploitation allows the attacker to control the execution flow of the application.\n7. **T1496** - Resource Hijacking: This technique may apply if the attacker can leverage the vulnerability to hijack resources.\n8. **T1505** - Server Software Component: This technique may apply if the attacker can manipulate server components.\n9. **None**: This indicates that there may not be enough techniques to fill all ten slots.\n10. **T1486** - Data Encrypted for Impact: This technique may apply if the exploitation leads to data being encrypted maliciously.\n\nBased on the above reasoning, the top techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2023-49103",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1078",
+            "T1068",
+            "T1486",
+            "T1005",
+            "T1552",
+            "T1136",
+            "T1210",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "Given the vulnerability description for ownCloud's graphapi app, the main exploitation technique revolves around the exposure of sensitive configuration details through the phpinfo function, which can be accessed via a public-facing application. The most relevant attack techniques for this scenario are those that involve exploiting public-facing applications to gain unauthorized access or execute arbitrary code. Based on the provided attack techniques, the following techniques are most applicable:\n\n1. **T1190** - Exploit Public-Facing Application: This technique directly relates to the vulnerability as it involves exploiting the application's exposure to the internet.\n2. **T1059** - Command and Scripting Interpreter: This technique is relevant as it involves executing commands through the application, which could be facilitated by the information disclosed through the vulnerability.\n3. **T1078** - Valid Accounts: If an attacker can exploit the vulnerability to gain access to sensitive information, they may also leverage valid accounts to further their attack.\n4. **T1068** - Exploitation for Privilege Escalation: This technique may be relevant if the attacker can escalate privileges after gaining access through the vulnerability.\n5. **T1486** - Data Encrypted for Impact: If sensitive data is exposed, it could lead to further exploitation where the attacker may encrypt data to hold it for ransom.\n6. **T1005** - Data from Local System: This technique could be relevant if the attacker uses the information obtained to extract more data from the local system.\n7. **T1552** - Unsecured Credentials: If credentials are exposed through the phpinfo output, this technique becomes relevant.\n8. **T1136** - Create Account: If the attacker can exploit the vulnerability to create accounts, this technique is applicable.\n9. **T1210** - Exploitation of Remote Services: This technique could be relevant if the attacker exploits remote services as part of their attack strategy.\n10. **None**: As a placeholder for the tenth position, indicating that there may not be a tenth relevant technique.\n\nThus, the top 10 techniques in descending order are:\n['T1190', 'T1059', 'T1078', 'T1068', 'T1486', 'T1005', 'T1552', 'T1136', 'T1210', None]"
+    },
+    {
+        "target_cve": "CVE-2022-3075",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1059",
+            "T1203",
+            "T1574",
+            "T1566",
+            "T1068",
+            "T1496",
+            "T1486",
+            null
+        ],
+        "true labels": [
+            "T1204"
+        ],
+        "reasoning": "Given the vulnerability description, \"Insufficient data validation in Mojo in Google Chrome prior to 105.0.5195.102 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page,\" the relevant attack techniques of type exploitation_technique would primarily focus on techniques that involve exploiting public-facing applications or executing arbitrary code via crafted inputs. \n\nThe following techniques are particularly relevant:\n1. **T1190** - Exploit Public-Facing Application: This technique is directly applicable as the vulnerability allows for exploitation through crafted HTML pages.\n2. **T1204** - User Execution: This technique is relevant because the exploitation requires user interaction to open the crafted HTML page.\n3. **T1059** - Command and Scripting Interpreter: This technique is relevant as it involves executing commands, which could be part of the exploitation process.\n4. **T1203** - Exploitation for Client Execution: This technique is relevant as it involves executing code on the client side, which aligns with the nature of the vulnerability.\n5. **T1574** - Hijack Execution Flow: This technique could be relevant if the exploitation leads to control over the execution flow.\n6. **T1566** - Phishing: This technique is relevant as it could be a method to deliver the crafted HTML page to the user.\n7. **T1068** - Exploitation for Privilege Escalation: This technique may be relevant if the exploitation leads to privilege escalation.\n8. **T1496** - Resource Hijacking: This could be relevant if the exploitation allows the attacker to hijack resources.\n9. **T1486** - Data Encrypted for Impact: This could be relevant if the exploitation leads to data being encrypted maliciously.\n10. **None**: This is included to satisfy the requirement of having ten entries.\n\nThus, the ranked list of relevant attack techniques is as follows:\n['T1190', 'T1204', 'T1059', 'T1203', 'T1574', 'T1566', 'T1068', 'T1496', 'T1486', None]"
+    }
+]

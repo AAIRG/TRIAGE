@@ -1,0 +1,38 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068",
+            "T1190",
+            "T1548",
+            "T1078",
+            "T1059",
+            "T1574",
+            "T1204",
+            "T1133",
+            "T1210",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described as \"Windows DWM Core Library Elevation of Privilege Vulnerability,\" we need to identify the most relevant exploitation techniques from the provided list. Given that this vulnerability pertains to elevation of privilege, we can infer that techniques related to privilege escalation and exploitation of public-facing applications are particularly relevant. \n\nThe following techniques are identified as relevant to this vulnerability:\n1. **T1068** - Exploitation for Privilege Escalation\n2. **T1190** - Exploit Public-Facing Application\n3. **T1548** - Abuse Elevation Control Mechanism\n4. **T1078** - Valid Accounts\n5. **T1059** - Command and Scripting Interpreter\n6. **T1574** - Hijack Execution Flow\n7. **T1204** - User Execution\n8. **T1133** - External Remote Services\n9. **T1210** - Exploitation of Remote Services\n10. **None** - indicating that there are no additional relevant techniques beyond the identified ones.\n\nThese techniques are ranked based on their relevance to the exploitation of the vulnerability in question, with the most pertinent techniques listed first."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190",
+            "T1204",
+            "T1059",
+            "T1574",
+            "T1068",
+            "T1548",
+            "T1486",
+            "T1496",
+            "T1498",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described allows a remote attacker to execute commands on the host by manipulating the processed input stream in the XStream library. This indicates that the exploitation technique is likely to involve methods that allow for remote code execution or command execution through crafted input. Based on the provided attack techniques, the following techniques are relevant:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability allows exploitation through a public-facing application.\n2. **T1204 - User Execution**: This technique may also be relevant if user interaction is required to trigger the vulnerability.\n3. **T1059 - Command and Scripting Interpreter**: This technique is relevant as it involves executing commands, which aligns with the nature of the vulnerability.\n4. **T1574 - Hijack Execution Flow**: This technique is applicable as it involves manipulating the execution flow, which could be a method of exploiting the vulnerability.\n5. **T1068 - Exploitation for Privilege Escalation**: While this vulnerability primarily allows command execution, it may also lead to privilege escalation depending on the context of the attack.\n6. **T1548 - Abuse Elevation Control Mechanism**: This technique could be relevant if the exploitation allows for elevation of privileges.\n7. **T1486 - Data Encrypted for Impact**: This technique may be relevant if the exploitation leads to data being encrypted or manipulated.\n8. **T1496 - Resource Hijacking**: This technique could be relevant if the exploitation allows the attacker to hijack resources.\n9. **T1498 - Network Denial of Service**: This technique may be relevant if the exploitation leads to denial of service conditions.\n10. **None**: This option is included to fulfill the requirement of having ten entries.\n\nBased on the above reasoning, the top 10 relevant attack techniques in descending order are:\n1. T1190\n2. T1204\n3. T1059\n4. T1574\n5. T1068\n6. T1548\n7. T1486\n8. T1496\n9. T1498\n10. None"
+    }
+]

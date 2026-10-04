@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1496",
+            "T1005",
+            "T1078",
+            "T1059",
+            "T1486",
+            "T1562",
+            "T1046",
+            "T1003",
+            "T1505",
+            null
+        ],
+        "true labels": [
+            "T1499"
+        ],
+        "reasoning": "Given the vulnerability description for the D-Link DIR-820L, which involves remote command execution (RCE) via HTTP POST, we can infer several potential secondary impacts. The nature of RCE typically allows attackers to execute arbitrary commands on the affected system, which can lead to various malicious activities. \n\nBased on the provided attack techniques, the following secondary impacts are relevant:\n1. **T1496 - Resource Hijacking**: The attacker could use the compromised system resources for their own purposes.\n2. **T1005 - Data from Local System**: The attacker may access sensitive data stored on the device.\n3. **T1078 - Valid Accounts**: The attacker could create or manipulate accounts on the device.\n4. **T1059 - Command and Scripting Interpreter**: The attacker can execute scripts or commands.\n5. **T1486 - Data Encrypted for Impact**: The attacker might encrypt data to extort the victim.\n6. **T1562 - Impair Defenses**: The attacker could disable security measures on the device.\n7. **T1046 - Network Service Discovery**: The attacker may discover other services running on the network.\n8. **T1003 - OS Credential Dumping**: The attacker could extract credentials from the operating system.\n9. **T1505 - Server Software Component**: The attacker might manipulate server components for further exploitation.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on this analysis, the top 10 techniques, including the 'None' value, are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486",
+            "T1496",
+            "T1505",
+            "T1562",
+            "T1048",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "Given the vulnerability description for Adobe ColdFusion versions 9.0, 9.0.1, 9.0.2, and 10, which allows attackers to access restricted directories when a password is not configured, we can infer several potential secondary impacts. These impacts may include the ability to gather sensitive information, manipulate data, or escalate privileges. Based on the provided attack techniques, the following secondary impacts are relevant: \n\n1. **T1005** - Data from Local System: Attackers may access sensitive files.\n2. **T1046** - Network Service Discovery: Attackers could discover services running on the system.\n3. **T1003** - OS Credential Dumping: Attackers may extract credentials from the operating system.\n4. **T1078** - Valid Accounts: Attackers may use valid accounts to gain further access.\n5. **T1486** - Data Encrypted for Impact: Attackers may encrypt data to extort the victim.\n6. **T1496** - Resource Hijacking: Attackers may hijack resources for their own use.\n7. **T1505** - Server Software Component: Attackers may manipulate server components.\n8. **T1562** - Impair Defenses: Attackers may disable security measures.\n9. **T1048** - Exfiltration Over Alternative Protocol: Attackers may exfiltrate data using non-standard methods.\n10. **None**: If no relevant techniques are found, this would be indicated.\n\nBased on the context of the vulnerability, the techniques that are most relevant to the secondary impact are ranked accordingly."
+    }
+]

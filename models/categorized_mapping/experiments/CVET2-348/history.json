@@ -1,0 +1,132 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068"
+        ],
+        "true labels": [
+            "T1068"
+        ],
+        "reasoning": "The vulnerability described as \"Windows DWM Core Library Elevation of Privilege Vulnerability\" is a type of vulnerability in the Windows operating system that allows for privilege escalation. Given that the associated Common Weakness Enumeration (CWE) is \"CWE-787: Out-of-bounds Write,\" it indicates a potential for exploitation through memory corruption techniques. The analysis of potential attack techniques leads us to consider those that can leverage such privilege escalation vulnerabilities.\n\nRelevant techniques would be related to exploiting the underlying operating system or its components, particularly those which would allow an adversary to gain privileges or execute code. Based on the context, an appropriate technique includes:\n\n- **T1059 (Command and Scripting Interpreter)**: Since exploitation often leads to executing arbitrary commands, this technique is a common avenue for taking advantage of elevated privileges.\n\nThus, the relevant attack technique for the described vulnerability would be **['T1068']**, which specifically relates to exploiting vulnerabilities to achieve privilege escalation.",
+        "demonstration_cves": [
+            "CVE-2021-39144",
+            "CVE-2022-3075",
+            "CVE-2018-0296",
+            "CVE-2013-0632",
+            "CVE-2022-22948",
+            "CVE-2022-26134",
+            "CVE-2024-38112",
+            "CVE-2017-9805",
+            "CVE-2020-8195",
+            "CVE-2022-21919",
+            "CVE-2023-7024",
+            "CVE-2022-35914",
+            "CVE-2021-1497",
+            "CVE-2015-8651",
+            "CVE-2014-7169",
+            "CVE-2021-22894",
+            "CVE-2024-5274",
+            "CVE-2021-21973",
+            "CVE-2021-35464",
+            "CVE-2022-34713",
+            "CVE-2012-0754",
+            "CVE-2023-23397",
+            "CVE-2022-26501",
+            "CVE-2021-26857",
+            "CVE-2023-35078",
+            "CVE-2019-0604",
+            "CVE-2022-22047",
+            "CVE-2023-22527",
+            "CVE-2019-11634",
+            "CVE-2023-38035"
+        ]
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190"
+        ],
+        "true labels": [
+            "T1203",
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described indicates that the XStream library allows a remote attacker to execute commands on the host by manipulating input streams. This suggests an exploitation technique involving an attacker controlling a public-facing application. The most relevant attack technique for exploiting this type of vulnerability is likely \"Exploit Public-Facing Application\" (T1190). This technique aligns well with scenarios where external input is manipulated to execute arbitrary commands on a server. Thus, based on the nature of this vulnerability, the appropriate attack techniques for the exploitation part would be ['T1190'].",
+        "demonstration_cves": [
+            "CVE-2021-27101",
+            "CVE-2021-35464",
+            "CVE-2015-7645",
+            "CVE-2024-38112",
+            "CVE-2017-9822",
+            "CVE-2024-38080",
+            "CVE-2022-22965",
+            "CVE-2008-2992",
+            "CVE-2021-41379",
+            "CVE-2024-20399",
+            "CVE-2021-42237",
+            "CVE-2020-5735",
+            "CVE-2021-36934",
+            "CVE-2020-8657",
+            "CVE-2020-17530",
+            "CVE-2022-20821",
+            "CVE-2024-20359",
+            "CVE-2017-5638",
+            "CVE-2023-38035",
+            "CVE-2022-41082",
+            "CVE-2021-27104",
+            "CVE-2022-29464",
+            "CVE-2023-21608",
+            "CVE-2021-34473",
+            "CVE-2024-5274",
+            "CVE-2024-21893",
+            "CVE-2022-3038",
+            "CVE-2012-0767",
+            "CVE-2023-28252",
+            "CVE-2021-44228"
+        ]
+    },
+    {
+        "target_cve": "CVE-2018-7600",
+        "predictions": [
+            "T1190"
+        ],
+        "true labels": [
+            "T1485",
+            "T1496",
+            "T1059",
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described for Drupal allows remote attackers to execute arbitrary code due to improper validation within the system. This type of security issue typically falls under the category of \"Exploitation for Public-Facing Application,\" as it directly involves exploiting a vulnerability in a web application that is accessible over the network. Given the context and the attack methodology, the relevant attack technique here is \"T1190: Exploit Public-Facing Application.\"\n\nGiven the ability to execute arbitrary code, it can also lead to various impacts such as creating a new session or manipulating existing ones, but the primary method for exploiting this vulnerability is through public-facing application exploits.",
+        "demonstration_cves": [
+            "CVE-2024-20359",
+            "CVE-2022-22965",
+            "CVE-2024-27198",
+            "CVE-2023-20198",
+            "CVE-2022-26904",
+            "CVE-2019-3396",
+            "CVE-2020-0069",
+            "CVE-2021-40539",
+            "CVE-2024-5274",
+            "CVE-2022-22960",
+            "CVE-2020-17530",
+            "CVE-2023-26369",
+            "CVE-2024-24919",
+            "CVE-2023-29298",
+            "CVE-2021-40449",
+            "CVE-2024-4978",
+            "CVE-2022-41328",
+            "CVE-2021-35394",
+            "CVE-2024-4947",
+            "CVE-2013-3346",
+            "CVE-2021-40655",
+            "CVE-2022-24682",
+            "CVE-2008-2992",
+            "CVE-2022-20701",
+            "CVE-2023-47565",
+            "CVE-2021-22894",
+            "CVE-2020-1472",
+            "CVE-2021-44077",
+            "CVE-2023-36884",
+            "CVE-2009-3960"
+        ]
+    }
+]

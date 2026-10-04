@@ -1,0 +1,248 @@
+The vulnerability CVE-2020-3322 allows an attacker to send a malicious Webex recording file (ARF or WRF), which, when opened by the user, could cause the application to crash, resulting in a Denial of Service (DoS) condition. Given the nature of this vulnerability, relevant attack techniques include:
+
+1. **Endpoint Denial of Service: Application or System Exploitation (T1499.004)** - This is directly relevant as the vulnerability describes a Denial of Service condition caused by exploiting insufficient validation in the Webex player application.
+2. **User Execution: Malicious File (T1204.002)** - This highlights how an adversary may rely on the user to open the malicious file sent through email or a link which leads to the vulnerability being exploited.
+3. **Drive-by Compromise (T1189)** - This technique is related as it describes how an adversary can exploit a user visiting a website and executing malicious code, similar to how they might use a malicious ARF or WRF file.
+
+Based on the descriptions of the attack techniques and their alignment with the impact of CVE-2020-3322, we identify these key techniques.
+
+Given the context of CVE-2020-12000, which involves vulnerabilities related to the handling of serialized data that can result in deserialization of untrusted data, the relevant attack techniques to consider are those that implicate the ability to manipulate data, exploit public-facing applications, engage in adversary-in-the-middle tactics, and possibly execute code through command and scripting interpreters. The attack techniques that apply include: 
+
+- **T1059** (Command and Scripting Interpreter): This is relevant as the vulnerability could allow adversaries to execute code.
+- **T1439** (Eavesdrop on Insecure Network Communication): This concern ties into the lack of data validation leading to potential exploitation of transmitted data.
+- **T1203** (Exploitation for Client Execution): This relates to potential exploitation of the application as a way to influence the execution context.
+- **T1557** (Adversary in the Middle): Since deserialization vulnerabilities often lead to opportunities for session hijacking or intercepting data before it reaches its intended destination.
+
+Based on these insights, the relevant attack techniques applicable to CVE-2020-12000 include:
+
+- T1059 (Command and Scripting Interpreter)
+- T1557 (Adversary-in-the-Middle)
+- T1203 (Exploitation for Client Execution)
+
+These techniques align with the nature of the vulnerability and its potential exploitation. 
+
+Thus, the identified relevant attack techniques are T1059, T1557, and T1203.
+
+For the vulnerability identified as CVE-2018-15772, there are relevant secondary impact attack techniques. Given the description of the vulnerability which involves uncontrolled resource consumption, this aligns with the techniques that indicate exploitation for various purposes such as denial of service or resource misuse. The attack ids that fit within this category are specifically related to manipulating system resources or affecting availability.
+
+The following techniques are particularly relevant:
+- **T1499.004**: This is associated with endpoint denial of service via exploitation and is relevant as the vulnerability may lead to systems being slowed down or made unresponsive due to resource consumption.
+- **T1499**: General endpoint denial of service exists as well, considering the overall impact on system availability due to the resource utilization.
+
+Thus, both T1499 and T1499.004 are applicable to the CVE in question.
+
+For the vulnerability CVE-2020-15170, the relevant attack techniques should address the lack of access controls implemented by the apollo-adminservice, particularly when exposed to the internet. The potential risks include exploitation through secondary impacts such as manipulating web session cookies and conducting man-in-the-middle attacks. The relevance of the techniques against the context of unauthorized access, exposure, or manipulation is crucial. Therefore, techniques like 'Adversary-in-the-Middle', which includes manipulating data during transmission, can be significant for this vulnerability. Also, manipulation of data or lack of integrity checks could lead to serious consequences, thus the 'Data Manipulation' techniques are pertinent. Considering these points, the relevant attack ids are T1557 for Adversary-in-the-Middle and T1565 for Data Manipulation.
+
+The vulnerability CVE-2019-3786 allows remote authenticated users to manipulate backup scripts, leading to the potential compromise of integrity by requesting unauthorized backup files from different jobs. The relevant attack techniques that relate to the manipulation of data and browser vulnerabilities are of interest here. Potential techniques to consider are 'T1557' for Adversary-in-the-Middle, which can align with the manipulation of scripts and traffic, and 'T1565' for Data Manipulation, which would relate to the context of altering backup data and integrity impacts. Additionally, techniques like 'T1499.004' which deals with Endpoint Denial of Service through application exploitation may connect, given the context of application vulnerabilities that can lead to denial of service or manipulation. Collectively, the relevant attack techniques that can be associated with this vulnerability through available methods and subject matter knowledge include T1557 and T1565 for data manipulation and exploitation.
+
+The vulnerability CVE-2018-15462 is characterized by a lack of proper TCP rate limiting on management access ports (22 for SSH and 443 for HTTPS) in Cisco Firepower Threat Defense Software, which allows for remote denial of service (DoS) attacks. Based on the descriptions of relevant attack techniques provided, two techniques appear highly relevant to this vulnerability: 
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**, which explicitly relates to exploiting vulnerabilities to crash applications and cause denial of service conditions, correlating with the CPU and memory usage increase described in the CVE.
+- **T1499 (Endpoint Denial of Service)**, which includes performing DoS attacks to disrupt the availability of services, directly corresponding with the nature of the vulnerability as it potentially leads to a complete denial of service.
+
+These techniques align well with the nature of the CVE.
+
+The vulnerability CVE-2019-6538 is related to the exploitation of weak telemetry communication in Medtronic devices, where an attacker can intercept, modify, or manipulate data due to a lack of authentication in the telemetry protocol. This suggests the potential for techniques that involve adversarial interception of communications, such as Network Sniffing and Adversary-in-the-Middle attacks. 
+
+The provided list of attack techniques reveals a suitable match for the behavior described in the vulnerability:
+
+1. **T1557 (Adversary-in-the-Middle)** is applicable since it directly relates to the concept of an attacker positioning themselves to intercept and manipulate data transmissions between entities.
+2. **T1040 (Network Sniffing)** is relevant as it encompasses the strategy of capturing and analyzing communication over the network to gather sensitive information.
+3. **T1565 (Data Manipulation)** could also apply given that the attacker’s actions might involve manipulating the telemetry data being transmitted.
+
+The other techniques, including those related to denial of service, command execution, and account manipulation, do not directly relate to the specific capabilities described in the vulnerability itself.
+
+Thus, the relevant attack techniques for CVE-2019-6538 that can be associated with the described vulnerability are T1557, T1040, and potentially T1565 for data manipulation.
+
+The context provided describes a vulnerability in Microsoft Excel (CVE-2020-1495) that allows for remote code execution upon opening a specially crafted file. The discussed attack vectors involve social engineering to entice users into opening a malicious file, which aligns with several attack techniques related to user execution and data manipulation.
+
+In this case, the relevant attack techniques are:
+- User Execution: Malicious File (T1204.002), as the attack relies on the user to open a maliciously crafted Excel file.
+- Abuse Elevation Control Mechanism: Sudo and Sudo Caching (T1548.003) could be relevant for escalation of privileges on systems compromised through this vulnerability, although it is less directly applicable than the user execution techniques.
+- Data Manipulation: Stored Data Manipulation (T1565.001) and Transmitted Data Manipulation (T1565.002) may be relevant if adversaries manipulate stored data or data in transit as part of exploiting the vulnerability.
+
+However, the strongest impact is through User Execution (T1204.002) as the primary attack vector. 
+
+Therefore, the most pertinent attack techniques derived from the given vulnerability are primarily concerned with user execution of malicious files.
+
+Given the context of the CVE-2019-0576 vulnerability, we need to identify potential attack techniques related to secondary impacts. The CVE describes a remote code execution vulnerability in the Windows Jet Database Engine affecting various Windows operating systems. Given the nature of this vulnerability, the techniques that may apply to some extent include:
+
+- T1212: Exploitation for Credential Access: The nature of remote code execution vulnerabilities often allows adversaries to exploit systems and acquire access tokens or credentials.
+- T1565.001: Data Manipulation: Stored Data Manipulation: If the adversary is able to manipulate stored data through RCE, this matches the secondary impact scope.
+- T1566.001: Phishing: Spearphishing Attachment: Although not directly applicable, many RCE vulnerabilities in environments result from user interactions with malicious attachments or links. This pathway may be relevant.
+
+After carefully analyzing the provided attack techniques and considering the general nature of remote execution vulnerabilities, I have selected relevant techniques for potential secondary impacts.
+
+Given the vulnerability description for CVE-2018-15758, the exploitation involves an attacker gaining unauthorized privileges by crafting requests to manipulate authorization processes. An important aspect of the attack is the ability to alter protected data and execute unauthorized actions, leading to privilege escalation. The relevant attack techniques that apply to this scenario include:
+
+1. **T1565** - Data Manipulation: This technique involves manipulating data to influence outcomes or hide activities, which aligns with modifying authorization requests.
+2. **T1557** - Adversary-in-the-Middle: This attack involves placing oneself between the user and the authorization server to intercept or modify the traffic, facilitating the exploitation of this vulnerability.
+
+Therefore, the relevant attack techniques for CVE-2018-15758 are T1565 and T1557.
+
+The vulnerability CVE-2020-6964 allows attackers to obtain remote keyboard input access without authentication over the network, which may involve various techniques related to network communications and user input interception. Considering the context of the attack techniques provided:
+
+1. **T1557, Adversary-in-the-Middle**: This technique applies because an attacker could position themselves to intercept and manipulate the communications between the telemetry server and its users, potentially gaining access to sensitive data being transmitted over the network.
+
+2. **T1539, Steal Web Session Cookie**: Although this technique generally pertains to stealing session cookies, in the context of remote input access, capturing or manipulating session tokens is relevant as it can strengthen an adversary's access during the attack.
+
+3. **T1005, Data from Local System**: While this applies more broadly, if keyboard input data is intercepted and stored locally before being transmitted to the attacker, it could fit within this technique.
+
+Given the information that attackers exploit vulnerabilities without authentication, techniques emphasizing interception of communication and unauthorized access to data are particularly relevant here.
+
+Therefore, the relevant attack techniques for CVE-2020-6964 include techniques concerning adversarial positioning to intercept, manipulate, or steer data.
+
+To determine the relevant attack techniques for the CVE-2020-1425 vulnerability, we will analyze the context in relation to the attack techniques provided. The described CVE indicates a remote code execution vulnerability that involves the manipulation of memory within the Microsoft Windows Codecs Library, requiring user interaction to exploit. Based on the context and characteristics of the vulnerability, the following attack techniques are applicable:
+
+1. **T1565.001 - Data Manipulation: Stored Data Manipulation**: This technique is relevant since the exploit may involve manipulating data within the system that gets executed under specific contexts.
+   
+2. **T1210 - Exploitation of Remote Services**: Given the remote nature of the vulnerability, this technique aligns with attempting to exploit system vulnerabilities remotely for initial access.
+
+Given these considerations, the relevant attack techniques for CVE-2020-1425 link to the data manipulation and exploitation aspects as detailed above.
+
+The vulnerability CVE-2019-1035 is described as a remote code execution vulnerability in Microsoft Word, with significant impacts such as complete confidentiality, integrity, and availability impacts. Given this severity, several attack techniques from the provided list are relevant. Particularly, techniques related to manipulating or hijacking sessions, user execution of malicious files, and remote code execution can all be associated with this type of vulnerability. Relevant attack techniques for secondary impact include `T1557` (Adversary-in-the-Middle) and `T1204.001` (User Execution: Malicious Link), as both techniques involve user interaction and exploitation vulnerabilities present in the Microsoft software. Additional techniques related to data manipulation and integrity could also apply.
+
+Based on this, I will select the most applicable attack techniques relevant to CVE-2019-1035.
+
+The vulnerability CVE-2018-15392 is related to a denial of service (DoS) condition caused by improper handling of DHCP lease requests. This implies the potential attack techniques pertinent to the scenario center around creating conditions for denial of service, exploitation of network protocols, and disrupting normal service operations. The relevant attack techniques from the provided options include 'T1499.004' (Endpoint Denial of Service: Application or System Exploitation) which fits the description of how an adversary may exploit vulnerabilities to crash applications or systems, preventing access to legitimate users. Other techniques like 'T1499', which broadly refers to Endpoint Denial of Service, could also be relevant. However, since the task specifically notes the type for secondary impact attack techniques, the most relevant here is 'T1499.004'.
+
+Thus, the selected attack techniques identify the specific attacks relevant to the DoS exploit characteristic of CVE-2018-15392.
+
+The vulnerability CVE-2020-5358 is characterized as a privilege escalation vulnerability stemming from incorrect permissions, allowing a low-privileged user to exploit a symbolic link to gain elevated privileges on the affected system. In this context, relevant attack techniques that could be associated with the secondary impact of this vulnerability should include those related to privilege escalation and potential data manipulation or session hijacking.
+
+Based on the provided list of attack techniques, the following are particularly relevant:
+- T1068: Exploitation for Privilege Escalation is directly applicable as the vulnerability allows for escalation of privileges.
+- T1552.001: Unsecured Credentials: Credentials In Files may apply if attackers exploit misconfigured permissions to access sensitive credential files.
+- T1565.001: Data Manipulation: Stored Data Manipulation is relevant if adversaries manipulate stored data once elevated privileges are obtained.
+- T1554: Compromise Client Software Binary could apply in scenarios where an adversary modifies a legitimate process to establish persistent access after gaining elevated privileges.
+
+Given the focus on secondary impacts, the most relevant technique seems to be T1068, while others are less directly linked given the nature of the exploitation. This will be the focus for the answer.
+
+For the vulnerability CVE-2020-15188, which is related to unauthenticated remote code execution and is characterized by deserializing untrusted data, the relevant attack techniques that can be associated with the secondary impact include those that relate to browser hijacking and the execution of commands via scripting. Given the nature of the vulnerability, it allows exploitation opportunities through techniques like hijacking browser sessions to gain unauthorized access, or executing arbitrary code using the command interpreter. Therefore, the most relevant techniques would be:
+
+- 'T1557' (Adversary-in-the-Middle) for potential session hijacking.
+- 'T1059' (Command and Scripting Interpreter) as it allows for executing arbitrary commands, which is a result of the remote code execution aspect of this vulnerability.
+
+Thus, the relevant techniques can include both session interception and command execution capabilities.
+
+Given the context of the CVE-2020-0898 vulnerability, which presents an elevation of privilege risk associated with the Windows Graphics Component, the relevant attack techniques that can be mapped to this type of vulnerability focus on exploitation for privilege escalation, manipulation of data, and potentially hijacking sessions. The techniques identified that could be relevant include:
+
+- **T1068**: Exploitation for Privilege Escalation. This attack technique is directly applicable since the vulnerability revolves around elevation of privilege through improper handling of objects in memory.
+- **T1565.001**: Data Manipulation: Stored Data Manipulation. Since the vulnerability has the potential to manipulate objects in memory, there may be some relevance to data manipulation as a secondary effect during exploitation.
+- **T1557**: Adversary-in-the-Middle. While not the core functionality, if the attacker can manipulate graphics streaming, they may in effect gain capabilities that align with this technique, especially regarding session hijacking or interception of sensitive information. 
+- However, given the nature of this specific vulnerability, the primary technique here remains **T1068** due to the elevation of privilege nature and **T1565.001** due to potential manipulation aspects.
+
+After consideration, the most relevant and direct technique is **T1068**. 
+
+While T1557 is a possible related technique, the direct connection primarily supports T1068 as using the vulnerability for initial exploit or data alteration.
+
+Thus, the relevant attack techniques flag only T1068 as directly applicable, with direct exploitation actions stemming from the specific configuration of Windows systems handled through Graphics Component.
+
+The vulnerability CVE-2020-11055 refers to an XSS vulnerability in the BookStack where a user can inject HTML, which could be executed in the context of another user's session. This allows for potential browser session hijacking or manipulation of data related to browser sessions. Given that the vulnerability may be leveraged to exploit users through their web browsers, relevant attack techniques would include those associated with hijacking browser sessions or manipulating transmitted data. In particular, 'T1557' (Adversary-in-the-Middle) can be applied because it describes techniques used to intervene and manipulate browser sessions. Additionally, since the vulnerability allows manipulation of data displayed in comments, 'T1565.001' (Data Manipulation: Stored Data Manipulation) may also apply as it involves inserting or manipulating stored data that affects user outcomes. Therefore, the selected techniques for CVE-2020-11055 would be ['T1557', 'T1565.001'] as they directly relate to the exploitation of XSS for malicious activities.
+
+Based on the context of CVE-2020-3349, which allows for cross-site scripting (XSS) attacks due to insufficient validation of user-supplied input, the relevant attack techniques can be derived from the provided CSV descriptions. The vulnerability allows an attacker to execute arbitrary script code in the context of the affected web-based management interface. Given this exploitation method involves manipulating browser behaviors and potentially sessions, the attack techniques that apply include:
+
+1. **T1557**: Adversary-in-the-Middle - This technique is relevant because the vulnerability allows an attacker to position themselves and manipulate the interactions between users and the web interface, which aligns with the description of this technique.
+
+2. **T1204.001**: User Execution: Malicious Link - Since an attacker may persuade users to click malicious links (which is part of the XSS attack), this technique is applicable.
+
+3. **T1203**: Exploitation for Client Execution - This technique may be relevant as it involves exploiting browser vulnerabilities, which aligns with the XSS nature of the CVE.
+
+These techniques specifically reflect the characteristics and exploitation method described in CVE-2020-3349. 
+
+Thus, the relevant attack techniques that apply to this CVE are T1557, T1204.001, and T1203.
+
+The given CVE (CVE-2020-0671) describes an elevation of privilege vulnerability affecting the Windows kernel. Given its nature of allowing users to gain higher privileges within the operating system, several attack techniques are relevant. The techniques focus on privilege escalation and manipulation of data, making them applicable to the potential outcomes of the mentioned vulnerability.
+
+The relevant attack techniques that align with the nature of privilege escalation and manipulation in the context of this CVE are:
+- T1068: Exploitation for Privilege Escalation - directly relates to the CVE's elevate privilege nature.
+- T1557: Adversary-in-the-Middle - potentially relevant when considering how the vulnerability could be exploited in an attack scenario.
+- T1565.001: Data Manipulation: Stored Data Manipulation - related to how data might be manipulated as part of the exploit’s consequences.
+
+Based on the attack techniques provided and the context of the CVE, the above techniques are identified as relevant.
+
+The CVE-2020-3292 vulnerability describes how an authenticated remote attacker with administrative privileges can exploit the vulnerability in Cisco routers to execute arbitrary code, leading to a complete impact on confidentiality, integrity, and availability. The context of this vulnerability involves the potential for data manipulation and execution of arbitrary commands by sending crafted requests. Based on the provided attack techniques, the following are relevant as they pertain to how an attacker may exploit this vulnerability: 
+
+- T1557 (Adversary-in-the-Middle) applies, as attackers may intercept data or influence the transmission of commands due to the nature of the web-based management interface.
+- T1565.001 (Data Manipulation: Stored Data Manipulation) is applicable since adversaries could manipulate data stored on the routers as part of their exploit.
+- T1059 (Command and Scripting Interpreter) relates directly to the execution of arbitrary commands via the exploitation.
+- T1499 (Endpoint Denial of Service) can also be relevant, since an attacker exploiting this vulnerability could cause the system to crash, denying service.
+- T1548 (Abuse Elevation Control Mechanism) might apply here in terms of leveraging administrative privileges to execute commands.
+
+The attack techniques that are most aligned with the details of CVE-2020-3292 involve data manipulation, command execution, and those that recognize the risk of elevated privileges resulting from the exploitation.
+
+The vulnerability CVE-2020-3407 describes a situation where an unauthenticated remote attacker can exploit issues in the RESTCONF and NETCONF-YANG access control functionality of Cisco IOS XE Software to cause the device to reload, leading to a denial of service condition. In this case, the relevant attack technique for secondary impact is T1499.004, which relates to endpoint denial of service caused by exploitation. This is aligned with the capability to directly cause a denial of service as indicated in the provided context.
+
+Additionally, since there is no indication of user interaction required (as user interaction is not typically needed for remote exploitation via the mentioned protocols), another relevant technique is T1557, which involves adversarial positioning between networked devices that could facilitate further malicious actions following the initial exploit. Therefore, the techniques applicable to this vulnerability are T1499.004 and T1557.
+
+The vulnerability CVE-2019-6522 involves improper array bounds checks which could lead to an attacker reading device memory, potentially retrieving sensitive data or causing the device to reboot. Given the nature of this vulnerability, it is associated with significant security implications, particularly in terms of data integrity and the unauthorized execution of commands which could lead to a system crash or denial of service. 
+
+Among the attack techniques listed, the following might be relevant:
+- T1499.004, Endpoint Denial of Service: Application or System Exploitation, as it can be applied when a vulnerability is exploited to crash the device.
+- T1499, Endpoint Denial of Service, which is a broader category that also covers similar denial of service implications.
+
+Since no others specifically correlate with establishing a foothold through direct exploitation of the kind described in the CVE, the resulting relevant techniques for secondary impact primarily include those related to denial of service.
+
+Given the context of CVE-2019-1118, which is a remote code execution vulnerability, the relevant attack techniques from the provided list are focused on the ability of adversaries to compromise authentication, manipulate data, and potentially execute malicious payloads. Specifically, the techniques that align with the exploitation methods typically associated with remote code execution include the following: 
+
+- **T1557 (Adversary-in-the-Middle)**: This technique refers to positioning between two networked devices to intercept or manipulate communication, which can facilitate the exploitation of vulnerabilities like CVE-2019-1118.
+- **T1565 (Data Manipulation)**: This involves altering data to influence outcomes, which can be part of executing remote code or leveraging exploits that change data integrity.
+- **T1204.001 (User Execution: Malicious Link)**: Users may be tricked into executing malicious payloads, a common approach in social engineering.
+- **T1204.002 (User Execution: Malicious File)**: This technique applies as well, as users executing files containing exploits can lead to the exploitation of vulnerabilities like CVE-2019-1118.
+- **T1059 (Command and Scripting Interpreter)**: This encompasses various command execution vulnerabilities, relevant for a remote code execution scenario.
+
+The potential for multiple techniques to tie into the exploitation of this specific vulnerability is high due to its nature as a remote code execution issue, thus validating the selection of the techniques that can be used in conjunction with manipulation and user execution strategies.
+
+The given vulnerability CVE-2018-15771 describes an information disclosure vulnerability where a malicious user could potentially determine the existence of system files via the Boxmgmt CLI in Dell EMC RecoverPoint. The mapped attack techniques for the secondary impact category mostly revolve around data manipulation, adversarial attacks on system and network operations, and user authentication bypass.
+
+From the provided list of attack techniques, the following techniques are relevant to this scenario:
+
+1. **T1005** - Data from Local System: This technique is directly relevant as the vulnerability allows a user to discover sensitive information about the system files.
+2. **T1557** - Adversary-in-the-Middle: This can be relevant since the attacker could potentially intercept commands or information as the Boxmgmt CLI may function in a networked environment.
+3. **T1565** - Data Manipulation: This relates to the ability to manipulate or make use of the data that can be compromised through this vulnerability.
+
+Other techniques such as **T1068** (Exploitation for Privilege Escalation) could also be indirectly relevant if the attacker sought to escalate privileges later, but the direct relation to secondary impacts in context is primarily with data manipulation and information exposure.
+
+Thus, the relevant attack techniques identified for this vulnerability in regard to secondary impacts are: **['T1005', 'T1557', 'T1565']**.
+
+The vulnerability CVE-2020-1347 describes an elevation of privilege vulnerability in Windows Storage Services, which is associated with improper handling of file operations, allowing a potential exploit to gain higher privileges. The attack techniques that may relate to this vulnerability would focus on manipulation of data or credentials, as well as privilege escalation tactics. Given that the specific secondary impacts provided in the question include direct exploitation for privilege escalation, the corresponding attack techniques can be linked to this type of behavior.
+
+The relevant techniques from the provided list are:
+- 'T1068' for "Exploitation for Privilege Escalation", as this is directly related to the nature of the vulnerability.
+- 'T1556' for "Adversary-in-the-Middle", as it indicates a possibility of intercepting actions related to the exploitation.
+- 'T1485' for "Data Destruction" as a consequence of using the exploit could be aligned with scenarios where modified services affect data integrity.
+
+While the effect of the attack might not immediately indicate data manipulation or other forms of attacks, the higher-level privilege gain aligns with the mentioned techniques. Hence, we go with the identified secondary impacts that regard manipulation of data.
+
+Based on the detailed descriptions provided, the relevant attack techniques for CVE-2020-1347 are only focused on privilege escalation.
+
+For the vulnerability CVE-2019-13555, which describes a denial-of-service condition caused by a remote attacker exploiting the FTP service in various Mitsubishi Electric MELSEC control CPU modules, the following attack techniques are relevant based on the provided descriptions:
+
+1. **T1499.004** - Endpoint Denial of Service: Application or System Exploitation: This technique specifically relates to exploiting software vulnerabilities that can cause an application or system to crash, leading to denial of service, which directly aligns with the nature of the vulnerability described.
+
+2. **T1499** - Endpoint Denial of Service: This broader category also applies since the CVE directly states the denial-of-service potential due to resource consumption.
+
+Thus, the relevant attack techniques for this vulnerability focus around denial-of-service scenarios as the primary impact is the unavailability of the FTP service on the affected devices.
+
+The vulnerability CVE-2019-1876 does not directly provide any attack techniques specifically outlined for secondary impacts. However, the nature of the vulnerability could allow for unauthorized access to resources typically blocked by corporate policies. This could potentially leverage a few particular techniques. Given the context where an attacker could exploit the HTTPS proxy vulnerability, it could lead to tactics that involve data manipulation or session hijacking. The relevant techniques that correlate with such exploits from the given techniques can include:
+
+- **T1565.001**: Data Manipulation: Stored Data Manipulation could be applicable if data integrity is compromised via accessing resources.
+- **T1557**: Adversary-in-the-Middle, as the attacker could position themselves in a way to intercept and manipulate data being transmitted.
+- **T1489**: Service Stop may occur if the attacker aims to disrupt services after manipulating data to achieve further goals.
+- **T1185**: Browser Session Hijacking could be relevant if the attacker is able to exploit sessions through the proxy.
+
+Given the potential for such attacks, these options are feasible to consider.
+
+The provided vulnerability CVE-2019-3707 describes an authentication bypass in Dell EMC iDRAC9, which allows a remote attacker to bypass authentication and gain access to the system without any prior authentication. Given this context, several attack techniques from the provided list are relevant. The most applicable techniques include:
+
+- **T1557 (Adversary-in-the-Middle)**: This technique fits well as an adversary could leverage the authentication bypass to position themselves between secure communications and manipulate or monitor the traffic.
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: Given that the vulnerability could lead to unauthorized system access, adversaries might exploit it to intentionally crash or disrupt the availability of the application or services.
+- **T1566.001 (Phishing: Spearphishing Attachment)**: Although not directly related, the compromised system could be used to send spearphishing messages if the adversary gains control.
+
+However, the particularly strong techniques that relate best to the exploitation of the vulnerability would be T1557 and T1499.004.
+
+The vulnerability CVE-2020-3306 describes a denial of service (DoS) condition caused by a flaw in the DHCP module of Cisco devices that could allow an unauthenticated attacker to exploit it. The relevant attack technique associated with this vulnerability aligns with the ability to exploit software vulnerabilities that can cause a system to crash or deny service, which is directly covered by the attack technique T1499.004 - Endpoint Denial of Service: Application or System Exploitation. Therefore, this technique is relevant for the secondary impact of this vulnerability. 
+
+Additionally, since the exploit involves sending crafted DHCP packets, it could potentially lead to the exploitation technique for credential access as a follow-up action, such as impacting network availability. However, the primary focus of this specific vulnerability as described relates closely to the T1499.004 technique.
+
+Given that only the T1499.004 attack technique aligns with the details of the vulnerability provided, the response will include only this technique.
+

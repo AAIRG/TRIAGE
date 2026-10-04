@@ -1,0 +1,190 @@
+For the vulnerability CVE-2020-3322, the relevant secondary impact is associated with the ATT&CK technique T1499, which refers to Endpoint Denial of Service: Application or System Exploitation. This technique is applicable as the vulnerability allows an attacker to cause a denial of service by exploiting insufficient validation of input data, specifically through manipulation of the Webex recording files. Additionally, the technique T1566.001, which involves phishing with a spearphishing attachment, could be relevant since the exploitation method involves persuading a user to open a malicious file. However, this is more closely related to primary impact than secondary impact.
+
+Therefore, the only relevant secondary impact technique in this context is T1499.
+
+For the vulnerability described (CVE-2020-12000), we are tasked with identifying relevant attack techniques of type secondary_impact. According to the provided mappings, the vulnerability has a functionality of "Read Files." This functionality leads to two secondary impacts:
+
+1. **OS Credential Dumping: /etc/passwd and /etc/shadow** (T1003.008) - which indicates that adversaries can access and manipulate sensitive system files to extract credentials.
+2. **Unsecured Credentials: Credentials In Files** (T1552.001) - which indicates that adversaries can retrieve unprotected credentials stored in files.
+
+Given that both secondary impacts are relevant to the vulnerability's description and the provided attack techniques, they are included in our answer.
+
+Given the context of vulnerability CVE-2018-15772, which relates to an uncontrolled resource consumption issue that may result in denial of service, the secondary impact attack technique mapped is T1499, specifically T1499.004, which pertains to "Endpoint Denial of Service: Application or System Exploitation." This aligns well with the potential consequences of exploiting the mentioned vulnerability, as exploitative actions could lead to service unavailability by consuming system resources. Additionally, examining the provided attack techniques, T1499.004 clearly addresses the consequences stemming from this vulnerability.
+
+For the vulnerability CVE-2020-15170, we are interested in identifying the relevant attack techniques of type secondary_impact. Based on the associated attack techniques and tactics available, the primary impact has been identified as data from the local system (T1005), typically involving information access. Furthermore, the exploitation method related to this vulnerability is exploiting public-facing applications (T1190), which can lead to various secondary impacts including the access and manipulation of data.
+
+In the provided CSV data, the following techniques are relevant in the context of secondary impacts:
+- T1557 (Adversary-in-the-Middle) is a possible attack vector since it is common for adversaries to position themselves to intercept or manipulate data.
+- T1005 (Data from Local System) is directly relevant as it aligns with the primary impact.
+- T1565 (Data Manipulation) is also applicable, as manipulation of accessible data is often a secondary impact following exploitation.
+
+More relevant techniques were considered, but specific dependencies or contextual matches led to the selection of these. 
+
+Thus, the relevant attack techniques for secondary_impact based on the mappings and context of the attack are:
+- **T1005** (Data from Local System)
+- **T1557** (Adversary-in-the-Middle)
+- **T1565** (Data Manipulation)
+
+For the vulnerability described in CVE-2019-3786, multiple secondary impact attack techniques can be derived based on the capabilities an adversary can exploit. The relevant attack techniques are identified as follows:
+
+1. **T1059** (Command and Scripting Interpreter) - This technique can be used by adversaries to execute commands after exploiting the vulnerability.
+2. **T1574** (Hijack Execution Flow) - This technique could involve manipulating the execution flow of the system once access is gained.
+3. **T1554** (Compromise Client Software Binary) - An attacker may modify software to gain persistent access, particularly relevant if the attacker modifies backup processes.
+4. **T1557** (Adversary-in-the-Middle) - The attacker may utilize this technique as they have access to both the backup and restoration processes to intercept and alter communications or data.
+   
+Hence, the relevant attack techniques of the type secondary_impact for CVE-2019-3786 are ['T1059', 'T1574', 'T1554', 'T1557'].
+
+For the vulnerability CVE-2018-15462 associated with uncontrolled resource consumption, the relevant secondary impacts are linked to Denial of Service (DoS) attacks. Given the provided mappings, the specific attack technique for secondary impact is T1499, which corresponds to exploitation resulting in an endpoint denial of service. There are no other secondary impact techniques relevant to this specific vulnerability from the provided list. Therefore, the only identification for secondary impact is T1499.
+
+To determine the relevant attack techniques of type secondary_impact for CVE-2019-6538, we refer to the attack techniques listed in the prompt and the context provided earlier. The secondary impacts associated with this vulnerability include:
+
+- T1059 (Command and Scripting Interpreter): This is relevant because the vulnerability allows manipulation of memory values in implanted cardiac devices, which can involve executing commands via interpreters or scripts to manipulate device behavior.
+- T1574 (Hijack Execution Flow): This technique could also be relevant as an attacker could inject malicious instructions into the execution flow of the device firmware or software, thus taking control over its operations.
+- T1554 (Compromise Client Software Binary): If an attacker is able to modify software binaries (such as firmware), they could exploit this vulnerability further.
+- TT1565.001 (Data Manipulation: Stored Data Manipulation): This technique is directly connected as the manipulation of telemetry data could alter the device's memory or functionality maliciously.
+
+Therefore, the relevant secondary impact attack techniques for this vulnerability are T1059, T1574, T1554, and T1565.
+
+The vulnerability CVE-2020-1495 has been associated with several secondary impact techniques. Based on the provided context, there are mappings for this vulnerability under the secondary impacts, specifically:
+
+- T1211, Exploitation for Credential Access: Adversaries may exploit software vulnerabilities in an attempt to collect credentials.
+- T1557, Adversary-in-the-Middle: Adversaries may attempt to position themselves between two or more networked devices to collect information.
+
+Thus, the relevant secondary impact techniques for this vulnerability would be as follows: T1211 and T1557.
+
+Based on the context of the vulnerability CVE-2019-0576 which is associated with remote code execution and an exploitation technique tied to the exploitation of public-facing applications (T1190), we need to derive the relevant secondary impacts from the provided attack techniques. The relevant techniques for secondary impacts include those that would typically be used after initial exploitation, such as compromising user sessions or manipulating data. 
+
+Here, the following techniques apply:
+1. **Adversary-in-the-Middle (T1557)**: This technique is relevant as it indicates that the adversary can put themselves between a user and their intended destination, potentially intercepting sensitive information and affecting data integrity.
+2. **Data from Local System (T1005)**: This technique is applicable as adversaries may look for sensitive information on local systems after compromising a public-facing application.
+3. **Data Manipulation: Stored Data Manipulation (T1565.001)**: Altering data that has been stored could also be a follow-up action after exploiting a vulnerability, aiming to change the integrity of the system’s data.
+
+Based on the potential secondary impacts identified, the relevant attack techniques corresponding to secondary impact are: ['T1557', 'T1005', 'T1565.001'].
+
+Given the information about the vulnerability CVE-2018-15758, which is associated with the secondary impact of "Change Ownership or Permissions" and maps to the attack technique with ID T1222 ("File and Directory Permissions Modification"), we identify that there are no additional techniques presented in the provided CSV that correlate with this specific secondary impact. The mappings do not connect to other attack techniques from the provided CSV that relate to the stated impact of the vulnerability.
+
+Thus, the relevant attack techniques of type secondary_impact for this vulnerability can be summarized as follows:
+
+- The only relevant attack technique already identified is T1222. 
+- Therefore, based on the provided list of attack techniques, T1222 is the only one that matches the secondary impact discussed, while other techniques are not applicable.
+
+For the vulnerability CVE-2020-6964, it has been established that the primary impact is associated with T1552 (Unsecured Credentials). However, there is no direct mapping of secondary impacts for this vulnerability to any of the attack techniques presented in the CSV. The detailed nature of the provided attack techniques does not specifically include derivatives or outcomes that match the secondary impacts relevant to the attack described in the vulnerability. Therefore, the relevant secondary impact techniques are non-existent for this specific vulnerability.
+
+To determine the relevant attack techniques of type secondary_impact for the given vulnerability context, I will consider the details provided about the vulnerability's impact and associated secondary attack techniques. The following secondary impacts related to the vulnerability have been listed:
+
+1. **Exploitation for Defense Evasion** - T1211
+2. **Exploitation for Credential Access** - T1212
+
+The secondary impacts associated with the vulnerability align with the potential methods that adversaries may deploy once they exploit the initial weakness. I will choose the corresponding attack IDs that match these impacts.
+
+Hence, the relevant attack techniques of type secondary_impact are T1211 and T1212.
+
+Given the context surrounding the vulnerability CVE-2019-1035, which is related to a remote code execution vulnerability in Microsoft Word due to improper handling of objects in memory, we need to identify the relevant secondary impact attack techniques from the provided list. The description provided in the context indicates that it possibly allows an attacker to manipulate data, possibly leading to further exploitation and control over the system.
+
+From the attack techniques list, we can identify:
+- **T1557 (Adversary-in-the-Middle)**: This technique is relevant as it allows an adversary to intercept communications between two devices, which could be significant in an exploitation scenario.
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: This technique could also apply, since exploiting a vulnerability may lead to denial of service conditions where the application or system becomes unusable.
+
+Since these methods capture the secondary impacts resulting from the exploitation of the vulnerability, the relevant attack techniques are identified accordingly.
+
+For the vulnerability identified (CVE-2018-15392), which describes a Denial of Service condition caused by improper handling of DHCP lease requests, the relevant secondary impact attack technique is related to denying services to users. The only appropriate attack technique from the provided list that aligns with the nature of the vulnerability is T1499.004, which concerns the Endpoint Denial of Service from application or system exploitation. There is no other secondary impact technique that fits this vulnerability's characteristics, thus the resulting attack techniques are limited.
+
+For the vulnerability described (CVE-2020-5358) and its associated attack techniques, the relevant secondary impacts were identified and mapped primarily to specific exploitation techniques and impacts. The techniques presented aim to identify actions that could stem from a successful exploitation of the vulnerability. Specifically, the mapped attack techniques include T1552 concerning the handling of unsecured credentials accessed by means of the vulnerability, which elaborates on the possibility of credential theft. Additionally, T1632 regarding the manipulation of trust controls is pertinent as it outlines potential ways adversaries could undermine security mechanisms after gaining increased privileges. Lastly, exploiting the permissions and the elevated privileges can further lead to potential impacts covered under other relevant techniques.
+
+Based on the provided information, the relevant attack techniques for secondary impacts thus include T1552 and T1632.
+
+For the vulnerability CVE-2020-15188, there are insights into the associated impacts from the methodology overview provided. The primary impact level is associated with attack technique T1059, which indicates potential command execution through scripting interpretation. For secondary impacts, examining the attack techniques related to the exploitation of public-facing applications leads to a relevant association with T1190. Additionally, reviewing the listed techniques that apply to the secondary impact category informs that neither T1066 nor T1557 is relevant or applicable here.
+
+Thus, the appropriate secondary impact attack techniques from the ones provided in the CSV would be relevant to the scenario, which highlights command execution and associated outcomes.
+
+Therefore, the attack techniques for secondary impacts relevant to the specified vulnerability are:
+- T1059 (Command and Scripting Interpreter)
+- T1190 (Exploit Public-Facing Application)
+
+This leads us to conclude the list of relevant secondary impact attack techniques for CVE-2020-15188.
+
+Given the context of the vulnerability CVE-2020-0898, which relates to an elevation of privilege vulnerability within the Windows Graphics Component, we need to determine the relevant attack techniques classified as `secondary_impact`. Based on the description, the vulnerability is associated with the tactic of Privilege Escalation, connecting it to the attack technique T1068, which is focused on exploitation for privilege escalation. 
+
+Among the attack techniques listed in the question, T1068 seems to directly correspond with the secondary impact of this vulnerability, as it involves exploiting a vulnerability to gain elevated privileges. Therefore, the relevant attack technique for `secondary_impact` here would be T1068.
+
+For the vulnerability CVE-2020-11055, the relevant attack techniques of type secondary_impact can be derived from the provided mapping and descriptions. For this specific vulnerability, the following attack techniques apply:
+
+- **T1185 (Browser Session Hijacking)**: This technique is relevant as the XSS vulnerability could allow an adversary to hijack browser sessions, which is a common consequence of JavaScript injection through XSS.
+- **T1557 (Adversary-in-the-Middle)**: This technique is relevant since the XSS vulnerability can facilitate methods to position an adversary in-between networked devices, allowing them to manipulate traffic.
+  
+These techniques are directly related to the impacts that an adversary can achieve through exploiting the stored XSS vulnerability, leading to session hijacking and data manipulation.
+
+The secondary impact associated with the vulnerability CVE-2020-3349, which concerns cross-site scripting (XSS), has been identified as "Browser Session Hijacking," corresponding to the attack technique with ID T1185. This technique directly relates to the potential actions an attacker can take after successfully exploiting the identified vulnerability. Other secondary impacts listed do not correspond to any additional attack techniques mentioned in the provided CSV, making T1185 the only relevant technique for secondary impact here.
+
+Based on the context provided, the relevant secondary impact associated with the vulnerability CVE-2020-0671 appears to be linked to the primary impact of file and directory permissions modification. There are no specified secondary impact techniques associated with this vulnerability in the context given. Therefore, I must conclude that there are no specific attack techniques relevant to the secondary impact for this vulnerability. The relevant section from the description indicates that while the primary impact maps to T1222 (File and Directory Permissions Modification), there are no mention of secondary impacts that link to specific attack techniques. Thus, the response will indicate an empty list for secondary impact attack techniques.
+
+Based on the provided context about the vulnerabilities and attack techniques associated with CVE-2020-3292, we can determine the relevant secondary impacts that an adversary could achieve. The CVE indicates that an authenticated user could exploit the vulnerability to execute arbitrary code or cause the device to crash, which aligns with the attack technique T1499.004 (Endpoint Denial of Service: Application or System Exploitation), as the adversary may exploit the software vulnerability to cause an application or system to crash, thus denying service. 
+
+In the provided attack techniques, there are no additional techniques that explicitly align with secondary impacts derived from the associated mappings. Therefore, the only secondary impact attack technique relevant to this vulnerability is T1499.004.
+
+Based on the provided context regarding the vulnerability CVE-2020-3407, we can extract that the primary impact involves system restart (mapped to T1529) and the exploitation techniques are related to accessing the device using RESTCONF or NETCONF-YANG (mapped to T1190 and T1133). The focus of the question is on identifying secondary impact techniques related to this vulnerability.
+
+Upon reviewing the techniques provided in the CSV, the following attack techniques fit the context of secondary impacts related to the vulnerability's nature:
+- **T1557** (Adversary-in-the-Middle): This technique can be related to exploiting vulnerabilities and redirecting traffic when interacting with REST APIs.
+- **T1499.004** (Endpoint Denial of Service: Application or System Exploitation): The nature of the vulnerability is linked to causing the device to reload, resulting in a denial of service condition, making this technique applicable.
+
+No other secondary impacts or techniques directly align with the specifics of the given vulnerability and its expected exploitation impacts.
+
+Therefore, the relevant attack techniques for the secondary impact from the listed techniques are: ['T1557', 'T1499.004'].
+
+Based on the provided context, CVE-2019-6522 has an associated primary impact of System Shutdown/Reboot (mapped to the T1529 technique) and an exploitation technique of exploiting public-facing applications (mapped to T1190). Given the context of secondary impacts related to the vulnerability, we need to establish what could potentially follow from these actions. 
+
+In looking at the list of attack techniques, relevant secondary impacts could stem from adversaries manipulations or exploitation that could occur post-exploitation. The T1499.004 Endpoint Denial of Service: Application or System Exploitation technique seems applicable since it describes the consequences of exploiting software vulnerabilities that can result in a service denial or degradation, which could align with the nature of the System Shutdown/Reboot.
+
+Additionally, T1557 (Adversary-in-the-Middle) is also relevant as it defines the act of positioning between devices to manipulate network traffic which could potentially align with the outcomes of exploitation. Both attack techniques can be considered valid secondary impacts in context with this vulnerability. 
+
+Thus, the relevant secondary impacts are T1499.004 and T1557.
+
+The context provided outlines a specific vulnerability (CVE-2019-1118) associated with potential attack techniques for secondary impacts, but there is no detailed mapping of secondary impacts to specific ATT&CK techniques in the information provided. In this case, we don't have direct references linking available secondary impact techniques to the vulnerability in question. However, we can consider general knowledge and the nature of this vulnerability in terms of expected exploitation and impacts.
+
+Based on the attack techniques listed in the CSV provided, the following techniques may be relevant to a vulnerability that allows remote code execution:
+
+1. **T1557 (Adversary-in-the-Middle)** - This technique can apply after exploiting a vulnerability that allows an adversary to compromise a session or manipulate data flows.
+2. **T1204.001 (User Execution: Malicious Link)** - This technique aligns with the use case where users might be tricked into clicking on a malicious link leading them to a compromised website.
+3. **T1566.002 (Phishing: Spearphishing Link)** - Like T1204.001, this highlights the malicious links sent via phishing emails, which is directly related to the exploitation methods described for the vulnerability.
+
+Given the focus of the secondary impacts, the above techniques can be relevant in this context.
+
+The CSV listed many possible attack techniques, but not all would apply as secondary impacts specifically. Evaluating based on the details provided, the resulting relevant attack techniques for secondary impacts are T1557, T1204.001, and T1566.002.
+
+Thus, the answer will be these mentioned techniques.
+
+For the vulnerability CVE-2018-15771, the relevant secondary impacts include: 
+
+1. **T1003.008 (OS Credential Dumping: /etc/passwd and /etc/shadow)** - This technique applies as the attacker may be able to gather sensitive information like user passwords from local system files.
+
+2. **T1552.001 (Unsecured Credentials: Credentials In Files)** - This technique is relevant because insecurely stored credentials in local files could be accessed by an attacker once they exploit the information disclosure vulnerability.
+
+Both of these attack techniques align with the scenario where the adversary, having gained unauthorized access through the vulnerability, can extract sensitive data or credentials from the compromised system.
+
+For the vulnerability described (CVE-2020-1347), which does not have specific attack techniques listed for the secondary impact, we need to consider the context provided and identify any potential related secondary impacts. The additional context mentions an elevation of privilege vulnerability associated with T1068 (Exploitation for Privilege Escalation) and a primary impact associated with T1222 (File and Directory Permissions Modification). 
+
+However, from the provided attack techniques, the significant secondary impacts relevant to this vulnerability revolve around the ability of adversaries to take advantage of the changes in file permissions or perform exploitation for privilege escalation. Therefore, the only relevant secondary impact technique that fits this criterion from the list you provided is 'T1068' (Exploitation for Privilege Escalation). Since this fits logically as an escalation of privilege resulting from the initial exploitation outlined by CVE-2020-1347, I will include it.
+
+None of the other attack techniques provided seem to apply directly to the context of secondary impacts for CVE-2020-1347. Thus, the selection is limited, mainly focusing on T1068.
+
+For the vulnerability CVE-2019-13555, the relevant secondary impact is related to the attack technique associated with T1499, which represents Endpoint Denial of Service. According to the provided context, this aligns perfectly, as the primary impact of the vulnerability is directly related to adversary methods that can lead to service shutdowns or application crashes. Therefore, the relevant attack technique for the secondary impact would be the one specifying endpoint denial service exploits, along with any other techniques that could be logically linked or applicable in cases of secondary impacts.
+
+Following the analysis, the only relevant secondary impact attack technique here is 'T1499.004', which is specifically titled "Endpoint Denial of Service: Application or System Exploitation."
+
+The vulnerability CVE-2019-1876 related to Cisco Wide Area Application Services (WAAS) Software allows an unauthenticated remote attacker to exploit the HTTPS proxy feature due to insufficient authentication. For this vulnerability, the attack techniques relevant to the secondary impact within the context of the methodology overview are to be assessed. Since the explicit examples provided for secondary impacts related to the CVE discussed exploitation and impacts that allow access to restricted areas or provide means for credential theft, we can conclude the relevant secondary impacts pertain to:
+
+1. **Adversary-in-the-Middle (T1557)**: This relates to the ability to exploit network traffic, which directly connects to manipulating data transfer over unsecured connections, consistent with the description of the vulnerability allowing unauthorized access to resources normally restricted.
+2. **Data from Local System (T1005)**: This technique involves seeking sensitive information from the local system as part of adversarial actions following an initial exploit, which is relevant to what the attacker could achieve using the compromised HTTPS proxy.
+   
+Thus, the two secondary impact attack techniques identified are T1557 and T1005.
+
+The vulnerability described (CVE-2019-3707) is an authentication bypass vulnerability that allows an attacker to gain access to the system by sending specially crafted input data to the WS-MAN interface. The secondary impact of this vulnerability is significant as it can lead to unauthorized access to sensitive information. The relevant attack techniques that can be derived from this scenario pertain to various forms of data interception, unauthorized access, and manipulation, particularly from the provided list. Based on the nature of this vulnerability, the following attack techniques are applicable for the secondary impact:
+
+- T1557 (Adversary-in-the-Middle): This technique applies because an adversary can position themselves between the victim and the system, potentially capturing credentials or manipulating data.
+- T1552.001 (Unsecured Credentials: Credentials In Files): This can be relevant if credentials are insecurely stored on the target system, which ties into the attacker’s ability to obtain those credentials once access is gained.
+
+No other techniques from the provided list seem to be explicitly linked to the secondary impact associated with this vulnerability based on the given descriptions.
+
+The vulnerability described (CVE-2020-3306) is associated with the tactic of Initial Access and has been linked to the attack techniques T1190 (Exploit Public-Facing Application) for exploitation. However, regarding secondary impact, the most relevant attack technique that could be linked to this vulnerability is T1499.004 (Endpoint Denial of Service: Application or System Exploitation). This is because the vulnerability can lead to a denial of service condition, which is a secondary impact resulting from a successful exploit. Therefore, the relevant attack technique for secondary impact in this context is T1499.004, and there are no other techniques listed that apply.
+

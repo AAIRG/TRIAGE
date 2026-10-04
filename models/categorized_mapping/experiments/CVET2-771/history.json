@@ -1,0 +1,910 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1005",
+            "T1068",
+            "T1486",
+            "T1553",
+            "T1070",
+            "T1496",
+            "T1489",
+            "T1557",
+            "T1003",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described is a Windows DWM Core Library Elevation of Privilege Vulnerability. This type of vulnerability typically allows an attacker to gain elevated privileges on the system, which can lead to various secondary impacts. Based on the context of similar vulnerabilities and the provided list of attack techniques, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: After gaining elevated privileges, an attacker can access sensitive data from the local system.\n2. **T1068** - Exploitation for Privilege Escalation: This is directly related to the nature of the vulnerability itself.\n3. **T1486** - Data Encrypted for Impact: An attacker may encrypt data to prevent access or to extort the victim.\n4. **T1553** - Subvert Trust Controls: This technique involves manipulating trust relationships to further exploit the system.\n5. **T1070** - Indicator Removal: An attacker may attempt to cover their tracks after gaining access.\n6. **T1496** - Resource Hijacking: This involves taking control of system resources for malicious purposes.\n7. **T1489** - Service Stop: An attacker may stop services to disrupt operations.\n8. **T1557** - Adversary-in-the-Middle: This technique can be used to intercept communications after gaining elevated access.\n9. **T1003** - OS Credential Dumping: An attacker can dump credentials from the operating system after gaining elevated privileges.\n10. **None**: If there are fewer than ten relevant techniques, we include a 'None' value to fill the list.\n\nBased on the analysis, the top relevant secondary impacts are ranked, and the final list includes nine techniques and one 'None' value."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1554",
+            "T1486",
+            "T1564",
+            "T1557",
+            "T1558",
+            "T1003",
+            "T1584",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for XStream, the primary impact involves the potential for remote command execution due to improper input handling. This can lead to various secondary impacts, such as data exfiltration, credential dumping, or infrastructure compromise. Based on the context of the vulnerability and the nature of the attack techniques available, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: This technique is applicable as the attacker may access sensitive data from the system.\n2. **T1496** - Resource Hijacking: The attacker could hijack resources on the system.\n3. **T1554** - Compromise Client Software Binary: This could be relevant if the attacker manipulates client software.\n4. **T1486** - Data Encrypted for Impact: If the attacker encrypts data to prevent access.\n5. **T1564** - Hide Artifacts: The attacker may attempt to hide their activities.\n6. **T1557** - Adversary-in-the-Middle: This could be a potential secondary impact if the attacker intercepts communications.\n7. **T1558** - Steal or Forge Kerberos Tickets: If the attacker gains access to authentication tokens.\n8. **T1003** - OS Credential Dumping: The attacker may attempt to dump credentials from the operating system.\n9. **T1584** - Compromise Infrastructure: The attacker may compromise the underlying infrastructure.\n10. **None**: Since there are fewer than ten relevant techniques, we will include a 'None' value.\n\nThus, the ranked list of secondary impact techniques is as follows: ['T1005', 'T1496', 'T1554', 'T1486', 'T1564', 'T1557', 'T1558', 'T1003', 'T1584', None]."
+    },
+    {
+        "target_cve": "CVE-2018-7600",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1486",
+            "T1557",
+            "T1003",
+            "T1048",
+            "T1499",
+            "T1068",
+            "T1059",
+            null
+        ],
+        "true labels": [
+            "T1485",
+            "T1496"
+        ],
+        "reasoning": "The vulnerability in Drupal allows remote attackers to execute arbitrary code, which can lead to various secondary impacts. Based on the context of the vulnerability and the attack techniques provided, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: After gaining access, attackers can extract data from the local system.\n2. **T1496** - Resource Hijacking: Attackers may hijack resources for their own use.\n3. **T1486** - Data Encrypted for Impact: Attackers may encrypt data to extort the victim.\n4. **T1557** - Adversary-in-the-Middle: Attackers can intercept communications.\n5. **T1003** - OS Credential Dumping: Attackers can dump credentials from the operating system.\n6. **T1048** - Exfiltration Over Alternative Protocol: Attackers may exfiltrate data using alternative protocols.\n7. **T1499** - Endpoint Denial of Service: Attackers may cause denial of service to endpoints.\n8. **T1068** - Exploitation for Privilege Escalation: Attackers may escalate privileges to gain further control.\n9. **T1059** - Command and Scripting Interpreter: Attackers can execute commands on the system.\n10. **None**: If there are fewer than ten relevant techniques, we can include a 'None' to fill the list.\n\nGiven the analysis, the top relevant secondary impact techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-45046",
+        "predictions": [
+            "T1486",
+            "T1496",
+            "T1608",
+            "T1505",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1486"
+        ],
+        "reasoning": "Given the vulnerability description for CVE-2021-44228, the secondary impacts include potential data encryption for impact, resource hijacking, and staging capabilities. The relevant attack techniques associated with these impacts are:\n\n1. **T1486** - Data Encrypted for Impact\n2. **T1496** - Resource Hijacking\n3. **T1608** - Stage Capabilities\n4. **T1505** - Server Software Component\n\nThese techniques are ranked based on their relevance to the described impacts of the vulnerability. Since there are only four relevant secondary impact techniques identified, the remaining six slots will be filled with 'None' to indicate the absence of additional relevant techniques.\n\nThus, the final list of secondary impact techniques will be:\n1. T1486\n2. T1496\n3. T1608\n4. T1505\n5. None\n6. None\n7. None\n8. None\n9. None\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-7101",
+        "predictions": [
+            "T1005",
+            "T1041",
+            "T1003",
+            "T1136",
+            "T1489",
+            "T1486",
+            "T1070",
+            "T1553",
+            null
+        ],
+        "true labels": [
+            "T1105"
+        ],
+        "reasoning": "The vulnerability described involves arbitrary code execution due to unvalidated input in the Spreadsheet::ParseExcel Perl module. The primary impact of this vulnerability is the ability to execute arbitrary code, which can lead to various secondary impacts. Based on the context of arbitrary code execution, the following secondary impacts are relevant:\n\n1. **Data from Local System (T1005)**: The attacker may access sensitive data from the local system after executing arbitrary code.\n2. **Exfiltration Over C2 Channel (T1041)**: The attacker could exfiltrate data to a command and control server.\n3. **OS Credential Dumping (T1003)**: The attacker may dump credentials from the operating system.\n4. **Create Account (T1136)**: The attacker may create new accounts on the compromised system.\n5. **Service Stop (T1489)**: The attacker may stop services to disrupt operations.\n6. **Data Encrypted for Impact (T1486)**: The attacker may encrypt data to extort the victim.\n7. **Indicator Removal (T1070)**: The attacker may remove indicators of compromise to evade detection.\n8. **Subvert Trust Controls (T1553)**: The attacker may manipulate trust controls to maintain access.\n9. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top techniques are ranked, and 'None' is included as the last entry."
+    },
+    {
+        "target_cve": "CVE-2021-39226",
+        "predictions": [
+            "T1485",
+            "T1496",
+            "T1005",
+            "T1555",
+            "T1565",
+            "T1078",
+            "T1557",
+            "T1552",
+            "T1486",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for Grafana, the secondary impacts primarily involve the ability of authenticated users to delete snapshots and the potential for data loss. The relevant attack techniques that could be associated with these impacts include techniques related to data manipulation, credential dumping, and resource hijacking. Based on the context of the vulnerability, the following techniques are relevant:\n\n1. **T1485** - Data Destruction: This technique is relevant as the vulnerability allows for the deletion of snapshots, leading to data loss.\n2. **T1496** - Resource Hijacking: This could be relevant as the ability to delete snapshots may allow an attacker to manipulate resources.\n3. **T1005** - Data from Local System: This technique is relevant as it involves accessing data that could be exposed through the vulnerability.\n4. **T1555** - Credentials from Password Stores: If an attacker can manipulate the system, they might gain access to credentials.\n5. **T1565** - Data Manipulation: This is relevant as the ability to delete snapshots directly manipulates data.\n6. **T1078** - Valid Accounts: This technique is relevant as authenticated users can exploit the vulnerability.\n7. **T1557** - Adversary-in-the-Middle: This could apply if the attacker can intercept or manipulate data during the snapshot process.\n8. **T1552** - Unsecured Credentials: If the snapshots contain sensitive information, this technique could be relevant.\n9. **T1486** - Data Encrypted for Impact: If the snapshots are deleted, it could lead to data being encrypted or lost.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top 10 techniques in descending order are:\n- T1485\n- T1496\n- T1005\n- T1555\n- T1565\n- T1078\n- T1557\n- T1552\n- T1486\n- None"
+    },
+    {
+        "target_cve": "CVE-2012-0754",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1553",
+            "T1003",
+            "T1070",
+            "T1557",
+            "T1558",
+            "T1489",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described allows attackers to execute arbitrary code or cause a denial of service through unspecified vectors in Adobe Flash Player. The secondary impacts of such vulnerabilities typically include actions that an attacker can take after gaining initial access, such as data exfiltration, credential dumping, or further exploitation of the system. Based on the context of the vulnerability and the provided list of attack techniques, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: This technique involves accessing data on the compromised system.\n2. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to hinder recovery efforts.\n3. **T1496** - Resource Hijacking: This technique involves using the compromised system's resources for malicious purposes.\n4. **T1553** - Subvert Trust Controls: This technique involves manipulating trust relationships to gain further access.\n5. **T1003** - OS Credential Dumping: This technique involves extracting credentials from the operating system.\n6. **T1070** - Indicator Removal: This technique involves removing traces of the attack to avoid detection.\n7. **T1557** - Adversary-in-the-Middle: This technique involves intercepting communications between two parties.\n8. **T1558** - Steal or Forge Kerberos Tickets: This technique involves stealing or forging Kerberos tickets for unauthorized access.\n9. **T1489** - Service Stop: This technique involves stopping services to disrupt operations.\n10. **None**: Since there are fewer than ten relevant techniques, we include a 'None' value to fill the list.\n\nThus, the top 10 techniques in descending order are: ['T1005', 'T1486', 'T1496', 'T1553', 'T1003', 'T1070', 'T1557', 'T1558', 'T1489', None]."
+    },
+    {
+        "target_cve": "CVE-2014-6271",
+        "predictions": [
+            "T1003",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1556",
+            "T1070",
+            "T1557",
+            "T1552",
+            "T1558",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for CVE-2014-7169, which allows remote attackers to execute arbitrary code via a crafted environment, the secondary impacts could include various techniques that an attacker might leverage after gaining initial access. The techniques that are relevant to this vulnerability typically involve actions such as credential dumping, data exfiltration, and further exploitation of the compromised system. \n\nBased on the examples provided, I will identify the most relevant secondary impact techniques associated with this type of vulnerability. The techniques will be ranked based on their relevance to the exploitation of the vulnerability described. \n\nAfter reviewing the available techniques, the following secondary impacts are identified:\n1. **T1003** - OS Credential Dumping\n2. **T1486** - Data Encrypted for Impact\n3. **T1496** - Resource Hijacking\n4. **T1499** - Endpoint Denial of Service\n5. **T1556** - Modify Authentication Process\n6. **T1070** - Indicator Removal\n7. **T1557** - Adversary-in-the-Middle\n8. **T1552** - Unsecured Credentials\n9. **T1558** - Steal or Forge Kerberos Tickets\n10. **None** - To indicate that there are no more relevant techniques.\n\nThus, the top 10 techniques in descending order are:\n1. T1003\n2. T1486\n3. T1496\n4. T1499\n5. T1556\n6. T1070\n7. T1557\n8. T1552\n9. T1558\n10. None"
+    },
+    {
+        "target_cve": "CVE-2012-2034",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1486",
+            "T1489",
+            "T1553",
+            "T1557",
+            "T1003",
+            "T1565",
+            "T1499",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "To identify the relevant secondary impact techniques for the specified vulnerability in Adobe Flash Player and Adobe AIR, we need to consider the potential consequences of exploiting the vulnerability. The vulnerability allows for arbitrary code execution or denial of service, which can lead to various secondary impacts such as:\n\n1. **Data Exfiltration**: If an attacker can execute arbitrary code, they may be able to extract sensitive information from the system.\n2. **Service Disruption**: A denial of service can lead to service interruptions, affecting availability.\n3. **Credential Dumping**: If the attacker gains access to the system, they may also attempt to extract credentials.\n4. **Resource Hijacking**: The attacker may utilize the compromised system for their own purposes, such as mining cryptocurrency or launching further attacks.\n5. **Data Manipulation**: The attacker could alter data on the system, leading to integrity issues.\n\nBased on the context of the vulnerability and the potential secondary impacts, the relevant attack techniques can be ranked. However, since the specific secondary impacts are not explicitly listed in the provided data, we will need to infer the most relevant techniques based on common attack patterns associated with arbitrary code execution and denial of service vulnerabilities.\n\nAfter analyzing the context and potential impacts, the following techniques are identified as relevant for secondary impacts:\n\n1. T1005 - Data from Local System\n2. T1496 - Resource Hijacking\n3. T1486 - Data Encrypted for Impact\n4. T1489 - Service Stop\n5. T1553 - Subvert Trust Controls\n6. T1557 - Adversary-in-the-Middle\n7. T1003 - OS Credential Dumping\n8. T1565 - Data Manipulation\n9. T1499 - Endpoint Denial of Service\n10. None (indicating that there may be no additional relevant techniques)\n\nThe techniques are ranked based on their relevance to the potential impacts of the vulnerability."
+    },
+    {
+        "target_cve": "CVE-2012-5054",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1557",
+            "T1068",
+            "T1059",
+            "T1078",
+            "T1552",
+            "T1003",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described involves an integer overflow in Adobe Flash Player, which allows remote attackers to execute arbitrary code via malformed arguments. Given this context, the secondary impacts of such an exploitation could include various techniques that allow an attacker to further manipulate the system or extract sensitive information. \n\nBased on the examples provided, relevant secondary impacts for similar vulnerabilities often include techniques related to data exfiltration, credential dumping, and resource hijacking. However, since the specific vulnerability does not directly indicate any known secondary impacts from the examples, I will list the most relevant techniques that could be associated with the exploitation of arbitrary code execution in a general context.\n\nThe top techniques that could be relevant include:\n1. T1005 - Data from Local System\n2. T1486 - Data Encrypted for Impact\n3. T1496 - Resource Hijacking\n4. T1557 - Adversary-in-the-Middle\n5. T1068 - Exploitation for Privilege Escalation\n6. T1059 - Command and Scripting Interpreter\n7. T1078 - Valid Accounts\n8. T1552 - Unsecured Credentials\n9. T1003 - OS Credential Dumping\n10. None (indicating no further relevant techniques)\n\nThis ranking is based on the potential for an attacker to leverage the initial code execution to gain further access or manipulate the system."
+    },
+    {
+        "target_cve": "CVE-2024-34102",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1555",
+            "T1003",
+            "T1078",
+            "T1557",
+            "T1550",
+            "T1068",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "The vulnerability described is an Improper Restriction of XML External Entity Reference (XXE) in Adobe Commerce, which can lead to arbitrary code execution. The primary impact of this vulnerability is the ability to execute commands or scripts on the server. The secondary impacts can include various actions that an attacker can perform once they have gained access through arbitrary code execution. \n\nBased on the context of similar vulnerabilities and their secondary impacts, the following techniques are relevant:\n1. **T1005** - Data from Local System: This technique allows the attacker to gather sensitive data from the compromised system.\n2. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to prevent access, which can be a follow-up action after gaining access.\n3. **T1496** - Resource Hijacking: This technique allows the attacker to use the compromised resources for their own purposes.\n4. **T1555** - Credentials from Password Stores: This technique allows the attacker to extract stored credentials from the system.\n5. **T1003** - OS Credential Dumping: This technique allows the attacker to dump credentials from the operating system.\n6. **T1078** - Valid Accounts: This technique involves using valid accounts to maintain access to the system.\n7. **T1557** - Adversary-in-the-Middle: This technique allows the attacker to intercept and manipulate communications.\n8. **T1550** - Use Alternate Authentication Material: This technique allows the attacker to use alternative methods to authenticate.\n9. **T1068** - Exploitation for Privilege Escalation: This technique allows the attacker to escalate their privileges on the system.\n10. **None**: This indicates that there are no additional relevant techniques beyond those listed.\n\nBased on the analysis, the top 10 techniques in descending order of relevance are:\n1. T1005\n2. T1486\n3. T1496\n4. T1555\n5. T1003\n6. T1078\n7. T1557\n8. T1550\n9. T1068\n10. None"
+    },
+    {
+        "target_cve": "CVE-2021-35464",
+        "predictions": [
+            "T1496",
+            "T1005",
+            "T1486",
+            "T1059",
+            "T1068",
+            "T1574",
+            "T1556",
+            "T1485",
+            "T1552",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the given vulnerability description regarding the ForgeRock AM server's Java deserialization vulnerability, the primary impact is remote code execution. This allows an attacker to execute arbitrary code on the server, which can lead to various secondary impacts. Based on the context of the attack and the techniques available in the MITRE ATT&CK framework, the following secondary impacts are relevant:\n\n1. **T1496 - Resource Hijacking**: The attacker can utilize the compromised server resources for their own purposes.\n2. **T1005 - Data from Local System**: The attacker may access sensitive data stored on the server.\n3. **T1486 - Data Encrypted for Impact**: The attacker could encrypt data to extort the organization.\n4. **T1059 - Command and Scripting Interpreter**: The attacker can execute further commands on the system.\n5. **T1068 - Exploitation for Privilege Escalation**: The attacker may escalate privileges to gain more control over the system.\n6. **T1574 - Hijack Execution Flow**: The attacker can manipulate the execution flow of the application.\n7. **T1556 - Modify Authentication Process**: The attacker may alter authentication mechanisms.\n8. **T1485 - Data Destruction**: The attacker may delete or corrupt data.\n9. **T1552 - Unsecured Credentials**: The attacker may exploit unsecured credentials to gain further access.\n10. **None**: This indicates that there are no additional relevant techniques beyond the ones listed.\n\nBased on the analysis, the top 10 secondary impact techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2023-3519",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1496",
+            "T1489",
+            "T1486",
+            "T1070",
+            "T1136",
+            "T1041",
+            null
+        ],
+        "true labels": [
+            "T1087"
+        ],
+        "reasoning": "The vulnerability described as \"Unauthenticated remote code execution\" typically allows an attacker to execute arbitrary code on a target system without needing authentication. This can lead to various secondary impacts, such as data exfiltration, credential dumping, or further exploitation of the system. Based on the examples provided, common secondary impacts associated with such vulnerabilities include:\n\n1. **Data from Local System (T1005)** - The attacker may access files and data on the compromised system.\n2. **OS Credential Dumping (T1003)** - The attacker may extract credentials stored on the system.\n3. **Resource Hijacking (T1496)** - The attacker may use the compromised system's resources for their own purposes.\n4. **Service Stop (T1489)** - The attacker may stop services on the system, causing denial of service.\n5. **Data Encrypted for Impact (T1486)** - The attacker may encrypt data to extort the victim.\n6. **Indicator Removal (T1070)** - The attacker may remove traces of their activity to avoid detection.\n7. **Create Account (T1136)** - The attacker may create new accounts for persistent access.\n8. **Exfiltration Over C2 Channel (T1041)** - The attacker may send data back to their command and control server.\n9. **None** - In cases where no relevant secondary impacts are identified.\n\nBased on the context of the vulnerability and the common secondary impacts, the top techniques relevant to this vulnerability are identified and ranked."
+    },
+    {
+        "target_cve": "CVE-2022-29464",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1489",
+            "T1559",
+            "T1557",
+            "T1068",
+            "T1070",
+            "T1003",
+            null
+        ],
+        "true labels": [
+            "T1496"
+        ],
+        "reasoning": "Given the vulnerability description, the attacker can exploit the unrestricted file upload to achieve remote code execution. The primary impact of this exploitation is likely to involve executing commands or scripts on the server, which can lead to various secondary impacts. Based on the context of similar vulnerabilities and their secondary impacts, the following techniques are relevant:\n\n1. **T1005** - Data from Local System: The attacker may access sensitive data from the system.\n2. **T1486** - Data Encrypted for Impact: The attacker could encrypt data to hinder recovery efforts.\n3. **T1496** - Resource Hijacking: The attacker may hijack system resources for malicious purposes.\n4. **T1489** - Service Stop: The attacker could stop services to disrupt operations.\n5. **T1559** - Inter-Process Communication: The attacker may use IPC to communicate with other processes.\n6. **T1557** - Adversary-in-the-Middle: The attacker could intercept communications.\n7. **T1068** - Exploitation for Privilege Escalation: The attacker may escalate privileges to gain further control.\n8. **T1070** - Indicator Removal: The attacker may attempt to remove traces of their activities.\n9. **T1003** - OS Credential Dumping: The attacker may try to obtain credentials from the operating system.\n10. **None**: In case there are fewer than ten relevant techniques, we include a placeholder for completeness.\n\nBased on the analysis, the top techniques are ranked, and since there are more than nine relevant techniques, we will include 'None' as the last entry."
+    },
+    {
+        "target_cve": "CVE-2022-26138",
+        "predictions": [
+            "T1003",
+            "T1005",
+            "T1087",
+            "T1046",
+            "T1496",
+            "T1552",
+            "T1557",
+            "T1069",
+            "T1613",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description, the attacker can exploit the hardcoded password to gain access to the Confluence application as the user \"disabledsystemuser.\" This access allows the attacker to potentially perform various actions that could lead to secondary impacts. The relevant secondary impacts include actions like credential dumping, data exfiltration, and account discovery. Based on the provided attack techniques, the most relevant secondary impacts for this vulnerability are:\n\n1. **T1003** - OS Credential Dumping: The attacker can access credentials stored in the system.\n2. **T1005** - Data from Local System: The attacker can retrieve data from the local system.\n3. **T1087** - Account Discovery: The attacker can discover accounts on the system.\n4. **T1046** - Network Service Discovery: The attacker can discover network services running on the system.\n5. **T1496** - Resource Hijacking: The attacker can hijack resources for their own use.\n6. **T1552** - Unsecured Credentials: The attacker may find unsecured credentials.\n7. **T1557** - Adversary-in-the-Middle: The attacker can perform man-in-the-middle attacks.\n8. **T1069** - Permission Groups Discovery: The attacker can discover permission groups.\n9. **T1613** - Container and Resource Discovery: The attacker can discover containers and resources.\n10. **None**: This is included to indicate that there may not be ten relevant techniques.\n\nBased on the analysis, the top 10 techniques, including the empty label, are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-37415",
+        "predictions": [
+            "T1573",
+            "T1560",
+            "T1087",
+            "T1070",
+            "T1047",
+            "T1003",
+            "T1136",
+            "T1218",
+            "T1140",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described allows for an authentication bypass in Zoho ManageEngine ServiceDesk Plus, which can lead to unauthorized access to certain functionalities without proper authentication. Given this context, the secondary impacts that could arise from exploiting this vulnerability include actions that an attacker could take after gaining unauthorized access. \n\nFrom the provided list of attack techniques, the following secondary impacts are relevant:\n- **T1573**: Encrypted Channel - This could be used to maintain a secure communication channel after gaining access.\n- **T1560**: Archive Collected Data - An attacker might collect sensitive data after gaining access.\n- **T1087**: Account Discovery - The attacker could enumerate accounts to find valuable targets.\n- **T1070**: Indicator Removal - The attacker may want to cover their tracks after exploitation.\n- **T1047**: Windows Management Instrumentation - This could be leveraged for further actions on the system.\n- **T1003**: OS Credential Dumping - The attacker might attempt to extract credentials from the system.\n- **T1136**: Create Account - The attacker could create new accounts for persistent access.\n- **T1218**: System Binary Proxy Execution - This could be used to execute binaries remotely.\n- **T1140**: Deobfuscate/Decode Files or Information - This could be used to analyze or manipulate data.\n\nSince the description does not explicitly mention any secondary impacts, it is reasonable to include 'None' to indicate that there may not be enough information to fill all ten slots with relevant techniques.\n\nThus, the final list of secondary impacts is ranked and includes 'None' as the last entry."
+    },
+    {
+        "target_cve": "CVE-2009-1862",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1555",
+            "T1078",
+            "T1557",
+            "T1068",
+            "T1059",
+            "T1499",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "To identify the relevant secondary impact techniques for the specified vulnerability, we analyze the potential consequences of exploiting the vulnerability. The vulnerability allows for arbitrary code execution and denial of service, which can lead to various secondary impacts such as data exfiltration, system discovery, and credential dumping. \n\nBased on the context of similar vulnerabilities and the provided attack techniques, the following secondary impacts are likely relevant:\n1. **T1005** - Data from Local System: This technique could be used to gather sensitive information from the compromised system.\n2. **T1486** - Data Encrypted for Impact: If the attacker can encrypt data to prevent access or to hold it for ransom.\n3. **T1496** - Resource Hijacking: The attacker could hijack resources for their own use.\n4. **T1555** - Credentials from Password Stores: The attacker could extract credentials stored on the system.\n5. **T1078** - Valid Accounts: The attacker could create or use valid accounts for further access.\n6. **T1557** - Adversary-in-the-Middle: The attacker could intercept communications.\n7. **T1068** - Exploitation for Privilege Escalation: The attacker could escalate privileges to gain further control.\n8. **T1059** - Command and Scripting Interpreter: The attacker could execute commands on the system.\n9. **T1499** - Endpoint Denial of Service: The attacker could cause a denial of service on the endpoint.\n10. **None**: If there are no other relevant techniques, we can include a 'None' label.\n\nBased on the analysis, the top 10 techniques, ranked in descending order, would be:\n\n1. T1005\n2. T1486\n3. T1496\n4. T1555\n5. T1078\n6. T1557\n7. T1068\n8. T1059\n9. T1499\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-40044",
+        "predictions": [
+            "T1003",
+            "T1041",
+            "T1496",
+            "T1486",
+            "T1553",
+            "T1489",
+            "T1557",
+            "T1078",
+            "T1068",
+            null
+        ],
+        "true labels": [
+            "T1202"
+        ],
+        "reasoning": "Given the vulnerability description, it indicates that a pre-authenticated attacker can exploit a .NET deserialization vulnerability to execute remote commands on the WS_FTP Server operating system. The primary impact of this vulnerability is the ability to execute commands, which can lead to various secondary impacts. Based on the provided attack techniques, the relevant secondary impacts could include actions such as credential dumping, data exfiltration, and other malicious activities that can be performed after gaining command execution. \n\nAfter analyzing the available secondary impact techniques, the following techniques are relevant:\n1. T1003 - OS Credential Dumping\n2. T1041 - Exfiltration Over C2 Channel\n3. T1496 - Resource Hijacking\n4. T1486 - Data Encrypted for Impact\n5. T1553 - Subvert Trust Controls\n6. T1489 - Service Stop\n7. T1557 - Adversary-in-the-Middle\n8. T1078 - Valid Accounts\n9. T1068 - Exploitation for Privilege Escalation\n10. None (indicating that there are no more relevant techniques)\n\nThe techniques are ranked based on their relevance and potential impact in the context of the described vulnerability."
+    },
+    {
+        "target_cve": "CVE-2023-49103",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1552",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1562",
+            "T1557",
+            "T1613",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described in the context involves the exposure of sensitive configuration details through the ownCloud graphapi app, which can lead to credential disclosure and other potential impacts. Given the nature of the vulnerability, the secondary impacts could include various techniques that allow an attacker to exploit the information gained from the phpinfo output. \n\nBased on the provided attack techniques, the following secondary impacts are relevant:\n1. **T1005** - Data from Local System: This technique allows attackers to gather sensitive data from the local system, which aligns with the exposure of sensitive configuration details.\n2. **T1003** - OS Credential Dumping: This technique is relevant as attackers may attempt to extract credentials from the system.\n3. **T1552** - Unsecured Credentials: This technique is applicable since the vulnerability exposes sensitive credentials.\n4. **T1486** - Data Encrypted for Impact: If attackers gain access to sensitive data, they may encrypt it to leverage for ransom or other malicious purposes.\n5. **T1496** - Resource Hijacking: Attackers could utilize the exposed information to hijack resources.\n6. **T1499** - Endpoint Denial of Service: This could be a potential impact if the attacker decides to disrupt services.\n7. **T1562** - Impair Defenses: Attackers may disable security measures using the information obtained.\n8. **T1557** - Adversary-in-the-Middle: This technique could be relevant if attackers leverage the exposed information to intercept communications.\n9. **T1613** - Container and Resource Discovery: Given the context of containerized deployments, this technique may also be relevant.\n10. **None**: If there are fewer than ten relevant techniques, we can include 'None' to fill the list.\n\nBased on the analysis, the top techniques are ranked, and 'None' is included if necessary."
+    },
+    {
+        "target_cve": "CVE-2022-3075",
+        "predictions": [
+            "T1003",
+            "T1486",
+            "T1496",
+            "T1553",
+            "T1555",
+            "T1070",
+            "T1048",
+            "T1046",
+            "T1068",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described allows a remote attacker to potentially perform a sandbox escape via a crafted HTML page. This indicates that once the attacker has escaped the sandbox, they could potentially execute arbitrary code or commands on the host system. The secondary impacts that could arise from such an exploitation typically include actions like credential dumping, data exfiltration, or further system manipulation. \n\nBased on the context of the vulnerability and the provided list of attack techniques, the following secondary impacts are relevant:\n1. **T1003** - OS Credential Dumping: After gaining access, the attacker may attempt to extract credentials from the system.\n2. **T1486** - Data Encrypted for Impact: The attacker may encrypt data to hold it for ransom or to cover their tracks.\n3. **T1496** - Resource Hijacking: The attacker could use the compromised system resources for their own purposes.\n4. **T1553** - Subvert Trust Controls: The attacker may manipulate trust relationships to gain further access.\n5. **T1555** - Credentials from Password Stores: The attacker may extract stored credentials from the system.\n6. **T1070** - Indicator Removal: The attacker may attempt to remove traces of their activities.\n7. **T1048** - Exfiltration Over Alternative Protocol: The attacker may use alternative methods to exfiltrate data.\n8. **T1046** - Network Service Discovery: The attacker may look for other services to exploit on the network.\n9. **T1068** - Exploitation for Privilege Escalation: The attacker may try to escalate their privileges further.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the relevance and potential impact of these techniques, the top 10 techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2023-38203",
+        "predictions": [
+            "T1005",
+            "T1557",
+            "T1486",
+            "T1070",
+            "T1553",
+            "T1496",
+            "T1048",
+            "T1499",
+            "T1068",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for Adobe ColdFusion, which involves a Deserialization of Untrusted Data vulnerability leading to arbitrary code execution, the potential secondary impacts can include various attack techniques that an adversary might leverage after gaining initial access. \n\nThe secondary impacts typically involve actions that can be taken post-exploitation, such as data exfiltration, credential dumping, or further system manipulation. Based on the provided attack techniques, the following techniques are relevant to the secondary impact of this vulnerability:\n\n1. **T1005** - Data from Local System: This technique involves accessing sensitive data from the compromised system.\n2. **T1557** - Adversary-in-the-Middle: This technique can be used to intercept communications and manipulate data.\n3. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to prevent access, which can be a tactic used after exploitation.\n4. **T1070** - Indicator Removal: This technique involves removing traces of the attack to avoid detection.\n5. **T1553** - Subvert Trust Controls: This technique can be used to manipulate trust relationships within the system.\n6. **T1496** - Resource Hijacking: This technique involves using the compromised resources for unauthorized purposes.\n7. **T1048** - Exfiltration Over Alternative Protocol: This technique can be used to exfiltrate data using less monitored channels.\n8. **T1499** - Endpoint Denial of Service: This technique can be used to disrupt services on the compromised endpoint.\n9. **T1068** - Exploitation for Privilege Escalation: This technique can be used to gain higher privileges on the system.\n10. **None**: In case there are not enough relevant techniques, we can include a placeholder for an empty label.\n\nBased on the analysis, the top 10 relevant secondary impact techniques are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2023-23397",
+        "predictions": [
+            "T1003",
+            "T1005",
+            "T1041",
+            "T1486",
+            "T1489",
+            "T1553",
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1078"
+        ],
+        "reasoning": "For the vulnerability described as \"Microsoft Outlook Elevation of Privilege Vulnerability,\" we need to identify the relevant secondary impact attack techniques. The context of this vulnerability suggests that an attacker could gain elevated privileges, which often leads to various secondary impacts such as data exfiltration, credential dumping, or further exploitation of the system.\n\nFrom the provided list of attack techniques, we will look for those that are typically associated with secondary impacts following an elevation of privilege. Techniques such as \"OS Credential Dumping\" (T1003), \"Data from Local System\" (T1005), and \"Exfiltration Over C2 Channel\" (T1041) are common secondary impacts of such vulnerabilities.\n\nAfter reviewing the techniques, the following secondary impacts are identified:\n1. T1003 - OS Credential Dumping\n2. T1005 - Data from Local System\n3. T1041 - Exfiltration Over C2 Channel\n4. T1486 - Data Encrypted for Impact\n5. T1489 - Service Stop\n6. T1553 - Subvert Trust Controls\n\nSince we need to provide a ranked list of ten techniques, we will include these identified techniques and fill the remaining slots with 'None' to indicate no relevant attack techniques.\n\nThe final ranking will be:\n1. T1003\n2. T1005\n3. T1041\n4. T1486\n5. T1489\n6. T1553\n7. None\n8. None\n9. None\n10. None\n\nThus, the output will be structured accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-26855",
+        "predictions": [
+            "T1567",
+            "T1482",
+            "T1087",
+            "T1505",
+            "T1003",
+            "T1136",
+            "T1046",
+            "T1078",
+            "T1048",
+            null
+        ],
+        "true labels": [
+            "T1005",
+            "T1505"
+        ],
+        "reasoning": "The Microsoft Exchange Server Remote Code Execution Vulnerability allows attackers to execute arbitrary code on the server. This can lead to various secondary impacts, such as credential dumping, account discovery, and server component manipulation. Based on the context of similar vulnerabilities and their associated secondary impacts, the following techniques are relevant:\n\n1. **T1567** - Exfiltration Over Web Service: This technique is relevant as attackers may exfiltrate data through web services after gaining access.\n2. **T1482** - Domain Trust Discovery: Once inside the network, attackers can discover domain trusts to escalate their access.\n3. **T1087** - Account Discovery: Attackers can enumerate accounts to find valid credentials.\n4. **T1505** - Server Software Component: This technique involves manipulating server components, which is likely after gaining remote code execution.\n5. **T1003** - OS Credential Dumping: Attackers may attempt to dump credentials from the operating system.\n6. **T1136** - Create Account: Attackers may create new accounts to maintain persistence.\n7. **T1046** - Network Service Discovery: This technique allows attackers to discover services running on the network.\n8. **T1078** - Valid Accounts: Attackers may use valid accounts to further their access.\n9. **T1048** - Exfiltration Over Alternative Protocol: This technique may be used to exfiltrate data through less monitored channels.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the above reasoning, the top 10 techniques in descending order are:\n\n1. T1567\n2. T1482\n3. T1087\n4. T1505\n5. T1003\n6. T1136\n7. T1046\n8. T1078\n9. T1048\n10. None"
+    },
+    {
+        "target_cve": "CVE-2018-0296",
+        "predictions": [
+            "T1499",
+            "T1005",
+            "T1486",
+            "T1070",
+            "T1553",
+            "T1562",
+            "T1480",
+            "T1564",
+            "T1491",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description, the primary impact is a denial of service (DoS) condition or unauthenticated disclosure of information. The secondary impacts could include various actions that an attacker might take after exploiting the vulnerability, such as accessing sensitive information or causing further disruptions. \n\nBased on the context of the vulnerability, the following secondary impact techniques are relevant:\n1. **T1499** - Endpoint Denial of Service: This is relevant as the vulnerability can lead to a DoS condition.\n2. **T1005** - Data from Local System: This is relevant because the attacker can potentially access sensitive system information.\n3. **T1486** - Data Encrypted for Impact: This could be relevant if the attacker encrypts data to cause further impact.\n4. **T1070** - Indicator Removal: This could be relevant if the attacker tries to cover their tracks after exploiting the vulnerability.\n5. **T1553** - Subvert Trust Controls: This could be relevant if the attacker manipulates trust controls after gaining access.\n6. **T1562** - Impair Defenses: This could be relevant if the attacker disables security measures.\n7. **T1480** - Execution Guardrails: This could be relevant if the attacker tries to bypass security controls.\n8. **T1564** - Hide Artifacts: This could be relevant if the attacker tries to hide their actions.\n9. **T1491** - Defacement: This could be relevant if the attacker defaces the system after gaining access.\n10. **None**: This is included to meet the requirement of providing ten entries.\n\nAfter analyzing the potential secondary impacts, the top techniques are ranked based on their relevance to the described vulnerability."
+    },
+    {
+        "target_cve": "CVE-2023-38035",
+        "predictions": [
+            "T1005",
+            "T1557",
+            "T1552",
+            "T1496",
+            "T1486",
+            "T1499",
+            "T1068",
+            "T1048",
+            "T1558",
+            null
+        ],
+        "true labels": [
+            "T1496",
+            "T1571",
+            "T1105",
+            "T1071",
+            "T1018",
+            "T1046",
+            "T1557"
+        ],
+        "reasoning": "Given the vulnerability description, the attacker can bypass authentication controls on the administrative interface of the MICS Admin Portal due to an insufficiently restrictive Apache HTTPD configuration. This could lead to various secondary impacts, such as unauthorized access to sensitive data, manipulation of system processes, or exploitation of other vulnerabilities. Based on the context of the attack and the techniques available, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: The attacker may access sensitive data stored on the system.\n2. **T1557** - Adversary-in-the-Middle: The attacker could intercept communications.\n3. **T1552** - Unsecured Credentials: The attacker may gain access to credentials stored insecurely.\n4. **T1496** - Resource Hijacking: The attacker could hijack resources for their own use.\n5. **T1486** - Data Encrypted for Impact: The attacker may encrypt data to extort the organization.\n6. **T1499** - Endpoint Denial of Service: The attacker could cause a denial of service.\n7. **T1068** - Exploitation for Privilege Escalation: The attacker could escalate privileges.\n8. **T1048** - Exfiltration Over Alternative Protocol: The attacker may exfiltrate data using alternative methods.\n9. **T1558** - Steal or Forge Kerberos Tickets: The attacker could manipulate authentication tokens.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top ten techniques relevant to the secondary impact of the vulnerability are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2020-8195",
+        "predictions": [
+            "T1003",
+            "T1078",
+            "T1046",
+            "T1005",
+            "T1083",
+            "T1486",
+            "T1496",
+            "T1485",
+            "T1557",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description indicates that it allows limited information disclosure to low privileged users. This suggests that the secondary impacts could involve techniques related to credential dumping, account discovery, and data manipulation. \n\nFrom the provided attack techniques, the following secondary impacts are relevant:\n1. **T1003** - OS Credential Dumping: This technique is relevant as the vulnerability could lead to the exposure of credentials.\n2. **T1078** - Valid Accounts: If low privileged users can gain access to valid accounts, this technique is applicable.\n3. **T1046** - Network Service Discovery: This could be relevant if the attacker can discover services running on the network.\n4. **T1005** - Data from Local System: This technique is applicable as the vulnerability allows for information disclosure.\n5. **T1083** - File and Directory Discovery: This could be relevant if the attacker can discover files and directories due to the vulnerability.\n6. **T1486** - Data Encrypted for Impact: If data is encrypted as a result of exploitation, this technique is relevant.\n7. **T1496** - Resource Hijacking: This could be relevant if the attacker can hijack resources due to the vulnerability.\n8. **T1485** - Data Destruction: If the attacker can manipulate data leading to destruction, this technique is relevant.\n9. **T1557** - Adversary-in-the-Middle: This could be relevant if the attacker can position themselves between the user and the service.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the analysis, the top relevant secondary impact techniques are ranked as follows:\n1. T1003\n2. T1078\n3. T1046\n4. T1005\n5. T1083\n6. T1486\n7. T1496\n8. T1485\n9. T1557\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-5631",
+        "predictions": [
+            "T1185",
+            "T1539",
+            "T1114",
+            "T1082",
+            "T1005",
+            "T1078",
+            "T1048",
+            "T1496",
+            "T1498",
+            null
+        ],
+        "true labels": [
+            "T1041"
+        ],
+        "reasoning": "The vulnerability described allows for stored XSS via crafted SVG documents, which can lead to the execution of arbitrary JavaScript code. This type of attack can have various secondary impacts, such as stealing session cookies, performing actions on behalf of the user, or accessing sensitive information. Based on the context of the vulnerability and the provided attack techniques, the following secondary impacts are relevant:\n\n1. **T1185** - Browser Session Hijacking: This is a direct consequence of XSS, where an attacker can hijack the user's session.\n2. **T1539** - Steal Web Session Cookie: This technique is also directly related to XSS, allowing the attacker to steal cookies.\n3. **T1114** - Email Collection: If the attacker can execute JavaScript, they may be able to collect email data.\n4. **T1082** - System Information Discovery: The attacker may gather information about the system.\n5. **T1005** - Data from Local System: The attacker could potentially access local data.\n6. **T1078** - Valid Accounts: If the attacker can execute scripts, they might exploit valid accounts.\n7. **T1048** - Exfiltration Over Alternative Protocol: The attacker may exfiltrate data using alternative protocols.\n8. **T1496** - Resource Hijacking: This could be a potential secondary impact if the attacker can manipulate resources.\n9. **T1498** - Network Denial of Service: This could be an indirect impact if the attacker can disrupt services.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the analysis, the top 10 secondary impacts relevant to the vulnerability are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2008-0655",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1553",
+            "T1070",
+            "T1496",
+            "T1489",
+            "T1557",
+            "T1003",
+            "T1564",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described involves multiple unspecified vulnerabilities in Adobe Reader and Acrobat before version 8.1.2, which have unknown impacts and attack vectors. Given the lack of specific information about the impacts or exploitation techniques, it is challenging to determine relevant secondary impacts directly related to this vulnerability. However, based on the context of similar vulnerabilities in Adobe products, common secondary impacts might include credential dumping, data exfiltration, or other forms of exploitation that could be inferred from the nature of the software. \n\nSince there are no specific secondary impacts listed in the provided examples for this vulnerability, it is reasonable to include 'None' as a placeholder for the secondary impact techniques. Therefore, the output will consist of 'None' along with other relevant techniques that could be inferred from similar vulnerabilities.\n\nBased on the context and the nature of vulnerabilities in Adobe products, the following secondary impact techniques are relevant:\n1. T1005 - Data from Local System\n2. T1486 - Data Encrypted for Impact\n3. T1553 - Subvert Trust Controls\n4. T1070 - Indicator Removal\n5. T1496 - Resource Hijacking\n6. T1489 - Service Stop\n7. T1557 - Adversary-in-the-Middle\n8. T1003 - OS Credential Dumping\n9. T1564 - Hide Artifacts\n10. None (indicating no specific secondary impact techniques identified)\n\nThis results in a ranked list of techniques, including 'None' to indicate the absence of specific secondary impacts."
+    },
+    {
+        "target_cve": "CVE-2024-24919",
+        "predictions": [
+            "T1005",
+            "T1584",
+            "T1078",
+            "T1069",
+            "T1082",
+            "T1592",
+            "T1590",
+            "T1591",
+            "T1530",
+            null
+        ],
+        "true labels": [
+            "T1003",
+            "T1003",
+            "T1059"
+        ],
+        "reasoning": "The vulnerability allows an attacker to read certain information on Check Point Security Gateways, which suggests that the attacker could potentially gather sensitive information or perform actions that exploit the access gained through the vulnerability. Based on the context of the vulnerability, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: The attacker can read sensitive information from the system.\n2. **T1584** - Compromise Infrastructure: The attacker may leverage the information to compromise the infrastructure further.\n3. **T1078** - Valid Accounts: If the attacker can gather credentials or session tokens, they may use valid accounts to further exploit the system.\n4. **T1069** - Permission Groups Discovery: The attacker may discover permission groups to escalate privileges or access more sensitive data.\n5. **T1082** - System Information Discovery: The attacker can gather system information to plan further attacks.\n6. **T1592** - Gather Victim Host Information: The attacker can gather detailed information about the victim's host.\n7. **T1590** - Gather Victim Network Information: The attacker can gather information about the network configuration.\n8. **T1591** - Gather Victim Org Information: The attacker can gather organizational information that may aid in further attacks.\n9. **T1530** - Data from Cloud Storage: If the system interacts with cloud storage, the attacker may access sensitive data stored there.\n10. **None**: Since there are many relevant techniques, the last entry will be 'None' to indicate that there are no additional techniques beyond the top nine.\n\nThus, the ranked list of secondary impacts is as follows: ['T1005', 'T1584', 'T1078', 'T1069', 'T1082', 'T1592', 'T1590', 'T1591', 'T1530', None]."
+    },
+    {
+        "target_cve": "CVE-2022-24086",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1559",
+            "T1070",
+            "T1557",
+            "T1558",
+            "T1068",
+            null
+        ],
+        "true labels": [
+            "T1213"
+        ],
+        "reasoning": "Given the vulnerability description for Adobe Commerce, the primary impact is arbitrary code execution, which can lead to various secondary impacts. Based on the context of similar vulnerabilities and their associated secondary impacts, the following techniques are relevant:\n1. **T1005** - Data from Local System: This technique is commonly associated with arbitrary code execution as it allows attackers to access sensitive data from the local system.\n2. **T1486** - Data Encrypted for Impact: This technique is relevant as attackers may encrypt data to prevent recovery or to extort victims.\n3. **T1496** - Resource Hijacking: This technique can be utilized to take control of resources for malicious purposes.\n4. **T1499** - Endpoint Denial of Service: This technique may be used to disrupt services as a secondary impact of exploiting the vulnerability.\n5. **T1559** - Inter-Process Communication: This technique may be relevant if the attacker tries to communicate with other processes after gaining access.\n6. **T1070** - Indicator Removal: This technique is often used to cover tracks after exploitation.\n7. **T1557** - Adversary-in-the-Middle: This technique may be applicable if the attacker tries to intercept communications.\n8. **T1558** - Steal or Forge Kerberos Tickets: This technique can be relevant if the attacker aims to escalate privileges further.\n9. **T1068** - Exploitation for Privilege Escalation: This technique is relevant as attackers may seek to escalate their privileges after initial access.\n10. **None**: This indicates that there may not be a tenth relevant technique.\n\nThus, the top 10 techniques in descending order are:\n1. T1005\n2. T1486\n3. T1496\n4. T1499\n5. T1559\n6. T1070\n7. T1557\n8. T1558\n9. T1068\n10. None"
+    },
+    {
+        "target_cve": "CVE-2024-4978",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1557",
+            "T1543",
+            "T1486",
+            "T1554",
+            "T1555",
+            "T1562",
+            "T1553",
+            null
+        ],
+        "true labels": [
+            "T1005",
+            "T1071"
+        ],
+        "reasoning": "The vulnerability allows a remote, privileged threat actor to execute unauthorized PowerShell commands. This indicates that the attacker can potentially manipulate the system and access sensitive information or perform further malicious actions. \n\nFrom the provided attack techniques, the following secondary impacts are relevant:\n1. **T1005** - Data from Local System: The attacker can access data from the local system after executing commands.\n2. **T1003** - OS Credential Dumping: The attacker may dump credentials from the operating system.\n3. **T1557** - Adversary-in-the-Middle: The attacker could position themselves to intercept communications.\n4. **T1543** - Create or Modify System Process: The attacker can create or modify processes on the system.\n5. **T1486** - Data Encrypted for Impact: The attacker may encrypt data to extort the victim.\n6. **T1554** - Compromise Client Software Binary: The attacker could compromise software binaries to maintain persistence.\n7. **T1555** - Credentials from Password Stores: The attacker may extract credentials stored in password managers.\n8. **T1562** - Impair Defenses: The attacker can disable security measures.\n9. **T1553** - Subvert Trust Controls: The attacker may manipulate trust relationships to gain further access.\n\nSince there are not enough unique secondary impact techniques listed in the context, we will include 'None' to fill the list to ten.\n\nThus, the ranked list of secondary impact techniques is:\n1. T1005\n2. T1003\n3. T1557\n4. T1543\n5. T1486\n6. T1554\n7. T1555\n8. T1562\n9. T1553\n10. None"
+    },
+    {
+        "target_cve": "CVE-2024-21893",
+        "predictions": [
+            "T1003",
+            "T1557",
+            "T1496",
+            "T1046",
+            "T1005",
+            "T1069",
+            "T1136",
+            "T1083",
+            "T1485",
+            null
+        ],
+        "true labels": [
+            "T1555",
+            "T1505"
+        ],
+        "reasoning": "The vulnerability described allows an attacker to access restricted resources without authentication, which can lead to various secondary impacts. Based on the context of the vulnerability and the attack techniques available, the following secondary impacts are relevant:\n\n1. **T1003** - OS Credential Dumping: If the attacker can access restricted resources, they may be able to dump credentials from the system.\n2. **T1557** - Adversary-in-the-Middle: The attacker could potentially intercept communications or manipulate data.\n3. **T1496** - Resource Hijacking: The attacker could use the access to hijack resources for their own purposes.\n4. **T1046** - Network Service Discovery: The attacker may discover other services running on the network.\n5. **T1005** - Data from Local System: The attacker could extract data from the local system.\n6. **T1069** - Permission Groups Discovery: The attacker may discover permission groups to escalate privileges.\n7. **T1136** - Create Account: The attacker could create accounts to maintain access.\n8. **T1083** - File and Directory Discovery: The attacker could explore the file system for sensitive information.\n9. **T1485** - Data Destruction: The attacker could potentially destroy data.\n10. **None**: Since not all vulnerabilities will have ten distinct secondary impacts, including a 'None' value is appropriate.\n\nBased on the analysis, the top 10 relevant attack techniques of type secondary_impact in descending order are:\n\n1. T1003\n2. T1557\n3. T1496\n4. T1046\n5. T1005\n6. T1069\n7. T1136\n8. T1083\n9. T1485\n10. None"
+    },
+    {
+        "target_cve": "CVE-2022-22948",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1087",
+            "T1213",
+            "T1046",
+            "T1083",
+            "T1082",
+            "T1078",
+            null
+        ],
+        "true labels": [
+            "T1068"
+        ],
+        "reasoning": "The vulnerability described allows a malicious actor to gain access to sensitive information due to improper file permissions. This could lead to various secondary impacts, such as:\n\n1. **Data from Local System (T1005)** - The attacker can access sensitive data stored on the local system.\n2. **OS Credential Dumping (T1003)** - The attacker may be able to extract credentials from the system.\n3. **Account Discovery (T1087)** - The attacker can identify user accounts on the system.\n4. **Data from Information Repositories (T1213)** - The attacker can access data stored in repositories.\n5. **Network Service Discovery (T1046)** - The attacker can discover network services running on the system.\n6. **File and Directory Discovery (T1083)** - The attacker can enumerate files and directories.\n7. **System Information Discovery (T1082)** - The attacker can gather information about the system configuration.\n8. **Valid Accounts (T1078)** - The attacker may exploit valid accounts to gain further access.\n9. **None** - In case there are not enough relevant techniques to fill the list.\n\nBased on the context of the vulnerability, the most relevant secondary impacts are likely to be those that involve accessing sensitive information and discovering system configurations. The techniques that fit this context are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2019-5591",
+        "predictions": [
+            "T1557",
+            "T1584",
+            "T1539",
+            "T1005",
+            "T1552",
+            "T1071",
+            "T1040",
+            "T1592",
+            "T1083",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "The vulnerability described allows an unauthenticated attacker to intercept sensitive information by impersonating the LDAP server. This implies that the attacker could potentially gain access to sensitive data, manipulate or exfiltrate it, or perform actions that could lead to further exploitation. \n\nBased on the context of the vulnerability, the following secondary impacts could be relevant:\n1. **T1584 - Compromise Infrastructure**: The attacker could compromise the infrastructure by gaining access to sensitive information.\n2. **T1557 - Adversary-in-the-Middle**: This technique is directly relevant as the attacker is impersonating the LDAP server, which is a classic man-in-the-middle attack.\n3. **T1539 - Steal Web Session Cookie**: If the attacker can intercept communications, they may also be able to steal session cookies.\n4. **T1005 - Data from Local System**: The attacker may access data from the local system as a result of the impersonation.\n5. **T1552 - Unsecured Credentials**: If the attacker can access unsecured credentials through the LDAP impersonation.\n6. **T1071 - Application Layer Protocol**: The attacker may exploit application layer protocols to further their access.\n7. **T1040 - Network Sniffing**: The attacker may perform network sniffing to gather more information.\n8. **T1592 - Gather Victim Host Information**: The attacker could gather information about the victim's host.\n9. **T1083 - File and Directory Discovery**: The attacker may discover files and directories on the compromised system.\n10. **None**: If there are no other relevant techniques, this can be included.\n\nBased on the analysis, the relevant secondary impacts can be ranked as follows:\n1. T1557\n2. T1584\n3. T1539\n4. T1005\n5. T1552\n6. T1071\n7. T1040\n8. T1592\n9. T1083\n10. None\n\nThus, the final output will be a list of these techniques in descending order."
+    },
+    {
+        "target_cve": "CVE-2014-7169",
+        "predictions": [
+            "T1003",
+            "T1496",
+            "T1486",
+            "T1556",
+            "T1048",
+            "T1557",
+            "T1078",
+            "T1555",
+            "T1505",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described (CVE-2014-6271), which allows remote attackers to execute arbitrary code via a crafted environment, the secondary impacts can include various techniques that an attacker might leverage after gaining initial access. Based on the context of the vulnerability and the examples provided, relevant secondary impacts could include techniques such as credential dumping, data exfiltration, and resource hijacking. \n\nAfter analyzing the available techniques, the following secondary impacts are relevant:\n1. **T1003** - OS Credential Dumping\n2. **T1496** - Resource Hijacking\n3. **T1486** - Data Encrypted for Impact\n4. **T1556** - Modify Authentication Process\n5. **T1048** - Exfiltration Over Alternative Protocol\n6. **T1557** - Adversary-in-the-Middle\n7. **T1078** - Valid Accounts\n8. **T1555** - Credentials from Password Stores\n9. **T1505** - Server Software Component\n10. **None** - Indicating no additional relevant techniques.\n\nThe techniques are ranked based on their relevance and potential impact following the exploitation of the vulnerability."
+    },
+    {
+        "target_cve": "CVE-2024-4358",
+        "predictions": [
+            "T1005",
+            "T1069",
+            "T1083",
+            "T1496",
+            "T1499",
+            "T1531",
+            "T1136",
+            "T1557",
+            "T1552",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The given vulnerability describes an authentication bypass in Progress Telerik Report Server, allowing an unauthenticated attacker to access restricted functionalities. This type of vulnerability can lead to various secondary impacts, such as unauthorized access to sensitive data, manipulation of server settings, or execution of further attacks. Based on the context of the vulnerability and the provided list of attack techniques, the relevant secondary impacts could include techniques that allow for data exfiltration, account manipulation, or system discovery. \n\nAfter analyzing the attack techniques, the following secondary impacts are identified as relevant:\n1. T1005 - Data from Local System\n2. T1069 - Permission Groups Discovery\n3. T1083 - File and Directory Discovery\n4. T1496 - Resource Hijacking\n5. T1499 - Endpoint Denial of Service\n6. T1531 - Account Access Removal\n7. T1136 - Create Account\n8. T1557 - Adversary-in-the-Middle\n9. T1552 - Unsecured Credentials\n10. None (indicating that there are no more relevant techniques)\n\nThese techniques are ranked based on their relevance to the vulnerability described."
+    },
+    {
+        "target_cve": "CVE-2022-22960",
+        "predictions": [
+            "T1003",
+            "T1041",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1556",
+            "T1557",
+            "T1078",
+            "T1068",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described involves privilege escalation due to improper permissions in VMware Workspace ONE Access, Identity Manager, and vRealize Automation. When a malicious actor can escalate privileges to 'root', they can potentially perform various actions that correspond to secondary impacts. Based on the context of privilege escalation, relevant secondary impact techniques may include actions like credential dumping, data exfiltration, and system discovery. \n\nAfter analyzing the provided attack techniques, the following secondary impact techniques are relevant:\n1. T1003 - OS Credential Dumping\n2. T1041 - Exfiltration Over C2 Channel\n3. T1486 - Data Encrypted for Impact\n4. T1496 - Resource Hijacking\n5. T1499 - Endpoint Denial of Service\n6. T1556 - Modify Authentication Process\n7. T1557 - Adversary-in-the-Middle\n8. T1078 - Valid Accounts\n9. T1068 - Exploitation for Privilege Escalation\n10. None (indicating no further relevant techniques)\n\nThe techniques are ranked based on their relevance to the privilege escalation context and potential actions an attacker could take after gaining root access."
+    },
+    {
+        "target_cve": "CVE-2018-4878",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1486",
+            "T1553",
+            "T1059",
+            "T1070",
+            "T1557",
+            "T1078",
+            "T1489",
+            null
+        ],
+        "true labels": [
+            "T1041"
+        ],
+        "reasoning": "Given the vulnerability description of a use-after-free vulnerability in Adobe Flash Player that can lead to arbitrary code execution, we need to identify the secondary impacts that can result from such an exploitation. The potential secondary impacts typically involve actions that an attacker can take after gaining control over the system, such as data exfiltration, privilege escalation, or further exploitation of the network or system resources.\n\nFrom the provided list of attack techniques, we can identify the following relevant secondary impacts that could be associated with this vulnerability:\n1. **T1005** - Data from Local System: This technique involves accessing data from the compromised system.\n2. **T1496** - Resource Hijacking: This technique involves taking control of system resources for malicious purposes.\n3. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to extort the victim.\n4. **T1553** - Subvert Trust Controls: This technique involves manipulating trust relationships to gain further access.\n5. **T1059** - Command and Scripting Interpreter: This technique involves executing commands on the system.\n6. **T1070** - Indicator Removal: This technique involves removing traces of the attack.\n7. **T1557** - Adversary-in-the-Middle: This technique involves intercepting communications.\n8. **T1078** - Valid Accounts: This technique involves using valid credentials to maintain access.\n9. **T1489** - Service Stop: This technique involves stopping services to disrupt operations.\n\nSince we have identified more than ten techniques, we will select the top nine based on relevance and include 'None' as the tenth entry to indicate that there are no additional techniques to list."
+    },
+    {
+        "target_cve": "CVE-2022-20700",
+        "predictions": [
+            "T1005",
+            "T1489",
+            "T1496",
+            "T1556",
+            "T1557",
+            "T1003",
+            "T1068",
+            "T1040",
+            "T1552",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described in the Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers, the secondary impacts include various potential actions an attacker could take after exploiting the vulnerabilities. Given the nature of the vulnerabilities, which include executing arbitrary code, elevating privileges, and bypassing authentication, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: This technique is relevant as the attacker could access sensitive data from the router's local system.\n2. **T1489** - Service Stop: An attacker could potentially stop services, leading to denial of service.\n3. **T1496** - Resource Hijacking: This could involve taking control of resources for malicious purposes.\n4. **T1556** - Modify Authentication Process: The attacker could alter authentication mechanisms.\n5. **T1557** - Adversary-in-the-Middle: This could be applicable if the attacker can intercept communications.\n6. **T1003** - OS Credential Dumping: The attacker might extract credentials from the system.\n7. **T1068** - Exploitation for Privilege Escalation: This is relevant as the vulnerabilities allow for privilege escalation.\n8. **T1040** - Network Sniffing: The attacker could monitor network traffic.\n9. **T1552** - Unsecured Credentials: The attacker might exploit unsecured credentials.\n10. **None**: Given the context, it is also appropriate to include an empty label indicating that there may not be additional relevant techniques beyond those listed.\n\nThus, the top 10 secondary impact techniques, ranked in descending order, are:\n['T1005', 'T1489', 'T1496', 'T1556', 'T1557', 'T1003', 'T1068', 'T1040', 'T1552', None]"
+    },
+    {
+        "target_cve": "CVE-2015-3043",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1555",
+            "T1557",
+            "T1078",
+            "T1041",
+            "T1068",
+            "T1480",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The provided vulnerability description indicates that Adobe Flash Player allows attackers to execute arbitrary code or cause a denial of service through unspecified vectors. This type of vulnerability typically leads to various secondary impacts, such as data exfiltration, system compromise, or further exploitation of the affected system. Based on the context of similar vulnerabilities and their associated secondary impacts, the following techniques are relevant:\n\n1. **T1005** - Data from Local System: This technique is commonly used when an attacker gains access to a system and seeks to extract sensitive information.\n2. **T1486** - Data Encrypted for Impact: This technique may be employed if an attacker seeks to encrypt data to prevent access or to extort the victim.\n3. **T1496** - Resource Hijacking: This technique can be relevant if the attacker uses the compromised system's resources for their own purposes.\n4. **T1555** - Credentials from Password Stores: If the attacker gains access to the system, they may attempt to extract stored credentials.\n5. **T1557** - Adversary-in-the-Middle: This technique could be used if the attacker wants to intercept communications.\n6. **T1078** - Valid Accounts: If the attacker exploits the vulnerability, they may create or use valid accounts to maintain access.\n7. **T1041** - Exfiltration Over C2 Channel: This technique is relevant if the attacker sends data back to their command and control server.\n8. **T1068** - Exploitation for Privilege Escalation: This technique may be used if the attacker seeks to escalate their privileges after initial access.\n9. **T1480** - Execution Guardrails: This technique could be relevant if the attacker sets up conditions to ensure their malicious code runs under specific circumstances.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top 10 techniques relevant to the secondary impact of the vulnerability are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2022-41033",
+        "predictions": [
+            "T1003",
+            "T1489",
+            "T1490",
+            "T1486",
+            "T1070",
+            "T1553",
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability \"Windows COM+ Event System Service Elevation of Privilege Vulnerability,\" we need to identify the secondary impacts based on the attack techniques provided. The secondary impacts typically involve actions that an attacker can take after exploiting the vulnerability, such as credential dumping, data exfiltration, or gaining further access to the system.\n\nUpon reviewing the provided attack techniques, the following secondary impacts are relevant:\n1. **T1003** - OS Credential Dumping\n2. **T1489** - Service Stop\n3. **T1490** - Inhibit System Recovery\n4. **T1486** - Data Encrypted for Impact\n5. **T1070** - Indicator Removal\n6. **T1553** - Subvert Trust Controls\n\nThese techniques represent actions that can be taken after the initial exploitation of the vulnerability. Since there are only six relevant secondary impacts identified, I will include 'None' to fill the remaining slots to make a total of ten.\n\nThus, the final list of secondary impact techniques in descending order is:\n1. T1003\n2. T1489\n3. T1490\n4. T1486\n5. T1070\n6. T1553\n7. None\n8. None\n9. None\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-7024",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1557",
+            "T1552",
+            "T1003",
+            "T1554",
+            "T1070",
+            "T1068",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described is a heap buffer overflow in WebRTC in Google Chrome, which allows a remote attacker to potentially exploit heap corruption via a crafted HTML page. The primary impact of such an exploitation typically involves executing arbitrary code, which can lead to various secondary impacts. \n\nBased on the context of similar vulnerabilities and their associated secondary impacts, the following attack techniques are relevant:\n1. **T1005** - Data from Local System: This technique involves accessing sensitive data from the local system after gaining control.\n2. **T1486** - Data Encrypted for Impact: This technique can be used to encrypt data to prevent access or to extort victims.\n3. **T1496** - Resource Hijacking: This technique involves taking control of resources for malicious purposes.\n4. **T1557** - Adversary-in-the-Middle: This technique allows an attacker to intercept communications.\n5. **T1552** - Unsecured Credentials: This technique involves accessing credentials that are not properly secured.\n6. **T1003** - OS Credential Dumping: This technique is used to extract credentials from the operating system.\n7. **T1554** - Compromise Client Software Binary: This technique involves modifying client software to gain unauthorized access.\n8. **T1070** - Indicator Removal: This technique is used to erase traces of the attack.\n9. **T1068** - Exploitation for Privilege Escalation: This technique allows an attacker to gain higher privileges.\n10. **None**: In cases where no relevant secondary impacts are identified, this would be used.\n\nGiven the context of the vulnerability and the potential impacts, the top 10 techniques, ranked in descending order, are as follows."
+    },
+    {
+        "target_cve": "CVE-2024-23692",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1496",
+            "T1486",
+            "T1499",
+            "T1559",
+            "T1557",
+            "T1550",
+            "T1552",
+            null
+        ],
+        "true labels": [
+            "T1005",
+            "T1496",
+            "T1105"
+        ],
+        "reasoning": "For the given vulnerability regarding the Rejetto HTTP File Server's template injection vulnerability, the primary impact is the ability to execute arbitrary commands on the affected system. This can lead to various secondary impacts, such as data exfiltration, credential dumping, and system manipulation. \n\nBased on the context of the vulnerability and the nature of the attack, the following secondary impacts are relevant:\n1. **T1005** - Data from Local System: The attacker can access files and data on the compromised system.\n2. **T1003** - OS Credential Dumping: The attacker may be able to extract credentials from the operating system.\n3. **T1496** - Resource Hijacking: The attacker could potentially hijack system resources for their own use.\n4. **T1486** - Data Encrypted for Impact: The attacker could encrypt data to extort the victim.\n5. **T1499** - Endpoint Denial of Service: The attacker could cause a denial of service on the endpoint.\n6. **T1559** - Inter-Process Communication: The attacker may utilize IPC to communicate with other processes.\n7. **T1557** - Adversary-in-the-Middle: The attacker could intercept communications.\n8. **T1550** - Use Alternate Authentication Material: The attacker may exploit alternate authentication methods.\n9. **T1552** - Unsecured Credentials: The attacker could access unsecured credentials.\n10. **None**: If there are fewer than ten relevant techniques, we can include a 'None' to fill the list.\n\nBased on the analysis, the top relevant secondary impact techniques are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2022-28810",
+        "predictions": [
+            "T1003",
+            "T1070",
+            "T1136",
+            "T1573",
+            "T1560",
+            "T1047",
+            "T1505",
+            "T1087",
+            "T1562",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described, the relevant secondary impacts include the potential actions an attacker can take after exploiting the vulnerability. Based on the provided examples and the context of the vulnerability, the following secondary impacts are identified: \n\n1. **T1003** - OS Credential Dumping: This technique is relevant as the attacker may gain access to sensitive credentials after executing arbitrary commands.\n2. **T1070** - Indicator Removal: The attacker may attempt to cover their tracks after gaining access.\n3. **T1136** - Create Account: The attacker may create new accounts to maintain access.\n4. **T1573** - Encrypted Channel: This could be used to secure communications after gaining access.\n5. **T1560** - Archive Collected Data: The attacker may collect and archive data from the compromised system.\n6. **T1047** - Windows Management Instrumentation: This technique may be leveraged for further actions on the system.\n7. **T1505** - Server Software Component: The attacker may manipulate server components.\n8. **T1087** - Account Discovery: The attacker may look for accounts to exploit further.\n9. **T1562** - Impair Defenses: The attacker may disable security measures.\n10. **None**: This is included to meet the requirement of having ten entries.\n\nThe techniques are ranked based on their relevance and potential impact following the exploitation of the vulnerability."
+    },
+    {
+        "target_cve": "CVE-2013-0631",
+        "predictions": [
+            "T1005",
+            "T1552",
+            "T1584",
+            "T1539",
+            "T1557",
+            "T1003",
+            "T1114",
+            "T1069",
+            "T1592",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for Adobe ColdFusion versions 9.0, 9.0.1, and 9.0.2, which allows attackers to obtain sensitive information, we need to identify the secondary impact techniques that could result from exploiting this vulnerability. The context suggests that the exploitation could lead to various impacts, such as data exfiltration, credential dumping, or other malicious activities that could leverage the sensitive information obtained.\n\nFrom the provided list of attack techniques, the following secondary impacts are relevant:\n1. **T1005** - Data from Local System: This technique is relevant as attackers may access sensitive data stored on the system.\n2. **T1552** - Unsecured Credentials: If sensitive information includes credentials, this technique is applicable.\n3. **T1584** - Compromise Infrastructure: This could be a potential secondary impact if the attacker uses the information to compromise further infrastructure.\n4. **T1539** - Steal Web Session Cookie: If the sensitive information includes session cookies, this technique is relevant.\n5. **T1557** - Adversary-in-the-Middle: This could be a potential technique if the attacker uses the information to intercept communications.\n6. **T1003** - OS Credential Dumping: If the sensitive information includes credentials, this technique is applicable.\n7. **T1114** - Email Collection: If the sensitive information includes email addresses, this could be a potential impact.\n8. **T1069** - Permission Groups Discovery: This could be relevant if the attacker uses the information to discover user permissions.\n9. **T1592** - Gather Victim Host Information: This could be relevant as attackers may gather more information about the host.\n10. **None**: If no other techniques are applicable, we can include a 'None' value.\n\nBased on the analysis, the top 10 techniques in descending order of relevance are:\n1. T1005\n2. T1552\n3. T1584\n4. T1539\n5. T1557\n6. T1003\n7. T1114\n8. T1069\n9. T1592\n10. None"
+    },
+    {
+        "target_cve": "CVE-2022-20701",
+        "predictions": [
+            "T1005",
+            "T1489",
+            "T1490",
+            "T1486",
+            "T1070",
+            "T1553",
+            "T1557",
+            "T1558",
+            "T1552",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described, the secondary impacts include various potential actions that an attacker can take after exploiting the vulnerabilities in the Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers. The relevant attack techniques that correspond to these secondary impacts include:\n\n1. **T1005** - Data from Local System: This technique allows an attacker to gather data from the local system after gaining access.\n2. **T1489** - Service Stop: This technique involves stopping services, which can lead to denial of service.\n3. **T1490** - Inhibit System Recovery: This technique can prevent recovery options from being utilized, further compromising the system.\n4. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to prevent access, which can be a method of extortion.\n5. **T1070** - Indicator Removal: This technique allows an attacker to remove traces of their activities, making detection harder.\n6. **T1553** - Subvert Trust Controls: This technique can be used to manipulate trust relationships, allowing further exploitation.\n7. **T1557** - Adversary-in-the-Middle: This technique allows an attacker to intercept communications, potentially leading to further exploits.\n8. **T1558** - Steal or Forge Kerberos Tickets: This technique can be used to impersonate users and gain unauthorized access.\n9. **T1552** - Unsecured Credentials: This technique involves exploiting unsecured credentials to gain further access.\n10. **None**: Since there are fewer than ten relevant techniques, we include a 'None' value to fill the list.\n\nBased on the analysis, the top 10 relevant attack techniques for the secondary impact of the given vulnerability are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2023-49897",
+        "predictions": [
+            "T1005",
+            "T1486",
+            "T1496",
+            "T1555",
+            "T1078",
+            "T1557",
+            "T1068",
+            "T1489",
+            "T1499",
+            null
+        ],
+        "true labels": [
+            "T1498"
+        ],
+        "reasoning": "The OS command injection vulnerability allows an attacker to execute arbitrary commands on the system. This can lead to various secondary impacts, such as data exfiltration, credential dumping, and potentially gaining further control over the system. Based on the context of OS command injection, relevant secondary impacts could include:\n\n1. **T1005** - Data from Local System: The attacker can access sensitive data from the local system.\n2. **T1486** - Data Encrypted for Impact: The attacker may encrypt data to prevent access.\n3. **T1496** - Resource Hijacking: The attacker can hijack system resources for malicious purposes.\n4. **T1555** - Credentials from Password Stores: The attacker may retrieve stored credentials.\n5. **T1078** - Valid Accounts: The attacker may create or manipulate user accounts.\n6. **T1557** - Adversary-in-the-Middle: The attacker can intercept communications.\n7. **T1068** - Exploitation for Privilege Escalation: The attacker may escalate privileges.\n8. **T1489** - Service Stop: The attacker may stop services to disrupt operations.\n9. **T1499** - Endpoint Denial of Service: The attacker may cause a denial of service.\n10. **None**: If there are not enough relevant techniques, we can include a placeholder for an empty label.\n\nGiven the nature of the vulnerability, the most relevant techniques are ranked based on their potential impact and likelihood of being exploited following the initial command injection."
+    },
+    {
+        "target_cve": "CVE-2022-41082",
+        "predictions": [
+            "T1005",
+            "T1003",
+            "T1496",
+            "T1136",
+            "T1489",
+            "T1486",
+            "T1557",
+            "T1555",
+            "T1554",
+            null
+        ],
+        "true labels": [
+            "T1567",
+            "T1482",
+            "T1087",
+            "T1505"
+        ],
+        "reasoning": "For the vulnerability \"Microsoft Exchange Server Remote Code Execution Vulnerability,\" we need to identify the secondary impact techniques associated with it. Based on the provided examples, we can see that similar vulnerabilities often lead to impacts such as data exfiltration, credential dumping, and account manipulation. \n\nFrom the examples of labeled vulnerabilities, we can infer that common secondary impacts for remote code execution vulnerabilities include:\n- Data from Local System (T1005)\n- OS Credential Dumping (T1003)\n- Resource Hijacking (T1496)\n- Create Account (T1136)\n- Service Stop (T1489)\n- Data Encrypted for Impact (T1486)\n\nGiven the context of the Microsoft Exchange Server vulnerability, it is likely that the secondary impacts would include techniques related to credential access and data manipulation. \n\nAfter analyzing the context and examples, the top 10 relevant secondary impact techniques for this vulnerability are:\n1. T1005 - Data from Local System\n2. T1003 - OS Credential Dumping\n3. T1496 - Resource Hijacking\n4. T1136 - Create Account\n5. T1489 - Service Stop\n6. T1486 - Data Encrypted for Impact\n7. T1557 - Adversary-in-the-Middle\n8. T1555 - Credentials from Password Stores\n9. T1554 - Compromise Client Software Binary\n10. None (indicating that there may not be enough techniques to fill all 10 slots)\n\nThus, the final list will include these techniques in descending order of relevance."
+    },
+    {
+        "target_cve": "CVE-2021-31207",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1555",
+            "T1078",
+            "T1068",
+            "T1505",
+            "T1559",
+            "T1554",
+            "T1485",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The Microsoft Exchange Server Security Feature Bypass Vulnerability can lead to various secondary impacts once exploited. Based on the context of similar vulnerabilities and the attack techniques available, the following secondary impacts are relevant:\n\n1. **T1005 - Data from Local System**: This technique is often used to gather sensitive information from the compromised system.\n2. **T1496 - Resource Hijacking**: This technique can be employed to take control of resources for malicious purposes.\n3. **T1555 - Credentials from Password Stores**: This technique allows attackers to extract stored credentials, which can be critical for further exploitation.\n4. **T1078 - Valid Accounts**: This technique indicates the use of valid accounts to maintain access or escalate privileges.\n5. **T1068 - Exploitation for Privilege Escalation**: This technique can be used to gain higher privileges on the system.\n6. **T1505 - Server Software Component**: This technique can be relevant as it involves manipulating server components.\n7. **T1559 - Inter-Process Communication**: This technique can be used to communicate between processes for further exploitation.\n8. **T1554 - Compromise Client Software Binary**: This technique can be used to manipulate client software for malicious purposes.\n9. **T1485 - Data Destruction**: This technique can be used to destroy data as a form of sabotage.\n10. **None**: In case there are not enough relevant techniques, this serves as a placeholder.\n\nBased on the analysis, the top 10 techniques related to secondary impacts for this vulnerability are ranked as follows:\n\n1. T1005\n2. T1496\n3. T1555\n4. T1078\n5. T1068\n6. T1505\n7. T1559\n8. T1554\n9. T1485\n10. None"
+    },
+    {
+        "target_cve": "CVE-2023-33246",
+        "predictions": [
+            "T1005",
+            "T1496",
+            "T1499",
+            "T1486",
+            "T1070",
+            "T1553",
+            "T1552",
+            "T1003",
+            "T1068",
+            null
+        ],
+        "true labels": [
+            "T1608"
+        ],
+        "reasoning": "Given the vulnerability description for RocketMQ versions 5.1.0 and below, the secondary impacts of the exploitation include potential actions an attacker could take after gaining remote command execution capabilities. The attacker can manipulate the system, access sensitive data, or disrupt services. Based on the context of the vulnerability and the provided attack techniques, the following secondary impacts are relevant:\n\n1. **T1005** - Data from Local System: The attacker can access sensitive data from the system.\n2. **T1496** - Resource Hijacking: The attacker can hijack system resources for their own use.\n3. **T1499** - Endpoint Denial of Service: The attacker can cause a denial of service to the endpoint.\n4. **T1486** - Data Encrypted for Impact: The attacker can encrypt data to disrupt operations.\n5. **T1070** - Indicator Removal: The attacker may remove indicators of compromise to hide their actions.\n6. **T1553** - Subvert Trust Controls: The attacker can manipulate trust controls within the system.\n7. **T1552** - Unsecured Credentials: The attacker may exploit unsecured credentials to further their access.\n8. **T1003** - OS Credential Dumping: The attacker can dump credentials from the operating system.\n9. **T1068** - Exploitation for Privilege Escalation: The attacker may escalate privileges after initial access.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top 10 secondary impact techniques are ranked as follows."
+    }
+]

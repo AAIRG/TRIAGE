@@ -1,0 +1,184 @@
+{
+  "metainfo": "OpenAI o3 model is used to generate description entries",
+  "items": [
+    {
+      "affected_object": "Internet-facing Host/System",
+      "description": "An Internet-facing host is any system that provides a doorway from the open Internet into your infrastructure.",
+      "examples": [
+        "webserver",
+        "website",
+        "database",
+        "service"
+      ],
+      "details": [
+        {
+          "sublabel": null,
+          "exploitation_technique": [
+            "T1190",
+            "T1211"
+          ],
+          "example_impact": null,
+          "notes": "Adversaries may attempt to exploit a weakness in an Internet-facing host or system, which may be a software bug, temporary glitch, or misconfiguration. Depending on the flaw being exploited, this may also involve Exploitation for Defense Evasion."
+        }
+      ]
+    },
+    {
+      "affected_object": "Client Application",
+      "description": "Locally executed, user-facing software that initiates connections or processes externally supplied data.",
+      "examples": [
+        "browser",
+        "office app"
+      ],
+      "details": [
+        {
+          "sublabel": "alternative_1",
+          "exploitation_technique": [
+            "T1203"
+          ],
+          "example_impact": [
+            "T1574"
+          ],
+          "notes": "Adversaries may exploit software vulnerabilities in client applications to execute code. For example, an application that fails to properly handle objects in memory may allow an adversary to run arbitrary code in the context of the current user."
+        },
+        {
+          "sublabel": "alternative_2",
+          "exploitation_technique": [
+            "T1204.001"
+          ],
+          "example_impact": [
+            "T1203"
+          ],
+          "notes": "A user clicking a link may lead to other execution techniques such as exploitation of a browser or application vulnerability via Exploitation for Client Execution."
+        },
+        {
+          "sublabel": "alternative_3",
+          "exploitation_technique": [
+            "T1204.002"
+          ],
+          "example_impact": [
+            "T1203"
+          ],
+          "notes": "Malware may be written to compromise a vulnerable client application (the malware is executed by a user)."
+        },
+        {
+          "sublabel": "alternative_4",
+          "exploitation_technique": [
+            "T1189"
+          ],
+          "example_impact": null,
+          "notes": "Vulnerable web browsers are targets of drive-by compromises."
+        }
+      ]
+    },
+    {
+      "affected_object": "Endpoint Security Solution",
+      "description": "An endpoint security solution is host-based defensive software—such as traditional anti-virus, next-generation AV, EDR (Endpoint Detection & Response), or a host-based IDS/IPS—that monitors activity on the local system to prevent, detect, and respond to malicious behavior.",
+      "examples": [
+        "host-based firewall",
+        "AV software"
+      ],
+      "details": [
+        {
+          "sublabel": null,
+          "exploitation_technique": [
+            "T1204.002",
+            "T1204.001",
+            "T1566.001",
+            "T1566.002",
+            "T1566.003"
+          ],
+          "example_impact": [
+            "T1203"
+          ],
+          "notes": "Vulnerable endpoint security solutions may enable users to execute malicious files (received as email attachments or via malicious links)."
+        }
+      ]
+    },
+    {
+      "affected_object": "Network-based Application",
+      "description": "A server or service software that listens on the network to deliver functional capabilities (web, database, directory, SCADA, etc.) to other computers.",
+      "examples": null,
+      "details": [
+        {
+          "exploitation_technique": [
+            "T1040",
+            "T1059"
+          ],
+          "example_impact": [
+            "T1574"
+          ],
+          "notes": "Adversaries may sniff network traffic to capture insecure/unencrypted credentials. Adversaries may also execute commands and compromise an application through an interactive terminal or shell."
+        }
+      ]
+    },
+    {
+      "affected_object": "Operating System",
+      "description": "An operating system (OS) is the fundamental system software that sits between a computer’s hardware and every program a user runs.  It orchestrates all hardware resources, offers common services to applications, and provides the human-and-machine interfaces that let people and programs actually use the computer.",
+      "examples": [
+        "Kernel",
+        "shell"
+      ],
+      "details": [
+        {
+          "sublabel": "alternative_1",
+          "exploitation_technique": [
+            "T1574"
+          ],
+          "example_impact": [
+            "T1499.004"
+          ],
+          "notes": "Vulnerabilities in the kernel, such as a race condition, can be exploited to elevate privilege or crash the system (DoS)."
+        },
+        {
+          "sublabel": "alternative_2",
+          "exploitation_technique": [
+            "T1091"
+          ],
+          "example_impact": null,
+          "notes": "An operating system vulnerability may allow code execution from removable media (even without Autorun enabled)."
+        }
+      ]
+    },
+    {
+      "affected_object": "Internal Remote Service",
+      "description": "Any network-accessible service that allows a user or process on one host to authenticate to, and execute actions on, another host inside the organization’s private network.",
+      "examples": [
+        "smb",
+        "netlogon",
+        "print spooler"
+      ],
+      "details": [
+        {
+          "sublabel": null,
+          "exploitation_technique": [
+            "T1210"
+          ],
+          "example_impact": [
+            "T1068"
+          ],
+          "notes": "Once inside a network, adversaries may exploit remote services to gain unauthorized access to other internal systems."
+        }
+      ]
+    },
+    {
+      "affected_object": "External Remote Service",
+      "description": "A network-accessible service that lets users authenticate from the public Internet (or any untrusted network) into an organization’s environment and then interact with internal resources.",
+      "examples": [
+        "vpn",
+        "service",
+        "software"
+      ],
+      "details": [
+        {
+          "sublabel": null,
+          "exploitation_technique": [
+            "T1078",
+            "T1133"
+          ],
+          "example_impact": null,
+          "notes": "Adversaries may leverage external-facing remote services to initially access and/or persist within a network."
+        }
+      ]
+    }
+  ]
+}

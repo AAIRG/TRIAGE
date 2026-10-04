@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1499",
+            "T1071",
+            "T1543",
+            "T1070",
+            "T1584",
+            "T1005",
+            "T1562",
+            "T1486",
+            "T1505",
+            null
+        ],
+        "true labels": [
+            "T1499"
+        ],
+        "reasoning": "For the D-Link DIR-820L vulnerability, which allows remote command execution (RCE), the secondary impacts can include various actions that an attacker can perform after gaining access. Based on the context of similar vulnerabilities and the potential actions an attacker could take, the following secondary impact techniques are relevant:\n\n1. **T1499** - Endpoint Denial of Service: An attacker could exploit the RCE to cause a denial of service on the device.\n2. **T1071** - Application Layer Protocol: The attacker could use the compromised device to communicate over application layer protocols.\n3. **T1543** - Create or Modify System Process: The attacker may create or modify processes on the device.\n4. **T1070** - Indicator Removal: The attacker could attempt to remove traces of their activities.\n5. **T1584** - Compromise Infrastructure: The attacker could use the compromised device to further compromise other systems.\n6. **T1005** - Data from Local System: The attacker could extract data from the local system.\n7. **T1562** - Impair Defenses: The attacker could disable security measures on the device.\n8. **T1486** - Data Encrypted for Impact: The attacker could encrypt data to extort the victim.\n9. **T1505** - Server Software Component: The attacker could manipulate server components.\n10. **None**: If there are no more relevant techniques, we can include an empty label.\n\nBased on the analysis, the top 10 secondary impact techniques are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1005",
+            "T1592",
+            "T1003",
+            "T1078",
+            "T1486",
+            "T1489",
+            "T1496",
+            "T1046",
+            "T1069",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "For the vulnerability described, the secondary impacts could include various techniques that an attacker might use after gaining access to restricted directories. Given the context of unauthorized access to sensitive directories, potential secondary impacts may involve actions like gathering sensitive information, manipulating data, or further exploiting the system. \n\nBased on the provided attack techniques, the following techniques are relevant for the secondary impact:\n1. **T1005** - Data from Local System: This technique allows attackers to gather sensitive information from the local system.\n2. **T1592** - Gather Victim Host Information: This technique allows attackers to collect information about the victim's host.\n3. **T1003** - OS Credential Dumping: This technique allows attackers to extract credentials from the operating system.\n4. **T1078** - Valid Accounts: This technique allows attackers to use valid accounts for further exploitation.\n5. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to prevent access or to extort victims.\n6. **T1489** - Service Stop: This technique involves stopping services to disrupt operations.\n7. **T1496** - Resource Hijacking: This technique allows attackers to hijack resources for their own use.\n8. **T1046** - Network Service Discovery: This technique allows attackers to discover network services for further exploitation.\n9. **T1069** - Permission Groups Discovery: This technique allows attackers to discover permission groups to escalate privileges.\n10. **None**: Since there may not be enough techniques to fill all ten slots, we can include a 'None' value.\n\nThus, the ranked list of secondary impact techniques is:\n['T1005', 'T1592', 'T1003', 'T1078', 'T1486', 'T1489', 'T1496', 'T1046', 'T1069', None]."
+    }
+]

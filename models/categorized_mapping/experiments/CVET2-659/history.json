@@ -1,0 +1,36 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1496",
+            "T1499",
+            "T1068",
+            "T1059",
+            "T1078",
+            "T1486",
+            "T1556",
+            "T1552",
+            "T1071",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The Windows DWM Core Library Elevation of Privilege Vulnerability allows an attacker to gain elevated privileges on a Windows system. This typically leads to various secondary impacts that can be exploited by the attacker. Based on the context of similar vulnerabilities and the attack techniques provided, the following secondary impacts are relevant:\n\n1. **T1496 - Resource Hijacking**: The attacker can utilize the elevated privileges to hijack system resources.\n2. **T1499 - Endpoint Denial of Service**: The attacker may cause a denial of service on the endpoint.\n3. **T1068 - Exploitation for Privilege Escalation**: This is a direct follow-up from the initial elevation of privilege.\n4. **T1059 - Command and Scripting Interpreter**: The attacker can execute commands using the elevated privileges.\n5. **T1078 - Valid Accounts**: The attacker may create or manipulate accounts with elevated privileges.\n6. **T1486 - Data Encrypted for Impact**: The attacker could encrypt data to extort the victim.\n7. **T1556 - Modify Authentication Process**: The attacker may modify authentication mechanisms.\n8. **T1552 - Unsecured Credentials**: The attacker can access unsecured credentials.\n9. **T1071 - Application Layer Protocol**: The attacker can exploit application layer protocols using the elevated privileges.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the analysis, the top 10 techniques relevant to the secondary impact of this vulnerability are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1496",
+            "T1499",
+            "T1565",
+            "T1041",
+            "T1059",
+            "T1005",
+            "T1003",
+            "T1068",
+            "T1078",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "To identify the relevant attack techniques of type secondary_impact for the given vulnerability, we analyze the nature of the vulnerability described. The vulnerability allows a remote attacker to execute commands on the host by manipulating the input stream. This indicates that the attacker can potentially gain control over the system and perform various malicious actions.\n\nBased on the examples provided, we can infer that secondary impacts often include techniques related to resource hijacking, denial of service, credential dumping, and other actions that can be performed after gaining initial access.\n\nFrom the examples of labeled vulnerabilities, we can see that common secondary impacts include:\n- Resource Hijacking (T1496)\n- Endpoint Denial of Service (T1499)\n- Data Manipulation (T1565)\n- Exfiltration Over C2 Channel (T1041)\n- Command and Scripting Interpreter (T1059)\n\nGiven the context of the vulnerability, the following techniques are likely relevant:\n1. T1496 - Resource Hijacking\n2. T1499 - Endpoint Denial of Service\n3. T1565 - Data Manipulation\n4. T1041 - Exfiltration Over C2 Channel\n5. T1059 - Command and Scripting Interpreter\n6. T1005 - Data from Local System\n7. T1003 - OS Credential Dumping\n8. T1068 - Exploitation for Privilege Escalation\n9. T1078 - Valid Accounts\n10. None (indicating no additional relevant techniques)\n\nThus, the top 10 techniques in descending order, including the empty label, would be:\n['T1496', 'T1499', 'T1565', 'T1041', 'T1059', 'T1005', 'T1003', 'T1068', 'T1078', None]"
+    }
+]

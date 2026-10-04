@@ -1,0 +1,22 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068",
+            "T1190"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described as \"Windows DWM Core Library Elevation of Privilege Vulnerability\" suggests that it allows an attacker to gain elevated privileges on a Windows system. Given that the attack involves exploiting a vulnerability in a core Windows component, the relevant exploitation techniques would typically include those that allow for privilege escalation or exploitation of public-facing applications. \n\nIn this case, the most relevant attack techniques for exploitation would be:\n- **T1068**: Exploitation for Privilege Escalation, as the vulnerability allows for elevation of privilege.\n- **T1190**: Exploit Public-Facing Application, as it may also be applicable if the vulnerability can be exploited through an application interface.\n\nThus, the relevant attack techniques of type exploitation_technique for this vulnerability would be ['T1068', 'T1190']."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190",
+            "T1059"
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described indicates that a remote attacker can exploit the XStream library by manipulating the processed input stream, which suggests that it can be exploited through a public-facing application. The attack techniques relevant to this type of exploitation include the exploitation of public-facing applications, which is represented by the attack ID T1190. Since the vulnerability allows for command execution due to improper handling of input, it aligns with the exploitation techniques that involve executing commands or scripts, which can be represented by T1059 (Command and Scripting Interpreter). Therefore, the relevant attack techniques for this vulnerability are T1190 and T1059."
+    }
+]

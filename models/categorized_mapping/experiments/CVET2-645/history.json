@@ -1,0 +1,36 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1003",
+            "T1059",
+            "T1486",
+            "T1496",
+            "T1565",
+            "T1078",
+            "T1048",
+            "T1499",
+            "T1552",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The Windows DWM Core Library Elevation of Privilege Vulnerability allows an attacker to gain elevated privileges on a Windows system. This can lead to various secondary impacts, such as credential dumping, data manipulation, and unauthorized access to sensitive information. Based on the context of similar vulnerabilities and the nature of the exploitation, the following attack techniques are relevant for secondary impacts:\n\n1. **T1003** - OS Credential Dumping: This technique is commonly used after gaining elevated privileges to extract credentials from the operating system.\n2. **T1059** - Command and Scripting Interpreter: This technique allows the attacker to execute commands and scripts, which can be used for further exploitation.\n3. **T1486** - Data Encrypted for Impact: This technique involves encrypting data to prevent access, often used as a part of ransomware attacks.\n4. **T1496** - Resource Hijacking: This technique can be employed to utilize compromised resources for malicious purposes.\n5. **T1565** - Data Manipulation: This technique allows an attacker to alter data, which can be critical after gaining elevated privileges.\n6. **T1078** - Valid Accounts: This technique can be used to maintain access to the system by leveraging valid accounts.\n7. **T1048** - Exfiltration Over Alternative Protocol: This technique can be used to exfiltrate data after gaining access.\n8. **T1499** - Endpoint Denial of Service: This technique can be used to disrupt services on the endpoint.\n9. **T1552** - Unsecured Credentials: This technique can be used to exploit unsecured credentials found on the system.\n10. **None**: In cases where no relevant secondary impacts are identified, this label can be used.\n\nBased on the analysis, the top 10 techniques relevant to the secondary impact of this vulnerability are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1003",
+            "T1048",
+            "T1486",
+            "T1496",
+            "T1552",
+            "T1565",
+            "T1557",
+            "T1558",
+            "T1564",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for XStream, it allows a remote attacker to execute commands on the host by manipulating the processed input stream. This indicates that the primary impact could involve gaining unauthorized access or control over the system, which can lead to various secondary impacts. \n\nBased on the context of the vulnerability, the following secondary impacts are relevant:\n1. **T1003 (OS Credential Dumping)** - The attacker may gain access to credentials stored on the system.\n2. **T1048 (Exfiltration Over Alternative Protocol)** - The attacker could exfiltrate data using non-standard protocols.\n3. **T1486 (Data Encrypted for Impact)** - The attacker might encrypt data to hold it hostage.\n4. **T1496 (Resource Hijacking)** - The attacker could hijack system resources for their own use.\n5. **T1552 (Unsecured Credentials)** - The attacker may exploit unsecured credentials.\n6. **T1565 (Data Manipulation)** - The attacker could manipulate data on the system.\n7. **T1557 (Adversary-in-the-Middle)** - The attacker could intercept communications.\n8. **T1558 (Steal or Forge Kerberos Tickets)** - The attacker could forge authentication tokens.\n9. **T1564 (Hide Artifacts)** - The attacker may attempt to hide their actions on the system.\n10. **None** - This indicates that there are no additional relevant techniques.\n\nBased on the analysis, the top 10 secondary impact techniques are ranked accordingly."
+    }
+]

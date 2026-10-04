@@ -1,0 +1,27 @@
+The vulnerability CVE-2018-15444 allows an authenticated, remote attacker to gain read and write access due to improper handling of XML External Entity (XXE) inputs. The attacker requires user interaction to import a malicious XML file, which necessitates user execution techniques. Given the context of this CVE, relevant attack techniques for exploitation could involve user execution scenarios such as opening a crafted XML file or similar exploitations that involve social engineering or malicious file execution. The relevant techniques include 'User Execution: Malicious File' (T1204.002), as it directly relates to convincing a user to open a harmful document that can exploit the vulnerability. Additionally, 'Exploitation for Client Execution' (T1203) can also be relevant since this vulnerability can lead to executed code through client-side applications after the malformed XML file is processed. Thus, the relevant attack techniques are primarily based on user interaction and exploitation avenues that could be exploited through social engineering attacks related to file handling.
+
+Given the context of CVE-2020-15183, which involves a reflected cross-site scripting vulnerability that leads to remote code execution, we can draw several conclusions about the relevant attack techniques. The vulnerability allows attackers to craft specific payloads that target the web application, which aligns closely with techniques involving exploitation of web technologies and social engineering.
+
+The following techniques are particularly relevant:
+
+1. **T1059.007 - Command and Scripting Interpreter: JavaScript**: This is relevant because the vulnerability exploits JavaScript in web applications, allowing code execution through crafted input.
+
+2. **T1566.001 - Phishing: Spearphishing Attachment**: The XSS vulnerability can trick users (specifically admins) into clicking on a malicious link which may lead to code execution on their end.
+
+3. **T1204.001 - User Execution: Malicious Link**: Similar to the above, leveraging user actions (like clicking a link) is vital for this attack vector.
+
+4. **T1212 - Exploitation for Credential Access**: The ability to exploit web applications for credential access is an associated risk that comes from successful XSS exploitation.
+
+5. **T1210 - Exploitation of Remote Services**: If the XSS leads to further exploitation of backend systems, this technique can be relevant.
+
+Based on the preceding analysis, these techniques are directly applicable to the vulnerabilities outlined in the CVE description; however, more context might reveal other relevant techniques depending on specific attack scenarios.
+
+The vulnerability CVE-2019-1831 involves improper input validation in the Cisco AsyncOS Software for Email Security Appliance, allowing an attacker to bypass content filters by exploiting specific character strings in email messages. This vulnerability aligns with several exploitation techniques, particularly those related to exploiting application vulnerabilities and manipulating data. The relevant attack techniques from the provided options include:
+
+1. **T1210 - Exploitation of Remote Services**: This technique relates to exploiting vulnerabilities in software or services to gain unauthorized access, which fits with the ability to exploit the Cisco ESA through email manipulation.
+2. **T1190 - Exploit Public-Facing Application**: This is relevant since the Cisco ESA is an Internet-facing application vulnerable to exploitation.
+3. **T1499.004 - Endpoint Denial of Service: Application or System Exploitation**: This relates to forcibly exploiting application vulnerabilities, which is consistent with bypassing email content filters.
+4. **T1565.001 - Data Manipulation: Stored Data Manipulation**: Exploiting improper input validation may lead to the manipulation of stored email data.
+
+These techniques collectively describe how an attacker could exploit the stated vulnerability.
+

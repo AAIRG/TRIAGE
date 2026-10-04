@@ -1,0 +1,144 @@
+# Methodology Overview
+
+# **Introduction**
+
+[ATT&CK](https://attack.mitre.org/) tactics and techniques can be used as a set of standard terms to describe the
+exploitation process of a vulnerability. For example, to exploit a
+vulnerability where credentials are sent in clear text, the following
+steps could be used:
+
+1. Sniff the network [T1040](https://attack.mitre.org/techniques/T1040/)
+2. Which gets you the unsecured credentials [T1552](https://attack.mitre.org/techniques/T1552/)
+3. Which you can use to access a valid account [T1078](https://attack.mitre.org/techniques/T1078/)
+
+Once the attacker has access to the valid account, there are too many possible paths to list them all.
+
+When developing this mapping methodology, we found that three
+ steps of an associated attack were as many as could be reasonably
+described. We define these steps in the following way:
+
+1. **Exploitation Technique** - the method (technique) used to exploit the vulnerability (T1040 in the example).
+2. **Primary Impact** - the initial benefit (impact) gained through exploitation of the vulnerability (T1552 in the example).
+3. **Secondary Impact** - what the adversary can do by gaining the benefit of the primary impact (T1078 in the example).
+
+Using these three components, a vulnerability impact description template can be developed:
+
+The vulnerability allows the attacker to use *[EXPLOITATION TECHNIQUE]* to gain *[Primary Impact]*, which leads to *[Secondary Impact]*.
+
+It may not be possible to identify an ATT&CK technique for each step of an attack. ATT&CK techniques may be written at a level of abstraction that does not match that of the vulnerability. Also, ATT&CK techniques are based on real-world attacks and not theoretical concepts. For example, the primary impact of a vulnerability may be too low-level to include an ATT&CK technique. In which case, you can use the secondary impact in place of the primary or use one of the tactic-level techniques. Mappings with just one or two components can still be useful.
+
+# **Using the Methodology**
+
+This mapping methodology establishes a starting point for connecting
+threat actor behavior to the potential exploitation and impact of
+vulnerabilities. The methodology does not cover all the ways that
+systems are exploited.
+
+We defined three methods to map ATT&CK techniques to vulnerabilities:
+
+1. **Vulnerability Type** – This method groups vulnerabilities with common vulnerability types (e.g., cross-site
+scripting, SQL injection) with associated common technique mappings.
+Vulnerabilities of the same type will often have the same ATT&CK
+mapping.
+2. **Functionality** – This method groups
+common mappings based on the type of functionality the adversary gains
+access to by exploiting the vulnerability.
+3. **Exploit Technique** – This method groups
+common mappings depending on the technique used to exploit the
+vulnerability. Vulnerabilities of the same type can often be exploited
+in different ways; however, details of the vulnerability can lead to
+identification of a specific exploit method.
+
+Only the vulnerability type method has mappings for all three
+ categories. The functionality method has mappings for primary and
+secondary impacts. The exploit techniques method only has mappings for
+the exploitation technique categories.
+
+**Vulnerability Type Method**
+
+Vulnerabilities that have the same type often also have the
+same attack steps. This method maps ATT&CK techniques to some of the
+ more common vulnerability types. CWE-699 (Software Development) and
+CWE-1000 (Research Concepts) were used to select the vulnerability
+types, though the method sometimes creates its own high-level categories
+ for the sake of brevity.
+
+The vulnerability type mappings can include the following technique categories:
+
+1. Exploitation Technique
+2. Primary Impact
+3. Secondary Impact
+
+If one of these categories is not included in the mapping for
+ a particular vulnerability type, use one of the other methods to find
+the appropriate techniques.
+
+**Functionality Method**
+
+For a vulnerability to be useful, it needs to provide the
+adversary with a capability they did not have before. Adversaries are
+often trying to gain access to the same functionality and thus, many
+vulnerabilities can be grouped by functionality.
+
+This method includes the following technique categories:
+
+1. Primary Impact
+2. Secondary Impact
+
+To find the exploitation technique for a vulnerability, use one of the other two mapping methods in this document.
+
+**Exploit Technique Method**
+
+This method groups techniques by the common steps taken to
+exploit a vulnerability. Use this method when a vulnerability type has
+too many possible exploitation scenarios to list in the Vulnerability
+Type method.
+
+This method includes the following technique categories:
+
+1. Exploitation Technique
+
+We have a vulnerability called CVE-2020-3322
+The CVE has the following description: A vulnerability in Cisco Webex Network Recording Player and Cisco Webex Player for Microsoft Windows could allow an attacker to cause a process crash resulting in a Denial of service (DoS) condition for the player application on an affected system. The vulnerability exists due to insufficient validation of certain elements with a Webex recording stored in either the Advanced Recording Format (ARF) or the Webex Recording Format (WRF). An attacker could exploit this vulnerability by sending a user a malicious ARF or WRF file through a link or email attachment and persuading the user to open the file with the affected software on the local system. A successful exploit could allow the attacker to cause the Webex player application to crash when trying to view the malicious file.
+The following CWE applies to this CVE: CWE-20: Improper Input Validation
+The CVE was published at the time: 2020-06-03T17:15Z and last modified at the time: 2024-11-21T05:30Z
+The CVE has the following CVSS features:
+ - cvssV2.accessVector: NETWORK
+ - cvssV2.accessComplexity: MEDIUM
+ - cvssV2.authentication: NONE
+ - cvssV2.confidentialityImpact: NONE
+ - cvssV2.integrityImpact: NONE
+ - cvssV2.availabilityImpact: PARTIAL
+ - cvssV2.baseScore: 4.3
+ - baseMetricV2.severity: MEDIUM
+ - baseMetricV2.exploitabilityScore: 8.6
+ - baseMetricV2.impactScore: 2.9
+ - baseMetricV2.obtainAllPrivilege: False
+ - baseMetricV2.obtainUserPrivilege: False
+ - baseMetricV2.obtainOtherPrivilege: False
+ - baseMetricV2.userInteractionRequired: True
+ - cvssV3.attackVector: LOCAL
+ - cvssV3.attackComplexity: LOW
+ - cvssV3.privilegesRequired: NONE
+ - cvssV3.userInteraction: REQUIRED
+ - cvssV3.scope: UNCHANGED
+ - cvssV3.confidentialityImpact: NONE
+ - cvssV3.integrityImpact: NONE
+ - cvssV3.availabilityImpact: LOW
+ - cvssV3.baseScore: 3.3
+ - cvssV3.baseSeverity: LOW
+ - baseMetricV3.exploitabilityScore: 1.8
+ - baseMetricV3.impactScore: 1.4
+The vulnerability type Uncontrolled Resource Consumption is associated with this vulnerability which can be mapped to
+- one primary_impact associated with an attack technique with id: T1499 and name Endpoint Denial of Service
+The vulnerability has no functionality
+We know that the following is relevant for the exploitation of the vulnerability:
+The user executes a malicious file coming from An email
+This exploitation is associated with
+ - One exploitation_technique associated with an attack technique with id: T1566.001, and name: Phishing: Spearphishing Attachment
+The user clicks on a malicious link coming from An email
+This exploitation is associated with
+ - One exploitation_technique associated with an attack technique with id: T1566.002, and name: Phishing: Spearphishing Link
+
+We find that the vulnerability is associated with the tactic Initial Access, this tactic is associated with an exploitation_technique with attack id: T1190 and attack name Exploit Public-Facing Application
+

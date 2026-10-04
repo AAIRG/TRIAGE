@@ -1,0 +1,29 @@
+The vulnerability CVE-2018-15444 allows for exploitation via improperly handled XML External Entity references, which is a classic case of XML External Entity (XXE) attacks. The techniques that correspond to this vulnerability involve injecting malicious XML files that can execute arbitrary code or manipulate the system. From the provided attack techniques, relevant methods include:
+
+- T1204.001 (User Execution: Malicious Link), as the exploitation often requires user interaction to upload a malicious XML file.
+- T1204.002 (User Execution: Malicious File), highlighting the requirement for a user to execute or import the malicious XML file.
+- T1210 (Exploitation for Client Execution), which details exploiting vulnerabilities in applications that take untrusted inputs, fitting the context of XML parsing vulnerabilities.
+
+Thus, the relevant attack techniques in this context are T1204.001, T1204.002, and T1210.
+
+The vulnerability described as CVE-2020-15183 in SoyCMS exposes the system to Reflected Cross-Site Scripting (XSS), which can lead to Remote Code Execution (RCE). This scenario requires user interaction, as the attack relies on the administrator being coerced into loading a malicious webpage. In this context, relevant exploitation techniques must involve user actions and potentially malicious code execution on the client side. Based on the techniques provided in the CSV, two relevant attack techniques emerge: 
+
+1. **T1059.007** (Command and Scripting Interpreter: JavaScript) - This technique is directly tied to XSS vulnerabilities as it involves the use of JavaScript for executing malicious commands across websites and can leverage the XSS vulnerability effectively.
+
+2. **T1204.001** (User Execution: Malicious Link) - This technique is relevant as the exploitation method requires a user (administrator) to click on a link, leading them to execute malicious code, which aligns perfectly with the attack vector introduced by the vulnerability.
+
+Other techniques may be related but they do not directly correspond to the mechanisms associated with the exploitation of the listed vulnerability concerning user interaction and XSS. 
+
+Thus, the final list of relevant attack techniques is: ['T1059.007', 'T1204.001'].
+
+The vulnerability CVE-2019-1831 involves a vulnerability in the email message scanning of Cisco AsyncOS Software for Cisco Email Security Appliance (ESA). An unauthenticated, remote attacker can exploit this vulnerability due to improper input validation in the email body, allowing them to bypass configured content filters. Given the nature of this vulnerability, relevant attack techniques related to exploitation would focus on how an attacker can manipulate inputs or exploit existing conditions to bypass checks.
+
+Based on the context of the vulnerability and the provided list of attack techniques, the following techniques are relevant:
+- **T1212**: Exploitation for Credential Access - Given the possibility to bypass content filters, it aligns with credential exploitation.
+- **T1190**: Exploit Public-Facing Application - Indicative of exploiting a publicly available service (the Email Security Appliance).
+- **T1489**: Service Stop - In a broader sense, an attacker could exploit the vulnerability to impact service availability.
+- **T1557**: Adversary-in-the-Middle - If the attacker can send specifically crafted messages, they could intercept communications.
+- **T1566**: Phishing - Given the method of attack likely involves crafted emails to get around filters.
+
+Combining these techniques leads to a nuanced understanding of how the identified vulnerability can be exploited and what techniques might be relevant for exploiting the vulnerability effectively.
+

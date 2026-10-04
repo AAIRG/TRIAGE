@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1505",
+            "T1496",
+            "T1499",
+            "T1078",
+            "T1048",
+            "T1071",
+            "T1584",
+            null
+        ],
+        "true labels": [
+            "T1059"
+        ],
+        "reasoning": "The vulnerability described is a remote command execution (RCE) vulnerability in the D-Link DIR-820L router. Given the nature of this vulnerability, the primary impact techniques would likely involve methods that allow an attacker to execute commands or scripts on the compromised system. Based on the provided attack techniques, the most relevant primary impact techniques for this vulnerability include:\n\n1. **T1059 - Command and Scripting Interpreter**: This technique is directly related to executing commands on the system, which aligns with the nature of the RCE vulnerability.\n2. **T1068 - Exploitation for Privilege Escalation**: While this is more about gaining higher privileges, it can be relevant in the context of an RCE if the attacker aims to escalate their access after initial exploitation.\n3. **T1505 - Server Software Component**: This technique involves the manipulation of server components, which could be relevant in the context of exploiting a router's firmware.\n4. **T1496 - Resource Hijacking**: This could be relevant if the attacker aims to use the compromised device for further attacks or to leverage its resources.\n5. **T1499 - Endpoint Denial of Service**: This could be a secondary impact of the RCE, as an attacker may choose to disrupt the service after gaining access.\n6. **T1078 - Valid Accounts**: If the attacker can exploit the RCE to create or use valid accounts, this technique becomes relevant.\n7. **T1048 - Exfiltration Over Alternative Protocol**: If the attacker uses the compromised device to exfiltrate data, this technique would apply.\n8. **T1071 - Application Layer Protocol**: This could be relevant if the attacker uses application protocols to communicate with the compromised device.\n9. **T1584 - Compromise Infrastructure**: This could be relevant if the attacker aims to compromise additional infrastructure after exploiting the router.\n10. **None**: Since there may not be ten distinct techniques that apply directly to the primary impact, a 'None' label is included.\n\nBased on the analysis, the top 10 techniques in descending order are:\n\n1. T1059\n2. T1068\n3. T1505\n4. T1496\n5. T1499\n6. T1078\n7. T1048\n8. T1071\n9. T1584\n10. None"
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1505",
+            "T1496",
+            "T1005",
+            "T1046",
+            "T1036",
+            "T1136",
+            null
+        ],
+        "true labels": [
+            "T1202"
+        ],
+        "reasoning": "For the vulnerability described, the primary impact is related to unauthorized access to restricted directories due to a lack of password configuration in Adobe ColdFusion. The most relevant attack techniques that could be associated with this primary impact include techniques that involve gaining access to sensitive information or executing commands. Based on the provided attack techniques, the following techniques are relevant:\n\n1. **T1059** - Command and Scripting Interpreter: This technique is relevant as it allows attackers to execute commands on the system.\n2. **T1068** - Exploitation for Privilege Escalation: This technique is relevant as it allows attackers to escalate privileges after gaining access.\n3. **T1078** - Valid Accounts: This technique is relevant as attackers could use valid accounts to access restricted areas.\n4. **T1505** - Server Software Component: This technique is relevant as it involves manipulating server components.\n5. **T1496** - Resource Hijacking: This technique is relevant as it involves taking control of resources after gaining access.\n6. **T1005** - Data from Local System: This technique is relevant as it involves gathering data from the compromised system.\n7. **T1046** - Network Service Discovery: This technique is relevant as it allows attackers to discover services running on the network.\n8. **T1036** - Masquerading: This technique is relevant as it allows attackers to disguise their actions.\n9. **T1136** - Create Account: This technique is relevant as attackers could create accounts to maintain access.\n10. **None**: This indicates that there may not be enough techniques to fill all ten slots with relevant techniques.\n\nThus, the top 10 techniques in descending order are: ['T1059', 'T1068', 'T1078', 'T1505', 'T1496', 'T1005', 'T1046', 'T1036', 'T1136', None]."
+    }
+]

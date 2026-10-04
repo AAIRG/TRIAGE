@@ -1,0 +1,36 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068",
+            "T1059",
+            "T1078",
+            "T1496",
+            "T1486",
+            "T1505",
+            "T1136",
+            "T1005",
+            "T1087",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The Windows DWM Core Library Elevation of Privilege Vulnerability allows an attacker to gain elevated privileges on a Windows system. This can lead to various secondary impacts, including but not limited to:\n\n1. **T1068** - Exploitation for Privilege Escalation: This is a direct consequence of the vulnerability, as it allows an attacker to escalate their privileges.\n2. **T1059** - Command and Scripting Interpreter: Once elevated privileges are obtained, the attacker can execute commands or scripts.\n3. **T1078** - Valid Accounts: The attacker may use the elevated privileges to access valid accounts or create new ones.\n4. **T1496** - Resource Hijacking: With elevated privileges, the attacker can hijack resources on the system.\n5. **T1486** - Data Encrypted for Impact: The attacker may encrypt data to prevent access or to extort the victim.\n6. **T1505** - Server Software Component: The attacker could manipulate server components or software.\n7. **T1136** - Create Account: The attacker could create new accounts to maintain access.\n8. **T1005** - Data from Local System: The attacker can access sensitive data from the local system.\n9. **T1087** - Account Discovery: The attacker can discover accounts on the system.\n10. **None**: If no other techniques are applicable, this serves as a placeholder.\n\nBased on the analysis, the top relevant secondary impact techniques are ranked accordingly."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1496",
+            "T1499",
+            "T1557",
+            "T1005",
+            "T1059",
+            "T1078",
+            "T1068",
+            "T1552",
+            "T1562",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "Given the vulnerability description for XStream, the primary impact is the potential for remote command execution due to improper input handling. This allows an attacker to manipulate the processed input stream and execute commands on the host. The secondary impacts could include various actions that an attacker might take after gaining command execution capabilities. Based on the context of the vulnerability and the provided attack techniques, the following secondary impacts are relevant:\n\n1. **T1496** - Resource Hijacking: An attacker could use the compromised system resources for their own purposes.\n2. **T1499** - Endpoint Denial of Service: The attacker could cause the system to become unavailable.\n3. **T1557** - Adversary-in-the-Middle: The attacker could intercept communications.\n4. **T1005** - Data from Local System: The attacker could access sensitive data.\n5. **T1059** - Command and Scripting Interpreter: The attacker could execute additional commands.\n6. **T1078** - Valid Accounts: The attacker could leverage valid accounts for further access.\n7. **T1068** - Exploitation for Privilege Escalation: The attacker could escalate privileges.\n8. **T1552** - Unsecured Credentials: The attacker could exploit unsecured credentials.\n9. **T1562** - Impair Defenses: The attacker could disable security measures.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nBased on the analysis, the top 10 techniques in descending order of relevance are:\n\n1. T1496\n2. T1499\n3. T1557\n4. T1005\n5. T1059\n6. T1078\n7. T1068\n8. T1552\n9. T1562\n10. None"
+    }
+]

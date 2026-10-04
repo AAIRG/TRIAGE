@@ -1,0 +1,21 @@
+The vulnerability CVE-2018-15444 allows an attacker to exploit an improper handling of XML External Entity references (XXE) by convincing a user to import a maliciously crafted XML file. Given that the exploitation involves user interaction to execute the attack (as indicated by the "userInteractionRequired" property in the CVSS), the technique that best fits this scenario is related to user execution. Specifically, the User Execution techniques that involve the execution of malicious files or links may be applicable. Therefore, the relevant attack technique for this exploitation pattern would be T1204.002, which specifically relates to user execution of a malicious file, as exploitation requires the user to import a crafted XML file.
+
+The vulnerability CVE-2020-15183 involves Reflected Cross-Site Scripting (XSS), which is typically exploited through malicious web links that, when accessed by an administrator, can trigger unintended actions on a web application, leading to potential Remote Code Execution (RCE). Techniques that closely align with this exploitation type would include web-based scripting attacks. Notably, "Command and Scripting Interpreter: JavaScript" (T1059.007) is a relevant attack technique here, allowing the attacker to execute JavaScript in the context of the vulnerable web application. Additionally, "User Execution: Malicious Link" (T1204.001) reflects the requirement for the administrator to interact with the crafted webpage. These techniques directly relate to how the XSS vulnerability is exploited.
+
+The vulnerability CVE-2019-1831 relates to improper input validation in email scanning, allowing an attacker to bypass filters through crafted email content. Given that this vulnerability is exploited over a network without requiring authentication, it correlates to the exploitation of web applications. The most relevant attack technique from the provided options is T1190, which is about exploiting public-facing applications since email systems can be deemed as such. The technique T1204, which deals with user execution of malicious links, also applies since an attacker could potentially trick a user into opening a malicious email. Thus, the relevant attack techniques identified for the exploitation of this vulnerability are: ['T1190', 'T1204'].
+
+The vulnerability CVE-2018-11088 allows for privilege escalation due to access to admin credentials by a space developer. Relevant attack techniques would likely focus on this specific aspect of privilege escalation. Based on the list of attack techniques provided, the most relevant technique is T1068, "Exploitation for Privilege Escalation," since the vulnerability explicitly mentions privilege escalation. Other techniques that might relate to credential accessibility, such as obtaining or misusing credentials, are also relevant, including T1552, "Unsecured Credentials." However, T1552 isn't directly about exploiting the specific vulnerability described. 
+
+The main technique we can definitively identify here is T1068, as it directly corresponds to the privilege escalation aspect of the vulnerability. 
+
+Thus, the relevant attack techniques in this context are:
+- T1068
+
+The vulnerability CVE-2020-1569 allows for remote code execution due to improper memory handling in Microsoft Edge. This suggests that an attacker can execute arbitrary scripts, which aligns with the exploitation techniques associated with scripting interpreters. The relevant attack techniques include:
+- `T1059.007` for JavaScript execution, which is directly related to running scripts in a browser context.
+- `T1204` and `T1204.001` for user execution of malicious links and files, which is relevant since the exploitation relies on user interaction to view a specially crafted website.
+- `T1566.002` for spearphishing via links, as users may be enticed to visit the attacker-controlled site through phishing efforts.
+- `T1210` on exploitation of remote services, as the exploit can take advantage of an online presence.
+- `T1190`, which discusses exploiting public-facing applications—browsers fall into this category.
+Thus, the most relevant attack techniques for the given vulnerability would primarily revolve around script execution and user enticement through phishing and public-facing exploitation.
+

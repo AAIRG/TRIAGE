@@ -1,0 +1,47 @@
+To determine the relevant attack techniques of type exploitation_technique for the vulnerability CVE-2018-15444, we consider the nature of the vulnerability as described. This vulnerability allows an authenticated attacker to exploit improper handling of XML External Entity (XXE) entries when parsing XML files, thus leading to potential read and write access to files. The key exploitation technique here revolves around user interaction and convincing them to import a crafted XML file. 
+
+Given the attack techniques listed, techniques such as T1204.002 (User Execution: Malicious File) are applicable since the attacker relies on user action to exploit the vulnerability. Additionally, T1204.001 could also be relevant since it involves user execution of a malicious link, which can lead to the import of the malicious XML file. However, more techniques aligned specifically with XML parsing exploits or similar types of exploitation are not provided in the list. 
+
+Based on the nature of the provided techniques and their correlation to the specifics of the vulnerability, T1204.002 and T1204.001 are the most relevant techniques here.
+
+The vulnerability CVE-2020-15183 is identified as a Reflected Cross-Site Scripting (XSS) leading to Remote Code Execution (RCE). To exploit this vulnerability, the attacker would typically use methods that manipulate the web environment, which is indicative of a scripting attack. The relevant attack technique for exploitation in this scenario is related to using scripting languages to execute commands or code within the web browser. In this case, the most relevant technique from the provided list is:
+
+- **T1059.007**: Command and Scripting Interpreter: JavaScript, as JavaScript is frequently used in XSS attacks to execute malicious code within a web context.
+
+Given the XSS nature of the vulnerability, techniques focusing on command interpretation through scripted languages would be key to exploiting it. Therefore, the list of relevant attack techniques includes:
+
+- ['T1059.007']
+
+To determine the relevant attack techniques for the vulnerability CVE-2019-1831, we analyze the exploitation process as described. The vulnerability involves improper input validation that allows an unauthenticated remote attacker to bypass content filters. In this case, the most relevant exploitation technique is related to network sniffing since the character strings inserted into the email body may require capturing or modifying data in transit.
+
+The most applicable attack techniques from the provided list based on the nature of the vulnerability and the context are:
+- **T1040 (Network Sniffing)**: This technique relates directly to the ability to monitor the network for data, which aligns with the exploitation of this vulnerability.
+- Additional techniques that may complement this scenario include:
+  - **T1539 (Steal Web Session Cookie)** or **T1552 (Unsecured Credentials)**: While not direct exploitation techniques, they both connect to potential threats once filters are bypassed.
+  - **T1203 (Exploitation for Client Execution)** might apply if the attacker can use the vulnerability as a pivot to execute further attacks.
+
+However, the primary focus for identifying the exploitation technique here is **T1040**. No other exploitation techniques directly match the nature of CVE-2019-1831 based on its description and the provided choices.
+
+Thus, the relevant attack technique is primarily **T1040**.
+
+To determine the relevant attack techniques of type exploitation_technique for the vulnerability CVE-2018-11088, we analyze its characteristics. The vulnerability allows a space developer with access to the system org to access an artifact that contains CF admin credentials, enabling privilege escalation. 
+
+The core steps involved in exploiting this vulnerability can be derived from standard practices in privilege escalation, particularly techniques that focus on accessing sensitive credentials and abusing privilege controls. Relevant techniques might include:
+
+- **T1552**: Unsecured Credentials, which pertains to accessing credentials that are not adequately protected. This technique is relevant because the vulnerability facilitates access to admin credentials indirectly.
+- **T1068**: Exploitation for Privilege Escalation, which applies since the end goal of accessing CF admin credentials is to escalate privileges to that role.
+- **T1078**: Valid Accounts could also be tied in, as gaining access to a valid admin account is a primary impact of this exploitation.
+
+Thus, the relevant attack techniques for exploitation are identified to focus primarily on those directly tied to credential access and privilege escalation.
+
+For CVE-2020-1569, we need to identify relevant attack techniques of type exploitation_technique from the given list. This CVE describes a remote code execution vulnerability in Microsoft Edge that can lead to arbitrary code execution in the context of a user. The nature of this vulnerability suggests several possible exploitation techniques:
+
+1. **Network Sniffing (T1040)**: While this CVE specifically does not detail the use of a network sniffing technique, it is a common approach in exploitation scenarios where attackers may intercept network traffic to exploit vulnerabilities.
+2. **Phishing: Spearphishing Link (T1566.002)**: Attackers often rely on social engineering to lure users into visiting malicious websites, which aligns with the description of the CVE where users need to be convinced to visit a crafted website.
+3. **User Execution: Malicious Link (T1204.001)**: Similar to the above phish, attackers need users to click on the malicious link to trigger the exploit.
+4. **Exploitation for Client Execution (T1203)**: This technique could apply as the exploit successfully runs on the victim's machine when they access the malicious content.
+
+Given that the CVE does not explicitly map to any specific exploitation technique beyond what is inferred from the nature of the attack, the relevant attack techniques based on exploitation context can be summarized as follows.
+
+Therefore, the relevant exploitation techniques for CVE-2020-1569 are ['T1204.001', 'T1566.002', 'T1203'].
+

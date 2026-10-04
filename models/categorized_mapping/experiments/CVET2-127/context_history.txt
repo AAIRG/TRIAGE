@@ -1,0 +1,447 @@
+We have a vulnerability called CVE-2018-15444
+The CVE has the following description: A vulnerability in the web-based user interface of Cisco Energy Management Suite Software could allow an authenticated, remote attacker to gain read and write access to information that is stored on an affected system. The vulnerability is due to improper handling of XML External Entity (XXE) entries when parsing certain XML files. An attacker could exploit this vulnerability by convincing a user of an affected system to import a crafted XML file with malicious entries, which could allow the attacker to read and write files within the affected application.
+The following CWE applies to this CVE: CWE-611: Improper Restriction of XML External Entity Reference
+The CVE was published at the time: 2018-11-08T18:29Z and last modified at the time: 2019-10-09T23:35Z
+The CVE has the following CVSS features:
+ - cvssV2.accessVector: NETWORK
+ - cvssV2.accessComplexity: MEDIUM
+ - cvssV2.authentication: SINGLE
+ - cvssV2.confidentialityImpact: PARTIAL
+ - cvssV2.integrityImpact: PARTIAL
+ - cvssV2.availabilityImpact: NONE
+ - cvssV2.baseScore: 4.9
+ - baseMetricV2.severity: MEDIUM
+ - baseMetricV2.exploitabilityScore: 6.8
+ - baseMetricV2.impactScore: 4.9
+ - baseMetricV2.obtainAllPrivilege: False
+ - baseMetricV2.obtainUserPrivilege: False
+ - baseMetricV2.obtainOtherPrivilege: False
+ - baseMetricV2.userInteractionRequired: True
+ - cvssV3.attackVector: NETWORK
+ - cvssV3.attackComplexity: LOW
+ - cvssV3.privilegesRequired: LOW
+ - cvssV3.userInteraction: REQUIRED
+ - cvssV3.scope: UNCHANGED
+ - cvssV3.confidentialityImpact: HIGH
+ - cvssV3.integrityImpact: HIGH
+ - cvssV3.availabilityImpact: NONE
+ - cvssV3.baseScore: 7.3
+ - cvssV3.baseSeverity: HIGH
+ - baseMetricV3.exploitabilityScore: 2.1
+ - baseMetricV3.impactScore: 5.2
+Here are examples of vulnerabilities with their associated mappings for secondary_impact:
+CVE-2018-10636: CNCSoft Version 1.00.83 and prior with ScreenEditor Version 1.00.54 has multiple stack-based buffer overflow vulnerabilities that could cause the software to crash due to lacking user input validation before copying data from project files onto the stack. Which may allow an attacker to gain remote code execution with administrator privileges if exploited.
+CVE-2018-10636 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2018-11048: Dell EMC Data Protection Advisor, versions 6.2, 6,3, 6.4, 6.5 and Dell EMC Integrated Data Protection Appliance (IDPA) versions 2.0, 2.1 contain a XML External Entity (XXE) Injection vulnerability in the REST API. An authenticated remote malicious user could potentially exploit this vulnerability to read certain system files in the server or cause denial of service by supplying specially crafted Document Type Definitions (DTDs) in an XML request.
+CVE-2018-11048 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1499.004, name: Endpoint Denial of Service: Application or System Exploitation 
+CVE-2018-11059: RSA Archer, versions prior to 6.4.0.1, contain a stored cross-site scripting vulnerability. A remote authenticated malicious Archer user could potentially exploit this vulnerability to store malicious HTML or JavaScript code in a trusted application data store. When application users access the corrupted data store through their browsers, the malicious code gets executed by the web browser in the context of the vulnerable web application.
+CVE-2018-11059 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2018-11067: Dell EMC Avamar Client Manager in Dell EMC Avamar Server versions 7.2.0, 7.2.1, 7.3.0, 7.3.1, 7.4.0, 7.4.1, 7.5.0, 7.5.1, 18.1 and Dell EMC Integrated Data Protection Appliance (IDPA) versions 2.0, 2.1 and 2.2 contain an open redirection vulnerability. A remote unauthenticated attacker could potentially exploit this vulnerability to redirect application users to arbitrary web URLs by tricking the victim users to click on maliciously crafted links. The vulnerability could be used to conduct phishing attacks that cause users to unknowingly visit malicious sites.
+CVE-2018-11067 can be mapped to the following attack techniques: 
+- an attack technique with id: T1036, name: Masquerading 
+CVE-2018-11073: RSA Authentication Manager versions prior to 8.3 P3 contain a stored cross-site scripting vulnerability in the Operations Console. A malicious Operations Console administrator could exploit this vulnerability to store arbitrary HTML or JavaScript code through the web interface. When other Operations Console administrators open the affected page, the injected scripts could potentially be executed in their browser.
+CVE-2018-11073 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2018-11075: RSA Authentication Manager versions prior to 8.3 P3 contain a reflected cross-site scripting vulnerability in a Security Console page. A remote, unauthenticated malicious user, with the knowledge of a target user's anti-CSRF token, could potentially exploit this vulnerability by tricking a victim Security Console user to supply malicious HTML or JavaScript code to the vulnerable web application, which code is then executed by the victim's web browser in the context of the vulnerable web application.
+CVE-2018-11075 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2018-11088: Pivotal Applications Manager in Pivotal Application Service, versions 2.0 prior to 2.0.21 and 2.1 prior to 2.1.13 and 2.2 prior to 2.2.5, contains a bug which may allow escalation of privileges. A space developer with access to the system org may be able to access an artifact which contains the CF admin credential, allowing them to escalate to an admin role.
+CVE-2018-11088 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2018-15393: A vulnerability in the web-based management interface of Cisco Content Security Management Appliance (SMA) Software could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a maliciously crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+CVE-2018-15393 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2018-15466: A vulnerability in the Graphite web interface of the Policy and Charging Rules Function (PCRF) of Cisco Policy Suite (CPS) could allow an unauthenticated, remote attacker to access the Graphite web interface. The attacker would need to have access to the internal VLAN where CPS is deployed. The vulnerability is due to lack of authentication. An attacker could exploit this vulnerability by directly connecting to the Graphite web interface. An exploit could allow the attacker to access various statistics and Key Performance Indicators (KPIs) regarding the Cisco Policy Suite environment.
+CVE-2018-15466 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2018-15771: Dell EMC RecoverPoint versions prior to 5.1.2.1 and RecoverPoint for VMs versions prior to 5.2.0.2 contain an information disclosure vulnerability. A malicious boxmgmt user may potentially be able to determine the existence of any system file via Boxmgmt CLI.
+CVE-2018-15771 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2018-15780: RSA Archer versions prior to 6.5.0.1 contain an improper access control vulnerability. A remote malicious user could potentially exploit this vulnerability to bypass authorization checks and gain read access to restricted user information.
+CVE-2018-15780 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2018-17900: Yokogawa STARDOM Controllers FCJ, FCN-100, FCN-RTU, FCN-500, All versions R4.10 and prior, The web application improperly protects credentials which could allow an attacker to obtain credentials for remote access to controllers.
+CVE-2018-17900 can be mapped to the following attack techniques: 
+- an attack technique with id: T1078, name: Valid Accounts 
+CVE-2018-17934: NUUO CMS All versions 3.3 and prior the application allows external input to construct a pathname that is able to be resolved outside the intended directory. This could allow an attacker to impersonate a legitimate user, obtain restricted information, or execute arbitrary code.
+CVE-2018-17934 can be mapped to the following attack techniques: 
+- an attack technique with id: T1036, name: Masquerading  
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1203, name: Exploitation for Client Execution 
+CVE-2018-18987: VT-Designer Version 2.1.7.31 is vulnerable by the program populating objects with user supplied input via a file without first checking for validity, allowing attacker supplied input to be written to known memory locations. This may cause the program to crash or allow remote code execution.
+CVE-2018-18987 can be mapped to the following attack techniques: 
+- an attack technique with id: T1574, name: Hijack Execution Flow  
+- an attack technique with id: T1499.004, name: Endpoint Denial of Service: Application or System Exploitation 
+CVE-2018-18995: Pluto Safety PLC Gateway Ethernet devices ABB GATE-E1 and GATE-E2 all versions do not allow authentication to be configured on administrative telnet or web interfaces, which could enable various effects vectors, including conducting device resets, reading or modifying registers, and changing configuration settings such as IP addresses.
+CVE-2018-18995 can be mapped to the following attack techniques: 
+- an attack technique with id: T0816, name: Device Restart/Shutdown  
+- an attack technique with id: T1529, name: System Shutdown/Reboot  
+- an attack technique with id: T0855, name: Unauthorized Command Message  
+- an attack technique with id: T0836, name: Modify Parameter  
+- an attack technique with id: T1213, name: Data from Information Repositories 
+CVE-2018-8110: A remote code execution vulnerability exists when Microsoft Edge improperly accesses objects in memory, aka "Microsoft Edge Memory Corruption Vulnerability." This affects Microsoft Edge. This CVE ID is unique from CVE-2018-8111, CVE-2018-8236.
+CVE-2018-8110 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2018-8111: A remote code execution vulnerability exists when Microsoft Edge improperly accesses objects in memory, aka "Microsoft Edge Memory Corruption Vulnerability." This affects Microsoft Edge. This CVE ID is unique from CVE-2018-8110, CVE-2018-8236.
+CVE-2018-8111 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2018-8248: A remote code execution vulnerability exists in Microsoft Excel software when the software fails to properly handle objects in memory, aka "Microsoft Excel Remote Code Execution Vulnerability." This affects Microsoft Office.
+CVE-2018-8248 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2018-8353: A remote code execution vulnerability exists in the way that the scripting engine handles objects in memory in Internet Explorer, aka "Scripting Engine Memory Corruption Vulnerability." This affects Internet Explorer 9, Internet Explorer 11, Internet Explorer 10. This CVE ID is unique from CVE-2018-8355, CVE-2018-8359, CVE-2018-8371, CVE-2018-8372, CVE-2018-8373, CVE-2018-8385, CVE-2018-8389, CVE-2018-8390.
+CVE-2018-8353 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2018-8355: A remote code execution vulnerability exists in the way the scripting engine handles objects in memory in Microsoft browsers, aka "Scripting Engine Memory Corruption Vulnerability." This affects ChakraCore, Internet Explorer 11, Microsoft Edge. This CVE ID is unique from CVE-2018-8353, CVE-2018-8359, CVE-2018-8371, CVE-2018-8372, CVE-2018-8373, CVE-2018-8385, CVE-2018-8389, CVE-2018-8390.
+CVE-2018-8355 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2018-8431: An elevation of privilege vulnerability exists when Microsoft SharePoint Server does not properly sanitize a specially crafted web request to an affected SharePoint server, aka "Microsoft SharePoint Elevation of Privilege Vulnerability." This affects Microsoft SharePoint Server, Microsoft SharePoint. This CVE ID is unique from CVE-2018-8428.
+CVE-2018-8431 can be mapped to the following attack techniques: 
+- an attack technique with id: T1565, name: Data Manipulation 
+CVE-2018-8575: A remote code execution vulnerability exists in Microsoft Project software when it fails to properly handle objects in memory, aka "Microsoft Project Remote Code Execution Vulnerability." This affects Microsoft Project, Office 365 ProPlus, Microsoft Project Server.
+CVE-2018-8575 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2019-0609: A remote code execution vulnerability exists in the way the scripting engine handles objects in memory in Microsoft browsers, aka 'Scripting Engine Memory Corruption Vulnerability'. This CVE ID is unique from CVE-2019-0639, CVE-2019-0680, CVE-2019-0769, CVE-2019-0770, CVE-2019-0771, CVE-2019-0773, CVE-2019-0783.
+CVE-2019-0609 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2019-1031: A cross-site-scripting (XSS) vulnerability exists when Microsoft SharePoint Server does not properly sanitize a specially crafted web request to an affected SharePoint server, aka 'Microsoft Office SharePoint XSS Vulnerability'. This CVE ID is unique from CVE-2019-1032, CVE-2019-1033, CVE-2019-1036.
+CVE-2019-1031 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1478, name: Install Insecure or Malicious Configuration  
+- an attack technique with id: T1036, name: Masquerading 
+CVE-2019-1118: A remote code execution vulnerability exists in the way that DirectWrite handles objects in memory, aka 'DirectWrite Remote Code Execution Vulnerability'. This CVE ID is unique from CVE-2019-1117, CVE-2019-1119, CVE-2019-1120, CVE-2019-1121, CVE-2019-1122, CVE-2019-1123, CVE-2019-1124, CVE-2019-1127, CVE-2019-1128.
+CVE-2019-1118 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2019-12660: A vulnerability in the CLI of Cisco IOS XE Software could allow an authenticated, local attacker to write values to the underlying memory of an affected device. The vulnerability is due to improper input validation and authorization of specific commands that a user can execute within the CLI. An attacker could exploit this vulnerability by authenticating to an affected device and issuing a specific set of commands. A successful exploit could allow the attacker to modify the configuration of the device to cause it to be non-secure and abnormally functioning.
+CVE-2019-12660 can be mapped to the following attack techniques: 
+- an attack technique with id: T1562, name: Impair Defenses 
+CVE-2019-13555: In Mitsubishi Electric MELSEC-Q Series Q03/04/06/13/26UDVCPU: serial number 21081 and prior, Q04/06/13/26UDPVCPU: serial number 21081 and prior, and Q03UDECPU, Q04/06/10/13/20/26/50/100UDEHCPU: serial number 21081 and prior, MELSEC-L Series L02/06/26CPU, L26CPU-BT: serial number 21101 and prior, L02/06/26CPU-P, L26CPU-PBT: serial number 21101 and prior, and L02/06/26CPU-CM, L26CPU-BT-CM: serial number 21101 and prior, a remote attacker can cause the FTP service to enter a denial-of-service condition dependent on the timing at which a remote attacker connects to the FTP server on the above CPU modules.
+CVE-2019-13555 can be mapped to the following attack techniques: 
+- an attack technique with id: T0826, name: Loss of Availability 
+CVE-2019-1423: An elevation of privilege vulnerability exists in the way that the StartTileData.dll handles file creation in protected locations, aka 'Windows Elevation of Privilege Vulnerability'. This CVE ID is unique from CVE-2019-1420, CVE-2019-1422.
+CVE-2019-1423 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-15280: A vulnerability in the web-based management interface of Cisco Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack against a user of the web-based management interface. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface. An attacker could exploit this vulnerability by inserting malicious code in certain sections of the interface that are visible to other users. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or access sensitive, browser-based information. An attacker would need valid administrator credentials to exploit this vulnerability.
+CVE-2019-15280 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-15974: A vulnerability in the web interface of Cisco Managed Services Accelerator (MSX) could allow an unauthenticated, remote attacker to redirect a user to a malicious web page. The vulnerability is due to improper input validation of the parameters of an HTTP request. An attacker could exploit this vulnerability by intercepting a user's HTTP request and modifying it into a request that causes the web interface to redirect the user to a specific malicious URL. A successful exploit could allow the attacker to redirect a user to a malicious web page. This type of vulnerability is known as an open redirect attack and is used in phishing attacks that get users to unknowingly visit malicious sites.
+CVE-2019-15974 can be mapped to the following attack techniques: 
+- an attack technique with id: T1189, name: Drive-by Compromise 
+CVE-2019-15976: Multiple vulnerabilities in the authentication mechanisms of Cisco Data Center Network Manager (DCNM) could allow an unauthenticated, remote attacker to bypass authentication and execute arbitrary actions with administrative privileges on an affected device. For more information about these vulnerabilities, see the Details section of this advisory.
+CVE-2019-15976 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2019-15994: A vulnerability in the web-based management interface of Cisco Stealthwatch Enterprise could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected system. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of the affected software. An attacker could exploit this vulnerability by persuading a user to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+CVE-2019-15994 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-1611: A vulnerability in the CLI of Cisco NX-OS Software and Cisco FXOS Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying operating system of an affected device. The vulnerability is due to insufficient validation of arguments passed to certain CLI commands. An attacker could exploit this vulnerability by including malicious input as the argument of an affected command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with elevated privileges. An attacker would need valid administrator credentials to exploit this vulnerability. Firepower 4100 Series Next-Generation Firewalls are affected running software versions prior to 2.2.2.91, 2.3.1.110, and 2.4.1.222. Firepower 9300 Security Appliance are affected running software versions prior to 2.2.2.91, 2.3.1.110, and 2.4.1.222. MDS 9000 Series Multilayer Switches are affected running software versions prior to 6.2(25) and 8.3(1). Nexus 3000 Series Switches are affected running software versions prior to 7.0(3)I4(9) and 7.0(3)I7(5). Nexus 3500 Platform Switches are affected running software versions prior to 7.0(3)I7(5). Nexus 3600 Platform Switches are affected running software versions prior to 7.0(3)F3(5). Nexus 2000, 5500, 5600, and 6000 Series Switches are affected running software versions prior to 7.1(5)N1(1b) and 7.3(4)N1(1). Nexus 7000 and 7700 Series Switches are affected running software versions prior to 6.2(22), 7.3(3)D1(1), 8.2(3). Nexus 9000 Series Switches in Standalone NX-OS Mode are affected running software versions prior to 7.0(3)I4(9) and 7.0(3)I7(5). Nexus 9500 R-Series Line Cards and Fabric Modules are affected running software versions prior to 7.0(3)F3(5).
+CVE-2019-1611 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-1612: A vulnerability in the CLI of Cisco NX-OS Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying operating system of an affected device. The vulnerability is due to insufficient validation of arguments passed to certain CLI commands. An attacker could exploit this vulnerability by including malicious input as the argument of an affected command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with elevated privileges. An attacker would need valid administrator credentials to exploit this vulnerability. Nexus 3000 Series Switches are affected running software versions prior to 7.0(3)I4(9) and 7.0(3)I7(4). Nexus 3500 Platform Switches are affected running software versions prior to 7.0(3)I7(4). Nexus 3600 Platform Switches are affected running software versions prior to 7.0(3)F3(5). Nexus 9000 Series Switches in Stand are affected running software versions prior to 7.0(3)F3(5).
+CVE-2019-1612 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-1665: A vulnerability in the web-based management interface of Cisco HyperFlex software could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected system. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected system. An attacker could exploit this vulnerability by persuading a user of the interface to click a maliciously crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. Versions prior to 3.5(1a) are affected.
+CVE-2019-1665 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-16760: Cargo prior to Rust 1.26.0 may download the wrong dependency if your package.toml file uses the `package` configuration key. Usage of the `package` key to rename dependencies in `Cargo.toml` is ignored in Rust 1.25.0 and prior. When Rust 1.25.0 and prior is used Cargo may download the wrong dependency, which could be squatted on crates.io to be a malicious package. This not only affects manifests that you write locally yourself, but also manifests published to crates.io. Rust 1.0.0 through Rust 1.25.0 is affected by this advisory because Cargo will ignore the `package` key in manifests. Rust 1.26.0 through Rust 1.30.0 are not affected and typically will emit an error because the `package` key is unstable. Rust 1.31.0 and after are not affected because Cargo understands the `package` key. Users of the affected versions are strongly encouraged to update their compiler to the latest available one. Preventing this issue from happening requires updating your compiler to be either Rust 1.26.0 or newer. There will be no point release for Rust versions prior to 1.26.0. Users of Rust 1.19.0 to Rust 1.25.0 can instead apply linked patches to mitigate the issue.
+CVE-2019-16760 can be mapped to the following attack techniques: 
+- an attack technique with id: T1478, name: Install Insecure or Malicious Configuration 
+CVE-2019-1768: A vulnerability in the implementation of a specific CLI command for Cisco NX-OS Software could allow an authenticated, local attacker with administrator credentials to cause a buffer overflow condition or perform command injection. This could allow the attacker to execute arbitrary commands with elevated privileges on the underlying operating system of an affected device. The vulnerability is due to insufficient validation of arguments passed to a certain CLI command. An attacker could exploit this vulnerability by including malicious input as the argument of the affected CLI command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with root privileges. An attacker would need valid administrator credentials to exploit these vulnerabilities.
+CVE-2019-1768 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2019-1781: A vulnerability in the CLI of Cisco FXOS Software and Cisco NX-OS Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying operating system of an affected device. This vulnerability is due to insufficient validation of arguments passed to certain CLI commands. An attacker could exploit this vulnerability by including malicious input as the argument of an affected command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with elevated privileges. An attacker would need administrator credentials to exploit this vulnerability.
+CVE-2019-1781 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2019-1790: A vulnerability in the CLI of Cisco NX-OS Software could allow an authenticated, local attacker with valid administrator credentials to execute arbitrary commands on the underlying operating system of an affected device. The vulnerability is due to insufficient validation of arguments passed to certain CLI commands. An attacker could exploit this vulnerability by including malicious input as the argument of an affected command. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with elevated privileges. An attacker would need valid administrator credentials to exploit this vulnerability.
+CVE-2019-1790 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-1812: A vulnerability in the Image Signature Verification feature of Cisco NX-OS Software could allow an authenticated, local attacker with administrator-level credentials to install a malicious software image on an affected device. The vulnerability exists because software digital signatures are not properly verified during CLI command execution. An attacker could exploit this vulnerability to install an unsigned software image on an affected device.
+CVE-2019-1812 can be mapped to the following attack techniques: 
+- an attack technique with id: T1548, name: Abuse Elevation Control Mechanism 
+CVE-2019-18234: Equinox Control Expert all versions, is vulnerable to an SQL injection attack, which may allow an attacker to remotely execute arbitrary code.
+CVE-2019-18234 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1505.003, name: Server Software Component: Web Shell  
+- an attack technique with id: T1136, name: Create Account  
+- an attack technique with id: T1190, name: Exploit Public-Facing Application  
+- an attack technique with id: T1565.001, name: Data Manipulation: Stored Data Manipulation 
+CVE-2019-1831: A vulnerability in the email message scanning of Cisco AsyncOS Software for Cisco Email Security Appliance (ESA) could allow an unauthenticated, remote attacker to bypass configured content filters on the device. The vulnerability is due to improper input validation of the email body. An attacker could exploit this vulnerability by inserting specific character strings in the message. A successful exploit could allow the attacker to bypass configured content filters that would normally drop the email.
+CVE-2019-1831 can be mapped to the following attack techniques: 
+- an attack technique with id: T1566, name: Phishing 
+CVE-2019-1838: A vulnerability in the web-based management interface of Cisco Application Policy Infrastructure Controller (APIC) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. This vulnerability has been fixed in software version 14.1(1i).
+CVE-2019-1838 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-18571: The RSA Identity Governance and Lifecycle and RSA Via Lifecycle and Governance products prior to 7.1.1 P03 contain a reflected cross-site scripting vulnerability in the My Access Live module [MAL]. An authenticated malicious local user could potentially exploit this vulnerability by sending crafted URL with scripts. When victim users access the module through their browsers, the malicious code gets injected and executed by the web browser in the context of the vulnerable web application.
+CVE-2019-18571 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2019-18578: Dell EMC XtremIO XMS versions prior to 6.3.0 contain a stored cross-site scripting vulnerability. A low-privileged malicious remote user of XtremIO may exploit this vulnerability to store malicious HTML or JavaScript code in application fields. When victim users access the injected page through their browsers, the malicious code may be executed by the web browser in the context of the vulnerable web application.
+CVE-2019-18578 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2019-18581: Dell EMC Data Protection Advisor versions 6.3, 6.4, 6.5, 18.2 versions prior to patch 83, and 19.1 versions prior to patch 71 contain a server missing authorization vulnerability in the REST API. A remote authenticated malicious user with administrative privileges may potentially exploit this vulnerability to alter the application’s allowable list of OS commands. This may lead to arbitrary OS command execution as the regular user runs the DPA service on the affected system.
+CVE-2019-18581 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2019-1860: A vulnerability in the dashboard gadget rendering of Cisco Unified Intelligence Center could allow an unauthenticated, remote attacker to obtain or manipulate sensitive information between a user&rsquo;s browser and Cisco Unified Intelligence Center. The vulnerability is due to the lack of gadget validation. An attacker could exploit this vulnerability by forcing a user to load a malicious gadget. A successful exploit could allow the attacker to obtain sensitive information, such as current user credentials, or manipulate data between the user&rsquo;s browser and Cisco Unified Intelligence Center in the context of the malicious gadget.
+CVE-2019-1860 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2019-1863: A vulnerability in the web-based management interface of Cisco Integrated Management Controller (IMC) Software could allow an authenticated, remote attacker to make unauthorized changes to the system configuration. The vulnerability is due to insufficient authorization enforcement. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected software. A successful exploit could allow a user with read-only privileges to change critical system configurations using administrator privileges.
+CVE-2019-1863 can be mapped to the following attack techniques: 
+- an attack technique with id: T1565.001, name: Data Manipulation: Stored Data Manipulation 
+CVE-2019-1876: A vulnerability in the HTTPS proxy feature of Cisco Wide Area Application Services (WAAS) Software could allow an unauthenticated, remote attacker to use the Central Manager as an HTTPS proxy. The vulnerability is due to insufficient authentication of proxy connection requests. An attacker could exploit this vulnerability by sending a malicious HTTPS CONNECT message to the Central Manager. A successful exploit could allow the attacker to access public internet resources that would normally be blocked by corporate policies.
+CVE-2019-1876 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-1879: A vulnerability in the CLI of Cisco Integrated Management Controller (IMC) could allow an authenticated, local attacker to inject arbitrary commands that are executed with root privileges. The vulnerability is due to insufficient validation of user-supplied input at the CLI. An attacker could exploit this vulnerability by authenticating with the administrator password via the CLI of an affected device and submitting crafted input to the affected commands. A successful exploit could allow the attacker to execute arbitrary commands on the device with root privileges.
+CVE-2019-1879 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2019-1941: A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device. The vulnerability exists because the web-based management interface does not properly validate user-supplied input. An attacker could exploit this vulnerability by persuading a user to click a malicious link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information. At the time of publication, this vulnerability affected Cisco ISE running software releases prior to 2.4.0 Patch 9 and 2.6.0.
+CVE-2019-1941 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-1942: A vulnerability in the sponsor portal web interface for Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to impact the integrity of an affected system by executing arbitrary SQL queries. The vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending crafted input that includes SQL statements to an affected system. A successful exploit could allow the attacker to modify entries in some database tables, affecting the integrity of the data. At the time of publication, this vulnerability affected Cisco ISE running software releases 2.6.0 and prior.
+CVE-2019-1942 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565.001, name: Data Manipulation: Stored Data Manipulation 
+CVE-2019-1943: A vulnerability in the web interface of Cisco Small Business 200, 300, and 500 Series Switches software could allow an unauthenticated, remote attacker to redirect a user to a malicious web page. The vulnerability is due to improper input validation of the parameters of an HTTP request. An attacker could exploit this vulnerability by intercepting a user's HTTP request and modifying it into a request that causes the web interface to redirect the user to a specific malicious URL. This type of vulnerability is known as an open redirect attack and is used in phishing attacks that get users to unknowingly visit malicious sites.
+CVE-2019-1943 can be mapped to the following attack techniques: 
+- an attack technique with id: T1189, name: Drive-by Compromise 
+CVE-2019-3708: IsilonSD Management Server 1.1.0 contains a cross-site scripting vulnerability while uploading an OVA file. A remote attacker can trick an admin user to potentially exploit this vulnerability to execute malicious HTML or JavaScript code in the context of the admin user.
+CVE-2019-3708 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2019-3727: Dell EMC RecoverPoint versions prior to 5.1.3 and RecoverPoint for VMs versions prior to 5.2.0.2 contain an OS command injection vulnerability in the installation feature of Boxmgmt CLI. A malicious boxmgmt user may potentially be able to execute arbitrary commands as root.
+CVE-2019-3727 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-3754: Dell EMC Unity Operating Environment versions prior to 5.0.0.0.5.116, Dell EMC UnityVSA versions prior to 5.0.0.0.5.116 and Dell EMC VNXe3200 versions prior to 3.1.10.9946299 contain a reflected cross-site scripting vulnerability on the cas/logout page. A remote unauthenticated attacker could potentially exploit this vulnerability by tricking a victim application user to supply malicious HTML or Java Script code to Unisphere, which is then reflected back to the victim and executed by the web browser.
+CVE-2019-3754 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2019-3758: RSA Archer, versions prior to 6.6 P2 (6.6.0.2), contain an improper authentication vulnerability. The vulnerability allows sysadmins to create user accounts with insufficient credentials. Unauthenticated attackers could gain unauthorized access to the system using those accounts.
+CVE-2019-3758 can be mapped to the following attack techniques: 
+- an attack technique with id: T1136, name: Create Account 
+CVE-2019-3780: Cloud Foundry Container Runtime, versions prior to 0.28.0, deploys K8s worker nodes that contains a configuration file with IAAS credentials. A malicious user with access to the k8s nodes can obtain IAAS credentials allowing the user to escalate privileges to gain access to the IAAS account.
+CVE-2019-3780 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2019-3782: Cloud Foundry CredHub CLI, versions prior to 2.2.1, inadvertently writes authentication credentials provided via environment variables to its persistent config file. A local authenticated malicious user with access to the CredHub CLI config file can use these credentials to retrieve and modify credentials stored in CredHub that are authorized to the targeted user.
+CVE-2019-3782 can be mapped to the following attack techniques: 
+- an attack technique with id: T1098, name: Account Manipulation 
+CVE-2019-3787: Cloud Foundry UAA, versions prior to 73.0.0, falls back to appending “unknown.org” to a user's email address when one is not provided and the user name does not contain an @ character. This domain is held by a private company, which leads to attack vectors including password recovery emails sent to a potentially fraudulent address. This would allow the attacker to gain complete control of the user's account.
+CVE-2019-3787 can be mapped to the following attack techniques: 
+- an attack technique with id: T1078, name: Valid Accounts  
+- an attack technique with id: T1098, name: Account Manipulation 
+CVE-2019-6549: An attacker could retrieve plain-text credentials stored in a XML file on PR100088 Modbus gateway versions prior to Release R02 (or Software Version 1.1.13166) through FTP.
+CVE-2019-6549 can be mapped to the following attack techniques: 
+- an attack technique with id: T1078, name: Valid Accounts 
+CVE-2019-6563: Moxa IKS and EDS generate a predictable cookie calculated with an MD5 hash, allowing an attacker to capture the administrator's password, which could lead to a full compromise of the device.
+CVE-2019-6563 can be mapped to the following attack techniques: 
+- an attack technique with id: T1078, name: Valid Accounts 
+CVE-2020-0671: An elevation of privilege vulnerability exists when the Windows kernel fails to properly handle objects in memory, aka 'Windows Kernel Elevation of Privilege Vulnerability'. This CVE ID is unique from CVE-2020-0668, CVE-2020-0669, CVE-2020-0670, CVE-2020-0672.
+CVE-2020-0671 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-0981: A security feature bypass vulnerability exists when Windows fails to properly handle token relationships.An attacker who successfully exploited the vulnerability could allow an application with a certain integrity level to execute code at a different integrity level, leading to a sandbox escape.The update addresses the vulnerability by correcting how Windows handles token relationships, aka 'Windows Token Security Feature Bypass Vulnerability'.
+CVE-2020-0981 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation  
+- an attack technique with id: T1497, name: Virtualization/Sandbox Evasion 
+CVE-2020-11010: In Tortoise ORM before versions 0.15.23 and 0.16.6, various forms of SQL injection have been found for MySQL and when filtering or doing mass-updates on char/text fields. SQLite & PostgreSQL are only affected when filtering with contains, starts_with, or ends_with filters (and their case-insensitive counterparts).
+CVE-2020-11010 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1505.003, name: Server Software Component: Web Shell  
+- an attack technique with id: T1136, name: Create Account  
+- an attack technique with id: T1190, name: Exploit Public-Facing Application  
+- an attack technique with id: T1565.001, name: Data Manipulation: Stored Data Manipulation 
+CVE-2020-11023: In jQuery versions greater than or equal to 1.0.3 and before 3.5.0, passing HTML containing <option> elements from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.
+CVE-2020-11023 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-11030: In affected versions of WordPress, a special payload can be crafted that can lead to scripts getting executed within the search block of the block editor. This requires an authenticated user with the ability to add content. This has been patched in version 5.4.1, along with all the previously affected versions via a minor release (5.3.3, 5.2.6, 5.1.5, 5.0.9, 4.9.14, 4.8.13, 4.7.17, 4.6.18, 4.5.21, 4.4.22, 4.3.23, 4.2.27, 4.1.30, 4.0.30, 3.9.31, 3.8.33, 3.7.33).
+CVE-2020-11030 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-11055: In BookStack greater than or equal to 0.18.0 and less than 0.29.2, there is an XSS vulnerability in comment creation. A user with permission to create comments could POST HTML directly to the system to be saved in a comment, which would then be executed/displayed to others users viewing the comment. Through this vulnerability custom JavaScript code could be injected and therefore ran on other user machines. This most impacts scenarios where not-trusted users are given permission to create comments. This has been fixed in 0.29.2.
+CVE-2020-11055 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-11082: In Kaminari before 1.2.1, there is a vulnerability that would allow an attacker to inject arbitrary code into pages with pagination links. This has been fixed in 1.2.1.
+CVE-2020-11082 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-11087: In FreeRDP less than or equal to 2.0.0, there is an out-of-bound read in ntlm_read_AuthenticateMessage. This has been fixed in 2.1.0.
+CVE-2020-11087 can be mapped to the following attack techniques: 
+- an attack technique with id: T1211, name: Exploitation for Defense Evasion 
+CVE-2020-1109: An elevation of privilege vulnerability exists when the Windows Update Stack fails to properly handle objects in memory, aka 'Windows Update Stack Elevation of Privilege Vulnerability'. This CVE ID is unique from CVE-2020-1110.
+CVE-2020-1109 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-1111: An elevation of privilege vulnerability exists when Windows improperly handles calls to Clipboard Service, aka 'Windows Clipboard Service Elevation of Privilege Vulnerability'. This CVE ID is unique from CVE-2020-1121, CVE-2020-1165, CVE-2020-1166.
+CVE-2020-1111 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-12008: Baxter ExactaMix EM 2400 Versions 1.10, 1.11 and ExactaMix EM1200 Versions 1.1, 1.2 systems use cleartext messages to communicate order information with an order entry system. This could allow an attacker with network access to view sensitive data including PHI.
+CVE-2020-12008 can be mapped to the following attack techniques: 
+- an attack technique with id: T0859, name: Valid Accounts 
+CVE-2020-12029: All versions of FactoryTalk View SE do not properly validate input of filenames within a project directory. A remote, unauthenticated attacker may be able to execute a crafted file on a remote endpoint that may result in remote code execution (RCE). Rockwell Automation recommends applying patch 1126289. Before installing this patch, the patch rollup dated 06 Apr 2020 or later MUST be applied. 1066644 – Patch Roll-up for CPR9 SRx.
+CVE-2020-12029 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-14510: GateManager versions prior to 9.2c, The affected product contains a hard-coded credential for telnet, allowing an unprivileged attacker to execute commands as root.
+CVE-2020-14510 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation  
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-1456: A cross-site-scripting (XSS) vulnerability exists when Microsoft SharePoint Server does not properly sanitize a specially crafted web request to an affected SharePoint server, aka 'Microsoft Office SharePoint XSS Vulnerability'. This CVE ID is unique from CVE-2020-1450, CVE-2020-1451.
+CVE-2020-1456 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1478, name: Install Insecure or Malicious Configuration  
+- an attack technique with id: T1036, name: Masquerading 
+CVE-2020-1495: A remote code execution vulnerability exists in Microsoft Excel software when the software fails to properly handle objects in memory. An attacker who successfully exploited the vulnerability could run arbitrary code in the context of the current user. If the current user is logged on with administrative user rights, an attacker could take control of the affected system. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights. Users whose accounts are configured to have fewer user rights on the system could be less impacted than users who operate with administrative user rights.
+Exploitation of the vulnerability requires that a user open a specially crafted file with an affected version of Microsoft Excel. In an email attack scenario, an attacker could exploit the vulnerability by sending the specially crafted file to the user and convincing the user to open the file. In a web-based attack scenario, an attacker could host a website (or leverage a compromised website that accepts or hosts user-provided content) containing a specially crafted file designed to exploit the vulnerability. An attacker would have no way to force users to visit the website. Instead, an attacker would have to convince users to click a link, typically by way of an enticement in an email or instant message, and then convince them to open the specially crafted file.
+The security update addresses the vulnerability by correcting how Microsoft Excel handles objects in memory.
+
+CVE-2020-1495 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-15105: Django Two-Factor Authentication before 1.12, stores the user's password in clear text in the user session (base64-encoded). The password is stored in the session when the user submits their username and password, and is removed once they complete authentication by entering a two-factor authentication code. This means that the password is stored in clear text in the session for an arbitrary amount of time, and potentially forever if the user begins the login process by entering their username and password and then leaves before entering their two-factor authentication code. The severity of this issue depends on which type of session storage you have configured: in the worst case, if you're using Django's default database session storage, then users' passwords are stored in clear text in your database. In the best case, if you're using Django's signed cookie session, then users' passwords are only stored in clear text within their browser's cookie store. In the common case of using Django's cache session store, the users' passwords are stored in clear text in whatever cache storage you have configured (typically Memcached or Redis). This has been fixed in 1.12. After upgrading, users should be sure to delete any clear text passwords that have been stored. For example, if you're using the database session backend, you'll likely want to delete any session record from the database and purge that data from any database backups or replicas. In addition, affected organizations who have suffered a database breach while using an affected version should inform their users that their clear text passwords have been compromised. All organizations should encourage users whose passwords were insecurely stored to change these passwords on any sites where they were used. As a workaround, wwitching Django's session storage to use signed cookies instead of the database or cache lessens the impact of this issue, but should not be done without a thorough understanding of the security tradeoffs of using signed cookies rather than a server-side session storage. There is no way to fully mitigate the issue without upgrading.
+CVE-2020-15105 can be mapped to the following attack techniques: 
+- an attack technique with id: T1078, name: Valid Accounts 
+CVE-2020-15109: In solidus before versions 2.8.6, 2.9.6, and 2.10.2, there is an bility to change order address without triggering address validations. This vulnerability allows a malicious customer to craft request data with parameters that allow changing the address of the current order without changing the shipment costs associated with the new shipment. All stores with at least two shipping zones and different costs of shipment per zone are impacted. This problem comes from how checkout permitted attributes are structured. We have a single list of attributes that are permitted across the whole checkout, no matter the step that is being submitted. See the linked reference for more information. As a workaround, if it is not possible to upgrade to a supported patched version, please use this gist in the references section.
+CVE-2020-15109 can be mapped to the following attack techniques: 
+- an attack technique with id: T1565, name: Data Manipulation 
+CVE-2020-15118: In Wagtail before versions 2.7.4 and 2.9.3, when a form page type is made available to Wagtail editors through the `wagtail.contrib.forms` app, and the page template is built using Django's standard form rendering helpers such as form.as_p, any HTML tags used within a form field's help text will be rendered unescaped in the page. Allowing HTML within help text is an intentional design decision by Django; however, as a matter of policy Wagtail does not allow editors to insert arbitrary HTML by default, as this could potentially be used to carry out cross-site scripting attacks, including privilege escalation. This functionality should therefore not have been made available to editor-level users. The vulnerability is not exploitable by an ordinary site visitor without access to the Wagtail admin. Patched versions have been released as Wagtail 2.7.4 (for the LTS 2.7 branch) and Wagtail 2.9.3 (for the current 2.9 branch). In these versions, help text will be escaped to prevent the inclusion of HTML tags. Site owners who wish to re-enable the use of HTML within help text (and are willing to accept the risk of this being exploited by editors) may set WAGTAILFORMS_HELP_TEXT_ALLOW_HTML = True in their configuration settings. Site owners who are unable to upgrade to the new versions can secure their form page templates by rendering forms field-by-field as per Django's documentation, but omitting the |safe filter when outputting the help text.
+CVE-2020-15118 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-15162: In PrestaShop from version 1.5.0.0 and before version 1.7.6.8, users are allowed to send compromised files. These attachments allowed people to input malicious JavaScript which triggered an XSS payload. The problem is fixed in version 1.7.6.8.
+CVE-2020-15162 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-15183: SoyCMS 3.0.2 and earlier is affected by Reflected Cross-Site Scripting (XSS) which leads to Remote Code Execution (RCE) from a known vulnerability. This allows remote attackers to force the administrator to edit files once the adminsitrator loads a specially crafted webpage.
+CVE-2020-15183 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-15189: SOY CMS 3.0.2 and earlier is affected by Remote Code Execution (RCE) using Unrestricted File Upload. Cross-Site Scripting(XSS) vulnerability that was used in CVE-2020-15183 can be used to increase impact by redirecting the administrator to access a specially crafted page. This vulnerability is caused by insecure configuration in elFinder. This is fixed in version 3.0.2.328.
+CVE-2020-15189 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-15233: ORY Fosite is a security first OAuth2 & OpenID Connect framework for Go. In Fosite from version 0.30.2 and before version 0.34.1, there is an issue in which an an attacker can override the registered redirect URL by performing an OAuth flow and requesting a redirect URL that is to the loopback adapter. Attackers can provide both custom URL query parameters to their loopback redirect URL, as well as actually overriding the host of the registered redirect URL. These attacks are only applicable in scenarios where the attacker has access over the loopback interface. This vulnerability has been patched in ORY Fosite v0.34.1.
+CVE-2020-15233 can be mapped to the following attack techniques: 
+- an attack technique with id: T1036, name: Masquerading 
+CVE-2020-1569: A remote code execution vulnerability exists when Microsoft Edge improperly accesses objects in memory. The vulnerability could corrupt memory in such a way that enables an attacker to execute arbitrary code in the context of the current user. An attacker who successfully exploited the vulnerability could gain the same user rights as the current user. If the current user is logged on with administrative user rights, an attacker could take control of an affected system. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights.
+An attacker could host a specially crafted website that is designed to exploit the vulnerability through Microsoft Edge, and then convince a user to view the website. The attacker could also take advantage of compromised websites and websites that accept or host user-provided content or advertisements by adding specially crafted content that could exploit the vulnerability. In all cases, however, an attacker would have no way to force users to view the attacker-controlled content. Instead, an attacker would have to convince users to take action, typically by way of enticement in an email or Instant Messenger message, or by getting them to open an attachment sent through email.
+The security update addresses the vulnerability by modifying how Microsoft Edge handles objects in memory.
+
+CVE-2020-1569 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System  
+- an attack technique with id: T1565, name: Data Manipulation  
+- an attack technique with id: T1485, name: Data Destruction  
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-3121: A vulnerability in the web-based management interface of Cisco Small Business Smart and Managed Switches could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface. The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of the affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a malicious link and access a specific page. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+CVE-2020-3121 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-3216: A vulnerability in Cisco IOS XE SD-WAN Software could allow an unauthenticated, physical attacker to bypass authentication and gain unrestricted access to the root shell of an affected device. The vulnerability exists because the affected software has insufficient authentication mechanisms for certain commands. An attacker could exploit this vulnerability by stopping the boot initialization of an affected device. A successful exploit could allow the attacker to bypass authentication and gain unrestricted access to the root shell of the affected device.
+CVE-2020-3216 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-3233: A vulnerability in the web-based Local Manager interface of the Cisco IOx Application Framework could allow an authenticated, remote attacker to conduct a stored cross-site scripting (XSS) attack against a user of the web-based Local Manager interface of an affected device. The attacker must have valid Local Manager credentials. The vulnerability is due to insufficient validation of user-supplied input by the web-based Local Manager interface of the affected software. An attacker could exploit this vulnerability by injecting malicious code into a system settings tab. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected web interface or allow the attacker to access sensitive browser-based information.
+CVE-2020-3233 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-3240: Multiple vulnerabilities in the REST API of Cisco UCS Director and Cisco UCS Director Express for Big Data may allow a remote attacker to bypass authentication or conduct directory traversal attacks on an affected device. For more information about these vulnerabilities, see the Details section of this advisory.
+CVE-2020-3240 can be mapped to the following attack techniques: 
+- an attack technique with id: T1003.008, name: OS Credential Dumping: /etc/passwd and /etc/shadow  
+- an attack technique with id: T1552.001, name: Unsecured Credentials: Credentials In Files  
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-3292: Multiple vulnerabilities in the web-based management interface of Cisco Small Business RV320 and RV325 Series Routers and Cisco Small Business RV016, RV042, and RV082 Routers could allow an authenticated, remote attacker with administrative privileges to execute arbitrary code on an affected device. The vulnerabilities are due to insufficient boundary restrictions on user-supplied input to scripts in the web-based management interface. An attacker with administrative privileges that are sufficient to log in to the web-based management interface could exploit each vulnerability by sending crafted requests that contain overly large values to an affected device, causing a stack overflow. A successful exploit could allow the attacker to cause the device to crash or allow the attacker to execute arbitrary code with root privileges on the underlying operating system.
+CVE-2020-3292 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-3309: A vulnerability in Cisco Firepower Device Manager (FDM) On-Box software could allow an authenticated, remote attacker to overwrite arbitrary files on the underlying operating system of an affected device. The vulnerability is due to improper input validation. An attacker could exploit this vulnerability by uploading a malicious file to an affected device. A successful exploit could allow the attacker to overwrite arbitrary files on as well as modify the underlying operating system of an affected device.
+CVE-2020-3309 can be mapped to the following attack techniques: 
+- an attack technique with id: T1565.001, name: Data Manipulation: Stored Data Manipulation 
+CVE-2020-3349: Multiple vulnerabilities in the web-based management interface of Cisco Data Center Network Manager (DCNM) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface on an affected device. These vulnerabilities are due to insufficient validation of user-supplied input by the web-based management interface. An attacker could exploit these vulnerabilities by persuading a user of the interface to click a customized link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or access sensitive browser-based information.
+CVE-2020-3349 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-3356: A vulnerability in the web-based management interface of Cisco Data Center Network Manager (DCNM) could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface. The vulnerability is due to insufficient input validation by the web-based management interface. An attacker could exploit this vulnerability by interacting with the interface in a way that injects malicious content in a log file. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive, browser-based information.
+CVE-2020-3356 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-3403: A vulnerability in the CLI of Cisco IOS XE Software could allow an authenticated, local attacker to inject a command to the underlying operating system that will execute with root privileges upon the next reboot of the device. The authenticated user must have privileged EXEC permissions on the device. The vulnerability is due to insufficient protection of values passed to a script that executes during device startup. An attacker could exploit this vulnerability by writing values to a specific file. A successful exploit could allow the attacker to execute commands with root privileges each time the affected device is restarted.
+CVE-2020-3403 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-5225: Log injection in SimpleSAMLphp before version 1.18.4. The www/erroreport.php script, which receives error reports and sends them via email to the system administrator, did not properly sanitize the report identifier obtained from the request. This allows an attacker, under specific circumstances, to inject new log lines by manually crafting this report ID. When configured to use the file logging handler, SimpleSAMLphp will output all its logs by appending each log line to a given file. Since the reportID parameter received in a request sent to www/errorreport.php was not properly sanitized, it was possible to inject newline characters into it, effectively allowing a malicious user to inject new log lines with arbitrary content.
+CVE-2020-5225 can be mapped to the following attack techniques: 
+- an attack technique with id: T1565, name: Data Manipulation 
+CVE-2020-5231: In Opencast before 7.6 and 8.1, users with the role ROLE_COURSE_ADMIN can use the user-utils endpoint to create new users not including the role ROLE_ADMIN. ROLE_COURSE_ADMIN is a non-standard role in Opencast which is referenced neither in the documentation nor in any code (except for tests) but only in the security configuration. From the name – implying an admin for a specific course – users would never expect that this role allows user creation. This issue is fixed in 7.6 and 8.1 which both ship a new default security configuration.
+CVE-2020-5231 can be mapped to the following attack techniques: 
+- an attack technique with id: T1136, name: Create Account 
+CVE-2020-5241: matestack-ui-core (RubyGem) before 0.7.4 is vulnerable to XSS/Script injection. This vulnerability is patched in version 0.7.4.
+CVE-2020-5241 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-5250: In PrestaShop before version 1.7.6.4, when a customer edits their address, they can freely change the id_address in the form, and thus steal someone else's address. It is the same with CustomerForm, you are able to change the id_customer and change all information of all accounts. The problem is patched in version 1.7.6.4.
+CVE-2020-5250 can be mapped to the following attack techniques: 
+- an attack technique with id: T1478, name: Install Insecure or Malicious Configuration 
+CVE-2020-5264: In PrestaShop before version 1.7.6.5, there is a reflected XSS while running the security compromised page. It allows anyone to execute arbitrary action. The problem is patched in the 1.7.6.5.
+CVE-2020-5264 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-5266: In the ps_link module for PrestaShop before version 3.1.0, there is a stored XSS when you create or edit a link list block with the title field. The problem is fixed in 3.1.0
+CVE-2020-5266 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-5267: In ActionView before versions 6.0.2.2 and 5.2.4.2, there is a possible XSS vulnerability in ActionView's JavaScript literal escape helpers. Views that use the `j` or `escape_javascript` methods may be susceptible to XSS attacks. The issue is fixed in versions 6.0.2.2 and 5.2.4.2.
+CVE-2020-5267 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-5269: In PrestaShop between versions 1.7.6.1 and 1.7.6.5, there is a reflected XSS on AdminFeatures page by using the `id_feature` parameter. The problem is fixed in 1.7.6.5
+CVE-2020-5269 can be mapped to the following attack techniques: 
+- an attack technique with id: T1557, name: Adversary-in-the-Middle 
+CVE-2020-5270: In PrestaShop between versions 1.7.6.0 and 1.7.6.5, there is an open redirection when using back parameter. The impacts can be many, and vary from the theft of information and credentials to the redirection to malicious websites containing attacker-controlled content, which in some cases even cause XSS attacks. So even though an open redirection might sound harmless at first, the impacts of it can be severe should it be exploitable. The problem is fixed in 1.7.6.5
+CVE-2020-5270 can be mapped to the following attack techniques: 
+- an attack technique with id: T1036, name: Masquerading  
+- an attack technique with id: T1059.007, name: Command and Scripting Interpreter: JavaScript  
+- an attack technique with id: T1557, name: Adversary-in-the-Middle  
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2020-5283: ViewVC before versions 1.1.28 and 1.2.1 has a XSS vulnerability in CVS show_subdir_lastmod support. The impact of this vulnerability is mitigated by the need for an attacker to have commit privileges to a CVS repository exposed by an otherwise trusted ViewVC instance that also has the `show_subdir_lastmod` feature enabled. The attack vector involves files with unsafe names (names that, when embedded into an HTML stream, would cause the browser to run unwanted code), which themselves can be challenging to create. This vulnerability is patched in versions 1.2.1 and 1.1.28.
+CVE-2020-5283 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-5297: In OctoberCMS (october/october composer package) versions from 1.0.319 and before 1.0.466, an attacker can exploit this vulnerability to upload jpg, jpeg, bmp, png, webp, gif, ico, css, js, woff, woff2, svg, ttf, eot, json, md, less, sass, scss, xml files to any directory of an October CMS server. The vulnerability is only exploitable by an authenticated backend user with the `cms.manage_assets` permission. Issue has been patched in Build 466 (v1.0.466).
+CVE-2020-5297 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+CVE-2020-5328: Dell EMC Isilon OneFS versions prior to 8.2.0 contain an unauthorized access vulnerability due to a lack of thorough authorization checks when SyncIQ is licensed, but encrypted syncs are not marked as required. When this happens, loss of control of the cluster can occur.
+CVE-2020-5328 can be mapped to the following attack techniques: 
+- an attack technique with id: T1068, name: Exploitation for Privilege Escalation 
+CVE-2020-5339: RSA Authentication Manager versions prior to 8.4 P10 contain a stored cross-site scripting vulnerability in the Security Console. A malicious RSA Authentication Manager Security Console administrator with advanced privileges could exploit this vulnerability to store arbitrary HTML or JavaScript code through the Security Console web interface. When other Security Console administrators open the affected report page, the injected scripts could potentially be executed in their browser.
+CVE-2020-5339 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-5340: RSA Authentication Manager versions prior to 8.4 P10 contain a stored cross-site scripting vulnerability in the Security Console. A malicious RSA Authentication Manager Security Console administrator with advanced privileges could exploit this vulnerability to store arbitrary HTML or JavaScript code through the Security Console web interface. When other Security Console administrators attempt to change the default security domain mapping, the injected scripts could potentially be executed in their browser.
+CVE-2020-5340 can be mapped to the following attack techniques: 
+- an attack technique with id: T1185, name: Browser Session Hijacking 
+CVE-2020-5350: Dell EMC Integrated Data Protection Appliance versions 2.0, 2.1, 2.2, 2.3, 2.4 contain a command injection vulnerability in the ACM component. A remote authenticated malicious user with root privileges could inject parameters in the ACM component APIs that could lead to manipulation of passwords and execution of malicious commands on ACM component.
+CVE-2020-5350 can be mapped to the following attack techniques: 
+- an attack technique with id: T1098, name: Account Manipulation 
+CVE-2020-5364: Dell EMC Isilon OneFS versions 8.2.2 and earlier contain an SNMPv2 vulnerability. The SNMPv2 services is enabled, by default, with a pre-configured community string. This community string allows read-only access to many aspects of the Isilon cluster, some of which are considered sensitive and can foster additional access.
+CVE-2020-5364 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2020-5373: Dell EMC OpenManage Integration for Microsoft System Center (OMIMSSC) for SCCM and SCVMM versions prior to 7.2.1 contain an improper authentication vulnerability. A remote unauthenticated attacker may potentially exploit this vulnerability to retrieve the system inventory data of the managed device.
+CVE-2020-5373 can be mapped to the following attack techniques: 
+- an attack technique with id: T1005, name: Data from Local System 
+CVE-2020-6964: In ApexPro Telemetry Server Versions 4.2 and prior, CARESCAPE Telemetry Server v4.2 & prior, Clinical Information Center (CIC) Versions 4.X and 5.X, CARESCAPE Central Station (CSCS) Versions 1.X and CARESCAPE Central Station (CSCS) Versions 2.X, the integrated service for keyboard switching of the affected devices could allow attackers to obtain remote keyboard input access without authentication over the network.
+CVE-2020-6964 can be mapped to the following attack techniques: 
+- an attack technique with id: T1059, name: Command and Scripting Interpreter 
+

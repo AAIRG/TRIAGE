@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1078",
+            "T1133",
+            "T1068",
+            "T1574",
+            "T1496",
+            "T1486",
+            "T1505",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described is a remote command execution (RCE) vulnerability in the D-Link DIR-820L router, which can be exploited via HTTP POST requests. Given the nature of this vulnerability, the most relevant attack techniques for exploitation would typically include those that allow for remote code execution through public-facing applications. The following techniques from the provided list are particularly relevant:\n\n1. **T1190 - Exploit Public-Facing Application**: This technique is directly applicable as the vulnerability allows exploitation through a public-facing web interface.\n2. **T1059 - Command and Scripting Interpreter**: This technique is relevant as the exploitation involves executing commands on the system.\n3. **T1078 - Valid Accounts**: This technique may apply if the attacker needs valid credentials to exploit the vulnerability.\n4. **T1133 - External Remote Services**: This technique could be relevant if the exploitation involves accessing external services.\n5. **T1068 - Exploitation for Privilege Escalation**: This technique may be applicable if the exploitation leads to privilege escalation.\n6. **T1574 - Hijack Execution Flow**: This technique might be relevant if the exploitation allows for control over the execution flow.\n7. **T1496 - Resource Hijacking**: This technique could be relevant if the exploitation allows for hijacking resources.\n8. **T1486 - Data Encrypted for Impact**: This technique may apply if the exploitation leads to data being encrypted maliciously.\n9. **T1505 - Server Software Component**: This technique could be relevant if the exploitation involves manipulating server components.\n10. **None**: This is included to fulfill the requirement of having ten entries.\n\nBased on the analysis, the top relevant techniques are ranked as follows."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1190",
+            "T1552",
+            "T1556",
+            "T1068",
+            "T1078",
+            "T1133",
+            "T1003",
+            "T1059",
+            "T1486",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described allows attackers to access restricted directories in Adobe ColdFusion when a password is not configured. This is indicative of a potential exploitation technique that could be classified under \"Exploit Public-Facing Application\" (T1190), as the vulnerability can be exploited through web interfaces without proper authentication. Given the nature of the vulnerability, it is likely that other techniques related to exploitation of public-facing applications may also apply, but the primary technique is T1190. \n\nAfter analyzing the provided attack techniques, the most relevant exploitation techniques for this vulnerability include:\n1. T1190 - Exploit Public-Facing Application\n2. T1552 - Unsecured Credentials (as the lack of a password indicates unsecured access)\n3. T1556 - Modify Authentication Process (related to the lack of password)\n4. T1068 - Exploitation for Privilege Escalation (if the attacker gains access to sensitive areas)\n5. T1078 - Valid Accounts (if the attacker can exploit the lack of authentication)\n6. T1133 - External Remote Services (if the attack involves external services)\n7. T1003 - OS Credential Dumping (if credentials are accessible)\n8. T1059 - Command and Scripting Interpreter (if commands can be executed)\n9. T1486 - Data Encrypted for Impact (if data is compromised)\n10. None (as a placeholder for the 10th position)\n\nThus, the relevant techniques are ranked accordingly."
+    }
+]

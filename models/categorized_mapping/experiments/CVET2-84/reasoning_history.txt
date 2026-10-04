@@ -1,0 +1,25 @@
+Given the context of CVE-2018-15444, it is a vulnerability in the Cisco Energy Management Suite Software that allows authenticated remote attackers to exploit improper handling of XML External Entity (XXE) entries to gain read and write access. The attack requires user interaction, such as convincing a user to import a crafted XML file, which indicates that it acts through user execution methods. 
+
+Relevant attack techniques include:
+
+1. **User Execution: Malicious File (T1204.002)** - The attack relies on the user opening a crafted XML file that triggers the exploit.
+2. **Exploit Public-Facing Application (T1190)** - The vulnerability exploits a public-facing service (the web-based user interface) that processes the malicious XML input.
+
+Additionally, there is user interaction involved, which is essential to exploit this vulnerability effectively. Therefore, the identified techniques are appropriate mappings for this vulnerability.
+
+The vulnerability CVE-2020-15183 describes a reflected cross-site scripting (XSS) flaw that allows attackers to execute arbitrary code in the context of a web application. This aligns with the following attack techniques:
+- **T1204.001**: User Execution: Malicious Link, as the exploitation relies on user interaction with a malicious link.
+- **T1189**: Drive-by Compromise, since the vulnerability could be exploited by tricking an admin to load a specially crafted webpage (likely hosting the malicious payload).
+- **T1133**: External Remote Services may apply since the vulnerability involves interaction with an external site, serving the malicious payload.
+
+Given the context of vulnerability exploitation involving XSS and the need for user actions, these techniques are considered relevant.
+
+The vulnerability CVE-2019-1831 allows an unauthenticated, remote attacker to bypass email content filters due to improper input validation in the email scanning feature of Cisco AsyncOS Software for Cisco Email Security Appliance (ESA). This vulnerability relates to the exploitation of public-facing applications, which aligns with the attack technique of 'Exploiting Public-Facing Application' (T1190). Additionally, given that this type of vulnerability could potentially be used for spearphishing by crafting specific emails that bypass security filters, it relates to 'Spearphishing Attachment' (T1566.001) if malicious attachments were used or 'Spearphishing Link' (T1566.002) if links were involved to exploit the bypass capability. 
+
+Thus, the relevant attack techniques for this vulnerability would likely include:
+- T1190: Exploit Public-Facing Application
+- T1566.001: Phishing: Spearphishing Attachment
+- T1566.002: Phishing: Spearphishing Link
+
+The nature of the exploit emphasizes using public-facing services and manipulating email content, making T1190 a strong candidate, while the spearphishing techniques are possibilities secondary to the initial exploit.
+

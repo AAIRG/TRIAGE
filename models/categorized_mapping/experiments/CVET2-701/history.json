@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1499",
+            "T1071",
+            "T1543",
+            "T1070",
+            "T1584",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1499"
+        ],
+        "reasoning": "Given the vulnerability description for the D-Link DIR-820L, which involves remote command execution (RCE) via HTTP POST, we can infer potential secondary impacts that an attacker could exploit after gaining initial access. The secondary impacts typically involve actions that can be taken after the initial exploitation, such as data exfiltration, privilege escalation, or further system manipulation.\n\nFrom the provided list of attack techniques, the following techniques are relevant as secondary impacts for this vulnerability:\n1. **T1499** - Endpoint Denial of Service: An attacker could potentially cause a denial of service on the device.\n2. **T1071** - Application Layer Protocol: This could be used to communicate with other systems or services.\n3. **T1543** - Create or Modify System Process: An attacker could create or modify processes on the device.\n4. **T1070** - Indicator Removal: This technique could be used to hide the attacker's presence.\n5. **T1584** - Compromise Infrastructure: This could involve further exploitation of the network or connected devices.\n\nGiven the context of the vulnerability, these techniques represent plausible secondary impacts. However, since the list of techniques is extensive, we will rank them based on relevance and potential impact, while also including 'None' to indicate that there may be no additional techniques applicable.\n\nThe final ranked list of secondary impact techniques is:\n1. T1499\n2. T1071\n3. T1543\n4. T1070\n5. T1584\n6. None (indicating that there may not be enough techniques to fill the list)\n7. None\n8. None\n9. None\n10. None\n\nThus, the output will include the relevant techniques and the 'None' values to complete the list."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1068",
+            "T1552",
+            "T1003",
+            "T1083",
+            "T1136",
+            "T1486",
+            "T1496",
+            "T1557",
+            "T1490",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "Given the vulnerability description for Adobe ColdFusion versions 9.0, 9.0.1, 9.0.2, and 10, which allows attackers to access restricted directories when a password is not configured, the secondary impacts can include various attack techniques that an adversary might leverage after gaining initial access. \n\nBased on the context of the vulnerability, the following secondary impact techniques are relevant:\n1. **T1068** - Exploitation for Privilege Escalation: Gaining higher privileges after initial access.\n2. **T1552** - Unsecured Credentials: Accessing sensitive information due to lack of proper credential management.\n3. **T1003** - OS Credential Dumping: Extracting credentials from the operating system.\n4. **T1083** - File and Directory Discovery: Identifying files and directories to exploit further.\n5. **T1136** - Create Account: Creating new accounts for persistence.\n6. **T1486** - Data Encrypted for Impact: Encrypting data to extort victims.\n7. **T1496** - Resource Hijacking: Using resources for unauthorized purposes.\n8. **T1557** - Adversary-in-the-Middle: Intercepting communications.\n9. **T1490** - Inhibit System Recovery: Preventing recovery options to maintain control.\n10. **None**: Indicating that there may be no additional relevant techniques.\n\nThese techniques are ranked based on their relevance and potential impact following the exploitation of the vulnerability."
+    }
+]

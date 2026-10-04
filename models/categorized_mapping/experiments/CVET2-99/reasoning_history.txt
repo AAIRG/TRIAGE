@@ -1,0 +1,933 @@
+For the vulnerability CVE-2018-15444, the relevant attack techniques can be derived from the description of the vulnerability and its exploitation method. This vulnerability involves an XML External Entity (XXE) injection which classified it under multiple attack techniques. 
+
+- The reference to an authenticated, remote attacker exploiting the vulnerability indicates that the attack is conducted over a network. Thus, **T1190 (Exploit Public-Facing Application)** is relevant as it mentions the exploitation of weaknesses in an Internet-facing host or system.
+- The requirement for user interaction to carry out the attack suggests **T1204.001 (User Execution: Malicious Link)**, where the attacker needs a victim to click a link to successfully execute the exploit.
+- Given the user interaction and potential social engineering aspects, techniques related to phishing can be inferred. Therefore, **T1566 (Phishing)** is also relevant since adversaries may send phishing messages to gain access to victim systems.
+
+Based on the context provided, the relevant attack techniques include:
+- T1190 (Exploit Public-Facing Application)
+- T1204.001 (User Execution: Malicious Link)
+- T1566 (Phishing) 
+
+Thus, the resulting list of attack IDs related to this CVE is constructed based on the characteristics of the vulnerability and how it would be exploited in a real-world scenario.
+
+The vulnerability CVE-2020-15183 involves a reflected cross-site scripting (XSS) issue that can lead to remote code execution (RCE). The description indicates that a remote attacker can exploit this vulnerability by tricking an administrator into accessing a malicious webpage, leading to unauthorized commands being executed. This points toward several attack techniques, including the exploitation of a public-facing application, as the vulnerability occurs in a web application context. 
+
+The relevant attack techniques that relate to this vulnerability are:
+- **T1204.002 (User Execution: Malicious File)**, as an administrator is tricked into executing malicious code via XSS.
+- **T1189 (Drive-by Compromise)**, because the exploitation occurs through the user visiting a malicious webpage.
+- **T1190 (Exploit Public-Facing Application)**, since the vulnerability targets an internet-accessible application.
+
+Given the characteristics of the attack and the nature of the vulnerability, these three techniques are the most relevant.
+
+The vulnerability CVE-2019-1831 allows an unauthenticated remote attacker to bypass content filters on the Cisco Email Security Appliance (ESA) by exploiting improper input validation in the email body. This vulnerability likely involves indirect user execution, as attackers could send crafted emails that evade filtering mechanisms. The techniques related to this include:
+
+- **T1566.001 (Phishing: Spearphishing Attachment)**: This captures the functionality of sending malicious attachments that, if opened by the victim, could lead to code execution.
+
+- **T1566.002 (Phishing: Spearphishing Link)**: This encompasses the concept of persuading users to click on links in the phishing emails, which could exploit further vulnerabilities.
+
+- **T1190 (Exploit Public-Facing Application)**: Since the vulnerability relates to web-based content scanning, it can also be categorized under exploitation of public-facing applications where the attack takes advantage of a weakness in the system.
+
+Given the nature of the identified vulnerabilities, these attack techniques represent relevant approaches that an adversary might employ.
+
+To determine the relevant attack techniques for CVE-2018-11088, we analyze the description of the vulnerability, which indicates privilege escalation potentially via access to sensitive credentials. The user interaction required to exploit the vulnerability is critical, as it suggests that it can be tied to malicious file execution or exploitation techniques. The categorization of the attack techniques implies a lookup for methods associated with credential access, malicious user execution, and exploitation of public-facing applications to leverage weak points in the system. Based on the techniques provided in the CSV and the nature of the vulnerability, we can identify relevant techniques that align with the risk it poses.
+
+Key takeaways include:
+- Exploit Public-Facing Application (T1190): The nature of privilege escalation indicates that the vulnerability could be exploited through network-facing applications.
+- User Execution: Malicious File (T1204.002): The description of the scenario may allow for malicious file execution prompting user interaction.
+- Brute Force: Password Guessing (T1110.001): As the escalation relates to gaining credentials, this technique could also be relevant if there's a pattern of exploitation using weak credentials.
+
+Thus, the techniques applicable to this CVE are T1190, T1204.002, and T1110.001.
+
+The vulnerability CVE-2020-1569 allows for remote code execution through exploitation of a flaw in Microsoft Edge, relying on users to visit a malicious website or open a specially crafted file that can trigger the vulnerability. Given that CVE-2020-1569 also requires user interaction (indicated by userInteractionRequired being true) to execute the malicious payload, it aligns well with techniques that involve user execution of malicious content.
+
+From the provided attack techniques, relevant techniques for exploitation include:
+- T1204.002, User Execution: Malicious File: This technique applies since the execution requires a user to open a malicious file.
+- T1566, Phishing: This technique can apply as attackers may use phishing methods to entice users to open malicious content.
+- T1190, Exploit Public-Facing Application: The vulnerability involves exploiting a flaw in a public-facing application (Microsoft Edge), which is also relevant to this attack.
+
+After analyzing all the details, the relevant attack techniques that map to this vulnerability are T1204.002, T1566, and T1190.
+
+Based on the context of the vulnerability CVE-2020-1190, which is described as an elevation of privilege vulnerability related to the Windows State Repository Service, the relevant attack techniques can be determined from the provided options.
+
+Given the nature of the vulnerability, several attack techniques from the CSV provided may apply. Specifically, `T1210` (Exploitation for Credential Access) and `T1068` (Exploitation for Privilege Escalation) are particularly relevant since they are focused on exploiting flaws within software to gain higher access privileges.
+
+Additionally, `T1558` (Obtain Capabilities) and `T1190` (Exploit Public-Facing Application) may also apply, as exploiting such a vulnerability could potentially lead to access control circumvention or increase an adversary's capabilities to perform further attacks. 
+
+Given the description of the CVE and the capabilities of the various techniques, the following identifiers best match the context:
+- **T1068**: Exploitation for Privilege Escalation 
+- **T1190**: Exploit Public-Facing Application 
+- **T1210**: Exploitation for Credential Access 
+
+Therefore, the relevant attack techniques for the vulnerability CVE-2020-1190 can include these identifiers.
+
+For the vulnerability CVE-2019-0911, which describes a remote code execution vulnerability in Microsoft browsers related to memory corruption, the relevant attack techniques primarily involve user interactions leading to exploitation. Given the nature of the vulnerability, where user actions (like opening a malicious file or link) trigger the exploit, techniques such as 'User Execution: Malicious File' and 'Drive-by Compromise' are highly pertinent. 
+
+Thus, the techniques likely applicable are:
+- **T1204.002**: User Execution: Malicious File - because the vulnerability may require a user to execute or open a malicious file.
+- **T1189**: Drive-by Compromise - because the exploitation can occur through user visits to compromised websites that attempt to exploit the vulnerability.
+
+Considering these points, the relevant attack techniques derived for CVE-2019-0911 are T1204.002 and T1189.
+
+For CVE-2019-1812, which is a vulnerability in the Image Signature Verification feature of Cisco NX-OS Software allowing an authenticated, local attacker to install a malicious software image, the relevant attack techniques can include various exploitation techniques based on the description of the vulnerability and its nature. Given the specifics of the vulnerability where an attacker with administrator-level credentials can exploit improper verification during CLI command execution, the following attack techniques may apply:
+
+1. **T1190 (Exploit Public-Facing Application)** - This is relevant as the vulnerability allows exploitation through improperly secured public-facing applications/interfaces.
+2. **T1078 (Valid Accounts)** - Since the attacker needs valid administrator credentials to exploit this vulnerability, the abuse of valid accounts ties directly to the exploitation mechanism.
+3. **T1110 (Brute Force)** - Although not a direct method of exploitation described in this case, there could be scenarios where attackers may need to brute force access to accounts before exploiting the vulnerability.
+
+Thus, the relevant attack techniques for the described vulnerability would be:
+- **T1190 (Exploit Public-Facing Application)**
+- **T1078 (Valid Accounts)**
+- **T1110 (Brute Force)**
+
+The combination of exploiting the vulnerability through legitimate administrative accounts aligns well with the methodologies typically adopted by attackers.
+
+Given the context of CVE-2020-5373, which describes an improper authentication vulnerability in Dell EMC OpenManage Integration for Microsoft System Center, various attack techniques can be relevant for the exploitation of this vulnerability. Specifically, the vulnerability allows a malicious actor to access system inventory data without authentication, making it possible to exploit it through an external interface.
+
+The primary attack techniques that could align with this scenario include "T1190" (Exploit Public-Facing Application), as the vulnerability directly relates to an externally facing service that can be exploited via network access; and "T1133" (External Remote Services), as it involves accessing services without proper authentication. Given that a potential attacker can exploit this without any user interaction or prior authorization, "T1566.001" (Phishing: Spearphishing Attachment) could also be relevant in broader attack scenarios adjacent to the exploitation technique. However, in this instance, since it is primarily a vulnerability related directly to accessing data without proper authentication rather than phishing tactics, the focus remains primarily on direct exploitation techniques.
+
+Therefore, the most relevant attack techniques are identified as:
+- T1190: Exploit Public-Facing Application
+- T1133: External Remote Services
+
+Thus, the final output will reflect these.
+
+Given the context of CVE-2019-3707, which presents an authentication bypass vulnerability in Dell EMC iDRAC9, we need to identify relevant attack techniques. This vulnerability allows a remote attacker to exploit the WS-MAN interface, bypass authentication, and gain unauthorized access, indicating potential methods of attack that could exploit this weakness. 
+
+Based on the characteristics of the vulnerability, the following attack techniques are relevant:
+
+1. **T1190 - Exploit Public-Facing Application**: This is directly relevant as the vulnerability is found in a system that is likely to be considered public-facing due to its nature of being an interface accessed remotely.
+2. **T1078 - Valid Accounts**: If an attacker can exploit this vulnerability, they could effectively use it to gain access as a legitimate user or with elevated permissions, which ties back to the nature of bypassing authentication.
+3. **T1565 - Data Manipulation**: With unauthorized access, there could potentially be manipulation of data within the system.
+
+The combination of these techniques reflects the capabilities an adversary would leverage in exploiting this vulnerability effectively. 
+
+Thus, the relevant attack techniques for CVE-2019-3707 would be the following IDs:
+- T1190
+- T1078
+- T1565
+
+Based on the information provided about CVE-2018-19007, which involves an OS command injection vulnerability in Geutebrueck GmbH E2 Camera Series, several attack techniques can be mapped to this vulnerability. The key points are:
+
+- The vulnerability allows for command injection, which aligns with the exploitation technique of executing commands on the victim system.
+- Given that this vulnerability may be exploited via a network and that it has a high CVSS score indicating its severity, relevant techniques could include ways of manipulating commands or utilizing the compromised system to perform further attacks.
+- Specific techniques that map directly to command exploitation, injection, and vulnerability exploitation in network services are relevant.
+
+Thus, the relevant attack techniques that could apply include:
+- T1190: Exploit Public-Facing Application, since the attack can be initiated through the network interface.
+- T1212: Exploitation for Credential Access, which may occur during post-exploitation steps if credentials are accessible.
+- T1059: Command and Scripting Interpreter, which is applicable given that the vulnerability involves command execution.
+- T1566: Phishing, as an indirect route if social engineering is involved to lure users into triggering the vulnerability.
+
+Taking all of this into account, the relevant attack ID would primarily focus on exploitation techniques applicable to the context of the vulnerability.
+
+The vulnerability CVE-2020-3121 allows an unauthenticated remote attacker to conduct a cross-site scripting (XSS) attack due to insufficient validation of user-supplied input. This means that the attacker can trick a user into clicking a malicious link that leads to the execution of arbitrary script code in the context of the affected interface. 
+
+Given that this CVE involves a web-based management interface and XSS, there are several relevant attack techniques related to user execution and exploitation of vulnerabilities in public-facing applications. Specifically, the following techniques apply:
+
+- **T1190, Exploit Public-Facing Application**: This technique is relevant as the vulnerability allows the exploitation of a weakness in an Internet-facing host.
+  
+- **T1204.001, User Execution: Malicious Link**: This directly relates to the mechanism of exploitation by persuading users to click on a crafted link leading to the execution of arbitrary code through a browser.
+
+Based on these considerations, these attack techniques are deemed relevant for this vulnerability. Other techniques may also apply but are not immediately evident from the context provided.
+
+Given the context of CVE-2019-1031, which describes a cross-site scripting (XSS) vulnerability in Microsoft SharePoint Server, relevant attack techniques can be derived from the implications of this type of vulnerability. Since XSS vulnerabilities often allow attackers to execute scripts in the context of a user's session, techniques related to user execution scenarios, particularly when malicious links or files lead to code execution, are applicable. 
+
+Specifically, the techniques T1204.001 (User Execution: Malicious Link) and T1204.002 (User Execution: Malicious File) are highly relevant as they directly relate to methods an adversary could use to exploit the XSS vulnerability through social engineering tactics. Additionally, T1566 (Phishing) is broadly relevant, as phishing can lead users to unwittingly trigger the XSS by clicking on compromised links. 
+
+Therefore, the attack techniques that can be associated with CVE-2019-1031 are:
+- T1204.001
+- T1204.002
+- T1566
+
+To determine the relevant attack techniques associated with the vulnerability CVE-2019-16782, I analyzed the details about the information leak and session hijack vulnerability in Rack. This vulnerability is susceptible to exploitation via timing attacks, allowing an attacker to discover valid session IDs. Given the context and nature of exploitation, the following attack techniques seem applicable:
+
+1. **T1190 - Exploit Public-Facing Application**: This is relevant as the vulnerability can be exploited through the public-facing nature of web applications.
+2. **T1068 - Exploitation for Privilege Escalation**: While it primarily targets privilege escalation, it can also be related to vulnerabilities that inherently allow for other forms of exploitation due to underlying security flaws.
+3. **T1040 - Network Sniffing**: Given that session hijacking could involve intercepting traffic, this technique is relevant as well, especially when considering the potential for timing attacks leveraging network characteristics.
+4. **T1133 - External Remote Services**: This could also apply if the attacker uses external service connections to exploit the vulnerability.
+5. **T1566 - Phishing** and **T1566.002 - Phishing: Spearphishing Link**: These could also be relevant if phishing links are used to exploit the vulnerability directly by tricking users.
+
+After weighing these considerations, I compiled a list of relevant attack IDs.
+
+The vulnerability CVE-2018-15761 allows for privilege escalation through manipulation of a consent page to gain access tokens with arbitrary scopes. Given this scenario, the relevant attack techniques would likely involve methods for exploiting public-facing applications, as well as techniques that involve stealing access tokens or credentials. The following techniques are most applicable:
+- `T1190`: Exploit Public-Facing Application - as the vulnerability requires access to a web application and exploits it.
+- `T1552.001`: Unsecured Credentials: Credentials In Files - as privileges are escalated by getting access tokens possibly linked to insecure credential handling.
+- `T1550.001`: Use Alternate Authentication Material: Application Access Token - since the attacker ultimately stores tokens which can be used to authorize actions under another identity.
+- `T1566`: Phishing - as the technique could also apply in terms of tricking users into performing actions that would lead to privilege escalation.
+
+Overall, these techniques align with how the CVE exploits weaknesses in the application and user interaction.
+
+Given the details of CVE-2020-11050, the presence of "Improper Validation of Certificate with Host Mismatch" indicates that attackers may exploit this vulnerability through public-facing applications to compromise security. Since the vulnerability arises from the failure to perform proper SSL hostname validation, the most relevant attack techniques are those involved in exploiting public-facing applications and possibly leveraging user actions through email or malicious links. Attack techniques relevant to this scenario include T1190 (Exploit Public-Facing Application), T1566 (Phishing), and T1204 (User Execution), specifically focusing on the aspects where users may unknowingly interact with malicious content leading to an exploit. 
+
+The exploitation could also invoke T1204.002 (User Execution: Malicious File) if attackers are able to send links or files that users execute due to social engineering tactics.
+
+For the vulnerability CVE-2019-3784, which involves an insecure session that can be spoofed in Cloud Foundry Stratos, the relevant attack techniques are primarily focused on exploiting public-facing applications and gaining unauthorized access through session hijacking. The attack techniques applicable to this CVE include:
+
+- **T1190**: Exploit Public-Facing Application - The vulnerability can be exploited by a remote authenticated user to spoof sessions to other users.
+- **T1565.001**: Data Manipulation: Stored Data Manipulation - Since the session management relies on stored session data, manipulating that stored data can help in carrying out the spoofing.
+
+Given the context of the vulnerability and the nature of its exploitation, these techniques are highly relevant.
+
+Based on the context provided for CVE-2020-3253, we have a vulnerability concerning the support tunnel feature in Cisco Firepower Threat Defense Software that allows authenticated local attackers to gain shell access with root privileges. The CVE description indicates that an attacker can derive a tunnel password and execute commands, which implies potential for privilege escalation and possibly denial of service if misused. 
+
+1. **T1190 (Exploit Public-Facing Application)** is relevant here since an attacker can exploit a configuration issue in a public-facing application (the affected Cisco device) to gain unauthorized access.
+2. **T1078 (Valid Accounts)** is applicable as the attacker requires valid authentication to exploit the tunneling feature.
+3. **T1489 (Service Stop)** could be relevant because once an attacker has root access, they can stop services which could lead to denial of service.
+4. **T1499 (Endpoint Denial of Service)** applies as the successful exploitation could also lead to sustaining a denial of service condition on the affected device.
+
+These attack techniques capture the potential methods an adversary could utilize to exploit this vulnerability effectively.
+
+The provided context describes CVE-2019-1781, which is a vulnerability in the CLI of Cisco FXOS Software and Cisco NX-OS Software. It allows an authenticated local attacker to execute arbitrary commands on the underlying operating system due to insufficient validation of command arguments. Since exploitation requires administrator credentials, the relevant attack techniques would include those associated with exploiting existing accounts and executing commands.
+
+Upon reviewing the attack techniques, several align with the nature of this vulnerability:
+
+1. **T1078: Valid Accounts** – Since the attacker needs administrator credentials to exploit the vulnerability, this technique is highly relevant.
+2. **T1190: Exploit Public-Facing Application** – Although this is more commonly associated with internet-facing services, the CLI vulnerability could be leveraged in contexts where the CLI could be accessed over a management interface.
+3. **T1204: User Execution** – This might apply if the attacker somehow manipulates user actions to execute commands (not typical for this case, so it might be less relevant).
+4. **T1068: Exploitation for Privilege Escalation** – This can relate to the execution of elevated commands on the system through the exploited vulnerability.
+
+Given these observations, the relevant techniques specifically tailored to this vulnerability should primarily focus on **Valid Accounts** and **Exploit Public-Facing Application**.
+
+The vulnerability CVE-2020-5253 describes an issue in NetHack that allows for malicious use of escaping of characters in the configuration file, which can be exploited. Given that the CVSS v3 score for this vulnerability is 9.8 (critical), it suggests a high likelihood of exploitation by adversaries through public-facing applications. The nature of the attack allows attackers to manipulate network communications to achieve their objectives.
+
+Considering the nature of exploitability outlined in the context, the relevant attack techniques for this vulnerability include:
+- **T1190: Exploit Public-Facing Application**: This is directly applicable because the vulnerability allows exploitation through an issue associated with a public-facing application, NetHack.
+- **T1566.001: Phishing: Spearphishing Attachment** and **T1566: Phishing** could be relevant if we consider scenarios where adversaries could exploit the vulnerability in a social engineering context, although it is more of an indirect association.
+
+The primary and most significant technique based on the information provided for exploiting this specific vulnerability is **T1190**.
+
+Therefore, the answer is a list that primarily includes the most relevant attack technique ID for this specific vulnerability.
+
+For the vulnerability CVE-2020-5366, which describes a Path Traversal Vulnerability in Dell EMC iDRAC9 allowing unauthorized read access to arbitrary files by a remote authenticated malicious user, we can identify relevant attack techniques based on the ability to exploit the vulnerability. Given that this involves manipulating input parameters that lead to accessing sensitive files, the relevant attack techniques from the provided list would include:
+
+- **T1190** (Exploit Public-Facing Application) is appropriate as the vulnerability is exposed on a public-facing service (iDRAC9).
+- **T1133** (External Remote Services) could be relevant as this issue may involve remote services that are accessible after authentication.
+- Other techniques like **T1204.002** (User Execution: Malicious File) and **T1566** (Phishing) might be applicable if the exploitation involved social engineering tactics for users to trigger the vulnerability indirectly.
+
+Considering these, the most relevant attack techniques specifically related to this vulnerability are identified, focusing on the nature of the exploit through public-facing applications.
+
+The CVE-2020-5261 vulnerability relates to a faulty implementation of Token Replay Detection in the Sustainsys.Saml2 library for ASP.NET, which affects versions greater than 2.0.0 and less than 2.5.0. This vulnerability can allow attackers to exploit weaknesses in the system that enable replay attacks, which could lead to unauthorized access. 
+
+Considering the descriptions of the attack techniques available, the relevant techniques include:
+- T1190: Exploit Public-Facing Application, as the vulnerability allows for exploitation of the affected application.
+- T1566: Phishing can be relevant, especially if attackers use social engineering to trick users into accessing vulnerable areas.
+- T1531: Account Access Removal may also be a consideration, as compromised accounts could be removed or locked as part of an exploit.
+
+Thus, the relevant attack techniques for this CVE are those focused on public-facing application exploits, phishing methodologies, and manipulation of user access.
+
+To determine the relevant attack techniques for the vulnerability CVE-2020-12014, we know that it involves SQL injection, which is often associated with exploiting public-facing applications. Given that this vulnerability is related to SQL injection and the low level of authentication required, it aligns well with the attack technique for exploiting vulnerabilities in public-facing applications. Therefore, the appropriate attack technique is T1190, which specifically targets software vulnerabilities present in applications that are accessible over the internet. There are no other specific attack techniques mentioned in relation to CVE-2020-12014, making T1190 the sole technique relevant to this vulnerability.
+
+The vulnerability CVE-2018-10589, described as a path traversal vulnerability in the Advantech WebAccess product, allows attackers to execute arbitrary code. This type of exploitation typically falls under exploiting public-facing applications according to the attack techniques listed. The relevant attack technique that matches this scenario is 'T1190', which outlines the exploitation of vulnerabilities in publicly accessible hosts to gain unauthorized access or execute malicious code. Given that the vulnerability allows for such exploitation and is directly impacting an internet-facing application, it is justified to conclude 'T1190' as the relevant technique. Other attack techniques related to brute forcing or credential collection do not directly apply to the specifics of this vulnerability.
+
+Given the context of CVE-2019-3782, which involves Cloud Foundry CredHub CLI inadvertently writing authentication credentials into its persistent config file, the relevant attack techniques can be mapped to the exploitation techniques provided. Notably, this vulnerability allows for the potential retrieval and modification of credentials, which corresponds to techniques focused on credential manipulation and exploitation. 
+
+1. T1552, which refers to "Unsecured Credentials," connects closely to the nature of the vulnerability, exposing sensitive credential data.
+2. T1078, "Valid Accounts," is relevant since the exploitation could lead to unauthorized use of valid accounts.
+3. T1190, "Exploit Public-Facing Application," applies because the vulnerabilities extended from a public-facing application and could allow for external exploitation.
+4. T1110, "Brute Force," can be relevant here as adversaries might employ brute force methods to exploit weak credential storage or guess user/password combinations.
+5. T1554, "Compromise Client Software Binary," might be applicable as the attacker could manipulate the application that stores the credentials.
+
+Considering these points, the most directly relevant techniques for CVE-2019-3782 would be T1552, T1078, T1190, and possibly T1110 and T1554 depending on the specifics of how an attacker might approach the exploitation.
+
+The CVE-2018-8355 vulnerability is described as a remote code execution vulnerability in Microsoft browsers, which relates to memory corruption. It is categorized under high severity. Knowing that the exploitation likely requires user interaction, relevant attack techniques to consider would include methods that involve user execution, such as opening malicious files or clicking on links. Given this context and the specific characteristics of the vulnerability, the following techniques are applicable: 
+
+- **T1204.002 (User Execution: Malicious File)**: This is relevant as the execution of code requires user interaction, specifically opening a malicious file.
+- **T1566 (Phishing)**: While not directly tied to a specific technique of exploitation, phishing could lead to the delivery of a malicious file or link that exploits this vulnerability.
+- **T1190 (Exploit Public-Facing Application)**: This technique describes exploiting a weakness in an Internet-facing host which aligns with the nature of the vulnerability.
+
+Given these aspects, the relevant attack techniques that can be derived for CVE-2018-8355 are identified.
+
+The vulnerability CVE-2020-5220 involves the Sylius ResourceBundle accepting and using any serialization groups via an HTTP header. This could lead to unintentional data exposure, characterized as a CWE-200: Exposure of Sensitive Information to an Unauthorized Actor. Given its nature, it primarily indicates potential exploitation through remote services and web applications.
+
+From the context provided in the task, the following attack techniques are relevant:
+1. **T1190**: Exploiting public-facing applications, as this vulnerability resides in an API exposed to the internet and could be manipulated by attackers interacting with it.
+2. **T1566**: Phishing-related techniques could apply here if attackers attempt to trick users into utilizing the API in ways that could expose sensitive data inadvertently, or to gather information about the serialization groups being exploited.
+3. **T1059**: Command and Scripting Interpreter could relate to cases where scripts are used to exploit or interact with the endpoint.
+
+Thus, the relevant attack techniques associated with this vulnerability primarily relate to exploiting public-facing applications and the dangers of exposing such APIs to unintended serialization group exploitation.
+
+The vulnerability CVE-2019-3780 involves insufficient protection of credentials that could allow an attacker with access to Kubernetes nodes to escalate privileges and gain access to the IAAS account. Given this, the relevant attack techniques to consider would include those that relate to unauthorized access and manipulation of credentials or public-facing applications. 
+
+The specific techniques that are most relevant include:
+- T1190 (Exploit Public-Facing Application) as the vulnerability allows for exploitation via a misconfiguration that exposes credentials.
+- T1110 (Brute Force) since an attacker may try to guess credentials once they have some level of access as per the description of the vulnerability.
+- T1552.001 (Unsecured Credentials: Credentials In Files), as the nature of the vulnerability directly relates to insecure credential storage practices. 
+
+These techniques represent the potential methods that could be employed in exploiting this specific vulnerability.
+
+Given the description of CVE-2020-3233, it is evident that the vulnerability allows for a stored XSS attack, which can be exploited through user interaction. This aligns with techniques involving user execution, particularly when a user clicks on a link or opens a file that leads to code execution. The relevant attack techniques that could be applied in this case include:
+
+- **T1204.001**: User Execution: Malicious Link – since the attacker can exploit the XSS vulnerability by convincing a user to click a crafted link.
+- **T1189**: Drive-by Compromise – as the vulnerability involves taking control of the user's session upon interaction with the malicious web content.
+- **T1566**: Phishing – which comprehensively covers the method of social engineering that may lead users to fall victim to the exploit, primarily through links.
+
+Thus, a combination of these techniques provides a thorough understanding of how this vulnerability can be exploited.
+
+The vulnerability CVE-2020-12038, which pertains to a memory corruption issue in the EDS subsystem leading to denial-of-service conditions, can be linked to specific exploitation techniques. The primary impact of this vulnerability results in a denial of service affecting system availability. 
+
+Given the nature of the vulnerability—specifically its ability to cause denial of service through the means of crashing an application—a suitable attack technique is 'T1499' for Endpoint Denial of Service. Additionally, 'T1190', which involves exploiting a public-facing application, is relevant since the systems affected are typically accessed remotely.
+
+Therefore, the relevant attack techniques for this vulnerability are associated with the exploitation through service denial and the nature of the vulnerability exposing services to such attacks.
+
+Given the vulnerability CVE-2020-3322 in Cisco Webex Network Recording Player and Cisco Webex Player for Microsoft Windows, which allows for denial-of-service conditions due to improper input validation, the relevant attack techniques can be mapped based on the characteristics of this specific exploit. This vulnerability requires user interaction to exploit, as the user must open a malicious ARF or WRF file. Key techniques include:
+
+- **T1204.002 - User Execution: Malicious File**: Since the attack involves persuading a victim to open a malicious file, this technique is directly relevant.
+- **T1190 - Exploit Public-Facing Application**: Although this primarily refers to exploiting a public-facing service, since the Webex application is a widely used application, exploiting it could relate to gaining access via malicious files and a Denial of Service condition can occur.
+- **T1499.004 - Endpoint Denial of Service: Application or System Exploitation**: This technique applies because the result of the exploitation leads to a DoS condition.
+
+Overall, the described exploit can cause application crashes and disrupt service availability through user interaction with malicious files, aligning with the techniques identified.
+
+Given the context of the CVE-2019-3731 vulnerability, which describes an "Information Exposure Through Timing Discrepancy", the relevant attack techniques can be inferred mainly from the nature of the vulnerability itself and associated techniques utilized in similar scenarios. The context mentions the specific attack exploitability, potential use of remote access, and ways to gain information via timing attacks.
+
+The principal technique that applies here is `T1190` (Exploit Public-Facing Application), as the vulnerability pertains to the exploitation of a weakness in software that could be publicly accessed. Additionally, the inherent nature of this timing vulnerability could relate to tactics that involve observing the system's response times to different requests, which may align somewhat with `T1040` (Network Sniffing) as such activities might involve monitoring network traffic to collect timing information. 
+
+However, the main and most relevant technique remains `T1190`, based on the vulnerability's description.
+
+The vulnerability CVE-2019-1838 is a cross-site scripting (XSS) vulnerability that allows an authenticated, remote attacker to execute arbitrary script code in the context of the affected web-based management interface. Based on the provided methodologies and the nature of this vulnerability, it can be associated with several attack techniques:
+
+1. **T1204.001 - User Execution: Malicious Link**: This technique is relevant as the vulnerability can be exploited by persuading users to click a crafted link from a malicious source, leading to execution in their browser context.
+
+2. **T1189 - Drive-by Compromise**: Given that the attack relies on the user visiting a malicious link, compromising the user's browser via exploitation aligns here, although this specifically relates to the act of the browser being compromised upon visiting a malicious page, which may also include aspects of the XSS attack.
+
+3. **T1566.001 - Phishing: Spearphishing Attachment**: While the primary attack method focuses on links, the concept of delivering malicious content through emails or manipulating users to interact could also fall within the broader scope of phishing strategies.
+
+Overall, the primary focus is on user interaction enabling exploitation through crafted links. Therefore, relevant techniques connected to the nature of this vulnerability have been identified.
+
+Given the context of CVE-2020-5339, which details a stored cross-site scripting (XSS) vulnerability in the RSA Authentication Manager's Security Console, the relevant attack techniques can be derived based on the description of the CVE and associated examples. 
+
+1. The exploit involves the injection and execution of arbitrary HTML or JavaScript code, indicating that the attacker can manipulate web content to achieve their goals. This aligns with techniques focused on exploitation of browser behavior.
+2. 'Drive-by Compromise' (T1189) is relevant because the malicious code could be executed without direct interaction with users beyond accessing the affected report page.
+3. Since the attack is facilitated through a web application vulnerable to XSS, 'User Execution: Malicious Link' (T1204.001) may also apply since users would need to interact with a crafted link leading to the malicious payload.
+4. Finally, the attack may also involve 'Phishing: Spearphishing Link' (T1566.002) as a method used by an attacker to lure victims into executing the malicious code by clicking on prepared links or through other means of social engineering.
+
+In summary, the techniques that could be relevant to CVE-2020-5339 are:
+- T1189: Drive-by Compromise
+- T1204.001: User Execution: Malicious Link
+- T1566.002: Phishing: Spearphishing Link
+
+Thus, the relevant attack techniques for this vulnerability are identified.
+
+The vulnerability CVE-2020-12008 involves cleartext transmission of sensitive data, specifically health information, over a network, which can be intercepted by an attacker. The techniques relevant to this vulnerability focus on exploiting network-related weaknesses and capturing data without authorization. 
+
+The following attack techniques are deemed relevant:
+1. **T1040 (Network Sniffing)**: Since the vulnerability involves cleartext transmission, adversaries could sniff the network to capture sensitive information being transmitted.
+2. **T1190 (Exploit Public-Facing Application)**: Attackers could exploit vulnerabilities in applications accessible over the network that are transmitting sensitive information, which aligns with the vulnerability's context.
+3. **T1566.001 (Phishing: Spearphishing Attachment)**: While less direct, it's common for adversaries using network sniffing techniques to also target users through phishing to gain access to sensitive data.
+4. **T1566.002 (Phishing: Spearphishing Link)**: Similarly, adversaries may send links to deceive users into accessing malicious sites that could also facilitate data interception or manipulation.
+
+Considering the transmission vulnerability and the methods utilized, these techniques effectively encapsulate the forms of exploitation an adversary may use.
+
+Given the context of CVE-2020-3477, which discusses a vulnerability that allows an authenticated local attacker to access files from the flash filesystem due to insufficient application of restrictions during command execution, the relevant attack techniques can be inferred. The vulnerability may allow an attacker to exploit it in a configuration where they have valid credentials (as indicated by the CVSS metrics showing "LOCAL" access). Techniques related to "Valid Accounts" may also apply as the attacker would need to be authenticated. The attacker might also leverage methods to exploit software vulnerabilities (like User Execution), allowing them to manipulate the execution and behavior of the device they are accessing.
+
+Relevant techniques include:
+- **T1078** (Valid Accounts): As access requires authenticated user credentials.
+- **T1190** (Exploit Public-Facing Application): This could potentially apply if the command that exploits the restriction is accessible through a public interface.
+- **T1059.006** (Command and Scripting Interpreter: Python): If a scripting or command interpreter is being used as part of the command execution that leads to the exploitation.
+- **T1212** (Exploitation for Credential Access): Since additional exploitation scenarios may involve credentials, exploiting for Credential Access could be relevant.
+
+Thus, considering the attacker is likely leveraging credentials in conjunction with exploiting command behavior, these techniques are relevant.
+
+Given the vulnerability CVE-2018-7499, which describes potential stack-based buffer overflow vulnerabilities in various versions of Advantech WebAccess software, the following attack techniques are relevant:
+
+1. **T1190 (Exploit Public-Facing Application)**: This technique relates to exploiting vulnerabilities in internet-facing hosts or systems. As CVE-2018-7499 affects web applications, an attacker could exploit this vulnerability remotely.
+
+2. **T1204.002 (User Execution: Malicious File)**: This technique could apply because an attacker might leverage a crafted file that exploits the vulnerability to get a user to execute malicious code, further exploiting the existing vulnerability.
+
+3. **T1499.002 (Endpoint Denial of Service: Service Exhaustion Flood)**: Given the nature of buffer overflow vulnerabilities, they can be exploited to crash services, leading to denial of service conditions. 
+
+4. **T1068 (Exploitation for Privilege Escalation)**: Successful exploitation of the buffer overflow could allow an attacker to escalate privileges potentially, depending on how the service is configured and the access levels associated.
+
+These techniques cover the potential exploitation pathways available through the identified vulnerabilities, focusing both on direct exploitation and possible outcomes of executing that exploitation.
+
+Given the vulnerability CVE-2020-14508, which allows an attacker to execute arbitrary code or cause a denial-of-service condition through an off-by-one error, the relevant attack techniques can be extracted from the descriptions in the original context. The CVSS scores also indicate a high severity and exploitability score, suggesting exploitation would likely be successful through public-facing applications. 
+
+The key existing attack techniques from the provided CSV that relate to exploitation of this kind of vulnerability could include techniques such as 'Exploit Public-Facing Application' (T1190) because the application directly faces the internet and is vulnerable. Additionally, for the arbitrary code execution aspect, 'User Execution: Malicious File' (T1204.002) may be relevant, as adversaries often rely on users executing malicious files that leverage vulnerabilities. Given the nature of similar vulnerabilities listed in the examples, 'Exploitation for Client Execution' (T1203) would also apply as it relates to exploiting vulnerabilities to execute code. 
+
+Based on this analysis, the relevant attack techniques that can be derived for CVE-2020-14508 are classified as: T1190, T1203, and T1204. 
+
+Thus, the list of relevant attack techniques is: ['T1190', 'T1203', 'T1204.002'].
+
+The vulnerability CVE-2019-3708 is related to a cross-site scripting (XSS) flaw in the IsilonSD Management Server, which can allow attackers to execute malicious scripts from uploaded OVA files. Given this context, relevant attack techniques are those that involve exploiting web applications or gaining execution through user interaction. Specifically, the techniques involved include:
+
+1. **T1190 - Exploit Public-Facing Application:** This technique is a perfect fit as the vulnerability exploits a weakness in the web application while processing user input (OVA files in this case).
+2. **T1204.001 - User Execution: Malicious Link:** This applies since the attack relies on user interaction to trigger the malicious script, often by clicking a link to the OVA file.
+3. **T1204.002 - User Execution: Malicious File:** This technique is relevant since it encompasses scenarios where a user must open a malicious file, leading to the execution of malicious code.
+4. **T1189 - Drive-by Compromise:** While somewhat broader, drive-by compromise techniques can be relevant in cases where users are exposed to malicious scripts without explicit interaction, typically through web interfaces that are compromised.
+
+Thus, the selected attack techniques include the ones mentioned as they best describe the exploitation method and how the attack unfolds.
+
+Given the context of CVE-2018-5445, which describes a Path Traversal vulnerability allowing unauthorized read access to files on devices, the relevant attack techniques can be determined based on the nature of the exploitation. The attack leverages a specific vulnerability in a public-facing application, indicating that it may employ the following techniques: 
+
+- **T1190** - Exploit Public-Facing Application: This directly aligns with the nature of the vulnerability since it entails exploiting a weakness in an Internet-facing host or system. 
+- **T1566.001** - Phishing: Spearphishing Attachment: If an adversary attempts to use the vulnerability through a phishing attack, in which a malicious link is sent to users to exploit their interaction with the affected application, this technique would also be relevant.
+- **T1566** - General Phishing: This technique encompasses the broader category of phishing that includes using deceptive practices to entice victims into executing code or compromising their systems.
+
+Since the vulnerability does not inherently suggest user execution via malicious files, the focus remains primarily on the direct exploitation of the application. However, if we consider various avenues of how an attacker might engage this vulnerability, both types of phishing could be included if linked to attacks via social engineering tactics.
+
+The attack techniques primarily associated with the vulnerability are therefore focused and linked to attempting to exploit this specific application and its flaws.
+
+Given the context of CVE-2018-11051, which describes a path traversal vulnerability in certain RSA systems that allows unauthorized access to files stored on a server, the primary attack techniques relevant to this vulnerability include exploiting public-facing applications and user execution methods. In particular, the following techniques are applicable:
+
+1. **T1190**: Exploit Public-Facing Application - This technique refers to exploiting a weakness in an Internet-facing host or system directly, which aligns with the nature of the vulnerability allowing an attacker to access unauthorized files.
+2. **T1204**: User Execution - In this context, while the vulnerability itself is exploited remotely, user interaction may still contribute to the broader exploitation scenario where compromised content or unauthorized access could lead to further malicious activities.
+3. **T1566**: Phishing - If the exploitation method involves tricking users into interacting with malicious links that lead to this vulnerability being exploited, phishing techniques can be considered part of the threat landscape.
+
+Therefore, the relevant attack techniques include T1190, T1204, and T1566, as they pertain directly to how the vulnerability can be initiated or exploited in a real-world scenario.
+
+The vulnerability CVE-2020-10603 relates to improper input sanitization in WebAccess/NMS, allowing for OS command injection. This aligns with the attack technique T1210, which involves exploiting vulnerabilities in applications or systems to execute commands. Additionally, due to the nature of command injection, techniques such as T1059, which includes command and scripting interpreters, are relevant as well. The exploitation could also involve T1204.002 for user action if manipulation of a file or script is required to execute the command. Overall, based on the description and available attack techniques, the relevant techniques for this CVE include:
+- T1210 (Exploitation for Credential Access)
+- T1059 (Command and Scripting Interpreter)
+- T1204.002 (User Execution: Malicious File)
+
+Based on the above reasoning, the relevant attack techniques identified for CVE-2020-10603 are as follows.
+
+Given the context of CVE-2019-1876, which highlights a vulnerability related to insufficient authentication in the HTTPS proxy feature of Cisco Wide Area Application Services, we can analyze potential attack techniques. The vulnerability allows an unauthenticated attacker to exploit the Central Manager as an HTTPS proxy and access blocked internet resources. This exploit could fall under attack techniques category such as:
+
+1. **T1190**: Exploit Public-Facing Application - because the exploit involves taking advantage of public-facing applications.
+2. **T1557**: Adversary-in-the-Middle - as the attacker may position themselves between legitimate users and the proxy to manipulate data or actions.
+3. **T1140**: Network Sniffing - due to the potential to capture traffic that might be transmitted through the exploited proxy.
+
+With this reasoning, the relevant attack techniques for CVE-2019-1876 can be specified.
+
+Given the vulnerability CVE-2019-18573, which is a Session Fixation vulnerability as defined in the context, it can be related to specific attack techniques. The primary exploitation techniques that come into play here are:
+
+1. **T1204.002** - This applies as this vulnerability requires user interaction to be exploited. An attacker could manipulate user actions to exploit the session fixation vulnerability effectively.
+2. **T1190** - Exploiting public-facing applications often involves leveraging such session fixation vulnerabilities. As the application is exposed online, attackers may take advantage of the existing flaws once a user interacts with it.
+
+These techniques are particularly relevant due to the nature of the vulnerability being exploited in public applications and requiring user interactions for the exploitation to succeed.
+
+The vulnerability described in CVE-2020-5252 involves potential security risk related to the use of the Safety package in Python. Given that this vulnerability allows malicious code to "poison" detection routines and can be exploited in a Python environment, relevant attack techniques pertaining to exploitation are needed. The nature of this vulnerability fits well with techniques involving user execution (especially through malicious files or commands), exploitation of public-facing applications, and other forms of privilege manipulation. The following attack techniques can be associated with this CVE:
+- **T1204.002**: User Execution: Malicious File. This is relevant as it links to users executing code potentially via malicious scripts or commands within an affected Python environment.
+- **T1190**: Exploit Public-Facing Application. This attack technique is relevant as it relates to exploiting weaknesses in internet-facing services, which aligns with the concepts around the security issue described.
+- **T1555**: Use Alternate Authentication Material and **T1078**: Valid Accounts may also be applicable, as leveraging trusted environments and previously obtained credentials are common in exploiting software vulnerabilities.
+
+Lastly, techniques involving **Phishing** (such as T1566) could also apply if the malicious code disguised itself in a phishing format to exploit the mentioned vulnerabilities.
+
+Given that the initial request is to focus on relevant techniques from the provided list, we summarize the most fitting techniques.
+
+The vulnerability CVE-2020-3292 allows an authenticated, remote attacker with administrative privileges to execute arbitrary code due to insufficient boundary restrictions on user-supplied inputs. This vulnerability could be exploited through crafted web requests leading to a potential denial of service (DoS) or execution of arbitrary code. Relevant attack techniques that align with this exploit include:
+
+- **T1190**: Exploit Public-Facing Application: The CVE describes an attack targeting the web-based management interface of the affected routers, which is an Internet-facing host.
+- **T1204.002**: User Execution: Malicious File: If an attacker can send crafted requests leading to arbitrary code execution, they might trick users into executing a file.
+- **T1499.004**: Endpoint Denial of Service: Application or System Exploitation: Since the vulnerability leads to a potential crash of the device, this technique is applicable as well.
+- **T1203**: Exploitation for Client Execution: This aligns with potential browser exploits that could be executed on a victim's system as part of the attack.
+
+Given these insights, the attack techniques applicable to the vulnerability CVE-2020-3292 are identified.
+
+The vulnerability CVE-2019-1860 is due to improper validation of gadget rendering in the Cisco Unified Intelligence Center, which allows unauthenticated remote attackers to obtain or manipulate sensitive information. Considering the attack techniques from the CSV provided, the vulnerability can be related to several actions an attacker might perform. Specifically, it aligns with the exploit of public-facing applications (T1190) and involves user interaction for the successful execution of malicious gadgets, which requires the user to load them. Additionally, the aspect of potentially capturing sensitive information from users suggests exploitation for client execution (T1203). Therefore, the relevant attack techniques for this vulnerability are T1190 and T1203.
+
+Given the context regarding CVE-2020-12029, we know this vulnerability involves improper input validation in FactoryTalk View SE, allowing for potential remote code execution. The key characteristics include its exploitation potential through remote access and the requirement for user interaction. This aligns with attack techniques related to remote exploitation and user-triggered actions. The relevant attack techniques for this CVE would include:
+
+1. **T1190 (Exploit Public-Facing Application)**: This is directly related as the vulnerability allows for exploitation through a web-facing application, making it a viable attack technique.
+  
+2. **T1204.002 (User Execution: Malicious File)**: This reflects the user's role in executing malicious files, a likely scenario given the RCE capabilities of the vulnerability.
+
+3. **T1566 (Phishing)**: While not directly outlined in the context, phishing could be utilized to entice users to interact with malicious files based on the RCE aspect.
+
+These techniques showcase a clear pathway for exploiting the vulnerability using both indirect methods (exploitation) and direct user interaction methods (execution of harmful files).
+
+The vulnerability CVE-2020-15199 in TensorFlow involves improper input validation and could potentially lead to denial of service due to unexpected behavior when handling the 'splits' tensor. Given the nature of the vulnerability, it falls under the attack techniques related to exploitation of public-facing applications. By exploiting this vulnerability, an adversary can trigger conditions that may lead to crashes or denial of service. The relevant attack techniques include exploitation of public-facing applications ('T1190') and denial of service techniques that may result from the improper handling of inputs. Therefore, the relevant techniques related to this CVE include 'T1190' for exploiting the vulnerability and potentially 'T1499.002', as the nature of the vulnerability could lead to an endpoint denial of service condition. 
+
+Additionally, users must be social engineered to provide input resulting in the crash, which aligns with the 'User Execution' techniques (T1204). In this case, the most relevant techniques for this CVE are 'T1190', 'T1499.002', and 'T1204.002'. 
+
+Thus, the relevant attack techniques for this vulnerability could be summarized.
+
+The CVE-2020-5364 vulnerability involves the exploitation of a default enabled SNMPv2 service with a predictable community string that can lead to unauthorized access to sensitive information. Given its nature, relevant attack techniques that can apply to this scenario include:
+
+1. **T1190 - Exploit Public-Facing Application**: This technique is applicable as the vulnerability allows for exploitation of the SNMP service, which is exposed to the network. 
+
+2. **T1110 - Brute Force**: As there is a predictable community string, attackers could potentially employ brute force methods to gain unauthorized access.
+
+3. **T1565.001 - Data Manipulation: Stored Data Manipulation**: Since the exploitation allows read access to sensitive information and the threat actor may manipulate this data, this technique could be relevant.
+
+From analyzing these factors, T1190 and T1110 are the most directly relevant techniques to the type of exploitation associated with CVE-2020-5364.
+
+The vulnerability CVE-2019-1817 relates to improper validation of HTTP and HTTPS requests in the Cisco AsyncOS Software, leading to a denial of service (DoS) condition. Given the nature of the vulnerability, the most relevant attack techniques involve exploiting public-facing applications that may have insufficient input validation, which aligns with techniques that manipulate network requests to cause crashes or services to be interrupted.
+
+The attack techniques applicable include:
+- T1190 (Exploit Public-Facing Application): This technique is relevant as the vulnerability allows adversaries to exploit the HTTP/HTTPS interface to cause a denial of service.
+- T1499.004 (Endpoint Denial of Service: Application or System Exploitation): This technique is pertinent as the vulnerability leads to a denial-of-service condition through exploitation of application-level bugs.
+
+Thus, the relevant attack techniques for this vulnerability are:
+- T1190
+- T1499.004
+
+The given CVE-2019-15280 describes a stored XSS vulnerability that can be exploited by an authenticated remote attacker in Cisco Firepower Management Center (FMC) Software. The attacker must insert malicious code into user-supplied content, which when accessed by other users, can lead to the execution of arbitrary script code. 
+
+The relevant attack techniques from the provided CSV that align with the characteristics of this vulnerability would include:
+
+1. `T1204.001` (User Execution: Malicious Link) – as the successful exploit requires user interaction, specifically clicking a link that leads to the exploitation of the XSS vulnerability.
+2. `T1189` (Drive-by Compromise) – since the malicious script can be executed when an unsuspecting user visits a corresponding interface that contains the injected script.
+  
+Additionally, the nature of the attack requires authenticated sessions to exploit, which may suggest techniques related to valid accounts but are tied more specifically to user execution and exploitation of web interfaces.
+
+Given this analysis, the relevant attack techniques for the specified vulnerability are:
+- T1204.001
+- T1189
+
+Thus, the output will reflect these findings.
+
+The vulnerability CVE-2019-1013 indicates an information disclosure vulnerability which enables the Windows GDI component to improperly disclose memory contents, linked to a potential exposure of sensitive information (CWE-200). The context of this CVE suggests that it may be exploitable via a compromised public-facing application, allowing an adversary to exploit weaknesses through network feints. Based on the provided attack techniques, the following techniques are most relevant:
+- T1190 (Exploit Public-Facing Application) is specifically relevant as this vulnerability allows adversaries to compromise a system exposed to the internet.
+- T1204.001 (User Execution: Malicious Link) may also be considered since exploitation could involve social engineering to entice users to click potentially malicious links that leverage this information disclosure.
+- Since no direct credential manipulation or brute force actions are indicated by the CVE context, techniques such as T1110 (Brute Force) or T1557 (Adversary-in-the-Middle) are not applicable.
+
+Thus, the relevant attack techniques for this vulnerability are derived focusing on exploiting public-facing applications and social engineering through malicious links.
+
+The given context describes a vulnerability (CVE-2020-1111) related to the Windows Clipboard Service that allows for elevation of privilege due to improper handling. This can potentially allow an attacker to execute arbitrary commands or perform actions with higher privileges if exploited effectively. To identify relevant attack techniques, we analyze the characteristics of this vulnerability and its potential exploitation methods.
+
+Based on the known specifics of this CVE, which allows exploitation via local access and does not require user interaction, relevant techniques include:
+1. **T1210** - Exploiting remote services can correlate with exploiting the Windows Clipboard Service if it has network implications, but primarily, we'll align with local methods.
+2. **T1204.002** - User Execution: Malicious File may come into play if an attacker convinces a user to execute a malicious file that leverages this clipboard vulnerability.
+3. **T1190** - Exploit Public-Facing Application as this might be considered if the vulnerability is manipulated through user interactions with Windows UI elements.
+4. **T1068** - Exploitation for Privilege Escalation as the core exploit mechanism is to gain higher privileges.
+5. **T1499** could also be considered as an Endpoint Denial of Service if the exploitation leads to disruption of services.
+
+While multiple avenues exist for potential attack vectors, the primary techniques center around exploiting the privilege elevation aspect of this vulnerability.
+
+Thus, the relevant attack techniques for this vulnerability given the described actions and exploitation mechanisms can be summarized as: ['T1068', 'T1210', 'T1204.002'].
+
+Based on the information provided about the vulnerability CVE-2018-15393, it allows for a cross-site scripting (XSS) attack due to insufficient validation of user-supplied input by Cisco's web-based management interface. This typically entails inducing a user to click a malicious link, which is consistent with several potential attack techniques listed in the CSV. The associated techniques are:
+
+1. T1204.001 - User Execution: Malicious Link: This describes an adversary relying on user interaction to click a crafted link leading to execution.
+2. T1189 - Drive-by Compromise: This is applicable if the malicious link directs the user to a site that exploits vulnerabilities in the user's browser or application.
+3. T1566 - Phishing: Encompasses techniques that involve tricking users into executing malicious content inadvertently.
+
+Each of these techniques aligns with the nature of the XSS vulnerability described, where an attacker can manipulate user actions through crafted links. 
+
+Since the vulnerability allows for exploitation through user interaction and web-based execution, these techniques are highly relevant.
+
+For the CVE-2018-19010 vulnerability, which involves an attacker exploiting the improper input validation to disrupt patient monitoring through a malformed network packet, the relevant attack techniques are as follows:
+
+1. **T1190** (Exploit Public-Facing Application): This is relevant because the vulnerability allows an attacker to exploit an internet-facing system to cause disruptions.
+  
+2. **T1499.004** (Endpoint Denial of Service: Application or System Exploitation): The repeated reboots of the monitor lead to a denial of service, which aligns with this technique.
+
+3. **T1489** (Service Stop): The ability of the attacker to cause the monitor to reboot repeatedly can be viewed as a method to stop a specific service—the patient monitoring service.
+
+4. **T1204** (User Execution): Although not directly applicable since this attack does not rely on user interaction, it is necessary to recognize that any initial malicious load may require some form of user execution in broader contexts.
+
+These techniques appropriately encapsulate the mode of action for the CVE, aligning with the classification of exploits that lead to particular impacts.
+
+For the vulnerability CVE-2019-16009, it involves a cross-site request forgery (CSRF) attack that could allow a remote attacker to perform arbitrary actions with the privileges of the targeted user. The relevant attack techniques for this type of vulnerability are likely to involve user interaction, specifically clicking on malicious links. The techniques that best align with this scenario include:
+
+1. T1204.001 (User Execution: Malicious Link) - This technique involves an adversary manipulating a user into clicking a malicious link that could lead to exploit execution.
+2. T1566.002 (Phishing: Spearphishing Link) - This refers to using a crafted link within a phishing email to trick the user into clicking.
+
+Since the CVE specifically mentions a CSRF attack that requires user navigation to a malicious link, these two techniques are the most applicable.
+
+Given the context of CVE-2020-15162, which is a cross-site scripting (XSS) vulnerability in PrestaShop allowing malicious JavaScript to be executed, the applicable attack techniques should relate to user interactions and exploitation through web applications. The relevant techniques include:
+
+1. **T1204.001** (User Execution: Malicious Link) - This is relevant because the malicious JavaScript injection can occur if the user clicks on a crafted link.
+2. **T1189** (Drive-by Compromise) - It pertains to scenarios where users are exploited through a web browser without needing to download malware, directly correlating with the XSS component of the vulnerability.
+3. **T1566.002** (Phishing: Spearphishing Link) - This could be applicable if users are lured to a malicious link that executes the exploit.
+
+Since the XSS vulnerability does not directly imply password guessing, code execution via other means outside of a web browser, or persistent access mechanisms, we will not include attack techniques like T1110 (Brute Force) or T1055 (Process Injection) which are not relevant in this specific case.
+
+Therefore, the relevant attack techniques for CVE-2020-15162 are: T1204.001, T1189, and T1566.002.
+
+Given the context of vulnerability CVE-2020-6986, which pertains to a service error caused by sending specific data packets to an Omron PLC Ethernet module, a primary exploit technique that stands out is the targeted denial of service (DoS) performed by an adversary via crafted packets. The CVE's characteristics and effects suggest the following potential relevant attack techniques:
+
+- **T1499.004, Endpoint Denial of Service: Application or System Exploitation**: This attack technique is relevant because the vulnerability can lead to applications or systems being unresponsive as a result of being overwhelmed by crafted network data.
+  
+- **T1190, Exploit Public-Facing Application**: The Ethernet module is exposed to network access, allowing potential exploitation via public interfaces.
+
+- **T1499, Endpoint Denial of Service**: Corresponds with the intended denial of service results of the vulnerability described.
+
+Based on this analysis, the pertinent attack IDs can be consolidated as the primary methods an adversary might utilize to exploit this vulnerability.
+
+To determine the relevant attack techniques for CVE-2020-3309, we analyze the nature of the vulnerability. The CVE describes a critical flaw in Cisco's Firepower Device Manager that allows authenticated, remote users to overwrite arbitrary files due to improper input validation, which is categorized under CWE-787: Out-of-bounds Write.
+
+Considering the context of the attack, where authenticated users can exploit this vulnerability, the following attack techniques from the provided list are applicable:
+
+1. **T1190 - Exploit Public-Facing Application**: This attack technique is relevant because the vulnerability pertains to a public-facing service that can be exploited by authenticated users.
+
+2. **T1204.002 - User Execution: Malicious File**: Since the vulnerability can be exploited by uploading malicious files, this technique is relevant as it involves user actions leading to exploitation.
+
+3. **T1078 - Valid Accounts**: This is applicable due to the requirement that the attacker must be authenticated to exploit the vulnerability, which involves valid accounts.
+
+4. **T1554 - Compromise Client Software Binary**: This technique is relevant as adversaries may manipulate the software to install a backdoor, which aligns with the nature of overwriting files on the underlying OS.
+
+5. **T1212 - Exploitation for Credential Access**: This may be pertinent too if an attacker captures credentials during the exploitation phase.
+
+Based on these considerations, the relevant attack techniques for CVE-2020-3309 include T1190, T1204.002, T1078, T1554, and T1212.
+
+Given the details of CVE-2020-11055, which involves an XSS vulnerability that allows a user to inject malicious HTML or JavaScript code through comment creation in BookStack, multiple attack techniques can apply. The user must interact with the malicious content, indicating that social engineering is involved. The relevant attack techniques from the provided list include:
+
+- **T1204.001: User Execution: Malicious Link** - This applies since the attack relies on users clicking on the malicious comment or link to execute the injected JavaScript.
+- **T1189: Drive-by Compromise** - This can also apply as the malicious script could be executed simply by a user visiting the page displaying the comment.
+- **T1555: Adversary-in-the-Middle** - Although not directly part of the initial CVE description, if the adversary can manipulate input or the environment (e.g., DNS settings) while a user is viewing the comment, this could link to the attack.
+
+Therefore, the primary techniques that directly associate with the vulnerability's description center around user interactions with malicious scripts on pages (XSS).
+
+The CVE-2018-8431 vulnerability involves an elevation of privilege due to improper sanitization of input in Microsoft SharePoint Server. The associated attack patterns relate to the exploitation of public-facing applications where adversaries may manipulate specially crafted requests. Given this context, the relevant attack techniques include:
+
+1. **T1190 - Exploit Public-Facing Application**: This technique applies directly as the vulnerability exploits a flaw in internet-facing software, specifically SharePoint.
+2. **T1566 - Phishing**: Although not directly about phishing, the vulnerability could lead to an environment where users are targeted through crafted links or requests, which is a common phishing technique to exploit weaknesses.
+3. **T1204.001 - User Execution: Malicious Link**: Linked to the potential of causing users to execute malicious actions through manipulated links, especially if user interaction is involved as noted in the CVE.
+
+Other techniques can be ruled out given the specifics of the context and the nature of the attack focusing around exploiting the web application rather than client-level attacks or local system manipulations. Thus, the relevant techniques derived are mainly those interacting with the public-facing aspects of the SharePoint vulnerability.
+
+Given the details of CVE-2019-1087, this vulnerability in the Windows Audio Service allows for elevation of privilege via an attack that requires local access and has a medium severity rating. The exploitability score of 3.9 indicates that the attack technique may require some effort but can still be transferred into actions that utilize some of the common methods to exploit software vulnerabilities.
+
+There is an existing mapping hinting at the use of exploitation techniques that broadly fit various vulnerabilities and exploits. The techniques related to user interaction or privilege escalation, particularly using methods like the exploitation of public-facing applications (likely due to the nature of the service vulnerability) and employing user execution (for scenarios where user actions are involved) apply here.
+
+Combining these assessments leads to identifying attack techniques that could be relevant for exploiting this specific vulnerability. Relevant techniques include:
+
+- T1190 for Exploiting Public-Facing Applications as the Windows Audio Service could be externally accessible in some scenarios.
+- T1204 for User Execution, especially if there is social engineering involved.
+- T1068 for Exploitation for Privilege Escalation, useful in the case of elevating privileges once inside.
+
+There are no indications of the need for brute-force techniques or direct command injections, which suggests against using techniques like T1110 or T1059. 
+
+Summarizing these thoughts leads to the following list of attack IDs relevant to this vulnerability.
+
+The provided context describes CVE-2019-13522, a vulnerability affecting EZ PLC Editor Versions 1.8.41 and prior. This vulnerability is associated with an out-of-bounds write condition that could allow an attacker to use a specially crafted project file to corrupt memory and execute arbitrary code. The CVSS vectors indicate that it has the potential for high confidentiality, integrity, and availability impacts.
+
+The exploitation techniques relate directly to how an adversary could engage with this vulnerability. Given the context where user interaction is required (as indicated by features like 'user interaction required'), techniques such as 'User Execution: Malicious File' (T1204.002) are relevant, as they emphasize the need for a user to open malicious files.
+
+Furthermore, since the vulnerability can be exploited via a crafted project file – suggesting a possible web application or plugin context – techniques like 'Exploit Public-Facing Application' (T1190) may also apply since a weakness in publicly accessible systems is specifically mentioned. 
+
+Additionally, we can see a weak indirect link to 'Drive-by Compromise' (T1189) due to the possibility that the exploitation method could involve users being misled into accessing malicious online resources. 
+
+Based on the descriptions of the attack techniques provided and the context of CVE-2019-13522, the relevant exploitation techniques for this vulnerability would include:
+1. **T1204.002** - User Execution: Malicious File
+2. **T1190** - Exploit Public-Facing Application
+3. **T1189** - Drive-by Compromise (though it’s a distant relevance)
+
+Therefore, the appropriate response would encompass these attack IDs as relevant exploitation techniques.
+
+Given the description of CVE-2019-16760, it revolves around a vulnerability in Cargo versions prior to Rust 1.26.0 that can lead to the downloading of malicious dependencies due to improper handling of the `package` key in `Cargo.toml`. This poses a risk of a remote attacker effectively exploiting the vulnerability over network-based systems. 
+
+The exploitation may involve:
+1. **Exploitation of Public-Facing Application** (T1190) - Because the vulnerability involves Cargo, which can be considered a public-facing application for Rust package management.
+2. **Phishing** (T1566) - Though not directly related to deception through email, it could involve social engineering tactics used to manipulate users into executing harmful commands or modifications in their environments.
+3. **Brute Force** (T1110) - Since users could use vulnerable versions, they may also be susceptible to brute-force attacks on their environment given the context of how dependencies are managed.
+
+Consequently, the relevant attack techniques primarily focus on exploitation tactics that might be utilized to take advantage of this specific vulnerability in Cargo.
+
+CVE-2020-5269 is a reflected XSS vulnerability that allows an attacker to execute arbitrary actions on the AdminFeatures page by utilizing the `id_feature` parameter. Given the characteristics of this vulnerability, the relevant attack techniques can be deduced as follows:
+
+1. **T1204.001 (User Execution: Malicious Link)** - The attack requires a user to be tricked into clicking on a link containing a malicious parameter, thereby executing the intended script.
+
+2. **T1189 (Drive-by Compromise)** - If the vulnerability is exploited through a web browser without any user interaction required post-click, or if the user is redirected, it falls under this category.
+
+3. **T1566.002 (Phishing: Spearphishing Link)** - If the attack is executed through spearphishing emails that provide a link leading to the vulnerable page, it will be relevant as well.
+
+These technologies depend on social engineering and user interaction, common with XSS vulnerabilities, especially when external links can be manipulated to deliver malicious payloads or conduct scripts.
+
+The vulnerability CVE-2019-1790 in Cisco NX-OS Software allows an authenticated, local attacker to execute arbitrary commands on the underlying operating system due to improper validation of arguments passed to certain CLI commands. Given that the attack requires valid administrator credentials, relevant attack techniques would include those related to exploiting vulnerabilities that allow command execution in a context where the attacker can control input or may escalate their privileges. 
+
+Two primary attack techniques are particularly relevant:
+1. **T1078, Valid Accounts**: This technique is relevant because the attacker needs valid administrator credentials to exploit the vulnerability.
+2. **T1190, Exploit Public-Facing Application**: Although the vulnerability is exploited locally, it can be considered part of exploitation strategies for public-facing services since it affects the security posture of the application.
+   
+There may be other techniques that relate to the execution context and privilege escalation, but the above two techniques capture the essence of how the vulnerability could be exploited.
+
+The vulnerability described in CVE-2020-3237 allows an authenticated, local attacker to overwrite arbitrary files in a Cisco IOx application environment due to insufficient path restriction enforcement. Given that the attacker needs to have authenticated access, several possible attack techniques could be relevant, including methods for executing commands and exploiting vulnerabilities to gain unauthorized access.
+
+The relevant attack techniques for the exploitation of this vulnerability could include:
+
+1. **T1190 (Exploit Public-Facing Application)**: The nature of the vulnerability suggests it could be exploited through an application interface.
+2. **T1078 (Valid Accounts)**: The attacker needs valid credentials for exploitation.
+3. **T1211 (Exploitation for Defense Evasion)**: If an attack is leveraged to bypass security features or validations.
+4. **T1204.002 (User Execution: Malicious File)**: If user interaction is needed to execute a crafted application package that facilitates the overwrite.
+5. **T1565 (Data Manipulation)**: Since the exploit involves overwriting files, manipulation of data could be part of the attack.
+
+Given the specific scenario and the details from the vulnerability, the relevant attack techniques that I have derived include T1190, T1078, T1211, T1204.002, and T1565.
+
+For the vulnerability CVE-2020-11039 in FreeRDP, which involves integer overflows and allows arbitrary memory read and write due to vulnerabilities in USB redirection, there are a couple of relevant attack techniques. The direct exposure of the vulnerability over the network aligns with techniques that suggest exploitation via public-facing applications as well as potential user execution methods owing to the nature of how exploitation might occur.
+
+Based on the context of the vulnerability and existing attack techniques, the following are relevant:
+- T1190 (Exploit Public-Facing Application) aligns as the back-end server could be exploited directly through crafted packets, allowing malicious access.
+- T1204.002 (User Execution: Malicious File) may be a potential avenue if users are tricked into executing files that invoke the payload resulting from the vulnerability.
+
+Thus, the relevant attack techniques for this CVE would include the exploitation techniques that fall under both direct exploitation of public-facing applications and potential user-related execution events.
+
+For CVE-2018-11048, the vulnerability associated with Dell EMC Data Protection Advisor and IDPA systems involves an XML External Entity (XXE) Injection in the REST API, allowing an attacker to potentially read sensitive files or cause denial of service. The relevant attack techniques are primarily focused on exploitation via public-facing applications, as the vulnerability allows an attacker with valid credentials to manipulate XML requests and exploit the application's response behavior.
+
+Based on the description, the most appropriate attack techniques include:
+- T1190 (Exploit Public-Facing Application) because the attacker exploits a weakness in an internet-facing API that processes XML.
+- T1499.004 (Endpoint Denial of Service: Application or System Exploitation), as the denial of service aspect is also relevant.
+
+Since the CVE description does not involve user execution or phishing tactics as primary attack vectors, the response should focus on the public-facing exploitation and denial of service aspects.
+
+Thus, the relevant attack techniques are T1190 and T1499.004.
+
+For the vulnerability CVE-2020-16198, the adversary could exploit the software vulnerability without needing any user authentication (as indicated by the CVSS metrics). Given that the vulnerability pertains to claim verification and lacks adequate protection mechanisms, it suggests it can be exploited by targeting public-facing applications without strong validation checks. As CVE-2020-16198 is focused on weaknesses in application validation, the relevant attack technique for exploitation is "Exploitation of Public-Facing Application" (T1190). This is the primary method that aligns with the nature of this specific vulnerability. Thus, the relevant attack technique for this vulnerability is T1190.
+
+The vulnerability described by CVE-2019-3754 is a reflected cross-site scripting (XSS) vulnerability. In order to exploit it, an attacker must trick a user into executing malicious JavaScript or HTML, which reflects back when the user interacts with the affected page. The following attack techniques are relevant for this vulnerability:
+
+- **T1204.001** (User Execution: Malicious Link): This describes the need for a user to click on a malicious link for the attack to succeed, which aligns with the methodology of exploiting the reflected XSS vulnerability.
+- **T1059.007** (Command and Scripting Interpreter: JavaScript): Since the vulnerability specifically allows for the injection and execution of JavaScript, this technique is also relevant.
+
+Therefore, the relevant attack techniques derived from the context and description of the vulnerability are:
+1. T1204.001
+2. T1059.007
+
+The vulnerability CVE-2020-11030 involves cross-site scripting (XSS) in WordPress versions, allowing attackers to execute crafted scripts within the search block of the block editor by authenticated users. In this case, exploitation techniques relevant to such vulnerabilities would typically include those that target user interaction and exploit user execution behavior. The appropriate attack techniques include:
+- **T1204.001** (User Execution: Malicious Link) as attackers may craft links that lead users to malicious sites or exploit vulnerabilities when the user interacts with the compromised link.
+- **T1204.002** (User Execution: Malicious File) as an attacker may rely on users downloading and executing a malicious file that could exploit the vulnerability.
+- **T1566** (Phishing) as the vulnerability could facilitate phishing attempts where malicious scripts are delivered to users.
+- **T1190** (Exploit Public-Facing Application) is also relevant since it applies to exploiting weaknesses in an internet-facing application (i.e., a web application like WordPress).
+
+Thus, based on the nature of the vulnerability and the behaviors involved for exploitation, these attack techniques are appropriate.
+
+The context describes CVE-2020-3407, a vulnerability affecting Cisco IOS XE Software that allows an unauthenticated, remote attacker to cause a denial of service (DoS) by exploiting weak access control in RESTCONF and NETCONF-YANG features. The CVE indicates that successful exploitation could lead to full availability impact, which suggests that certain attack techniques such as Denial of Service (T1499) and Exploit Public-Facing Application (T1190) may apply. These techniques are relevant due to the nature of the vulnerability and how it can be exploited.
+
+1. **Exploit Public-Facing Application (T1190)** applies because the vulnerability can be exploited through access to an Internet-facing interface (RESTCONF or NETCONF-YANG).
+2. **Endpoint Denial of Service (T1499)** indicates that the exploit can lead to a denial of service condition, as noted in the CVE description.
+
+Given the context and the nature of the vulnerability, no other attack techniques seems applicable based on the provided definitions. 
+
+Therefore, the relevant attack techniques for this vulnerability are:
+
+- T1190
+- T1499
+
+The vulnerability described as CVE-2019-15288 can be exploited by an authenticated attacker who gains access to the restricted shell of Cisco systems due to improper input validation. The relevant attack techniques for this vulnerability would include exploiting public-facing applications, as it is likely the attacker would be taking advantage of the network and authenticated access to manipulate the system. The primary techniques which fit the narrative of exploitation through weak validation and the network access level include:
+
+1. **T1190** - Exploit Public-Facing Application: This aligns directly with the description of a vulnerability that could be exploited from a network perspective, getting access to the restricted functionality of the system.
+
+Since the context does not mention any malicious actions that fit other techniques like phishing or specific credential access methods, the remaining techniques from the provided list do not appear relevant. The most prominent technique that fits the description is T1190.
+
+The vulnerability CVE-2019-1857 is associated with a cross-site request forgery (CSRF) attack that can allow an unauthenticated, remote attacker to perform actions on an affected system via a web browser. Considering the nature of the vulnerability and the methods of exploitation necessary to perform such effective attacks, relevant attack techniques include:
+
+1. **T1204.001** - User Execution: Malicious Link: This corresponds directly to the mechanism by which the CSRF attack can be initiated—by persuading a user to click a crafted link.
+2. **T1566.002** - Phishing: Spearphishing Link: The attack can leverage a social engineering tactic where attackers attempt to trick users into clicking malicious links to exploit the CSRF vulnerability.
+
+Combining these observations leads to the conclusion that techniques regarding malicious links and phishing are the most relevant here.
+
+The vulnerability CVE-2020-5369 describes a privilege escalation vulnerability within Dell EMC Isilon OneFS and PowerScale OneFS. Since it allows authenticated users to exploit the vulnerability to gain unauthorized access to management files, relevant attack techniques could involve manipulating access control mechanisms and other user execution methods.
+
+Given the nature of how the vulnerability can be exploited, several relevant attack techniques from the provided list can be identified:
+
+1. **T1110.001 (Brute Force: Password Guessing)** - Since the vulnerability involves a potential guessing of access mechanisms, this technique is relevant.
+2. **T1190 (Exploit Public-Facing Application)** - This technique is relevant as the exploit uses SyncIQ, which interacts with public-facing applications.
+3. **T1565.001 (Data Manipulation: Stored Data Manipulation)** - This technique can apply since an attacker may manipulate stored data post-exploitation.
+4. **T1563 (Remote Service Session Hijacking)** - Though the description mainly relates to accessing existing sessions, a privilege escalation could facilitate session hijacking as an aftermath of exploiting the vulnerability.
+
+No explicit phishing or spearphishing techniques directly relate to this particular CVE since it is exploited through application vulnerabilities rather than through social engineering.
+
+Based on these considerations, the relevant techniques are identified as follows.
+
+The vulnerability CVE-2020-5340 is a stored cross-site scripting (XSS) vulnerability which allows a malicious administrator to inject arbitrary HTML or JavaScript code. As multiple attack techniques could exploit such a vulnerability, especially attack techniques that rely on user action (clicking a link, opening a malicious file, etc.), the relevant techniques would be those that exploit client execution through user interaction with malicious scripts, links, or attachments. 
+
+Specifically, the following attack techniques from the provided list match the exploitation mechanisms:
+1. **T1204.002** (User Execution: Malicious File) - This applies as the malicious code could be executed if users are tricked into opening or interacting with affected webpages.
+2. **T1204.001** (User Execution: Malicious Link) - This applies since the XSS vulnerability can also lead users to click on links to exploit the vulnerability.
+3. **T1189** (Drive-by Compromise) - This is applicable as it describes the process where users unintentionally execute code by visiting a maliciously crafted site or pages that an attacker has designed to exploit their browsers.
+
+Thus, these three techniques are relevant to the exploitation of CVE-2020-5340.
+
+The vulnerability CVE-2019-1611 allows an authenticated local attacker to execute arbitrary commands on the underlying operating system by bypassing certain command validations. Given this ability to execute arbitrary code, the relevant attack techniques could include exploitation of vulnerable systems, direct execution of commands through command lines, and potential privilege escalation if the commands include elevated privileges.
+
+The following attack techniques are relevant for this CVE:
+- T1078 (Valid Accounts): requires valid administrator credentials for the exploit.
+- T1133 (External Remote Services): if the exploited services are accessed via remote connections.
+- T1190 (Exploit Public-Facing Application): may apply if the exploited application is internet-accessible.
+
+Additionally, the exploit relies heavily on user execution, which would reflect actions by the admin user triggering the vulnerability. This action aligns with:
+- T1204 (User Execution): as the attack requires interaction by the authenticated user.
+
+Considering these points, the list of relevant attack techniques for CVE-2019-1611 becomes clear.
+
+For the vulnerability CVE-2020-6964, which involves an integrated service allowing attackers to access remote keyboard input without authentication, the relevant attack techniques focus on exploiting unprotected services accessible over the network. Given the nature of the vulnerability, the exploitation techniques could involve:
+
+- **T1190 (Exploit Public-Facing Application)**: This directly relates to exploiting a vulnerability in an Internet-facing service, which aligns with the nature of CVE-2020-6964 that allows attackers to obtain keyboard input access remotely.
+- **T1566 (Phishing)**: Although it’s less direct, phishing could be a related technique if attackers use deceptive tactics to convince users to engage with their malicious service.
+- **T1040 (Network Sniffing)**: While this doesn't directly relate to the keyboard input service, general monitoring of network traffic can reveal sensitive information and exploit vulnerabilities in communication.
+
+Based on these considerations, the most relevant technique is T1190, and potentially T1566, although its applicability is less direct.
+
+The vulnerability described by CVE-2020-5350 pertains to a command injection issue that can be exploited by a remote authenticated malicious user with root privileges. This indicates that the attacker could execute arbitrary commands on the system, potentially leading to significant integrity, confidentiality, and availability impacts. Since the exploitation hinges on injecting commands, relevant attack techniques would include:
+
+1. **T1202: Indirect Command Execution** - This aligns well as the exploit involves executing commands indirectly through a vulnerable component.
+2. **T1190: Exploit Public-Facing Application** - Given that the ACM component is a publicly accessible part of the Dell EMC system, attackers may exploit it from the network.
+3. **T1110: Brute Force** - While not directly applicable as the primary method of exploitation, if the attacker needs to gain authenticated access before leveraging the command injection vulnerability, this technique may still play a role.
+
+Those techniques are relevant based on the context of the vulnerability and the steps involved in exploiting it. Other techniques, such as various forms of user execution, may not apply as this is a command injection context rather than something that requires user interaction directly.
+
+Based on the context provided about CVE-2019-3758, which describes a vulnerability in RSA Archer that allows unauthenticated attackers to gain unauthorized access to the system through improperly created user accounts, the following attack techniques are relevant:
+
+1. **T1190, Exploit Public-Facing Application**: This technique is applicable as the vulnerability in question is an exploitation of an Internet-facing application (RSA Archer) allowing unauthorized access.
+2. **T1078, Valid Accounts**: This technique is relevant since the attackers can gain access through accounts that have been created with insufficient credentials.
+3. **T1566, Phishing**: While this may not be the primary method of attack outlined, there may be opportunities for phishing in conjunction with the vulnerabilities exploited.
+
+Given the descriptions, these techniques reflect both the manner in which the exploitation could be carried out as well as the adversarial objectives associated with this vulnerability.
+
+The vulnerability CVE-2019-3798 involves improper authentication when validating user permissions in the Cloud Foundry Cloud Controller API. Given the context of the vulnerability, a user could leverage this oversight to exploit various techniques. Since it allows a remote authenticated malicious user to escalate privileges through creating clients with the victim's GUID, relevant attack techniques would include "Exploit Public-Facing Application" (T1190) and "Brute Force" (T1110) since an attacker might use brute force methods to guess client credentials or exploit the web application directly to gain unauthorized privileges. Therefore, combining these insights, the relevant attack techniques for this vulnerability include T1190 and T1110.
+
+The given vulnerability, CVE-2020-5267, is described as a possible XSS vulnerability in ActionView's JavaScript literal escape helpers, which could allow attackers to exploit affected views using methods such as `j` or `escape_javascript`. The nature of XSS attacks usually relies on user interaction, specifically requiring a susceptible user to execute the malicious script that is injected into a web page by visiting it. This aligns with the exploitation techniques related to user actions.
+
+Based on this context, the relevant attack techniques derived from the provided options would include techniques that correspond to exploitation methods associated with XSS vulnerabilities. The following attack techniques are applicable:
+- T1204.001: User Execution: Malicious Link (as the user must click a crafted link that leads to the execution of the malicious script).
+- T1189: Drive-by Compromise (since the vulnerability can be exploited simply by visiting a compromised or malicious site).
+
+Therefore, the attack techniques list for this vulnerability will include both T1204.001 and T1189.
+
+For the CVE-2020-3349 vulnerability, which allows authenticated remote attackers to conduct cross-site scripting (XSS) attacks through the Cisco Data Center Network Manager's web interface, the most relevant attack techniques involve user actions triggered by malicious links or code execution within browsers. Given the nature of the vulnerability, it is confirmed that users must be persuaded to click on a crafted link for exploitation to occur, thus leading to the **User Execution: Malicious Link** (T1204.001) technique. Additionally, because there is a possibility of exploiting client-side vulnerabilities due to the web interface, the **Phishing: Spearphishing Link** (T1566.002) technique can also be relevant, as attackers may employ such a strategy to manipulate users into triggering the XSS vulnerability.
+
+Considering this analysis, the relevant attack techniques related to the exploitation of this vulnerability include:
+- T1204.001 (User Execution: Malicious Link)
+- T1566.002 (Phishing: Spearphishing Link)
+
+Therefore, the output list of relevant attack techniques will consist of these IDs.
+
+For the vulnerability CVE-2018-17900, the description indicates that the vulnerability involves insufficient protection for credentials in a web application. This could potentially allow an attacker to exploit the system using different attack techniques. The characteristics of this vulnerability align closely with techniques associated with credential access and manipulation.
+
+Given that the CVE description and characteristics suggest that an attacker could leverage network access to exploit the vulnerability, the following attack techniques are relevant:
+
+1. **T1110** - Brute Force: This technique could be utilized if the attacker attempts to guess credentials due to their insufficient protection.
+2. **T1552.001** - Unsecured Credentials: The vulnerability specifically mentions improperly protected credentials, which directly relates to this technique as it is about obtaining insecurely stored credentials.
+3. **T1204.002** - User Execution: Malicious File: If exploit involves user interaction or a malicious file to gain initial access to user credentials.
+
+Additionally, the overarching theme of web application vulnerabilities around unauthorized access suggests the inclusion of relevant phishing or external remote services techniques, hence:
+
+4. **T1190** - Exploit Public-Facing Application: The vulnerability is within a web application which may be exploited by an attacker as a public-facing service.
+5. **T1133** - External Remote Services: This may be relevant as attackers could exploit access points into the network.
+
+These considerations culminate in a sensible set of attack techniques that directly associate with the nature of the CVE in question.
+
+The context specifies that CVE-2018-11073 is a vulnerability related to stored cross-site scripting (XSS) in RSA Authentication Manager. This type of vulnerability typically involves injecting malicious scripts that can be executed in the context of trusted applications. Based on the characteristics of this attack vector, relevant attack techniques from the provided list include:
+
+1. **User Execution: Malicious Link** (T1204.001) - This technique is relevant as it involves user interaction to execute malicious code via a link, aligning with how XSS attacks typically require user engagement.
+2. **Drive-by Compromise** (T1189) - Since the vulnerability can lead to user browsers executing malicious scripts unintentionally through the web application, this technique is pertinent.
+3. **Exploitation for Client Execution** (T1203) - Related to how the web browser and other client applications can be exploited via malicious content delivery, indicative of XSS vulnerabilities.
+4. **Phishing: Spearphishing Link** (T1566.002) - Given that social engineering can be a component in convincing users to click links leading to malicious scripts, this is also relevant.
+
+Given these considerations, the potential attack techniques derived apply well to the vector described in the CVE.
+
+The given vulnerability, CVE-2020-16211, outlines an out-of-bounds read vulnerability that can be exploited through crafted project files. Looking at the context of relevant attack techniques listed, the following techniques could apply:
+
+1. **T1204.002 (User Execution: Malicious File)** - This technique is relevant since the exploitation relies on a user opening a specially crafted project file.
+2. **T1190 (Exploit Public-Facing Application)** - Since the vulnerability exists in a web application component, exploiting it could be related to exploiting the web-facing aspect of the HMI Designer.
+3. **T1566 (Phishing)** - Techniques related to social engineering that lead to users executing harmful files could come into play given this vulnerability’s exploitation method.
+
+The techniques are relevant based on the analysis of how vulnerabilities are typically exploited and the specific nature of how CVE-2020-16211 can be triggered through the user's actions with malicious files.
+
+Given the context of CVE-2020-4068, which involves a heap buffer overflow in APNSwift and has been assigned a high CVSS score (7.5 for v2 and 9.8 for v3), it indicates a significant security vulnerability that could be exploited remotely across a network without requiring user authentication. 
+
+The software flaw allows for potential remote code execution, leading to actions including data manipulation, service disruption, and unauthorized access. Based on this analysis:
+
+1. **T1190 - Exploit Public-Facing Application** is relevant because the vulnerability can be exploited over a network, allowing attackers to exploit the application without prior authentication.
+2. **T1210 - Exploitation of Remote Services** may be relevant, as it deals with the exploitation of software vulnerabilities in remote services which could also involve accessing public-facing applications.
+3. **T1489 - Service Stop** could be linked to the potential impacts of exploiting this vulnerability where the service could become unavailable due to exploitation.
+4. **T1499.004 - Endpoint Denial of Service: Application or System Exploitation** could be applicable due to the nature of buffer overflows potentially leading to denial of service conditions.
+5. **T1548 - Abuse Elevation Control Mechanism** might also relate if further exploitation involves privilege escalation through the vulnerability.
+6. **T1566 - Phishing** could indirectly relate if the application is used to facilitate social engineering attacks leveraging this vulnerability.
+
+Thus, the combination of these factors indicates to select the attack techniques of **T1190**, **T1210**, **T1489**, **T1499.004**, and **T1566** as the relevant techniques for this CVE.
+
+To determine the relevant attack techniques for CVE-2018-10610, we analyze its characteristics:
+- The vulnerability has an out-of-bounds write issue which could potentially lead to remote code execution when specially crafted project files are processed.
+- Based on this, it suggests exploitability through either on-client execution where user action is required (opening the file), or through remote exploitation of a public-facing application.
+
+Given the nature of the vulnerability and how it can be exploited, the following techniques are applicable:
+- **User Execution: Malicious File (T1204.002)**: This is relevant since a user may need to open a malicious project file that triggers the vulnerability.
+- **Drive-by Compromise (T1189)**: This is applicable because if the application is exploited through a web application, the user could be affected through a browser context, which might involve unintended actions leading to the execution of code.
+- **Exploit Public-Facing Application (T1190)**: Given that the vulnerability relates to a software exploitation context that could be exposed over a network, this technique fits as well.
+
+Other techniques like Brute Force (T1110), Credential Dumping (T1003), etc., are not relevant to this specific CVE since they don't align with the exploitation mechanism described.
+
+Thus, the relevant attack techniques for CVE-2018-10610 based on its characteristics and potential exploitation pathways are:
+- T1204.002
+- T1189
+- T1190
+
+The vulnerability CVE-2018-8111 describes a remote code execution vulnerability in Microsoft Edge due to improper access to memory objects. This kind of vulnerability can often exploit a weakness in an Internet-facing host or system, which aligns with the attack technique "Exploit Public-Facing Application" (T1190). Additionally, since the exploitation may require user interaction (as stated in the CVSS), techniques like "User Execution: Malicious File" (T1204.002) or "User Execution: Malicious Link" (T1204.001) may be relevant depending on the scenario used to deliver the exploit. Given these considerations, one likely pathway for an offset in attack would originate from both the linking possibly via phishing or user opening files that contain malicious payloads  or potentially direct exploitation through the Internet-facing application. Thus, the techniques relevant to CVE-2018-8111 are T1190 and T1204.002.
+
+Based on the provided context about the CVE-2019-1423 vulnerability, it is noted that the vulnerability is an elevation of privilege vulnerability in the way a system component (StartTileData.dll) handles file creation in protected locations. Given this nature of the vulnerability, relevant attack techniques would likely focus on exploitation methods that allow for privilege escalation or manipulation of system processes. 
+
+Reviewing the attack techniques, the following are relevant:
+- **T1068 (Exploitation for Privilege Escalation)**: This is directly aligned as the vulnerability would allow an adversary to exploit a weakness to gain elevated privileges on the system.
+- **T1498 (Endpoint Denial of Service)**: Exploiting the vulnerability could lead to conditions where services become unavailable or systems are made to crash.
+- **T1204 (User Execution)**, **T1204.001 (User Execution: Malicious Link)**, and **T1204.002 (User Execution: Malicious File)** are applicable due to the requirement of user interaction, which is common in privilege escalation scenarios where crafted files or links may lead to exploitation.
+- **T1554 (Compromise Client Software Binary)** might also be relevant if an attacker manipulated a client's software with a backdoor using this vulnerability.
+
+Overall, the primary focus is on privilege escalation and user-based execution techniques.
+
+Given the context of the CVE-2019-3750 vulnerability that allows a local authenticated malicious user to delete arbitrary files by exploiting improper symbolic link handling, several relevant attack techniques can be identified. The exploitation involves potentially abusing system mechanisms to manipulate file access permissions, which aligns with techniques that facilitate privilege escalation and unauthorized access.
+
+1. **T1190 - Exploit Public-Facing Application**: Although this CVE is not directly associated with a public-facing application, the underlying principles of exploiting a vulnerability in software to manipulate file access are relevant here. The fact that it allows deletion of files through improperly managed permissions supports this mapping.
+   
+2. **T1068 - Exploitation for Privilege Escalation**: This technique applies as it involves abuse of software vulnerabilities to achieve higher privileges, which is a core aspect of how this CVE could be exploited.
+
+3. **T1078 - Valid Accounts**: Since the attacker needs valid local authentication to exploit the vulnerability, this technique is applicable.
+
+4. **T1204.002 - User Execution: Malicious File**: While this CVE doesn't directly rely on users executing malicious files, the concept of user interaction is relevant if an attacker were trying to exploit this in an environment where user actions could inadvertently aid the elevation of impact.
+
+5. **T1497 - Virtualization/Sandbox Evasion**: Although primarily focused on evading detection in virtual environments, understanding how attackers might manipulate environments for their advantage can apply conceptually.
+
+In light of this analysis, the relevant attack techniques primarily include T1190, T1068, T1078, and T1204.002 as they pertain closely to the nature of the exploit described in CVE-2019-3750.
+
+For CVE-2020-11073, the primary attack technique involves the use of stored cross-site scripting (XSS) vulnerabilities. The attacker can exploit this vulnerability through methods like user execution when malicious scripts are injected. Given the nature of the vulnerability, relevant attack techniques are likely to include:
+
+- **T1189 (Drive-by Compromise)**: This is applicable as the vulnerability is exploited when users inadvertently execute the injected scripts while accessing the Operations Console.
+- **T1204.001 (User Execution: Malicious Link)**: This technique is significant as it involves users clicking on malicious links or executing scripts that get triggered through their interactions with the web interface.
+- **T1204.002 (User Execution: Malicious File)**: This technique can be relevant in cases where a user might inadvertently execute malicious files related to the injection.
+
+Considering these aspects related to exploitation techniques, I have derived the following list of relevant attack techniques.
+
+The CVE-2018-11059 vulnerability in RSA Archer is a stored cross-site scripting (XSS) vulnerability, where a malicious user can store script code that gets executed when other users access a corrupted data store. This aligns with various attack techniques related to executing malicious code via user interaction or exploiting web applications. Given its nature:
+
+1. **T1204.001 (User Execution: Malicious Link)** - The XSS attack requires user action to execute the script, often initiated by clicking a link.
+2. **T1189 (Drive-by Compromise)** - The attack can be categorized under drive-by compromises, where users trigger the execution of malicious code inadvertently by accessing a compromised site.
+3. **T1566 (Phishing)** - Although specific phishing isn't described, social engineering may involve tricks to persuade users to access malicious content, leading to a broader phishing context.
+
+These overlap with the techniques observed in this CVE's scope of vulnerability. 
+
+Thus, the relevant attack techniques for CVE-2018-11059 are primarily user execution and drive-by compromise types related to web-based interactions.
+
+The CVE-2019-15963 vulnerability allows an authenticated remote attacker to view sensitive information through the web-based management interface due to insufficient protection of user-supplied input. The description indicates that the attack can leverage the public-facing nature of the web management interface. Given the nature of the vulnerability, relevant attacking techniques can include:
+
+1. **T1190**: Exploit Public-Facing Application - This attack technique directly relates to exploiting vulnerabilities in internet-facing services like the web management interface affected by this CVE.
+2. **T1204.001**: User Execution: Malicious Link - If an attacker requires users to click a malicious link to access the web interface, it relates to this technique, although the description does not specifically suggest this.
+3. **T1078**: Valid Accounts - Since the exploit requires authentication, leveraging valid credentials may also apply if an attacker uses stolen credentials to access the web interface.
+
+On reviewing these techniques, it primarily retains T1190 and T1078 as strongly relevant due to the nature of accessing a web interface and needing valid credentials.
+
+CVE-2020-6960 describes an SQL injection vulnerability that allows for remote unauthenticated access to the web user interface with administrator-level privileges. Given the nature of this vulnerability, it aligns with multiple attack techniques, particularly those related to exploitation of public-facing applications and potential manipulation of data via malicious commands or queries. 
+
+Relevant attack techniques include:
+- **T1190** (Exploit Public-Facing Application): This technique is relevant as the vulnerability directly allows unauthorized access to a public-facing application (MAXPRO VMS and NVR).
+- **T1068** (Exploitation for Privilege Escalation): While not directly indicated, exploiting SQL injection vulnerabilities can sometimes lead to privilege escalation if SQL commands can manipulate users or roles.
+- **T1212** (Exploitation for Credential Access): The SQL injection could potentially allow an adversary to retrieve sensitive information such as credentials, depending on what queries can be executed through the vulnerable application.
+
+Given this context, the relevant attack techniques that could be derived are primarily focused on SQL injection exploitation in public-facing applications.
+
+The vulnerability CVE-2019-18234 involves SQL injection flaws that may allow attackers to execute arbitrary code remotely. This type of attack relates closely to the exploitation techniques typically associated with gaining unauthorized access or control over a system. Based on the provided context and CSV of attack techniques, the following techniques are particularly relevant:
+
+1. **T1190 - Exploit Public-Facing Application**: This is applicable as the vulnerability directly relates to an application accessible over the network that can be exploited via the SQL injection.
+
+2. **T1211 - Exploitation for Defense Evasion**: An SQL injection can be used to bypass security checks and defenses in place, particularly if logging is not properly configured or protected.
+
+3. **T1204.002 - User Execution: Malicious File**: While user interaction might not be a primary factor for SQL injection alone, it often leads to scenarios where malicious payloads could be executed via user actions as part of larger exploit chains.
+
+4. **T1565 - Data Manipulation**: This could relate to the ability to manipulate data via an SQL injection, allowing an adversary to alter the integrity of the database.
+
+Based on these considerations, the attack techniques relevant to CVE-2019-18234 are centered around exploitation of web-facing applications and the potential for code execution through user interaction and data manipulation within the database. Therefore, the identified techniques are:
+
+- T1190
+- T1211
+- T1204.002
+- T1565
+
+Based on the provided context regarding CVE-2020-5283, the relevant attack techniques for the vulnerability primarily revolve around user interaction leading to execution of malicious code, making certain techniques particularly applicable:
+
+1. **T1204.002, User Execution: Malicious File**: This technique is relevant as the vulnerability could be exploited if a user is tricked into clicking on unsafe file names that lead to execution of malicious code.
+2. **T1190, Exploit Public-Facing Application**: The vulnerability can also be viewed as an exploitation of the ViewVC application due to its XSS nature, targeting user interaction through the web interface.
+3. **T1566, Phishing**: Although not explicitly a phishing attack, the exploitation could involve direct manipulation or social engineering techniques to encourage users to trigger the vulnerability.
+
+Additionally, the XSS aspect means that approaches utilizing **JavaScript exploitation** (T1059.007) could also apply if the attack is delivered through crafted web content.
+
+Taking all these factors into consideration, the relevant attack techniques identified are T1204.002, T1190, and T1566.
+
+The vulnerability CVE-2019-3727 describes an OS command injection vulnerability that allows a malicious user to potentially execute arbitrary commands as root. This type of vulnerability can be exploited using various techniques related to command execution and user interactions. Given the nature of OS command injection, the following attack techniques are relevant:
+1. **T1059** (Command and Scripting Interpreter): This technique reflects the exploitation of command interpreters, which is directly applicable to OS command injection scenarios.
+2. **T1204** (User Execution): User execution techniques are applicable since the execution often requires some degree of interaction from a user to trigger the exploitation.
+3. **T1190** (Exploit Public-Facing Application): Given the nature of the vulnerability in an Internet-facing application, this attack technique is relevant as it may involve targeting internet-facing services.
+
+Combining these considerations, the most relevant attack techniques for CVE-2019-3727 would include **T1059**, **T1204**, and **T1190**.
+

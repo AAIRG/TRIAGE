@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1078",
+            "T1068",
+            "T1210",
+            "T1548",
+            "T1496",
+            "T1486",
+            "T1499",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described is a remote command execution (RCE) vulnerability in the D-Link DIR-820L router, which can be exploited via an HTTP POST request. Given the nature of this vulnerability, the most relevant attack techniques that correspond to exploitation techniques include those that involve exploiting public-facing applications, command execution, and potentially other techniques that facilitate remote code execution. Based on the provided list of attack techniques, the following techniques are most relevant:\n\n1. **T1190** - Exploit Public-Facing Application: This is directly applicable as the vulnerability allows exploitation through a public-facing interface.\n2. **T1059** - Command and Scripting Interpreter: This technique is relevant as the exploitation involves executing commands.\n3. **T1078** - Valid Accounts: If an attacker can exploit the vulnerability, they might also gain access to valid accounts.\n4. **T1068** - Exploitation for Privilege Escalation: This could be relevant if the exploitation allows for privilege escalation.\n5. **T1210** - Exploitation of Remote Services: This technique may apply if the attack involves exploiting remote services.\n6. **T1548** - Abuse Elevation Control Mechanism: This could be relevant if the exploitation allows for elevation of privileges.\n7. **T1496** - Resource Hijacking: If the exploitation leads to resource hijacking, this technique would be applicable.\n8. **T1486** - Data Encrypted for Impact: If the exploitation results in data being encrypted as a form of impact, this technique is relevant.\n9. **T1499** - Endpoint Denial of Service: If the exploitation leads to a denial of service, this technique would apply.\n10. **None**: This indicates that there may not be enough relevant techniques to fill all ten slots.\n\nThus, the ranked list of techniques is as follows: ['T1190', 'T1059', 'T1078', 'T1068', 'T1210', 'T1548', 'T1496', 'T1486', 'T1499', None]."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1190",
+            "T1552",
+            "T1078",
+            "T1068",
+            "T1059",
+            "T1496",
+            "T1486",
+            "T1003",
+            "T1046",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described allows attackers to access restricted directories in Adobe ColdFusion when a password is not configured. This indicates that the attack likely involves exploiting a public-facing application. The most relevant attack techniques for this vulnerability would include those that relate to exploiting public-facing applications and potentially accessing unauthorized resources. Based on the provided list of attack techniques, the following techniques are applicable:\n\n1. T1190 - Exploit Public-Facing Application: This is the primary technique that directly relates to the vulnerability as it involves exploiting the application itself.\n2. T1552 - Unsecured Credentials: This technique may also apply since the vulnerability arises from the lack of a configured password, leading to unsecured access.\n3. T1078 - Valid Accounts: If an attacker gains access to the application, they may also exploit valid accounts if they exist.\n4. T1068 - Exploitation for Privilege Escalation: If the attacker gains access, they may attempt to escalate privileges.\n5. T1059 - Command and Scripting Interpreter: This technique is relevant as it may be used to execute commands once access is gained.\n6. T1496 - Resource Hijacking: If the attacker can access the application, they may hijack resources.\n7. T1486 - Data Encrypted for Impact: This may apply if the attacker encrypts data after gaining access.\n8. T1003 - OS Credential Dumping: If the attacker can access the system, they may attempt to dump credentials.\n9. T1046 - Network Service Discovery: This could be relevant if the attacker is trying to discover services after gaining access.\n10. None: Since there are only nine relevant techniques, we will include a 'None' value to complete the list.\n\nThus, the final list of attack techniques is ranked as follows."
+    }
+]

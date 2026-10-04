@@ -1,0 +1,247 @@
+The vulnerability CVE-2020-3322, as described, allows an attacker to cause a denial of service (DoS) condition in the Cisco Webex Network Recording Player and Cisco Webex Player by exploiting improper input validation of ARF or WRF files. This aligns closely with several attack techniques that involve unavailable services, particularly those associated with denial of service. Based on the attack techniques provided, the relevant techniques include:
+
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: This directly addresses the exploitation of software vulnerabilities causing applications to crash or otherwise deny service.
+- **T1499 (Endpoint Denial of Service)**: This is a more generic technique referencing denial of service attacks to degrade the availability of application services.
+
+Given that the CVE specifically mentions potential for an attacker causing a crash (leading to the DoS condition), these techniques are appropriate for inclusion.
+
+The vulnerability CVE-2020-12000 relates to the handling of serialized data on specific systems, leading to the potential for unauthorized access to sensitive information. Given that the issue involves the lack of proper input validation and deserialization of untrusted data, the following attack techniques from the provided list are relevant: 
+
+1. **T1059** (Command and Scripting Interpreter) - This technique is applicable as malicious code may be executed due to deserialized untrusted data.
+2. **T1499.004** (Endpoint Denial of Service: Application or System Exploitation) - If the attacker can exploit this vulnerability to make the system unstable, it could lead to a denial of service condition through crashing the application or system.
+
+No other techniques directly apply based on the provided list. Therefore, the relevant techniques for CVE-2020-12000 are associated primarily with execution flows and systems exploitation.
+
+Given the description of the vulnerability CVE-2018-15772, which involves an uncontrolled resource consumption attack by a malicious user consuming CPU bandwidth and determining system file existence via Boxmgmt CLI, the appropriate attack techniques can be determined based on their relevance to the nature of the attack. 
+
+The relevant attack techniques that apply here include:
+- **T1499.004** (Endpoint Denial of Service: Application or System Exploitation) because the attack involves consuming system resources and could cause a denial of service condition on the system.
+- **T1565.001** (Data Manipulation: Stored Data Manipulation) may also be relevant as an attacker could manipulate stored settings or parameters in an application (since it involves consuming resources).
+
+While other techniques exist, they may not directly relate to the specifics of uncontrolled resource consumption through Boxmgmt CLI or system interactions' denial of service.
+
+Thus, the primary identifiers relevant to the attack technique for this vulnerability are:
+
+1. **T1499.004**: because of the nature of resource consumption causing potential denial of service.
+2. **T1565.001**: as it speaks to the manipulation of resources and application states.
+
+The remaining attack techniques do not directly pertain to the issues outlined in the context of CVE-2018-15772.
+
+Based on the context given regarding CVE-2020-15170, the primary impact of this vulnerability relates to improper access controls allowing unauthorized access to application configurations. Given this aspect, relevant attack techniques can include those associated with exploitation of vulnerabilities to gain access or manipulate data. The techniques that directly align with unauthorized access include:
+
+- **T1190 (Exploit Public-Facing Application)**: This technique is relevant as the CVE describes risks when the application is exposed to the internet, potentially allowing for exploitation.
+- **T1565 (Data Manipulation)**: As the CVE results in concerns regarding the manipulation of application configuration data, this technique applies as well.
+- **T1059 (Command and Scripting Interpreter)**: This technique may also be applicable as it relates to executing commands that could be leveraged to take control over configurations.
+
+Other techniques could be relevant depending on the specifics of how the vulnerability could be exploited, but based on the prominent features provided, these are the most directly relevant.
+
+The vulnerability CVE-2019-3786 centers around insufficient verification of data authenticity. Affected is the Cloud Foundry BOSH Backup and Restore CLI where an authenticated user can manipulate metadata to access unauthorized backup files. Here, relevant attack techniques include 'T1557' (Adversary-in-the-Middle) because the issue allows an attacker to insert malicious requests and effects data integrity for privilege escalation; and 'T1068' (Exploitation for Privilege Escalation) as it relates closely to escalation of access through unauthorized files. Additionally, 'T1565.001' (Data Manipulation: Stored Data Manipulation) is applicable because manipulative actions on stored files are part of the attack vector. Attack techniques such as 'T1499.004' (Endpoint Denial of Service) are also relevant as the actions could lead to service disruptions depending on the exploit’s execution context. The selection points to the authentication issue allowing abuse underlined by the processing of unauthorized requests to manipulate the backup process.
+
+The described vulnerability CVE-2018-15462 allows an unauthenticated, remote attacker to exploit weaknesses in TCP ingress handling on Cisco Firepower Threat Defense Software, leading to denial of service conditions due to insufficient ingress TCP rate limiting. This indicates that multiple attack techniques relevant to denial of service can be applicable. Among the options provided, the following techniques fit the context of exploiting the software to cause denial of service: 
+
+- T1499.004, "Endpoint Denial of Service: Application or System Exploitation" directly relates to exploiting software vulnerabilities to crash applications or systems.
+- T1499, "Endpoint Denial of Service" also indicates actions that lead to the unavailability of services to users.
+
+Given the characteristics of the vulnerability, these techniques adequately describe how it can be exploited.
+
+The vulnerability CVE-2019-6538 allows an attacker with adjacent short-range access to potentially modify and manipulate communication with implanted cardiac devices due to the lack of authentication or authorization in the communication protocol. Given the context of this vulnerability, relevant attack techniques include those that relate to the exploitation of vulnerabilities for data manipulation and denial of service, which could allow an adversary to compromise the integrity and availability of the device's communications.
+
+- **T1499.004**: Endpoint Denial of Service: Application or System Exploitation applies here, as the vulnerability can be used to create a denial of service condition, disabling the device’s normal functionality.
+  
+- **T1565.001**: Data Manipulation: Stored Data Manipulation may also apply because the attacker is capable of modifying memory values within implanted cardiac devices based on the flaw's description, which indicates manipulation of data at rest.
+
+- **T1566.001**: Phishing: Spearphishing Attachment or link may also be relevant if attackers decide to deliver exploits targeting the device through malicious attachments or links in an attempt to gain access.
+
+Given the specific context of the vulnerability and the relevant attack techniques listed, the final selection focuses on those primarily associated with direct exploitation of the vulnerability's nature.
+
+For the vulnerability CVE-2020-1495, the attacker requires user interaction to exploit the vulnerability, which is clearly indicated in the context provided. The attacker must convince the user to open a specially crafted file in Microsoft Excel, which aligns with attack techniques that involve user execution or leveraging social engineering attacks. The relevant attack techniques for this exploit would include methods associated with user action leading to execution of malicious payloads without requiring the user to download unauthorized executables directly.
+
+Relevant Techniques:
+- **T1204.001** (User Execution: Malicious Link) is applicable as it denotes the need for user interaction to execute a malicious payload.
+- **T1566** (Phishing) is also applicable since the attack relies on social engineering to have the user open the crafted file. 
+- **T1499.004** (Endpoint Denial of Service: Application or System Exploitation) is of high relevance due to the possibility of exploiting the application to cause crashes or loss of services due to the remote code execution vectors described.
+
+Additional considerations include:
+- **T1059.007** (Command and Scripting Interpreter: JavaScript) could be indirectly relevant if the crafted file leverages external JavaScript to execute but is not the main technique here.
+
+Based on the attack techniques listed, the most relevant techniques that typify the nature of CVE-2020-1495 exploitation are identified.
+
+To address the question regarding the relevant attack techniques for CVE-2019-0576, we analyze the description of the vulnerability and the provided techniques. CVE-2019-0576 is identified as a remote code execution vulnerability that affects several versions of Windows operating systems due to the improper handling of objects in memory by the Windows Jet Database Engine.
+
+Given this context, applicable techniques can include:
+- **T1068** (Exploitation for Privilege Escalation), since the vulnerability can potentially be exploited to elevate privileges through remote code execution.
+- **T1574** (Hijack Execution Flow), since the nature of remote code execution often involves hijacking the control flow to launch malicious payloads.
+- **T1499.004** (Endpoint Denial of Service: Application or System Exploitation), as the exploitation may cause denial-of-service conditions.
+
+Other techniques, such as data manipulation or command and scripting interpreter techniques, may also apply depending on how the exploitation occurs. However, the primary focus based on the vulnerability's capabilities would be the execution and potential privilege escalation. Therefore, the selection reflects a combination of these relevant techniques focusing primarily on those techniques that directly correlate to execution capabilities and exploitation of the vulnerability.
+
+The vulnerability CVE-2018-15758 involves a privilege escalation flaw where a malicious user can modify authorization requests by crafting requests to a custom approval endpoint in Spring Security OAuth. This scenario could potentially lead to unauthorized access or manipulation of system actions. The following attack techniques are applicable:
+
+- T1068 (Exploitation for Privilege Escalation): This vulnerability directly allows adversaries to exploit a flaw to escalate privileges within the system.
+- T1557 (Adversary-in-the-Middle): Given that the vulnerability involves modifying requests, there could be elements of this technique being employed, especially if an adversary is intercepting and altering requests.
+- T1552.001 (Unsecured Credentials: Credentials In Files): If inappropriate access controls are exploited, there may be scenarios where credentials are managed inadequately, leading to their exposure.
+
+Given the nature of the CVE and the techniques outlined, I believe T1068 and T1557 are particularly relevant.
+
+The vulnerability described (CVE-2020-6964) involves a lack of authentication in the keyboard switching service of several medical telemetry devices. Given the nature of the vulnerability and the attack techniques listed, multiple techniques are relevant. 
+
+1. **T1068 (Exploitation for Privilege Escalation)**: Given the potential for unauthorized keyboard access, it can allow attackers to escalate privileges by capturing commands that may later enable broader control.
+
+2. **T1190 (Exploit Public-Facing Application)**: This attack technique is applicable as the vulnerability can be exploited via a public-facing network without authentication, allowing attackers to gain access to the system.
+
+3. **T1557 (Adversary-in-the-Middle)**: Attackers can position themselves to capture keyboard inputs transmitted over the network, supporting follow-on attacks.
+
+4. **T1059 (Command and Scripting Interpreter)**: The lack of authentication means that commands executed through the keyboard interface can be viewed and manipulated by an attacker, providing a route for command injection.
+
+5. **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: Exploitation of this vulnerability could lead to denial of service by crashing the telemetry services via high volumes of input or malformed commands.
+
+Taking these points into consideration, the most relevant attack techniques for this CVE are associated with exploitation via public interfaces, potential privilege escalation, and manipulation of real-time commands.
+
+The vulnerability described by CVE-2020-1425 is a remote code execution vulnerability in Microsoft Windows Codecs Library that has a CVSS score of 7.8, indicating it has significant risk potential. The techniques relevant to this kind of vulnerability typically involve manipulating the execution flow of a program, potentially through injecting harmful commands that allow an attacker to run code in the context of the affected software. 
+
+Given the nature of the CVE, the following attack techniques are relevant:
+- T1059: Command and Scripting Interpreter, as the adversary can leverage execution flows via the Windows Command Shell or PowerShell to exploit the vulnerability.
+- T1574: Hijack Execution Flow, which involves intercepting or redirecting the flow to execute malicious code, is fundamental to how remote code execution exploits work.
+- T1499.004: Endpoint Denial of Service - Application or System Exploitation relates to potentially causing crashes or resource exhaustion leading to denial of service, which can be an outcome of exploiting said vulnerability.
+
+Thus, the relevant attack techniques are selected based on the nature of execution compromise and potential denial impact.
+
+For the vulnerability CVE-2019-1035, which is a remote code execution vulnerability in Microsoft Word, the relevant attack techniques include:
+
+1. **T1059.007 - Command and Scripting Interpreter: JavaScript**: Since Microsoft Word vulnerabilities often involve the ability to run JavaScript, this technique is applicable as an attack vector.
+2. **T1499.004 - Endpoint Denial of Service: Application or System Exploitation**: The nature of the vulnerability implies potential exploitation that could lead to denial of service as the system may become unstable or unresponsive.
+3. **T1190 - Exploit Public-Facing Application**: This technique applies if the vulnerability is exploited through a public-facing aspect of Microsoft Word.
+4. **T1566.001 - Phishing: Spearphishing Attachment**: If the vulnerability is exploited through malicious attachments sent via spearphishing, this technique is relevant.
+
+These techniques leverage the nature of the vulnerability, which allows for remote code execution that can be facilitated through various means such as JavaScript execution, public exposures, and social engineering tactics like phishing.
+
+The vulnerability CVE-2018-15392 allows an unauthenticated, adjacent attacker to exploit the DHCP service in Cisco Industrial Network Director to cause a denial of service (DoS) condition. The attacker can send malicious DHCP lease requests that result in the termination of the DHCP service. Based on the CVSS properties and the nature of the vulnerability, the relevant attack techniques include:
+
+- T1499 (Endpoint Denial of Service): This directly maps to the nature of the vulnerability since it involves causing an application or system to crash or become unavailable.
+- T1499.004 (Endpoint Denial of Service: Application or System Exploitation): This is also relevant as it specifies the exploitation of a software vulnerability to achieve denial of service.
+
+Both techniques are focused on the end result of causing a denial of service, making them the most relevant techniques for this specific vulnerability. Other techniques listed such as remote service manipulation or credential manipulation are not applicable in this context.
+
+The vulnerability CVE-2020-5358 describes a privilege escalation scenario that involves incorrect permissions, allowing a local user with low privileges to exploit this via symbolic links. Given its nature of allowing an escalation of privileges, several attack techniques may apply. The relevant techniques include:
+
+- **T1068** (Exploitation for Privilege Escalation): This directly correlates with the exploitation of a privilege escalation vulnerability due to incorrect permissions.
+- **T1552** (Unsecured Credentials): Although indirectly related, since the attack could involve accessing or manipulating credentials due to the elevation of privileges.
+- **T1574** (Hijack Execution Flow): Although there is no direct mention of hijacking execution flow, this technique could potentially tie into manipulating execution processes after gaining elevated permissions.
+
+Accordingly, the main focus is on privilege escalation, leading to relevant attack techniques that directly correlate with that outcome.
+
+To determine the relevant attack techniques for the vulnerability CVE-2020-15188, which involves Unauthenticated Remote Code Execution (RCE) due to vulnerabilities in deserializing untrusted data, we can analyze the attack techniques provided in the CSV. Given the nature of the vulnerability:
+
+1. The exploitation path typically leads to the execution of arbitrary code, which aligns with techniques that involve executing commands or scripts.
+2. The absence of user authentication implies the vulnerability could relate to exploitation of public-facing applications.
+3. The primary impact being remote code execution suggests techniques that allow attackers to execute commands/scripts on the server.
+4. In particular, techniques related to command and scripting interpreters are highly applicable here, as well as potential abuse of the system's execution flow.
+5. Given that this vulnerability is related to how data is handled and executed, techniques like Indirect Command Execution (T1202) and Command and Scripting Interpreter are relevant.
+
+The listed attack techniques that are most pertinent are T1059 (Command and Scripting Interpreter), T1202 (Indirect Command Execution), and T1499.004 (Endpoint Denial of Service: Application or System Exploitation). The focus remains on the aspects of exploiting the RCE capabilities presented by the vulnerability through command interpretation or exploitation of public-facing features.
+
+Thus, we can conclude that the relevant attack techniques for CVE-2020-15188 are as follows: ['T1059', 'T1202', 'T1499.004'].
+
+For the vulnerability CVE-2020-0898, we are dealing with an elevation of privilege vulnerability in the Windows Graphics Component that allows unauthorized access to sensitive parts of the system by improperly handling objects in memory. Given the context of such a vulnerability, the relevant attack techniques primarily revolve around exploiting or hijacking execution flow to gain unauthorized privileges. 
+
+The techniques that are highly relevant in this context include:
+- T1574, Hijack Execution Flow, as it directly relates to executing arbitrary code in a way that is not intended by the software.
+- T1068, Exploitation for Privilege Escalation, because the vulnerability allows an attacker to elevate their privileges within the system.
+
+No other techniques seem to fit the context as closely as these two. Therefore, the relevant attack techniques for this vulnerability are T1068 and T1574.
+
+The vulnerability CVE-2020-11055 describes an XSS vulnerability in BookStack that allows a user to inject custom JavaScript via comment creation. This is primarily indicative of a Cross-site Scripting attack, specifically related to the abuse of scripting languages like JavaScript. According to the attack techniques provided, the relevant technique that aligns with XSS vulnerabilities, particularly regarding the execution of arbitrary JavaScript code, is T1059.007 (Command and Scripting Interpreter: JavaScript). This technique is directly related to the execution of adversarial scripts within a web interface context. Other techniques such as T1557 (Adversary-in-the-Middle) may not be as directly applicable here as the primary impact involves executing JavaScript within the comments. Therefore, the relevant attack technique is T1059.007 alone.
+
+The vulnerability CVE-2020-3349 involves multiple vulnerabilities in the Cisco Data Center Network Manager (DCNM) that could support cross-site scripting (XSS) attacks due to insufficient validation of user-supplied input. Given the context of this vulnerability, the most relevant attack techniques relate to the ability of an attacker to inject scripts or execute commands, which aligns with the use of JavaScript in executing these types of attacks. The specific techniques that apply are:
+
+- **T1059.007 (Command and Scripting Interpreter: JavaScript)**: This directly correlates to the ability to exploit XSS vulnerabilities by executing JavaScript code within the context of the browser.
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: Given that the exploit of these vulnerabilities can potentially lead to application crashes or denial of service.
+
+Thus, the relevant attack techniques for the vulnerability are ['T1059.007', 'T1499.004'].
+
+The vulnerability CVE-2020-0671 describes an elevation of privilege vulnerability in the Windows kernel due to improper handling of objects in memory. Given the nature of the vulnerability focusing on privilege escalation, the relevant attack techniques from the provided list would include those that involve exploitation for privilege escalation and command execution. 
+
+In considering the details, the following techniques are applicable:
+- **T1068 (Exploitation for Privilege Escalation)**: This is directly relevant as the vulnerability involves the kernel's failure, which can lead to unauthorized elevation of privileges.
+- **T1059 (Command and Scripting Interpreter)**: This technique is relevant as an attacker could exploit this vulnerability to execute arbitrary commands with elevated privileges.
+- **T1574 (Hijack Execution Flow)**: This applies because an attacker might manipulate the execution flow to exploit the vulnerable area in the kernel.
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: While primarily this technique relates to crashes, exploiting this vulnerability could lead to DoS conditions if the application becomes unstable.
+
+Thus, the relevant attack techniques identified for this vulnerability encompass those that directly pertain to exploitation and execution of commands that lead to escalation of privileges or potential denial of service.
+
+For the vulnerability CVE-2020-3292, multiple attack techniques can be relevant due to its nature of allowing an authenticated remote attacker with administrative privileges to execute arbitrary code. Given its characteristics, it aligns well with several techniques related to code execution, privilege escalation, and denial of service:
+
+1. **T1059** (Command and Scripting Interpreter): This is relevant as the vulnerability allows for the execution of commands on the affected device.
+2. **T1068** (Exploitation for Privilege Escalation): This technique reflects the nature of the vulnerability where an attacker can execute arbitrary code with root privileges.
+3. **T1499.004** (Endpoint Denial of Service: Application or System Exploitation): Successful exploits causing the device to crash or leading to a denial of service fits within this technique.
+
+Other techniques could potentially be relevant, but the primary impacts focus around execution of commands and privilege escalation.
+
+The vulnerability CVE-2020-3407 describes an issue in Cisco IOS XE Software where incorrect processing of the access control list allows an unauthenticated remote attacker to cause the device to reload, resulting in a denial of service condition. The relevant attack techniques related to this vulnerability involve note-worthy approaches typically associated with denial of service and exploitation of software vulnerabilities.
+
+From the provided attack techniques, the following appear relevant:
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: This directly corresponds to the denial of service nature of the vulnerability.
+- The other techniques like hijacking execution flow can be contextually relevant as they may relate to the methods used to exploit the vulnerability, but the most directly relevant and primary impact technique aligns with denial of service.
+
+Based on this analysis, the selected attack technique is specifically about causing a denial of service condition on the affected system.
+
+The vulnerability CVE-2019-6522 involves Moxa IKS and EDS failing to properly check array bounds, which can lead to arbitrary memory reads. This corresponds to the attack techniques that allow for adversarial control via memory corruption or exploiting the lack of security in applications.
+
+Relevant attack techniques include:
+1. **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)** - This is directly applicable since the vulnerability can allow for a complete denial of service by exploiting the application behaviors.
+2. **T1574 (Hijack Execution Flow)** - This is also relevant as the vulnerability may provide avenues for the attacker to hijack execution flow through memory manipulation.
+
+These techniques directly relate to the potential impacts and methods of exploitation associated with the vulnerability listed, making them suitable selections.
+
+Given the context regarding the CVE-2019-1118 vulnerability, which can lead to remote code execution, the relevant attack techniques are likely to fall under methods that exploit software vulnerabilities. The following techniques are appropriate based on the provided description and the typical exploitation scenarios for such vulnerabilities: 
+
+1. **T1574 (Hijack Execution Flow)** - As this vulnerability involves remote code execution, it is common for adversaries to hijack execution flows to execute their malicious code.
+2. **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)** - The high CVSS base score and the potential for exploiting the vulnerability to cause denial of service conditions also make this technique relevant.
+3. **T1059 (Command and Scripting Interpreter)** - This is a general technique relevant for any vulnerabilities that allow execution of commands or scripts.
+
+These techniques encompass both direct exploitation and potential impacts resulting from the exploitation of this specific vulnerability.
+
+The vulnerability CVE-2018-15771 describes an information disclosure vulnerability in Dell EMC RecoverPoint, where a malicious user may determine the existence of system files via Boxmgmt CLI. This nature of the vulnerability suggests techniques related to information exposure and potentially to areas where the command line is abused or managed.
+
+Looking through the provided list of attack techniques, the relevant ones linked to this kind of attack include:
+- T1059 (Command and Scripting Interpreter) as the CLI could be exploited to execute commands or access information improperly.
+- T1557 (Adversary-in-the-Middle) is relevant as it implies the possibility of someone placing themselves in-between a command or request to manipulate or reveal information.
+- T1005 (Data from Local System) relates to the organization of information that may be at risk through the CLI commands as described in the vulnerability.
+
+Given the focus on exposure of sensitive information and the nature of how command interfaces can be exploited, these techniques are appropriate for the vulnerability in question.
+
+The vulnerability CVE-2020-1347 is classified as an elevation of privilege vulnerability within the Windows Storage Services. Given its nature, potential attack techniques that are relevant include those methods which are often associated with exploitation and privilege escalation, as well as those that could involve command and scripting execution.
+
+Analyzing the provided list of attack techniques, the following techniques seem most relevant:
+- **T1068** (Exploitation for Privilege Escalation): This technique directly corresponds to the nature of the CVE since it involves exploiting a vulnerability to gain elevated privileges.
+- **T1059** (Command and Scripting Interpreter): This technique is relevant because it encompasses the use of command-line interfaces or scripting languages that may be utilized post-exploitation.
+- **T1574** (Hijack Execution Flow): This technique is also relevant since the nature of the vulnerability may allow an attacker to hijack execution flow to perform unauthorized actions.
+
+Considering this context, the relevant techniques for the primary impact of CVE-2020-1347 are primarily focused on privilege escalation and the execution of commands or scripts.
+
+The provided CVE description for CVE-2019-13555 indicates that a remote attacker can exploit a vulnerability in Mitsubishi Electric MELSEC-Q and MELSEC-L Series CPU modules to cause a denial-of-service condition. This aligns primarily with denial-of-service attack vectors, specifically against the FTP service. The relevant attack techniques from the given options would be related to denial of service, specifically those that involve application or system exploitation leading to denial of service. The appropriate technique for this scenario is T1499.004, "Endpoint Denial of Service: Application or System Exploitation," as it directly concerns the exploitation leading to a denial of service condition.
+
+The vulnerability CVE-2019-1876 allows an unauthenticated remote attacker to exploit the insufficient authentication of proxy connection requests within Cisco's WAAS software, thus enabling access to blocked internet resources. This scenario fits multiple attack techniques. The most relevant techniques are:
+
+- **T1557 (Adversary-in-the-Middle)**: The attacker can potentially intercept traffic between the client and the proxy server.
+- **T1499.004 (Endpoint Denial of Service: Application or System Exploitation)**: By exploiting this vulnerability, an attacker might cause service disruptions or affect the normal functioning of the application.
+- **T1059.007 (Command and Scripting Interpreter: JavaScript)**: If the attacker can inject JavaScript via the HTTPS proxy, they could manipulate the execution flow.
+- **T1565.002 (Data Manipulation: Transmitted Data Manipulation)**: The ability to modify or intercept data being transmitted through the proxy is highly relevant.
+
+Therefore, the relevant attack techniques that can be associated with CVE-2019-1876 include these four techniques.
+
+The vulnerability CVE-2019-3707 describes an authentication bypass vulnerability in Dell EMC iDRAC9, which allows a remote attacker to bypass authentication and gain access to the system via specially crafted input. This situation typically aligns with exploitation tactics that leverage weaknesses in public-facing applications and may be exploited through the use of various attack techniques.
+
+Given this context, the relevant attack techniques for CVE-2019-3707 include:
+- **T1190** (Exploit Public-Facing Application): The nature of the vulnerability revolves around exploiting weaknesses in an internet-facing application (the iDRAC interface), making it a primary avenue of attack.
+- **T1557** (Adversary-in-the-Middle): If the attacker is able to intercept the communication, this technique could also be applicable, especially since it's applicable in scenarios involving remote attacks.
+
+Thus, the most relevant attack techniques for this vulnerability are T1190 and T1557.
+
+The vulnerability CVE-2020-3306 corresponds to a denial of service (DoS) condition on affected Cisco devices, primarily through the exploitation of the DHCP service. Given this context, the relevant attack techniques would typically involve methods that can disrupt service availability. The following techniques are applicable:
+
+1. **T1499.004, Endpoint Denial of Service: Application or System Exploitation**: This directly relates to the root issue as it encompasses the exploitation of software vulnerabilities to cause DoS conditions.
+2. **T1499, Endpoint Denial of Service**: This is a broader category that also fits the description of actions aimed at causing service disruption.
+
+No other provided attack techniques appear to be directly applicable to the nature of the described vulnerability (DoS via DHCP packet exploitation) outside of these denial of service techniques.
+

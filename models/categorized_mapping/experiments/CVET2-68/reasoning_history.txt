@@ -1,0 +1,24 @@
+The vulnerability CVE-2018-15444 is primarily related to the exploitation of a software bug in the Cisco Energy Management Suite that can allow an authenticated, remote attacker to gain unauthorized access to sensitive data through XML External Entity (XXE) injection. Given that it requires user interaction for exploitation (specifically importing a crafted XML file), the appropriate attack techniques are:
+
+1. **T1204.002** (User Execution: Malicious File) - This technique is relevant since the exploitation depends on a user opening a crafted XML file.
+2. **T1190** (Exploit Public-Facing Application) - Although the attacker must convince a user to execute the crafted file, the vulnerability itself can be seen as a flaw that could be exploited over a network.
+3. **T1566** (Phishing) - Similar to spearphishing, this technique applies due to the need for social engineering to get the user to open the malicious file.
+
+Overall, the techniques needed to exploit this vulnerability revolve around crafted user execution and ultimately exploiting the software itself to gain access to sensitive information.
+
+The vulnerability CVE-2020-15183 describes a reflected cross-site scripting (XSS) attack in SoyCMS that allows remote code execution when an administrator visits a crafted webpage. This vulnerability can be exploited using attacks that rely on user interaction, specifically with regard to executing malicious code via user actions such as clicking links or opening files. Thus, the relevant attack techniques applicable here include those focusing on user execution through malicious links or files, as well as exploitation of public-facing applications where such XSS attacks can occur.
+
+From the provided CSV of available attack techniques, the following techniques apply:
+- T1204.001: User Execution: Malicious Link (relevant because the administrator needs to click a malicious link for the attack to succeed)
+- T1204.002: User Execution: Malicious File (if crafted files are involved or downloaded as part of exploitation)
+- T1190: Exploit Public-Facing Application (this applies since the vulnerability can be exploited through the web application)
+
+Based on this analysis, the relevant attack techniques for CVE-2020-15183 are T1204.001, T1204.002, and T1190.
+
+The vulnerability CVE-2019-1831 allows unauthenticated remote attackers to bypass configured content filters in Cisco AsyncOS Software for Cisco Email Security Appliance. This indicates a potential exploitation through public-facing applications and specifically through malicious email content. Therefore, the most relevant attack techniques include:
+
+- T1190 (Exploit Public-Facing Application): This technique captures the main essence of exploiting a vulnerability in a publicly accessible service (in this case, the email service that the CVE targets).
+- T1566.001 (Phishing: Spearphishing Attachment): Given that the CVE describes bypassing email filters, it aligns well with spearphishing, where an attacker sends malicious attachments that may go undetected.
+
+These two techniques capture the essence of the exploitation path for CVE-2019-1831.
+

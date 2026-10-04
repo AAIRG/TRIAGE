@@ -1,0 +1,20 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described is a \"Windows DWM Core Library Elevation of Privilege Vulnerability.\" Given that this type of vulnerability typically allows an attacker to escalate privileges on the system, the relevant exploitation techniques would likely involve methods that allow an attacker to exploit the vulnerability to gain elevated access. \n\nIn this case, the attack techniques that are most relevant to an elevation of privilege vulnerability like this one would include:\n- T1068: Exploitation for Privilege Escalation - This technique directly relates to exploiting vulnerabilities to gain higher-level permissions.\n- T1078: Valid Accounts - While this is more about using existing credentials, it can be relevant in the context of leveraging an elevation of privilege vulnerability if the attacker already has access.\n\nHowever, since the question specifically asks for exploitation techniques, T1068 is the primary technique that applies here."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190"
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described allows a remote attacker to execute commands on the host by manipulating the processed input stream. This suggests that the attacker can exploit the vulnerability through a public-facing application, which aligns with the exploitation technique of \"Exploit Public-Facing Application\" (T1190). Given the nature of the vulnerability, it is likely that it can be exploited remotely without requiring user interaction, which further supports the use of T1190 as the relevant attack technique."
+    }
+]

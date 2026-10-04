@@ -1,0 +1,851 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1496",
+            "T1498",
+            "T1571"
+        ],
+        "true labels": [
+            "T1499"
+        ],
+        "reasoning": "The vulnerability description mentions a remote command execution (RCE) vulnerability in D-Link DIR-820L 1.03B01 Revision Ax, which can be exploited via a crafted POST request to the /fileupload endpoint. This vulnerability allows an unauthenticated attacker to execute arbitrary code on the affected device. The vulnerability is due to insufficient input validation of the HTTP URL. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to execute arbitrary commands on the affected device.\n\nThe relevant attack techniques of type secondary_impact for this vulnerability include T1496 (Resource Hijacking), T1498 (Network Denial of Service), and T1571 (Non-Standard Port). These techniques are relevant because they can be used by an attacker to further exploit the vulnerability, for example by using the executed commands to hijack system services, or to cause a denial-of-service condition by exploiting the vulnerability multiple times."
+    },
+    {
+        "target_cve": "CVE-2023-27350",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1557"
+        ],
+        "true labels": [
+            "T1105"
+        ],
+        "reasoning": "The vulnerability allows remote attackers to bypass authentication on affected installations of PaperCut NG 22.0.5 (Build 63914). This could allow attackers to execute arbitrary code in the context of SYSTEM. The vulnerability is due to improper access control. \n\nThe relevant attack techniques of type secondary_impact are those that could be used by an attacker after gaining access to the system through the vulnerability. These techniques include those that allow an attacker to maintain access, escalate privileges, or execute code on the system.\n\nBased on the information provided, the relevant attack techniques of type secondary_impact are:\n\n* T1059: Command and Scripting Interpreter - This technique allows an attacker to execute arbitrary code on the system, which could be used to maintain access or execute malicious code.\n* T1068: Exploitation for Privilege Escalation - This technique allows an attacker to escalate privileges on the system, which could be used to gain greater control over the system.\n* T1190: Exploit Public-Facing Application - This technique allows an attacker to exploit vulnerabilities in public-facing applications, which could be used to gain initial access to the system.\n* T1557: Adversary-in-the-Middle - This technique allows an attacker to intercept and modify network traffic, which could be used to steal sensitive information or execute malicious code."
+    },
+    {
+        "target_cve": "CVE-2016-4117",
+        "predictions": [
+            "T1557",
+            "T1003"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions Adobe Flash Player 21.0.0.226 and earlier allows remote attackers to execute arbitrary code via unspecified vectors, as exploited in the wild in May 2016. This indicates that the vulnerability can be exploited to gain control of a system, potentially allowing an attacker to execute malicious code. \n\nGiven the information provided in the vulnerability description and the list of attack techniques, we can infer that the exploitation technique is likely T1190, Exploit Public-Facing Application, as it is a common technique used to exploit vulnerabilities in web applications. \n\nThe primary impact of the vulnerability is likely T1059, Command and Scripting Interpreter, as it allows an attacker to execute arbitrary code on a compromised system. \n\nFor the secondary impact, we can consider techniques that are related to the primary impact or that could be used by an attacker after gaining initial access to a system. Based on the provided information, potential secondary impact techniques could include T1557, Adversary-in-the-Middle, and T1003, OS Credential Dumping, as these techniques could be used by an attacker to further compromise a system or gather sensitive information after initial exploitation."
+    },
+    {
+        "target_cve": "CVE-2021-1498",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1190",
+            "T1203"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that an unauthenticated, remote attacker can perform command injection attacks against an affected device. This indicates that the attacker can execute arbitrary commands on the device, which is a characteristic of the Command and Scripting Interpreter attack technique (T1059). Additionally, the vulnerability description mentions that the attacker can gain access to sensitive information, which is related to the Data from Local System attack technique (T1005). The vulnerability also affects the web-based management interface, which is related to the Exploit Public-Facing Application attack technique (T1190). Furthermore, the vulnerability can be exploited to execute arbitrary code, which is related to the Exploitation for Client Execution attack technique (T1203). \n\nGiven the information provided in the vulnerability description, the relevant attack techniques of type secondary_impact are T1059, T1005, T1190, and T1203."
+    },
+    {
+        "target_cve": "CVE-2022-39197",
+        "predictions": [
+            "T1059",
+            "T1496",
+            "T1574",
+            "T1005",
+            "T1136",
+            "T1218",
+            "T1003",
+            "T1140",
+            "T1027",
+            "T1505"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we must analyze the vulnerability description and identify the potential secondary impacts. The vulnerability description mentions a Cross-site Scripting (XSS) vulnerability in HelpSystems Cobalt Strike through 4.7 that allowed a remote attacker to execute HTML on the Cobalt Strike teamserver. The vulnerability can be exploited by inspecting a Cobalt Strike payload, modifying the username field in the payload (or creating a new payload with the extracted information and then modifying that username field to be malformed), and then sending the modified payload to the teamserver. \n\nGiven the information from the vulnerability description, the relevant attack techniques of type secondary_impact are likely to be related to the execution of malicious code, potential elevation of privileges, or access to sensitive information. Based on the information provided in the vulnerability description, potential secondary impacts could include the execution of arbitrary code, access to sensitive data, or the elevation of privileges."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "The vulnerability description mentions that Adobe ColdFusion 9.0, 9.0.1, and 9.0.2 allows attackers to obtain sensitive information via unspecified vectors, as exploited in the wild in January 2013. This indicates that the vulnerability can be exploited to gain access to sensitive information, which could be used to inform other malicious activities. \n\nGiven the information provided in the vulnerability description and the list of attack techniques, we can determine that the relevant attack techniques of type secondary_impact are those that are related to obtaining or manipulating sensitive information, or those that could be used to further malicious activities after initial exploitation.\n\nBased on the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are:\n\n* T1005: Data from Local System\n* T1046: Network Service Discovery\n* T1003: OS Credential Dumping\n* T1078: Valid Accounts\n* T1486: Data Encrypted for Impact\n\nThese attack techniques are relevant because they could be used by an attacker after initial exploitation of the vulnerability to further compromise the system, obtain sensitive information, or disrupt system operations."
+    },
+    {
+        "target_cve": "CVE-2022-1388",
+        "predictions": [
+            "T1059",
+            "T1190"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that undisclosed requests may bypass iControl REST authentication. This implies that an attacker could exploit this vulnerability to gain unauthorized access to the system. The CVSS features indicate that this vulnerability has a high severity and could allow an attacker to execute arbitrary code on the system. Based on the vulnerability description and CVSS features, the relevant attack techniques of type secondary_impact are likely to be related to code execution and unauthorized access.\n\nThe attack techniques provided include various methods for exploiting vulnerabilities, such as exploiting public-facing applications, using valid accounts, and executing arbitrary code. The secondary_impact type refers to the impact of the attack after the initial exploitation. In this case, the secondary impact could involve various techniques, including but not limited to code execution and data manipulation.\n\nGiven the information provided, the most relevant secondary_impact attack techniques for this vulnerability are likely to be T1059 (Command and Scripting Interpreter) and T1190 (Exploit Public-Facing Application), as they are directly related to the exploitation of the vulnerability and the execution of arbitrary code."
+    },
+    {
+        "target_cve": "CVE-2022-41128",
+        "predictions": [
+            "T1005",
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1190",
+            "T1486"
+        ],
+        "true labels": [
+            "T1070"
+        ],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that an adversary could achieve by exploiting the vulnerability. The vulnerability description mentions that it is a Windows Scripting Languages Remote Code Execution Vulnerability, which means that an adversary could potentially execute arbitrary code on a compromised system. \n\nGiven this information, we can infer that the secondary impacts of this vulnerability could include gaining access to sensitive data, escalating privileges, or establishing persistence on the compromised system. Based on the MITRE ATT&CK framework, the relevant secondary impact attack techniques for this vulnerability could be:\n\n* T1005: Data from Local System - An adversary may use the vulnerability to access sensitive data on the compromised system.\n* T1059: Command and Scripting Interpreter - An adversary may use the vulnerability to execute malicious scripts or commands on the compromised system.\n* T1068: Exploitation for Privilege Escalation - An adversary may use the vulnerability to escalate privileges on the compromised system.\n* T1078: Valid Accounts - An adversary may use the vulnerability to obtain or use valid accounts on the compromised system.\n* T1190: Exploit Public-Facing Application - An adversary may use the vulnerability to exploit public-facing applications on the compromised system.\n* T1486: Data Encrypted for Impact - An adversary may use the vulnerability to encrypt data on the compromised system for impact."
+    },
+    {
+        "target_cve": "CVE-2023-20887",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1202",
+            "T1203",
+            "T1204",
+            "T1552",
+            "T1556",
+            "T1557",
+            "T1559",
+            "T1560",
+            "T1562",
+            "T1565",
+            "T1566",
+            "T1567",
+            "T1568",
+            "T1569",
+            "T1570",
+            "T1571",
+            "T1573",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we must analyze the vulnerability description and identify the attack techniques that are associated with the secondary impact of the vulnerability. The vulnerability description mentions that a malicious actor with network access to VMware Aria Operations for Networks may be able to perform a command injection attack, resulting in remote code execution. \n\nThe attack techniques associated with the secondary impact of the vulnerability are those that can be used by an adversary after gaining initial access to a system or network. In this case, the secondary impact is the ability to execute arbitrary code on the system, which can be achieved through various attack techniques.\n\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are those that enable an adversary to execute arbitrary code on a system or network after gaining initial access. These techniques include exploiting vulnerabilities to execute code, using valid credentials to access systems or networks, and using various tools or scripts to execute code.\n\nThe relevant attack techniques of type secondary_impact for the given vulnerability are:\n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1190: Exploit Public-Facing Application\n- T1202: Indirect Command Execution\n- T1203: Exploitation for Client Execution\n- T1204: User Execution\n- T1552: Unsecured Credentials\n- T1556: Modify Authentication Process\n- T1557: Adversary-in-the-Middle\n- T1559: Subvert Trust Controls\n- T1560: Archive Collected Data\n- T1562: Impair Defenses\n- T1565: Data Manipulation\n- T1566: Phishing\n- T1567: Exfiltration Over Web Service\n- T1568: Dynamic Resolution\n- T1569: System Services\n- T1570: Lateral Tool Transfer\n- T1571: Non-Standard Port\n- T1573: Encrypted Channel\n- T1574: Hijack Execution Flow"
+    },
+    {
+        "target_cve": "CVE-2020-3452",
+        "predictions": [
+            "T1059",
+            "T1217"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nA vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to conduct cross-site scripting (XSS) attacks against a user of the web services interface of an affected device. The vulnerabilities are due to insufficient validation of user-supplied input by the web services interface of an affected device. An attacker could exploit these vulnerabilities by sending a crafted HTTP request to an affected device. An exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive, browser-based information. Note: These vulnerabilities affect only specific AnyConnect and WebVPN configurations. For more information, see the Vulnerable Products section.\n----\n\nBased on the description of the vulnerability, the relevant attack techniques of type secondary_impact are:\n- T1059: Command and Scripting Interpreter\n- T1217: Browser Information Discovery"
+    },
+    {
+        "target_cve": "CVE-2023-29492",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1557"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that Novi Survey before 8.9.43676 allows remote attackers to execute arbitrary code on the server in the context of the service account. This indicates that the vulnerability can be exploited to gain access to the server and execute malicious code. The vulnerability does not provide access to stored survey or response data.\n\nGiven the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are related to the execution of malicious code and the potential for privilege escalation or lateral movement. \n\nThe attack techniques that can be used as a secondary impact include:\n- T1059: Command and Scripting Interpreter, which allows attackers to execute malicious code on the compromised system.\n- T1068: Exploitation for Privilege Escalation, which could be used to escalate privileges and gain greater control over the system.\n- T1190: Exploit Public-Facing Application, which is the initial exploitation technique but can also be used for secondary impacts such as lateral movement or privilege escalation.\n- T1557: Adversary-in-the-Middle, which could be used to intercept and manipulate traffic to and from the compromised server."
+    },
+    {
+        "target_cve": "CVE-2023-0669",
+        "predictions": [
+            "T1005",
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [
+            "T1486"
+        ],
+        "reasoning": "The vulnerability is a pre-authentication command injection vulnerability in the License Response Servlet due to deserialization of an arbitrary attacker-controlled object. This allows an attacker to execute arbitrary commands on the system. The primary impact of this vulnerability is the execution of arbitrary commands, which can lead to various secondary impacts such as privilege escalation, data manipulation, and data exfiltration. \n\nTo determine the relevant attack techniques of type secondary_impact, we need to analyze the potential actions an attacker can perform after exploiting the vulnerability. The attacker can use the executed commands to escalate privileges, manipulate data, or exfiltrate data. \n\nBased on the information provided, the relevant attack techniques of type secondary_impact are:\n\n* T1005: Data from Local System - The attacker can use the executed commands to access and exfiltrate sensitive data from the local system.\n* T1059: Command and Scripting Interpreter - The attacker can use the executed commands to execute scripts or other commands that can be used to escalate privileges or manipulate data.\n* T1068: Exploitation for Privilege Escalation - The attacker can use the executed commands to escalate privileges and gain greater control over the system.\n* T1078: Valid Accounts - The attacker may use the executed commands to create or modify user accounts to maintain access to the system.\n* T1486: Data Encrypted for Impact - The attacker may use the executed commands to encrypt data to demand payment in exchange for the decryption key."
+    },
+    {
+        "target_cve": "CVE-2018-11776",
+        "predictions": [
+            "T1552",
+            "T1571"
+        ],
+        "true labels": [
+            "T1496"
+        ],
+        "reasoning": "The vulnerability to be labelled has the following description:\nApache Struts versions 2.3 to 2.3.34 and 2.5 to 2.5.16 suffer from possible Remote Code Execution when alwaysSelectFullNamespace is true (either by user or a plugin like Convention Plugin) and then: results are used with no namespace and in same time, its upper package have no or wildcard namespace and similar to results, same possibility when using url tag which doesn't have value and action set and in same time, its upper package have no or wildcard namespace.\nThe CVSS features of this vulnerability are:\n- cvssV2.accessVector: NETWORK\n- cvssV2.accessComplexity: MEDIUM\n- cvssV2.authentication: NONE\n- cvssV2.confidentialityImpact: COMPLETE\n- cvssV2.integrityImpact: COMPLETE\n- cvssV2.availabilityImpact: COMPLETE\n- cvssV2.baseScore: 9.3\n- baseMetricV2.severity: HIGH\n- baseMetricV2.exploitabilityScore: 8.6\n- baseMetricV2.impactScore: 10.0\n- baseMetricV2.obtainAllPrivilege: False\n- baseMetricV2.obtainUserPrivilege: False\n- baseMetricV2.obtainOtherPrivilege: False\n- baseMetricV2.userInteractionRequired: False\n- cvssV3.attackVector: NETWORK\n- cvssV3.attackComplexity: HIGH\n- cvssV3.privilegesRequired: NONE\n- cvssV3.userInteraction: NONE\n- cvssV3.scope: UNCHANGED\n- cvssV3.confidentialityImpact: HIGH\n- cvssV3.integrityImpact: HIGH\n- cvssV3.availabilityImpact: HIGH\n- cvssV3.baseScore: 8.1\n- cvssV3.baseSeverity: HIGH\n- baseMetricV3.exploitabilityScore: 2.2\n- baseMetricV3.impactScore: 5.9\nBased on the description of the vulnerability, the exploitation technique is T1190, Exploit Public-Facing Application. The primary impact is T1059, Command and Scripting Interpreter. \nGiven the information provided, the secondary impact of this vulnerability can be T1552, Unsecured Credentials, and T1571, Non-Standard Port, as the vulnerability allows for remote code execution, which can be used to access sensitive information, and the use of non-standard ports can be used to bypass security controls."
+    },
+    {
+        "target_cve": "CVE-2023-42793",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1190",
+            "T1496",
+            "T1497",
+            "T1505",
+            "T1550",
+            "T1552"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nIn JetBrains TeamCity before 2023.05.4 authentication bypass leading to RCE on TeamCity Server was possible\n----\nThe data in CSV format below describes the attack techniques to choose from:\n ----\nattack_id,attack_name,description\nT1047,Windows Management Instrumentation,\"Adversaries may interact with the Windows Management Instrumentation (WMI) to execute malicious commands and maintain persistence. WMI is a management infrastructure that provides access to local and remote data on a machine and provides management data to other programs.\"\nT1021,Remote Services,\"Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.\"\nT1059,Command and Scripting Interpreter,\"Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across different platforms.\"\nT1068,Exploitation for Privilege Escalation,\"Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code.\"\nT1078,Valid Accounts,\"Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop.\"\nT1106,Native API,\"Adversaries may interact with the native OS application programming interface (API) to execute adversary-controlled code. Native APIs provide a controlled means of calling low-level OS services within the kernel, which can be used to interact with and utilize various components of a victimized system.\"\nT1112,Modify Registry,\"Adversaries may interact with the Windows Registry to hide configuration information within Registry keys, remove information as part of cleaning up, or as part of other techniques to aid in persistence and execution. Access to specific areas of the Registry depends on account permissions, some requiring administrator-level access.\"\nT1133,External Remote Services,\"Adversaries may leverage external-facing remote services to initially access and/or persist within a network. Remote services such as VPNs, Citrix, and other access mechanisms allow users to connect to internal enterprise network resources from external locations.\"\nT1190,Exploit Public-Facing Application,\"Adversaries may exploit a weakness in an Internet-facing host or system to initially access a network. Exploitation of a public-facing application occurs when an adversary exploits a vulnerability in an application exposed to the internet in order to gain initial access to a network.\"\nT1211,Exploitation for Defense Evasion,\"Adversaries may exploit vulnerabilities in security software to bypass security features. Exploitation for defense evasion occurs when an adversary exploits a vulnerability in security software to disable or tamper with security features.\"\nT1482,Domain Trust Discovery,\"Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of another domain.\"\nT1496,Resource Hijacking,\"Adversaries may leverage the resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. Resource hijacking is a technique used to gain control of a system's resources, such as CPU, memory, or network bandwidth.\"\nT1497,Virtualization/Sandbox Evasion,\"Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include modifying system calls, timing, or other system-specific features to make the malware appear legitimate or avoid detection.\"\nT1505,Server Software Component,\"Adversaries may abuse legitimate extensible development features of servers to establish persistent access to systems. Enterprise server applications may include features that allow developers to write and install software or scripts to extend the functionality of the main application.\"\nT1550,Use Alternate Authentication Material,\"Adversaries may use alternate authentication material, such as password hashes, Kerberos tickets, and application access tokens, in order to move laterally within an environment and bypass normal system access controls.\"\nT1552,Unsecured Credentials,\"Adversaries may search compromised systems to find and obtain insecurely stored credentials. These credentials can be stored and/or misplaced in many locations on a system, including plaintext files (e.g. [Bash History](httpsassistant"
+    },
+    {
+        "target_cve": "CVE-2023-41179",
+        "predictions": [
+            "T1059",
+            "T1486"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that an attacker could achieve after exploiting the vulnerability. The vulnerability description mentions that an attacker can execute arbitrary code on an affected system, which could lead to various secondary impacts such as data manipulation, data encryption for impact, or even command and scripting interpreter execution. \n\nBased on the information provided in the vulnerability description, the relevant attack techniques of type secondary_impact are those that could be used by an attacker to further their goals after exploiting the vulnerability. For example, an attacker could use the vulnerability to execute arbitrary code, which could then be used to manipulate data, encrypt data for impact, or execute commands and scripts. \n\nGiven the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are ['T1059', 'T1486']."
+    },
+    {
+        "target_cve": "CVE-2022-22954",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1105",
+            "T1133",
+            "T1486",
+            "T1496",
+            "T1574",
+            "T1584",
+            "T1588",
+            "T1590",
+            "T1591",
+            "T1598",
+            "T1608",
+            "T1619",
+            "T1657",
+            "T1659"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nVMware Workspace ONE Access and Identity Manager contain a remote code execution vulnerability due to server-side template injection. A malicious actor with network access can trigger a server-side template injection that may result in remote code execution.\n----\nThe data in CSV format below describes the attack techniques to choose from:\n ----\nattack_id,attack_name,description\nT1047,Windows Management Instrumentation,\"Adversaries may interact with the Windows Management Instrumentation (WMI) to execute behaviors. WMI is an administration feature that provides a uniform environment to access Windows system components. The WMI service enables remote access, though the attacker must have an established connection to the system. \nAdversaries may use WMI to gather information for Discovery as well as to establish Persistence by configuring the system to execute a malicious program at startup or reboot.\"\nT1059,Command and Scripting Interpreter,\"Adversaries may use command-line or graphical user interface applications to execute scripts that can be used to execute malicious payloads. These applications include, but are not limited to, Windows command-line tools, web browsers, and other software that support scripts such as Python and PowerShell.\"\nT1068,Exploitation for Privilege Escalation,\"Adversaries may exploit a vulnerability to elevate their privilege level, allowing them to access resources that they would not normally be able to access, and perform actions they would not normally be able to perform.\"\nT1078,Valid Accounts,\"Adversaries may use compromised credentials to access systems that they would not normally be able to access, and perform actions they would not normally be able to perform.\"\nT1105,Ingress Tool Transfer,\"Adversaries may use various tools to transfer malicious tools to a compromised system. Tools can be executed on a local system, and then transferred to the compromised system, where they will be executed.\"\nT1112,Modify Registry,\"Adversaries may interact with the Windows Registry to hide configuration information within Registry keys, remove information as part of cleaning up, or as part of other techniques to aid in persistence and execution.\"\nT1133,External Remote Services,\"Adversaries may use external remote services to access compromised systems. External remote services include, but are not limited to, telnet, SSH, VNC, and RDP.\"\nT1202,Indirect Command Execution,\"Adversaries may use various utilities to execute commands indirectly, potentially bypassing security controls and/or detection.\"\nT1211,Exploitation for Defense Evasion,\"Adversaries may exploit vulnerabilities to evade security controls and/or detection.\"\nT1485,Data Destruction,\"Adversaries may delete or destroy data on compromised systems, potentially disrupting system availability.\"\nT1486,Data Encrypted for Impact,\"Adversaries may encrypt data on compromised systems, potentially for extortion purposes.\"\nT1496,Resource Hijacking,\"Adversaries may use compromised systems to hijack system resources, such as CPU, memory, or network bandwidth, potentially for malicious purposes such as cryptocurrency mining.\"\nT1497,Virtualization/Sandbox Evasion,\"Adversaries may use various techniques to evade detection by security controls, potentially including virtualization and/or sandbox environments.\"\nT1498,Network Denial of Service,\"Adversaries may use compromised systems to conduct denial-of-service (DoS) attacks, potentially disrupting system availability.\"\nT1499,Endpoint Denial of Service,\"Adversaries may use compromised systems to conduct DoS attacks, potentially disrupting system availability.\"\nT1505,Server Software Component,\"Adversaries may use compromised systems to access and/or exploit server software components, potentially for malicious purposes.\"\nT1550,Use Alternate Authentication Material,\"Adversaries may use compromised credentials to access systems that they would not normally be able to access, and perform actions they would not normally be able to perform.\"\nT1552,Unsecured Credentials,\"Adversaries may obtain or use unsecured credentials to access systems that they would not normally be able to access, and perform actions they would not normally be able to perform.\"\nT1556,Modify Authentication Process,\"Adversaries may modify authentication processes to access systems that they would not normally be able to access, and perform actions they would not normally be able to perform.\"\nT1557,Adversary-in-the-Middle,\"Adversaries may use compromised systems to intercept and/or modify network traffic, potentially for malicious purposes.\"\nT1559,Inter-Process Communication,\"Adversaries may use compromised systems to communicate with other processes, potentially for malicious purposes.\"\nT1560,Archive Collected Data,\"Adversaries may use compromised systems to archive and/or exfiltrate data, potentially for malicious purposes.\"\nT1562,Impair Defenses,\"Adversaries may use compromised systems to impair security controls, potentially to maintain access and/or execute malicious payloads.\"\nT1565,Data Manipulation,\"Adversaries may use compromised systems to manipulate data, potentially for malicious purposes.\"\nT1566,Phishing,\"Adversaries may use social engineering tactics to trick users into executing malicious payloads and/or revealing sensitive information.\"\nT1567,Exfiltration Over Web Service,\"Adversaries may use compromised systems to exfiltrate data, potentially for malicious purposes.\"\nT1568,Dynamic Resolution,\"Adversaries may use compromised systems to resolve and access resources dynamically, potentially for malicious purposes.\"\nT1569,System Services,\"Adversaries may use compromised systems to access and/or exploit system services, potentially for malicious purposes.\"\nT1570,Lateral Tool Transfer,\"Adversaries may use compromised systems to transfer tools and/or payloads laterally, potentially for malicious purposes.\"\nT1571,Non-Standard Port,\"Adversaries may use compromised systems to communicate over non-standard ports, potentially to evade detection.\"\nT1573,Encrypted Channel,\"Adversaries may use compromised systems to establish encrypted channels, potentially for malicious purposes.\"\nT1574,Hijack Execution Flow,\"Adversaries may use compromised systems to hijack execution flows, potentially for malicious purposes.\"\nT1580,Cloud Infrastructure Discovery,\"Adversaries may use compromised systems to discover cloud infrastructure, potentially for malicious purposes.\"\nT1584,Compromise Infrastructure,\"Adversaries may use compromised systems to compromise cloud infrastructure, potentially for malicious purposes.\"\nT1585,Establish Accounts,\"Adversaries may use compromised systems to establish accounts, potentially for malicious purposes.\"\nT1586,Compromise Accounts,\"Adversaries may use compromised systems to compromise accounts, potentially for malicious purposes.\"\nT1587,Develop Capabilities,\"Adversaries may use compromised systems to develop capabilities, potentially for malicious purposes.\"\nT1588,Obtain Capabilities,\"Adversaries may use compromised systems to obtain capabilities, potentially for malicious purposes.\"\nT1590,Gather Victim Network Information,\"Adversaries may use compromised systems to gather network information, potentially for malicious purposes.\"\nT1591,Gather Victim Org Information,\"Adversaries may use compromised systems to gather organizational information, potentially for malicious purposes.\"\nT1593,Search Open Websites/Domains,\"Adversaries may use compromised systems to search for and gather information from websites and/or domains, potentially for malicious purposes.\"\nT1595,Active Scanning,\"Adversaries may use compromised systems to actively scan for and gather information, potentially for malicious purposes.\"\nT1596,Search Open Technical Databases,\"Adversaries may use compromised systems to search for and gather information from technical databases, potentially for malicious purposes.\"\nT1597,Search Closed Sources,\"Adversaries may use compromised systems to search for and gather information from closed sources, potentially for malicious purposes.\"\nT1598,Phishing for Information,\"Adversaries may use compromised systems to phish for information, potentially for malicious purposes.\"\nT1599,Network Boundary Bridging,\"Adversaries may use compromised systems to bridge network boundaries, potentially for malicious purposes.\"\nT1600,Weaken Encryption,\"Adversaries may use compromised systems to weaken encryption, potentially for malicious purposes.\"\nT1601,Modify System Image,\"Adversaries may use compromised systems to modify system images, potentially for malicious purposes.\"\nT1606,Forge Web Credentials,\"Adversaries may use compromised systems to forge web credentials, potentially for malicious purposes.\"\nT1608,Stage Capabilities,\"Adversaries may use compromised systems to stage capabilities, potentially for malicious purposes.\"\nT1609,Container Administration Command,\"Adversaries may use compromised systems to execute container administration commands, potentially for malicious purposes.\"\nT1610,Deploy Container,\"Adversaries may use compromised systems to deploy containers, potentially for malicious purposes.\"\nT1611,Escape to Host,\"Adversaries may use compromised systems to escape to the host, potentially for malicious purposes.\"\nT1612,Build Image on Host,\"Adversaries may use compromised systems to build images on the host, potentially for malicious purposes.\"\nT1614,System Location Discovery,\"Adversaries may use compromised systems to discover system locations, potentially for malicious purposes.\"\nT1619,Cloud Storage Object Discovery,\"Adversaries may use compromised systems to discover cloud storage objects, potentially for malicious purposes.\"\nT1620,Weaken Encryption,\"Adversaries may use compromised systems to weaken encryption, potentially for malicious purposes.\"\nT1621,Multi-Factor Authentication Request Generation,\"Adversaries may use compromised systems to generate multi-factor authentication requests, potentially for malicious purposes.\"\nT1622,Video Capture,\"Adversaries may use compromised systems to capture video, potentially for malicious purposes.\"\nT1630,Transfer Data to Cloud Account,\"Adversaries may use compromised systems to transfer data to cloud accounts, potentially for malicious purposes.\"\nT1640,Weaken Encryption,\"Adversaries may use compromised systems to weaken encryption, potentially for malicious purposes.\"\nT1650,Acquire Access,\"Adversaries may use compromised systems to acquire access, potentially for malicious purposes.\"\nT1651,Cloud Administration Command,\"Adversaries may use compromised systems to execute cloud administration commands, potentially for malicious purposes.\"\nT1653,Power Settings,\"Adversaries may use compromised systems to modify power settings, potentially for malicious purposes.\"\nT1654,Log Enumeration,\"Adversaries may use compromised systems to enumerate logs, potentially for malicious purposes.\"\nT1656,Impersonation,\"Adversaries may use compromised systems to impersonate legitimate users, potentially for malicious purposes.\"\nT1657,Financial Theft,\"Adversaries may use compromised systems to steal financial resources, potentially for malicious purposes.\"\nT1658,Weaken Encryption,\"Adversaries may use compromised systems to weaken encryption, potentially for malicious purposes.\"\nT1659,Content Injection,\"Adversaries may use compromised systems to inject malicious content, potentially for malicious purposes.\"\nT1660,Weaken Encryption,\"Adversaries may use compromised systems to weaken encryption, potentially for malicious purposes.\"\n----\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are:\n \n - T1059: Command and Scripting Interpreter\n - T1068: Exploitation for Privilege Escalation\n - T1078: Valid Accounts\n - T1105: Ingress Tool Transfer\n - T1133: External Remote Services\n - T1486: Data Encrypted for Impact\n - T1496: Resource Hijacking\n - T1574: Hijack Execution Flow\n - T1584: Compromise Infrastructure\n - T1588: Obtain Capabilities\n - T1590: Gather Victim Network Information\n - T1591: Gather Victim Org Information\n - T1598: Phishing for Information\n - T1608: Stage Capabilities\n - T1619: Cloud Storage Object Discovery\n - T1657: Financial Theft\n - T1659: Content Injection\n ----"
+    },
+    {
+        "target_cve": "CVE-2015-5119",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1574"
+        ],
+        "true labels": [
+            "T1071",
+            "T1055"
+        ],
+        "reasoning": "The vulnerability description mentions that it is a use-after-free vulnerability in the ByteArray class in the ActionScript 3 (AS3) implementation in Adobe Flash Player. This vulnerability allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted Flash content that overrides a valueOf function, as exploited in the wild in July 2015. The vulnerability is identified as CVE-2015-3043.\n\nTo determine the relevant attack techniques of type secondary_impact, we need to analyze the vulnerability description and identify the potential secondary impacts of the exploitation. The description mentions that the vulnerability can be exploited to execute arbitrary code or cause a denial of service. \n\nBased on the information provided, the secondary impact of the vulnerability can be associated with the following attack techniques: \n\n* T1059: Command and Scripting Interpreter - The vulnerability allows attackers to execute arbitrary code, which can be used to execute commands or run scripts.\n* T1005: Data from Local System - The vulnerability can be used to access sensitive data on the local system.\n* T1574: Hijack Execution Flow - The vulnerability is a use-after-free vulnerability, which can be used to hijack the execution flow of a program."
+    },
+    {
+        "target_cve": "CVE-2023-46604",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1557"
+        ],
+        "true labels": [
+            "T1053"
+        ],
+        "reasoning": "The vulnerability description mentions that the Java OpenWire protocol marshaller is vulnerable to Remote Code Execution. This indicates that an attacker can execute arbitrary code on the system, potentially leading to unauthorized access or data theft. The vulnerability affects Java-based OpenWire brokers or clients. \n\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are those that can be used by an attacker after gaining initial access to the system. These techniques include those that allow an attacker to escalate privileges, move laterally within the network, or exfiltrate sensitive data.\n\nThe relevant secondary_impact attack techniques for this vulnerability include:\n\n* T1059: Command and Scripting Interpreter - This technique allows an attacker to execute arbitrary commands or scripts on the compromised system, potentially leading to further exploitation or data exfiltration.\n* T1068: Exploitation for Privilege Escalation - This technique allows an attacker to escalate privileges on the compromised system, potentially leading to unauthorized access to sensitive data or systems.\n* T1190: Exploit Public-Facing Application - This technique allows an attacker to exploit vulnerabilities in public-facing applications, potentially leading to initial access to the system.\n* T1557: Adversary-in-the-Middle - This technique allows an attacker to intercept or modify network traffic, potentially leading to data exfiltration or further exploitation."
+    },
+    {
+        "target_cve": "CVE-2023-27532",
+        "predictions": [
+            "T1059",
+            "T1552",
+            "T1557",
+            "T1560",
+            "T1562",
+            "T1574",
+            "T1584",
+            "T1608"
+        ],
+        "true labels": [
+            "T1486",
+            "T1087",
+            "T1555",
+            "T1087"
+        ],
+        "reasoning": "The vulnerability in Veeam Backup & Replication component allows encrypted credentials stored in the configuration database to be obtained. This may lead to gaining access to the backup infrastructure hosts. The primary impact of this vulnerability is the initial access to the system, which may be achieved through exploitation of the vulnerability. The secondary impact of this vulnerability may include establishing persistence, moving laterally within the environment, and/or exfiltrating sensitive data. \n\nGiven the information provided in the vulnerability description, the relevant attack techniques of type secondary_impact are T1059, T1552, T1557, T1560, T1562, T1574, T1584, and T1608. \n\nT1059 is relevant because once an attacker has access to the system, they may use command and scripting interpreter to execute arbitrary code and establish persistence. \nT1552 is relevant because the vulnerability provides access to encrypted credentials, which may be unsecured. \nT1557 is relevant because an attacker may use an adversary-in-the-middle position to intercept and modify traffic to and from the backup infrastructure. \nT1560 is relevant because an attacker may use the obtained access to archive collected data from the backup infrastructure. \nT1562 is relevant because an attacker may use the obtained access to impair defenses and evade detection. \nT1574 is relevant because an attacker may use the obtained access to hijack execution flow and escalate privileges. \nT1584 is relevant because an attacker may use the obtained access to compromise the backup infrastructure. \nT1608 is relevant because an attacker may use the obtained access to stage capabilities and tools to maintain access to the system."
+    },
+    {
+        "target_cve": "CVE-2018-6789",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions a buffer overflow in the base64d function in the SMTP listener in Exim before 4.90.1. This can be used to execute code remotely. The exploitation of this vulnerability can be used to gain access to the system and execute malicious code. \n\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are those that can be used to execute code remotely, gain access to the system, or manipulate system files and settings. \n\nThe relevant attack techniques of type secondary_impact are:\n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1190: Exploit Public-Facing Application\n- T1574: Hijack Execution Flow"
+    },
+    {
+        "target_cve": "CVE-2021-3129",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1557"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions insecure usage of file_get_contents() and file_put_contents() which can be exploited to execute arbitrary code. This indicates that the vulnerability can be exploited for code execution. The CVSS features indicate that the vulnerability has a high severity score, indicating significant potential for impact. The vulnerability can be exploited over the network without authentication, indicating that it may be exploited by an unauthenticated attacker. \n\nGiven the information provided, the relevant attack techniques of type secondary_impact are likely to be related to code execution, such as executing system commands, scripts, or other code, potentially leading to privilege escalation, data manipulation, or other malicious activities. \n\nBased on the provided data, the following secondary impact attack techniques are relevant: \n* T1059: Command and Scripting Interpreter - This attack technique is relevant as it involves executing arbitrary commands or scripts, potentially leading to code execution.\n* T1068: Exploitation for Privilege Escalation - This attack technique is relevant as it involves exploiting a vulnerability to escalate privileges, potentially leading to increased access to system resources.\n* T1557: Adversary-in-the-Middle - This attack technique is relevant as it involves intercepting communication to manipulate data, potentially leading to code execution or data manipulation."
+    },
+    {
+        "target_cve": "CVE-2023-48788",
+        "predictions": [
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [
+            "T1105"
+        ],
+        "reasoning": "The vulnerability description mentions that an improper neutralization of special elements used in an SQL command ('sql injection') in Fortinet FortiClientEMS version 7.2.0 through 7.2.2, FortiClientEMS 7.0.1 through 7.0.10 allows attacker to execute unauthorized code or commands via specially crafted packets. \nGiven the vulnerability description, the exploitation technique is T1190, Exploit Public-Facing Application, and the primary impact is T1059, Command and Scripting Interpreter. \nThe secondary impact is related to the primary impact, which is the execution of arbitrary code, and can include various techniques such as T1005, Data from Local System, T1046, Network Service Discovery, T1003, OS Credential Dumping, T1078, Valid Accounts, and T1486, Data Encrypted for Impact."
+    },
+    {
+        "target_cve": "CVE-2021-27059",
+        "predictions": [
+            "T1059",
+            "T1574",
+            "T1584",
+            "T1601",
+            "T1611",
+            "T1650",
+            "T1651",
+            "T1653",
+            "T1656",
+            "T1657",
+            "T1659",
+            "T1570",
+            "T1573",
+            "T1588",
+            "T1597",
+            "T1598",
+            "T1608",
+            "T1614",
+            "T1619",
+            "T1621",
+            "T1622",
+            "T1654",
+            "T1656",
+            "T1657",
+            "T1659"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nMicrosoft Office Remote Code Execution Vulnerability\n----\nThe data in CSV format below describes the attack techniques to choose from:\n ----\nattack_id,attack_name,description\nT1047,Windows Management Instrumentation,\"Adversaries may interact with the Windows Management Instrumentation (WMI) to execute malicious commands, which can be used to maintain persistence or gain higher-level privileges on compromised systems. WMI is a legitimate feature for interacting with the operating system, but it can be used in various ways to execute malicious commands, such as creating or modifying system files, registry keys, or other system components. Adversaries may use WMI to execute commands that are not visible to security controls, making it difficult to detect malicious activity.\"\nT1059,Command and Scripting Interpreter,\"Adversaries may use command-line or scripting interpreters to execute malicious commands or run malicious scripts. These interpreters can be used to interact with the operating system, execute system commands, or run scripts that perform malicious actions. Examples of command-line or scripting interpreters include cmd.exe, PowerShell, or Bash. Adversaries may use these tools to maintain persistence, move laterally, or execute malicious commands on compromised systems.\"\nT1557,Adversary-in-the-Middle,\"Adversaries may use an adversary-in-the-middle (AiTM) technique to intercept and modify network traffic between systems, allowing them to steal sensitive information, execute malicious commands, or disrupt system functionality. AiTM can be used to intercept and modify network traffic, allowing adversaries to access sensitive information, disrupt system functionality, or execute malicious commands on compromised systems.\"\nT1574,Hijack Execution Flow,\"Adversaries may hijack the execution flow of a program or system to execute malicious code or commands. This can be done by modifying system calls, API calls, or other execution flows to redirect the execution of malicious code. Hijacking execution flow can be used to maintain persistence, evade security controls, or execute malicious commands on compromised systems.\"\nT1584,Compromise Infrastructure,\"Adversaries may compromise infrastructure, such as network devices, servers, or other system components, to gain access to sensitive information, disrupt system functionality, or execute malicious commands on compromised systems. Compromising infrastructure can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1601,Modify System Image,\"Adversaries may modify system images, such as disk images or system configurations, to execute malicious code or commands on compromised systems. Modifying system images can provide adversaries with persistence, allow them to evade security controls, or enable them to execute malicious commands on compromised systems.\"\nT1611,Escape to Host,\"Adversaries may use container escape techniques to break out of containerized environments and access the underlying host system. This can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1650,Acquire Access,\"Adversaries may acquire access to compromised systems by exploiting vulnerabilities, using stolen credentials, or using social engineering tactics to trick users into divulging sensitive information. Acquiring access can provide adversaries with the ability to execute malicious commands, access sensitive information, or disrupt system functionality on compromised systems.\"\nT1651,Cloud Administration Command,\"Adversaries may use cloud administration commands to execute malicious code or commands on compromised cloud infrastructure. Cloud administration commands can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised cloud infrastructure.\"\nT1653,Power Settings,\"Adversaries may modify power settings on compromised systems to maintain access or execute malicious commands. Modifying power settings can provide adversaries with persistence, allow them to evade security controls, or enable them to execute malicious commands on compromised systems.\"\nT1656,Impersonation,\"Adversaries may use impersonation tactics to trick users into divulging sensitive information or executing malicious commands on compromised systems. Impersonation can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1657,Financial Theft,\"Adversaries may use various techniques, such as ransomware or data exfiltration, to steal sensitive information or execute malicious commands on compromised systems for financial gain. Financial theft can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1659,Content Injection,\"Adversaries may inject malicious content into compromised systems to execute malicious code or commands. Content injection can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1570,Lateral Tool Transfer,\"Adversaries may transfer tools or other files between compromised systems to execute malicious commands or maintain persistence. Lateral tool transfer can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1573,Encrypted Channel,\"Adversaries may use encrypted channels to execute malicious commands or transfer sensitive information on compromised systems. Encrypted channels can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1588,Obtain Capabilities,\"Adversaries may obtain capabilities, such as exploits or malware, to execute malicious commands or maintain persistence on compromised systems. Obtaining capabilities can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1597,Search Closed Sources,\"Adversaries may search closed sources, such as paid subscriptions or underground forums, to obtain sensitive information or execute malicious commands on compromised systems. Searching closed sources can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1598,Phishing for Information,\"Adversaries may use phishing tactics to trick users into divulging sensitive information or executing malicious commands on compromised systems. Phishing for information can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1608,Stage Capabilities,\"Adversaries may stage capabilities, such as exploits or malware, on compromised systems to execute malicious commands or maintain persistence. Staging capabilities can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1614,System Location Discovery,\"Adversaries may use system location discovery techniques to gather information about compromised systems, such as IP addresses, network configurations, or system settings. System location discovery can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1619,Cloud Storage Object Discovery,\"Adversaries may use cloud storage object discovery techniques to gather information about compromised cloud infrastructure, such as cloud storage objects, buckets, or other cloud components. Cloud storage object discovery can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised cloud infrastructure.\"\nT1621,Build Image on Host,\"Adversaries may build container images on compromised host systems to execute malicious commands or maintain persistence. Building images on hosts can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1622,Deploy Container,\"Adversaries may deploy containers on compromised systems to execute malicious commands or maintain persistence. Deploying containers can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1654,Log Enumeration,\"Adversaries may use log enumeration techniques to gather information about compromised systems, such as system logs, security logs, or other log files. Log enumeration can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1656,Impersonation,\"Adversaries may use impersonation tactics to trick users into divulging sensitive information or executing malicious commands on compromised systems. Impersonation can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1657,Financial Theft,\"Adversaries may use various techniques, such as ransomware or data exfiltration, to steal sensitive information or execute malicious commands on compromised systems for financial gain. Financial theft can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1659,Content Injection,\"Adversaries may inject malicious content into compromised systems to execute malicious code or commands. Content injection can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1570,Lateral Tool Transfer,\"Adversaries may transfer tools or other files between compromised systems to execute malicious commands or maintain persistence. Lateral tool transfer can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1573,Encrypted Channel,\"Adversaries may use encrypted channels to execute malicious commands or transfer sensitive information on compromised systems. Encrypted channels can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1588,Obtain Capabilities,\"Adversaries may obtain capabilities, such as exploits or malware, to execute malicious commands or maintain persistence on compromised systems. Obtaining capabilities can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1597,Search Closed Sources,\"Adversaries may search closed sources, such as paid subscriptions or underground forums, to obtain sensitive information or execute malicious commands on compromised systems. Searching closed sources can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1598,Phishing for Information,\"Adversaries may use phishing tactics to trick users into divulging sensitive information or executing malicious commands on compromised systems. Phishing for information can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1608,Stage Capabilities,\"Adversaries may stage capabilities, such as exploits or malware, on compromised systems to execute malicious commands or maintain persistence. Staging capabilities can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1614,System Location Discovery,\"Adversaries may use system location discovery techniques to gather information about compromised systems, such as IP addresses, network configurations, or system settings. System location discovery can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1619,Cloud Storage Object Discovery,\"Adversaries may use cloud storage object discovery techniques to gather information about compromised cloud infrastructure, such as cloud storage objects, buckets, or other cloud components. Cloud storage object discovery can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised cloud infrastructure.\"\nT1621,Build Image on Host,\"Adversaries may build container images on compromised host systems to execute malicious commands or maintain persistence. Building images on hosts can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1622,Deploy Container,\"Adversaries may deploy containers on compromised systems to execute malicious commands or maintain persistence. Deploying containers can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1654,Log Enumeration,\"Adversaries may use log enumeration techniques to gather information about compromised systems, such as system logs, security logs, or other log files. Log enumeration can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1656,Impersonation,\"Adversaries may use impersonation tactics to trick users into divulging sensitive information or executing malicious commands on compromised systems. Impersonation can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1657,Financial Theft,\"Adversaries may use various techniques, such as ransomware or data exfiltration, to steal sensitive information or execute malicious commands on compromised systems for financial gain. Financial theft can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\nT1659,Content Injection,\"Adversaries may inject malicious content into compromised systems to execute malicious code or commands. Content injection can provide adversaries with access to sensitive information, allow them to disrupt system functionality, or enable them to execute malicious commands on compromised systems.\"\n \nBased on the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are:\n['T1059', 'T1574', 'T1584', 'T1601', 'T1611', 'T1650', 'T1651', 'T1653', 'T1656', 'T1657', 'T1659', 'T1570', 'T1573', 'T1588', 'T1597', 'T1598', 'T1608', 'T1614', 'T1619', 'T1621', 'T1622', 'T1654', 'T1656', 'T1657', 'T1659']"
+    },
+    {
+        "target_cve": "CVE-2021-42258",
+        "predictions": [
+            "T1059",
+            "T1203",
+            "T1574"
+        ],
+        "true labels": [
+            "T1486"
+        ],
+        "reasoning": "The vulnerability description mentions that the vulnerability allows an unauthenticated attacker to execute arbitrary code on the system, which can be used to gain access to sensitive information, execute system commands, or install malware. This indicates that the vulnerability can be used for various malicious purposes, including data theft, privilege escalation, and lateral movement. \n\nGiven the information provided in the vulnerability description and the list of attack techniques, we can determine that the relevant attack techniques of type secondary_impact are those that are related to the execution of arbitrary code, such as 'T1059' (Command and Scripting Interpreter), 'T1203' (Exploitation for Client Execution), and 'T1574' (Hijack Execution Flow). \n\nThese attack techniques are relevant because they can be used by an attacker to execute arbitrary code on a compromised system, which can then be used to steal sensitive data, escalate privileges, or move laterally within a network."
+    },
+    {
+        "target_cve": "CVE-2014-0496",
+        "predictions": [
+            "T1059",
+            "T1496"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that it is a use-after-free vulnerability in Adobe Reader and Acrobat 10.x before 10.1.9 and 11.x before 11.0.06 on Windows and Mac OS X. This vulnerability allows attackers to execute arbitrary code via unspecified vectors. The CVSS features of the vulnerability include cvssV2.accessVector: NETWORK, cvssV2.accessComplexity: LOW, cvssV2.authentication: NONE, cvssV2.confidentialityImpact: COMPLETE, cvssV2.integrityImpact: COMPLETE, cvssV2.availabilityImpact: COMPLETE, cvssV2.baseScore: 10.0, baseMetricV2.severity: HIGH, baseMetricV2.exploitabilityScore: 10.0, baseMetricV2.impactScore: 10.0, baseMetricV2.obtainAllPrivilege: False, baseMetricV2.obtainUserPrivilege: False, baseMetricV2.obtainOtherPrivilege: False, baseMetricV2.userInteractionRequired: False, cvssV3.attackVector: nan, cvssV3.attackComplexity: nan, cvssV3.privilegesRequired: nan, cvssV3.userInteraction: nan, cvssV3.scope: nan, cvssV3.confidentialityImpact: nan, cvssV3.integrityImpact: nan, cvssV3.availabilityImpact: nan, cvssV3.baseScore: nan, cvssV3.baseSeverity: nan, baseMetricV3.exploitabilityScore: nan, baseMetricV3.impactScore: nan. \n\nGiven the vulnerability, the relevant attack techniques of type secondary_impact are ['T1059', 'T1496']."
+    },
+    {
+        "target_cve": "CVE-2014-0546",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1046"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nAdobe Reader and Acrobat 10.x before 10.1.11 and 11.x before 11.0.08 on Windows allow attackers to bypass a sandbox protection mechanism and consequently execute native code in a privileged context via unspecified vectors.\n----\nThe CVSS features of the vulnerability are:\n----\n - cvssV2.accessVector: NETWORK\n - cvssV2.accessComplexity: LOW\n - cvssV2.authentication: NONE\n - cvssV2.confidentialityImpact: COMPLETE\n - cvssV2.integrityImpact: COMPLETE\n - cvssV2.availabilityImpact: COMPLETE\n - cvssV2.baseScore: 10.0\n - baseMetricV2.severity: HIGH\n - baseMetricV2.exploitabilityScore: 10.0\n - baseMetricV2.impactScore: 10.0\n - baseMetricV2.obtainAllPrivilege: False\n - baseMetricV2.obtainUserPrivilege: False\n - baseMetricV2.obtainOtherPrivilege: False\n - cvssV3.attackVector: NETWORK\n - cvssV3.attackComplexity: LOW\n - cvssV3.privilegesRequired: NONE\n - cvssV3.userInteraction: NONE\n - cvssV3.scope: UNCHANGED\n - cvssV3.confidentialityImpact: HIGH\n - cvssV3.integrityImpact: HIGH\n - cvssV3.availabilityImpact: HIGH\n - cvssV3.baseScore: 9.8\n - cvssV3.baseSeverity: CRITICAL\n - baseMetricV3.exploitabilityScore: 3.9\n - baseMetricV3.impactScore: 5.9\n----\nThe vulnerability is related to the exploitation technique T1190, which is Exploit Public-Facing Application. The primary impact is related to the execution of arbitrary code in the context of the current user. \nGiven the CVSS features, the secondary impact is likely to be related to the execution of arbitrary code, which could lead to various malicious activities such as data manipulation, data exfiltration, or command and scripting interpreter execution. \nBased on the CVSS features, the secondary impact could be related to T1059, which is Command and Scripting Interpreter, and/or other techniques that could be executed as a result of the arbitrary code execution, such as T1005, which is Data from Local System, or T1046, which is Network Service Discovery.\n \nThe relevant attack techniques of type secondary_impact are therefore likely to be ['T1059', 'T1005', 'T1046']."
+    },
+    {
+        "target_cve": "CVE-2022-0028",
+        "predictions": [
+            "T1557",
+            "T1574",
+            "T1059",
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions a PAN-OS URL filtering policy misconfiguration could allow a network-based attacker to conduct reflected and amplified TCP denial-of-service (RDoS) attacks. The DoS attack would appear to originate from a Palo Alto Networks PA-Series (hardware), VM-Series (virtual) and CN-Series (container) firewall against an attacker-specified target. To be misused by an external attacker, the firewall configuration must have a URL filtering profile with one or more blocked categories assigned to a source zone that has an external facing interface. This configuration is not typical for URL filtering and, if set, is likely unintended by the administrator. If exploited, this issue would not impact the confidentiality, integrity, or availability of our products. However, the resulting denial-of-service (DoS) attack may help obfuscate the identity of the attacker and implicate the firewall as the source of the attack. \n\nBased on the description, the relevant attack techniques of type secondary_impact are related to the potential for the attacker to use the firewall as a proxy or pivot point to conduct further malicious activities, such as accessing sensitive information, executing arbitrary code, or using the compromised system as a command and control server. \n\nThe relevant attack techniques of type secondary_impact are: \n- T1557: Adversary-in-the-Middle \n- T1574: Hijack Execution Flow \n- T1059: Command and Scripting Interpreter \n- T1005: Data from Local System \n- T1046: Network Service Discovery \n- T1003: OS Credential Dumping \n- T1078: Valid Accounts \n- T1486: Data Encrypted for Impact"
+    },
+    {
+        "target_cve": "CVE-2022-24521",
+        "predictions": [
+            "T1059",
+            "T1068"
+        ],
+        "true labels": [
+            "T1059"
+        ],
+        "reasoning": "The vulnerability is described as a Windows Common Log File System Driver Elevation of Privilege Vulnerability. This vulnerability can be exploited by an attacker to gain elevated privileges on a system. The exploitation of this vulnerability can lead to arbitrary code execution, which can result in a range of malicious activities, including data theft, lateral movement, and persistence. \n\nThe secondary impact of this vulnerability can include various attack techniques, such as creating a new account, modifying system files, or executing malicious commands. The attacker may use the elevated privileges to access sensitive data, install malware, or create a backdoor for future access. \n\nBased on the information provided, the relevant attack techniques of type secondary_impact for this vulnerability are ['T1059', 'T1068']."
+    },
+    {
+        "target_cve": "CVE-2023-6548",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that an attacker with access to NSIP, CLIP, or SNIP with management interface can perform remote code execution on Management Interface. This indicates that the vulnerability can be exploited to gain access to the system, potentially allowing an attacker to execute malicious code. \n\nGiven the information provided in the vulnerability description and the list of attack techniques, the relevant attack techniques of type secondary_impact can be identified. \n\nThe attack techniques of type secondary_impact are those that are a consequence of the exploitation of the vulnerability. In this case, the secondary impact includes techniques that allow an attacker to maintain access to the system, escalate privileges, or execute malicious code.\n\nBased on the information provided, the relevant attack techniques of type secondary_impact are:\n\n* T1059: Command and Scripting Interpreter - This technique allows an attacker to execute malicious code on the system, which could be a consequence of exploiting the vulnerability.\n* T1068: Exploitation for Privilege Escalation - This technique allows an attacker to escalate privileges on the system, which could be a consequence of exploiting the vulnerability to execute code with elevated privileges.\n* T1557: Adversary-in-the-Middle - This technique allows an attacker to intercept and modify network traffic, potentially allowing them to steal sensitive information or execute malicious code on the system.\n* T1574: Hijack Execution Flow - This technique allows an attacker to hijack the execution flow of a process, potentially allowing them to execute malicious code on the system."
+    },
+    {
+        "target_cve": "CVE-2022-20699",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that an attacker can execute arbitrary code, elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, and cause denial of service (DoS). These actions can be performed by exploiting the vulnerability in Cisco Small Business RV160, RV260, RV340, and RV345 Series Routers. The vulnerability can be exploited by sending crafted requests to the affected devices. \n\nGiven the information provided, the relevant attack techniques of type secondary_impact are those that are associated with the actions that an attacker can perform after gaining initial access to the system. Based on the actions mentioned in the vulnerability description, the relevant attack techniques of type secondary_impact are:\n\n* T1059: Command and Scripting Interpreter - This technique is relevant because the vulnerability allows an attacker to execute arbitrary code, which can be done using command and scripting interpreters.\n* T1068: Exploitation for Privilege Escalation - This technique is relevant because the vulnerability allows an attacker to elevate privileges, which can be used to escalate privileges and perform actions that require higher privileges.\n* T1190: Exploit Public-Facing Application - This technique is relevant because the vulnerability can be exploited by sending crafted requests to the affected devices, which are public-facing applications."
+    },
+    {
+        "target_cve": "CVE-2022-20703",
+        "predictions": [
+            "T1565",
+            "T1059"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that could occur as a result of exploiting the vulnerability. The vulnerability description mentions that an attacker could execute arbitrary code, elevate privileges, execute arbitrary commands, bypass authentication and authorization protections, fetch and run unsigned software, and cause denial of service (DoS). \n\nBased on the vulnerability description, the secondary impact could include data manipulation, which could lead to unauthorized access or malicious activities. Additionally, the exploitation of the vulnerability could also lead to the execution of unauthorized code, potentially resulting in the exfiltration of sensitive data or the disruption of system services.\n\nGiven the potential impacts of exploiting the vulnerability, the relevant attack techniques of type secondary_impact could include 'T1565' (Data Manipulation) and 'T1059' (Command and Scripting Interpreter), as these techniques could be used to manipulate or execute code on the compromised system."
+    },
+    {
+        "target_cve": "CVE-2020-0787",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions an elevation of privilege vulnerability in Windows Background Intelligent Transfer Service (BITS) that improperly handles symbolic links, allowing an attacker to elevate their privileges. To determine the relevant attack techniques of type secondary_impact, we need to analyze the potential actions an attacker could perform after exploiting this vulnerability. \n\nGiven the elevation of privilege, an attacker could perform actions that require higher privileges, such as accessing sensitive data, modifying system configurations, or executing commands with elevated permissions. \n\nBased on the information provided, the relevant attack techniques of type secondary_impact are related to actions that can be performed by an attacker after gaining elevated privileges. \n\nConsidering the potential actions an attacker could perform after exploiting the vulnerability, the relevant attack techniques of type secondary_impact are:\n\n* T1059: Command and Scripting Interpreter - An attacker could use elevated privileges to execute commands or scripts, potentially leading to further exploitation or malicious activity.\n* T1068: Exploitation for Privilege Escalation - Although this technique is more related to the exploitation itself, the elevation of privilege is a direct result of the vulnerability, thus it can be considered as having an impact on the secondary actions an attacker could perform.\n* T1557: Adversary-in-the-Middle - An attacker with elevated privileges could potentially intercept or modify traffic, leading to further malicious activities such as data theft or disruption of services.\n* T1574: Hijack Execution Flow - With elevated privileges, an attacker could potentially hijack system calls or execute malicious code, leading to a complete compromise of the system."
+    },
+    {
+        "target_cve": "CVE-2024-4879",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1190",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that an unauthenticated user can remotely execute code within the context of the Now Platform. This indicates that the vulnerability can be exploited without the need for authentication, allowing an attacker to execute arbitrary code. Given this information, the relevant attack techniques of type secondary_impact are likely to be related to code execution and privilege escalation.\n\nBased on the provided data, the relevant attack techniques of type secondary_impact for the given vulnerability are:\n\n* T1059: Command and Scripting Interpreter\n* T1068: Exploitation for Privilege Escalation\n* T1190: Exploit Public-Facing Application\n* T1557: Adversary-in-the-Middle\n* T1574: Hijack Execution Flow\n\nThese attack techniques are relevant because they can be used to execute arbitrary code, escalate privileges, or intercept and modify traffic, which aligns with the capabilities provided by the vulnerability."
+    },
+    {
+        "target_cve": "CVE-2023-22515",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1133",
+            "T1068"
+        ],
+        "true labels": [
+            "T1078",
+            "T1059"
+        ],
+        "reasoning": "The vulnerability is described as allowing external attackers to create unauthorized Confluence administrator accounts and access Confluence instances. This vulnerability can be exploited by sending a crafted request to the Confluence server. The vulnerability affects all versions of Confluence Data Center and Server. \n\nTo determine the relevant attack techniques of type secondary_impact, we need to analyze the vulnerability description and identify the potential actions an adversary could perform after exploiting the vulnerability. \n\nThe vulnerability description mentions that an external attacker can create unauthorized Confluence administrator accounts and access Confluence instances. This implies that the adversary could potentially perform actions such as creating, reading, writing, or deleting data within the Confluence instance, as well as potentially escalating privileges or executing arbitrary code.\n\nBased on the vulnerability description, potential secondary impact attack techniques could include:\n\n* T1059: Command and Scripting Interpreter - The adversary could use the created administrator account to execute scripts or commands within the Confluence instance.\n* T1005: Data from Local System - The adversary could use the created administrator account to access or extract sensitive data from the Confluence instance.\n* T1133: External Remote Services - The adversary could use the created administrator account to access external remote services, potentially allowing for lateral movement or further exploitation.\n* T1068: Exploitation for Privilege Escalation - The adversary could use the created administrator account to escalate privileges, potentially allowing for further exploitation or lateral movement."
+    },
+    {
+        "target_cve": "CVE-2024-37085",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1190",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [
+            "T1608"
+        ],
+        "reasoning": "The vulnerability to be labelled has the following description:\nVMware ESXi contains an authentication bypass vulnerability.\u00a0A malicious actor with sufficient Active Directory (AD) permissions can gain full access to an ESXi host that was previously configured to use AD for user management https://blogs.vmware.com/vsphere/2012/09/joining-vsphere-hosts-to-active-directory.html  by re-creating the configured AD group ('ESXi Admins' by default) after it was deleted from AD.\nThe primary impact of this vulnerability is gaining full access to an ESXi host. The secondary impact of this vulnerability can be lateral movement within the network, access to sensitive information, or execution of malicious code. Based on the information provided, the relevant attack techniques of type secondary_impact are:\n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1078: Valid Accounts\n- T1190: Exploit Public-Facing Application\n- T1557: Adversary-in-the-Middle\n- T1574: Hijack Execution Flow"
+    },
+    {
+        "target_cve": "CVE-2018-15961",
+        "predictions": [
+            "T1059",
+            "T1496",
+            "T1571"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions an unrestricted file upload vulnerability, which allows an attacker to upload arbitrary files to the server. This could lead to remote code execution, as the uploaded files could be executable. The vulnerability is associated with the CWE-434: Unrestricted Upload of File with Dangerous Type.\n\nTo determine the relevant attack techniques of type secondary_impact, we need to analyze the potential impact of the vulnerability on the system. The unrestricted file upload vulnerability could allow an attacker to upload malicious files, such as web shells or backdoors, which could lead to remote code execution. This could enable the attacker to establish persistence, move laterally, and exfiltrate sensitive data.\n\nBased on the vulnerability description and the associated CWE, the relevant attack techniques of type secondary_impact could include:\n\n* T1059: Command and Scripting Interpreter, as the attacker could upload a malicious script or executable file that could be executed by the server, allowing them to run arbitrary commands.\n* T1496: Resource Hijacking, as the attacker could upload a malicious file that could be used to hijack system resources, such as the CPU or memory, to run malicious code or exfiltrate sensitive data.\n* T1571: Non-Standard Port, as the attacker could upload a malicious file that communicates with a command and control (C2) server using a non-standard port, allowing them to maintain access to the compromised system."
+    },
+    {
+        "target_cve": "CVE-2023-20109",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1071",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that a vulnerability in the Cisco Group Encrypted Transport VPN (GET VPN) feature of Cisco IOS Software and Cisco IOS XE Software could allow an authenticated, remote attacker who has administrative control of either a group member or a key server to execute arbitrary code on an affected device or cause the device to crash, resulting in a denial of service (DoS) condition. This vulnerability is due to insufficient validation of attributes in the Group Domain of Interpretation (GDOI) and G-IKEv2 protocols of the GET VPN feature. An attacker could exploit this vulnerability by compromising an installed key server or modifying the configuration of a group member to point to a key server that is controlled by the attacker. A successful exploit could allow the attacker to execute arbitrary code and gain full control of the affected system or cause the affected system to reload, resulting in a DoS condition.\n\nGiven the information provided in the vulnerability description, the relevant attack techniques of type secondary_impact are those that could be used by an attacker after gaining initial access to the system. Based on the information provided, the relevant secondary_impact attack techniques are:\n\n* T1059: Command and Scripting Interpreter - This attack technique could be used by an attacker to execute arbitrary code on the affected system after gaining initial access.\n* T1005: Data from Local System - This attack technique could be used by an attacker to gather sensitive information from the affected system after gaining initial access.\n* T1071: Application Layer Protocol - This attack technique could be used by an attacker to intercept and manipulate network traffic to and from the affected system after gaining initial access.\n* T1574: Hijack Execution Flow - This attack technique could be used by an attacker to hijack the execution flow of a process on the affected system after gaining initial access."
+    },
+    {
+        "target_cve": "CVE-2014-8439",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1496"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that Adobe Flash Player before 13.0.0.258 and 14.x and 15.x before 15.0.0.239 on Windows and OS X and before 11.2.202.424 on Linux allows attackers to execute arbitrary code or cause a denial of service (invalid pointer dereference) via unspecified vectors. This indicates that the vulnerability can be exploited to execute arbitrary code, which is a key indicator of the attack techniques that can be used. \n\nGiven the information provided in the vulnerability description, the relevant attack techniques of type secondary_impact can be identified. The attack techniques are identified based on the information that the vulnerability allows attackers to execute arbitrary code or cause a denial of service. \n\nThe relevant secondary_impact attack techniques for this vulnerability include 'T1059' (Command and Scripting Interpreter), 'T1005' (Data from Local System), and 'T1496' (Resource Hijacking)."
+    },
+    {
+        "target_cve": "CVE-2023-5217",
+        "predictions": [
+            "T1059",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions a heap buffer overflow in vp8 encoding in libvpx in Google Chrome prior to 117.0.5938.132 and libvpx 1.13.1 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. This indicates that the vulnerability can be exploited to execute arbitrary code on the victim's system. \n\nThe primary impact of the vulnerability is the execution of arbitrary code, which can be achieved through various attack techniques such as drive-by compromise or exploitation of public-facing applications. \n\nFor the secondary impact, we need to consider the potential consequences of executing arbitrary code on the victim's system. This can include actions such as data manipulation, command and scripting interpreter, or even proxying to hide the attacker's IP address. \n\nBased on the information provided and the potential for arbitrary code execution, the relevant attack techniques of type secondary_impact for this vulnerability are ['T1059', 'T1574']."
+    },
+    {
+        "target_cve": "CVE-2023-46805",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1557",
+            "T1005"
+        ],
+        "true labels": [
+            "T1555",
+            "T1505"
+        ],
+        "reasoning": "The vulnerability description mentions an authentication bypass vulnerability in the web management interface of Ivanti Connect Secure and Ivanti Policy Secure, allowing an unauthenticated, remote attacker to access restricted resources without proper authentication. This vulnerability can be exploited by sending a crafted HTTP request to the web management interface. The vulnerability affects Ivanti Connect Secure (9.x, 22.x) and Ivanti Policy Secure (9.x, 22.x). \n\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are those that allow an attacker to access restricted resources or execute arbitrary code, such as 'T1059' (Command and Scripting Interpreter), 'T1068' (Exploitation for Privilege Escalation), 'T1557' (Adversary-in-the-Middle), and 'T1005' (Data from Local System)."
+    },
+    {
+        "target_cve": "CVE-2023-36851",
+        "predictions": [
+            "T1059",
+            "T1496",
+            "T1571",
+            "T1105",
+            "T1071",
+            "T1018",
+            "T1046",
+            "T1557",
+            "T1569",
+            "T1070",
+            "T1003",
+            "T1136",
+            "T1218",
+            "T1003",
+            "T1140",
+            "T1027",
+            "T1505"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability is a Missing Authentication for Critical Function vulnerability in Juniper Networks Junos OS on SRX Series, allowing an unauthenticated, network-based attacker to cause limited impact to the file system integrity. The attacker can upload arbitrary files via J-Web, leading to a loss of integrity for a certain part of the file system. This vulnerability may allow chaining to other vulnerabilities. \n\nThe relevant attack techniques of type secondary_impact are those that can be used by an attacker after gaining initial access to the system. In this case, the attacker may use the uploaded files to execute arbitrary code, leading to a loss of integrity of the system. \n\nBased on the information provided, the relevant attack techniques of type secondary_impact are:\n\n* T1059: Command and Scripting Interpreter\n* T1496: Resource Hijacking\n* T1571: Non-Standard Port\n* T1105: Ingress Tool Transfer\n* T1071: Application Layer Protocol\n* T1018: Remote System Discovery\n* T1046: Network Service Discovery\n* T1557: Adversary-in-the-Middle\n* T1569: System Services\n* T1070: Indicator Removal\n* T1003: OS Credential Dumping\n* T1136: Create Account\n* T1218: System Binary Proxy Execution\n* T1003: OS Credential Dumping\n* T1140: Deobfuscate/Decode Files or Information\n* T1027: Obfuscated Files or Information\n* T1505: Server Software Component"
+    },
+    {
+        "target_cve": "CVE-2019-0708",
+        "predictions": [
+            "T1059",
+            "T1203",
+            "T1068"
+        ],
+        "true labels": [
+            "T1498"
+        ],
+        "reasoning": "The vulnerability description mentions a remote code execution vulnerability exists in Remote Desktop Services formerly known as Terminal Services when an unauthenticated attacker connects to the target system using RDP and sends specially crafted requests, aka 'Remote Desktop Services Remote Code Execution Vulnerability'. This vulnerability can be exploited to execute arbitrary code on the affected system. Based on this information, the relevant attack techniques of type secondary_impact can be identified as those related to code execution and command-line access, such as 'T1059' (Command and Scripting Interpreter), 'T1203' (Exploitation for Client Execution), and 'T1068' (Exploitation for Privilege Escalation)."
+    },
+    {
+        "target_cve": "CVE-2023-2868",
+        "predictions": [
+            "T1059",
+            "T1003",
+            "T1552",
+            "T1005"
+        ],
+        "true labels": [
+            "T1041",
+            "T1105"
+        ],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that an attacker could achieve by exploiting the vulnerability. The vulnerability description mentions that a remote command injection vulnerability exists in the web-based management interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software, allowing an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. \n\nGiven the information provided, the secondary impact of the vulnerability could involve various attack techniques, including but not limited to T1059 (Command and Scripting Interpreter), T1003 (OS Credential Dumping), T1552 (Unsecured Credentials), and T1005 (Data from Local System). These techniques could potentially be used by an attacker to further exploit the vulnerability and achieve additional malicious goals."
+    },
+    {
+        "target_cve": "CVE-2013-0641",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1486"
+        ],
+        "true labels": [
+            "T1048"
+        ],
+        "reasoning": "The vulnerability description mentions that a buffer overflow in Adobe Reader and Acrobat 9.x before 9.5.4, 10.x before 10.1.6, and 11.x before 11.0.02 allows remote attackers to execute arbitrary code via a crafted PDF document. This indicates that the vulnerability can be exploited to gain code execution on the system. \n\nGiven the information provided, the relevant attack techniques of type secondary_impact are those that can be used by an adversary after gaining code execution on the system. \n\nBased on the vulnerability description, the relevant secondary_impact attack techniques are:\n\n* T1059: Command and Scripting Interpreter - This technique allows an adversary to execute commands and scripts on the compromised system, which can be used to further exploit the system, gather information, or execute malicious payloads.\n* T1005: Data from Local System - This technique allows an adversary to gather sensitive information from the local system, which can be used to inform further exploitation or exfiltration of data.\n* T1486: Data Encrypted for Impact - This technique allows an adversary to encrypt data on the system, which can be used to extort money from the system owner or to limit access to the data."
+    },
+    {
+        "target_cve": "CVE-2016-1019",
+        "predictions": [
+            "T1059",
+            "T1082",
+            "T1083",
+            "T1068"
+        ],
+        "true labels": [
+            "T1486"
+        ],
+        "reasoning": "The vulnerability description mentions that Adobe Flash Player 21.0.0.197 and earlier allows remote attackers to execute arbitrary code via unspecified vectors, as exploited in the wild in October 2016. This indicates that the vulnerability can be exploited to execute arbitrary code, which is a key aspect of the Command and Scripting Interpreter attack technique (T1059). Additionally, the vulnerability can be used to gain access to sensitive system information, which is related to the System Information Discovery attack technique (T1082). Furthermore, the vulnerability can be used to create new system files, which is related to the File and Directory Discovery attack technique (T1083). The vulnerability can also be used to execute system commands, which is related to the Exploitation for Privilege Escalation attack technique (T1068). \n\nGiven the information provided in the vulnerability description and the examples of attack techniques, we can infer that the secondary impact of the vulnerability includes the execution of arbitrary code, access to sensitive system information, creation of new system files, and execution of system commands."
+    },
+    {
+        "target_cve": "CVE-2022-29303",
+        "predictions": [
+            "T1005",
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1090",
+            "T1105",
+            "T1133",
+            "T1190",
+            "T1486",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [
+            "T1496"
+        ],
+        "reasoning": "The vulnerability description mentions a command injection vulnerability via conf_mail.php, which allows an unauthenticated attacker to execute arbitrary code on the affected instance. This vulnerability can be exploited by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to execute arbitrary code on the affected device. The vulnerability affects all versions of Confluence Server and Data Center before version 7.4.17, from version 7.5.0 before 7.12.3, from version 7.13.0 before 7.13.2, from version 7.14.0 before 7.14.4, from version 7.15.0 before 7.15.2, from version 7.16.0 before 7.16.4, from version 7.17.0 before 7.17.4, and from version 7.18.0 before 7.18.1. \n\nGiven the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are: \n- T1005: Data from Local System\n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1078: Valid Accounts\n- T1090: Proxy\n- T1105: Ingress Tool Transfer\n- T1133: External Remote Services\n- T1190: Exploit Public-Facing Application\n- T1486: Data Encrypted for Impact\n- T1557: Adversary-in-the-Middle\n- T1574: Hijack Execution Flow"
+    },
+    {
+        "target_cve": "CVE-2021-27065",
+        "predictions": [
+            "T1059",
+            "T1078"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the information provided in the JSON with examples. Each entry in the JSON corresponds to a vulnerability which has a description and associated attack techniques by mapping type: exploitation_technique, primary_impact, and secondary_impact. The vulnerability to analyze is the Microsoft Exchange Server Remote Code Execution Vulnerability, which is described in the JSON as CVE-2021-42321. \n\nThe secondary_impact for CVE-2021-42321 includes the attack techniques with IDs T1059 and T1078. \n\nT1059 is the Command and Scripting Interpreter attack technique, which allows an adversary to execute arbitrary commands on a compromised system. \n\nT1078 is the Valid Accounts attack technique, which involves using compromised credentials to access systems, services, or resources."
+    },
+    {
+        "target_cve": "CVE-2021-33739",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1190",
+            "T1552",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability is described as a Microsoft DWM Core Library Elevation of Privilege Vulnerability. This vulnerability allows an attacker to gain elevated privileges on a system, potentially leading to unauthorized access to sensitive data or systems. To determine the relevant attack techniques of type secondary_impact, we need to analyze the information provided about the vulnerability and the associated attack techniques.\n\nThe attack techniques provided are categorized into three types: exploitation_technique, primary_impact, and secondary_impact. The secondary_impact techniques are the ones that are executed after the primary impact has been achieved, and they can be used to maintain access, escalate privileges, or execute malicious payloads.\n\nBased on the information provided, the relevant secondary_impact attack techniques for the given vulnerability are:\n\n* T1059: Command and Scripting Interpreter\n* T1068: Exploitation for Privilege Escalation\n* T1078: Valid Accounts\n* T1190: Exploit Public-Facing Application\n* T1552: Unsecured Credentials\n* T1574: Hijack Execution Flow\n\nThese attack techniques can be used by an attacker to maintain access to a compromised system, escalate privileges, or execute malicious payloads after the initial exploitation of the vulnerability."
+    },
+    {
+        "target_cve": "CVE-2010-2883",
+        "predictions": [
+            "T1059",
+            "T1496",
+            "T1571",
+            "T1574",
+            "T1584",
+            "T1592",
+            "T1608",
+            "T1619"
+        ],
+        "true labels": [
+            "T1059"
+        ],
+        "reasoning": "The vulnerability description mentions a stack-based buffer overflow in Adobe Reader and Acrobat 9.x before 9.5, 10.x before 10.1.7, and 11.x before 11.0.03, allowing remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via unspecified vectors. This vulnerability is a different vulnerability than CVE-2013-2718, CVE-2013-2719, CVE-2013-2720, CVE-2013-2721, CVE-2013-2722, CVE-2013-2723, CVE-2013-2725, CVE-2013-2726, CVE-2013-2731, CVE-2013-2732, CVE-2013-2734, CVE-2013-2735, CVE-2013-2736, CVE-2013-3337, CVE-2013-3338, CVE-2013-3339, CVE-2013-3340, and CVE-2013-3341. \n\nGiven the vulnerability description, the relevant attack techniques of type secondary_impact are T1059, T1496, T1571, T1574, T1584, T1592, T1608, and T1619."
+    },
+    {
+        "target_cve": "CVE-2021-4034",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1133",
+            "T1190",
+            "T1202",
+            "T1203",
+            "T1485",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1505",
+            "T1557",
+            "T1565",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability is a local privilege escalation vulnerability in polkit's pkexec utility. The pkexec application is a setuid tool designed to allow unprivileged users to run commands as privileged users according predefined policies. The current version of pkexec doesn't handle the calling parameters count correctly and ends trying to execute environment variables as commands. An attacker can leverage this by crafting environment variables in such a way it'll induce pkexec to execute arbitrary code. When successfully executed, the attack can cause a local privilege escalation given unprivileged users administrative rights on the target machine.\n\nGiven the vulnerability description, the relevant attack techniques of type secondary_impact are those that can be used by an attacker after gaining initial access to a system through exploitation of the vulnerability. These techniques include actions such as creating new accounts, accessing sensitive information, or executing arbitrary code.\n\nBased on the provided data in JSON format, the relevant attack techniques of type secondary_impact for the given vulnerability are:\n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1078: Valid Accounts\n- T1133: External Remote Services\n- T1190: Exploit Public-Facing Application\n- T1202: Indirect Command Execution\n- T1203: Exploitation for Client Execution\n- T1485: Data Destruction\n- T1486: Data Encrypted for Impact\n- T1496: Resource Hijacking\n- T1499: Endpoint Denial of Service\n- T1505: Server Software Component\n- T1557: Adversary-in-the-Middle\n- T1565: Data Manipulation\n- T1574: Hijack Execution Flow"
+    },
+    {
+        "target_cve": "CVE-2022-40684",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability is described as an authentication bypass using an alternate path or channel in Fortinet FortiOS version 7.2.0 through 7.2.1 and 7.0.0 through 7.0.6, FortiProxy version 7.2.0 and version 7.0.7 and earlier. This vulnerability allows an unauthenticated attacker to perform operations on the administrative interface via specially crafted HTTP or HTTPS requests. \n\nGiven the vulnerability description, the relevant attack techniques of type secondary_impact are those that can be used by an attacker after gaining access to the administrative interface. \n\nThe relevant secondary_impact attack techniques are:\n- T1059: Command and Scripting Interpreter\n- T1005: Data from Local System\n- T1046: Network Service Discovery\n- T1003: OS Credential Dumping\n- T1078: Valid Accounts\n- T1486: Data Encrypted for Impact"
+    },
+    {
+        "target_cve": "CVE-2020-8196",
+        "predictions": [
+            "T1005",
+            "T1046",
+            "T1003",
+            "T1078",
+            "T1486"
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "The vulnerability is described as an improper access control in Citrix ADC and Citrix Gateway versions before 13.0-58.30, 12.1-57.18, 12.0-63.21, 11.1-64.14 and 10.5-70.18 and Citrix SDWAN WAN-OP versions before 11.1.1a, 11.0.3d and 10.2.7. This vulnerability allows unauthenticated access to certain URL endpoints. The vulnerability is exploited by sending a crafted request to the affected device. A successful exploit could allow the attacker to execute arbitrary code on the affected device after the next reload of the device, which could alter system behavior. Because the injected code could persist across device reboots, the attacker could maintain access to the device. \n\nThe primary impact of the vulnerability is the execution of arbitrary code on the affected device. The secondary impact of the vulnerability includes the potential for the attacker to maintain access to the device across reboots and potentially alter system behavior.\n\nBased on the information provided, the relevant attack techniques of type secondary_impact for the given vulnerability are ['T1005', 'T1046', 'T1003', 'T1078', 'T1486']."
+    },
+    {
+        "target_cve": "CVE-2021-34523",
+        "predictions": [
+            "T1068",
+            "T1190",
+            "T1059",
+            "T1543",
+            "T1547",
+            "T1574",
+            "T1105",
+            "T1070",
+            "T1056",
+            "T1112",
+            "T1003",
+            "T1090",
+            "T1021",
+            "T1505",
+            "T1078"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description is \"Microsoft Exchange Server Elevation of Privilege Vulnerability\". Based on the description, the exploitation technique is likely to be \"Exploit Public-Facing Application\" (T1190), which could allow an attacker to execute arbitrary code on the Exchange Server. The primary impact of the vulnerability could be \"Command and Scripting Interpreter\" (T1059), which enables an attacker to execute commands on the compromised system. \n\nFor the secondary impact, the relevant attack techniques could be \"Exploitation for Privilege Escalation\" (T1068), \"Create or Modify System Process\" (T1543), \"Boot or Logon Autostart Execution\" (T1547), \"Hijack Execution Flow\" (T1574), \"Ingress Tool Transfer\" (T1105), \"Indicator Removal\" (T1070), \"Input Capture\" (T1056), \"Modify Registry\" (T1112), \"OS Credential Dumping\" (T1003), \"Proxy\" (T1090), \"Remote Services\" (T1021), \"Server Software Component\" (T1505), and \"Valid Accounts\" (T1078). \n\nThese techniques are all related to the exploitation of the Exchange Server vulnerability and could be used by an attacker to maintain access to the compromised system, evade detection, and gather sensitive information."
+    },
+    {
+        "target_cve": "CVE-2020-0688",
+        "predictions": [
+            "T1059",
+            "T1565",
+            "T1486"
+        ],
+        "true labels": [
+            "T1505"
+        ],
+        "reasoning": "The vulnerability description mentions that a remote code execution vulnerability exists in Microsoft Exchange Server when the software fails to properly handle objects in memory, allowing an attacker to execute arbitrary code on the affected system. This vulnerability can be exploited by sending a crafted HTTP request to the affected system. The primary impact of this vulnerability is the execution of arbitrary code, which can lead to various secondary impacts such as data manipulation, data encryption for impact, and command and scripting interpreter execution.\n\nTo determine the relevant attack techniques of type secondary_impact, we need to analyze the potential consequences of exploiting this vulnerability. The secondary impacts can include data manipulation, which may involve modifying or deleting data, as well as data encryption for impact, which may involve encrypting data to make it inaccessible to the system or users. Additionally, the execution of arbitrary code can lead to the execution of commands and scripts, potentially through a command and scripting interpreter.\n\nBased on the information provided, the relevant attack techniques of type secondary_impact for this vulnerability are:\n\n* T1059: Command and Scripting Interpreter\n* T1565: Data Manipulation\n* T1486: Data Encrypted for Impact"
+    },
+    {
+        "target_cve": "CVE-2022-22718",
+        "predictions": [
+            "T1574",
+            "T1496",
+            "T1498",
+            "T1557",
+            "T1562",
+            "T1571"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability is described as a Windows Print Spooler Elevation of Privilege Vulnerability. This vulnerability can be exploited by an attacker to gain elevated privileges on a Windows system. The exploitation technique for this vulnerability involves exploiting a weakness in the Windows Print Spooler service, which can be done by an attacker with valid accounts on the system. The primary impact of this vulnerability is the exploitation for privilege escalation, which can be achieved through the exploitation technique of valid accounts. \n\nThe secondary impact of this vulnerability can include various attack techniques. Based on the information provided, some possible secondary impact attack techniques include:\n\n* T1574: Hijack Execution Flow - This attack technique involves hijacking the flow of execution of a program or system to execute malicious code or commands.\n* T1496: Resource Hijacking - This attack technique involves hijacking system resources, such as CPU or memory, to execute malicious code or commands.\n* T1498: Network Denial of Service - This attack technique involves causing a denial-of-service (DoS) condition on a network or system, making it unavailable to legitimate users.\n* T1557: Adversary-in-the-Middle - This attack technique involves positioning oneself between two parties to intercept, modify, or redirect communications between them.\n* T1562: Impair Defenses - This attack technique involves impairing or disabling security controls or defensive mechanisms to make the system more vulnerable to attack.\n* T1571: Non-Standard Port - This attack technique involves using non-standard ports to communicate with a command and control (C2) channel or to transfer data."
+    },
+    {
+        "target_cve": "CVE-2021-21972",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1105",
+            "T1133",
+            "T1202",
+            "T1574",
+            "T1584",
+            "T1601",
+            "T1610",
+            "T1614",
+            "T1619",
+            "T1650",
+            "T1651",
+            "T1653",
+            "T1654",
+            "T1656",
+            "T1657",
+            "T1659",
+            "T1665",
+            "T1666",
+            "T1667",
+            "T1668",
+            "T1669",
+            "T1670",
+            "T1671",
+            "T1672",
+            "T1673",
+            "T1674",
+            "T1675",
+            "T1676",
+            "T1677",
+            "T1678",
+            "T1679",
+            "T1680"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability to be labelled has the following description:\n----\nThe vSphere Client (HTML5) contains a remote code execution vulnerability in a vCenter Server plugin. A malicious actor with network access to port 443 may exploit this issue to execute commands with unrestricted privileges on the underlying operating system that hosts vCenter Server. This affects: VMware vCenter Server (7.x before 7.0 U1c, 6.7 before 6.7 U3l and 6.5 before 6.5 U3n) and VMware Cloud Foundation (4.x before 4.2 and 3.x before 3.10.1.2). \n----\nThe data in CSV format below describes the attack techniques to choose from as labels:\n ----\nattack_id,attack_name,description\nT1047,Windows Management Instrumentation,\"Adversaries may interact with the Windows Management Instrumentation (WMI) to execute behaviors. WMI is an administration feature that provides a uniform environment to access Windows system components. WMI is an administration feature that provides a uniform environment to access Windows system components. WMI service enables programs and scripts to access Windows system components. \nT1059,Command and Scripting Interpreter,\"Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems and are a common feature across many different platforms. Most systems come with some built-in command-line interface and scripting capabilities, for example, macOS and Linux distributions include some flavor of [Unix Shell](https://attack.mitre.org/techniques/T1059/004) while Windows installations include the [Windows Command Shell](https://attack.mitre.org/techniques/T1059/003) and [PowerShell](https://attack.mitre.org/techniques/T1059/001). \nT1068,Exploitation for Privilege Escalation,\"Adversaries may exploit a system or application vulnerability to elevate privileges. Exploitation of a vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Security constructs such as permission levels will often hinder access to information and use of certain techniques, so adversaries will likely need to perform privilege escalation to include use of software exploitation to circumvent these restrictions.\nT1078,Valid Accounts,\"Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access and remote desktop.\nT1105,Ingress Tool Transfer,\"Adversaries may transfer tools or other files from an external system into a compromised environment. Tools or files may be copied from an external adversary-controlled system to the victim network through the command and control channel or through alternate protocols such as [ftp](https://attack.mitre.org/software/S0095). Once present, adversaries may also transfer/spread tools between victim devices within a compromised environment (i.e. [Lateral Tool Transfer](https://attack.mitre.org/techniques/T1570)). \nT1133,External Remote Services,\"Adversaries may use [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.\nT1202,Indirect Command Execution,\"Adversaries may abuse utilities that allow for command execution to bypass security restrictions that limit the use of command-line interpreters. Various Windows utilities may be used for indirect command execution, such as [Forfiles](https://attack.mitre.org/software/S0193), the Program Compatibility Assistant (pcalua.exe), as well as other utilities that leverage the Windows [Native API](https://attack.mitre.org/techniques/T1106) which is called from scripts or other commands. \nT1211,Exploitation for Defense Evasion,\"Adversaries may exploit vulnerabilities in security software to bypass security controls and/or disable security monitoring tools. Exploitation for defense evasion may also be used to execute malicious code in a way that would be detected by security software, but for the purpose of evading detection.\nT1485,Data Destruction,\"Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to system and network resources. Data destruction is likely to render stored data irrecoverable by forensic techniques through overwriting files or data on local and remote drives.\nT1496,Resource Hijacking,\"Adversaries may leverage the resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. \nT1542,Pre-OS Boot,\"Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence on a system. During the booting process of a computer, firmware and various startup services are loaded before the operating system. These programs control flow of execution before the operating system takes control.\nT1557,Adversary-in-the-Middle,\"Adversaries may position themselves between two or more networked devices using an adversary-in-the-middle (AiTM) technique to support follow-on behaviors such as [Network Sniffing](https://attack.mitre.org/techniques/T1040), [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002), or replay attacks ([Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212)). \nT1565,Data Manipulation,\"Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating data, adversaries may attempt to affect a business process, organizational understanding, or decision making.\nT1574,Hijack Execution Flow,\"Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs. Hijacking execution flow can be for the purposes of persistence, since this hijacked execution may reoccur over time. \nT1584,Compromise Infrastructure,\"Adversaries may compromise third-party infrastructure that can be used during targeting. Infrastructure solutions include physical or cloud servers, domains, and third-party web and DNS services. Instead of buying, leasing, or renting infrastructure an adversary may compromise infrastructure and use it during other phases of the adversary lifecycle.\nT1601,Modify System Image,\"Adversaries may make changes to the operating system of embedded network devices to weaken defenses and provide new capabilities for themselves. \nT1610,Deploy Container,\"Adversaries may deploy a container into an environment to facilitate execution or evade defenses. In some cases, adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware. \nT1614,System Location Discovery,\"Adversaries may gather information in an attempt to calculate the geographical location of a victim host. \nT1619,Cloud Storage Object Discovery,\"Adversaries may enumerate objects in cloud storage infrastructure. \nT1650,Acquire Access,\"Adversaries may purchase or otherwise acquire an existing access to a target system or network. \nT1651,Cloud Administration Command,\"Adversaries may abuse cloud management services to execute commands within virtual machines or hybrid-joined devices. \nT1653,Power Settings,\"Adversaries may impair a system's ability to hibernate, reboot, or shut down in order to extend access to infected machines. \nT1654,Log Enumeration,\"Adversaries may enumerate system and service logs to find useful data. \nT1656,Impersonation,\"Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. \nT1657,Financial Theft,\"Adversaries may steal monetary resources from targets through extortion, social engineering, technical theft, or other methods aimed at their own financial gain at the expense of the availability of these resources for victims. \nT1659,Content Injection,\"Adversaries may gain access and continuously communicate with victims by injecting malicious content into systems through online network traffic. \nT1660,Web Session Cookie,\"Adversaries may steal web application or service session cookies and use them to gain access to web applications or Internet services as an authenticated user without needing credentials. \nT1661,Container and Resource Discovery,\"Adversaries may attempt to discover containers and other resources that are available within a containers environment. \nT1662,Screen Capture,\"Adversaries may attempt to take screen captures of the desktop to gather information over the course of an operation. \nT1663,Audio Capture,\"An adversary can leverage a computer's peripheral devices (e.g., microphones and webcams) or applications (e.g., voice and video call services) to capture audio recordings for the purpose of gathering information. \nT1664,Input Capture,\"Adversaries may use input capture to obtain credentials or other sensitive information from a compromised host. \nT1665,Clipboard Data,\"Adversaries may access clipboard data to obtain credentials or other sensitive information. \nT1666,Session Hijacking,\"Adversaries may use session hijacking to gain access to a system that has an active user session. \nT1667,Permission Groups Discovery,\"Adversaries may attempt to discover permission groups or other security-related data on a compromised host. \nT1668,Password Policy Discovery,\"Adversaries may attempt to discover password policies on a compromised host to inform password guessing or brute force attacks. \nT1669,Network Service Discovery,\"Adversaries may attempt to discover network services on a compromised host to inform lateral movement or other malicious activities. \nT1670,System Network Configuration Discovery,\"Adversaries may attempt to discover system network configurations on a compromised host to inform lateral movement or other malicious activities. \nT1671,System Owner/User Discovery,\"Adversaries may attempt to discover system owners or users on a compromised host to inform other malicious activities. \nT1672,System Information Discovery,\"Adversaries may attempt to discover system information on a compromised host to inform other malicious activities. \nT1673,Domain Trust Discovery,\"Adversaries may attempt to discover domain trusts on a compromised host to inform lateral movement or other malicious activities. \nT1674,Account Discovery,\"Adversaries may attempt to discover user accounts on a compromised host to inform other malicious activities. \nT1675,Valid Accounts,\"Adversaries may obtain or create valid accounts on a compromised host to maintain access to the system. \nT1676,Remote System Discovery,\"Adversaries may attempt to discover remote systems on a compromised host to inform lateral movement or other malicious activities. \nT1677,Network Service Discovery,\"Adversaries may attempt to discover network services on a compromised host to inform lateral movement or other malicious activities. \nT1678,Software Discovery,\"Adversaries may attempt to discover software on a compromised host to inform other malicious activities. \nT1679,Cloud Service Discovery,\"Adversaries may attempt to discover cloud services on a compromised host to inform other malicious activities. \nT1680,Cloud Infrastructure Discovery,\"Adversaries may attempt to discover cloud infrastructure on a compromised host to inform other malicious activities. \n----\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are:\n \n- T1059: Command and Scripting Interpreter\n- T1068: Exploitation for Privilege Escalation\n- T1078: Valid Accounts\n- T1105: Ingress Tool Transfer\n- T1133: External Remote Services\n- T1202: Indirect Command Execution\n- T1574: Hijack Execution Flow\n- T1584: Compromise Infrastructure\n- T1601: Modify System Image\n- T1610: Deploy Container\n- T1614: System Location Discovery\n- T1619: Cloud Storage Object Discovery\n- T1650: Acquire Access\n- T1651: Cloud Administration Command\n- T1653: Power Settings\n- T1654: Log Enumeration\n- T1656: Impersonation\n- T1657: Financial Theft\n- T1659: Content Injection\n- T1665: Clipboard Data\n- T1666: Session Hijacking\n- T1667: Permission Groups Discovery\n- T1668: Password Policy Discovery\n- T1669: Network Service Discovery\n- T1670: System Network Configuration Discovery\n- T1671: System Owner/User Discovery\n- T1672: System Information Discovery\n- T1673: Domain Trust Discovery\n- T1674: Account Discovery\n- T1675: Valid Accounts\n- T1676: Remote System Discovery\n- T1677: Network Service Discovery\n- T1678: Software Discovery\n- T1679: Cloud Service Discovery\n- T1680: Cloud Infrastructure Discovery\n----"
+    },
+    {
+        "target_cve": "CVE-2013-0625",
+        "predictions": [
+            "T1005",
+            "T1059",
+            "T1071",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that an attacker could achieve after exploiting the vulnerability. The vulnerability description mentions that Adobe ColdFusion 9.0, 9.0.1, and 9.0.2 allows attackers to obtain sensitive information via unspecified vectors, as exploited in the wild in January 2013. This suggests that the vulnerability could be used to gain access to sensitive information, which could then be used to inform other malicious activities.\n\nBased on the information provided, the secondary impact of the vulnerability could involve techniques such as T1005 (Data from Local System), which could be used to gather sensitive information about the system, and T1059 (Command and Scripting Interpreter), which could be used to execute arbitrary code on the system. Additionally, T1071 (Application Layer Protocol) and T1574 (Hijack Execution Flow) could also be relevant as secondary impacts, as they could be used to manipulate the execution of system commands or applications, potentially leading to unauthorized access or code execution."
+    },
+    {
+        "target_cve": "CVE-2021-44529",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1046",
+            "T1078",
+            "T1557"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that an unauthenticated user can execute arbitrary code with limited permissions (nobody) on the Ivanti EPM Cloud Services Appliance (CSA). This indicates that the vulnerability can be exploited without authentication, and the code execution is limited to the nobody user, which has limited privileges. The vulnerability can be exploited via the web interface, which suggests that the exploitation technique is likely related to exploiting public-facing applications. \n\nGiven the information provided, the primary impact of the vulnerability is the execution of arbitrary code, which can be used to escalate privileges, gather sensitive information, or disrupt system operations. The secondary impact of the vulnerability can include various techniques, such as exploiting the executed code to escalate privileges, gather sensitive information, or disrupt system operations.\n\nBased on the provided information, the relevant attack techniques of type secondary_impact for the given vulnerability include:\n\n* T1059: Command and Scripting Interpreter - This technique is relevant as the executed code can be used to execute commands or scripts, potentially leading to further exploitation, such as escalating privileges, gathering sensitive information, or disrupting system operations.\n* T1005: Data from Local System - This technique is relevant as the executed code can potentially be used to gather sensitive information from the local system.\n* T1046: Network Service Discovery - This technique is relevant as the executed code can potentially be used to discover network services, which can then be used for lateral movement or to gather sensitive information.\n* T1078: Valid Accounts - This technique is relevant as the executed code can potentially be used to create or manipulate user accounts, which can then be used to maintain access to the system.\n* T1557: Adversary-in-the-Middle - This technique is relevant as the executed code can potentially be used to intercept and manipulate network traffic, potentially leading to the theft of sensitive information or disruption of system operations."
+    },
+    {
+        "target_cve": "CVE-2011-0611",
+        "predictions": [
+            "T1059",
+            "T1005",
+            "T1204"
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability description mentions that Adobe Flash Player before 10.2.154.27 on Windows, Mac OS X, Linux, and Solaris, and Adobe AIR before 2.6.19140, Adobe AIR SDK before 2.6.19140, and Adobe AIR SDK & Compiler before 2.6.19140 allow remote attackers to execute arbitrary code or cause a denial of service (application crash) via crafted Flash content. This indicates that the vulnerability can be exploited to execute arbitrary code, which is associated with the attack technique T1059. Additionally, the vulnerability can be exploited to gain access to sensitive information, which is associated with the attack technique T1005.\n\nThe vulnerability can also be exploited to execute arbitrary code, which is associated with the attack technique T1204. Furthermore, the vulnerability can be exploited to gain access to sensitive information, which is associated with the attack technique T1005.\n\nBased on the vulnerability description, the relevant attack techniques of type secondary_impact are T1059, T1005, and T1204."
+    },
+    {
+        "target_cve": "CVE-2019-3398",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1078",
+            "T1133",
+            "T1190",
+            "T1204",
+            "T1552",
+            "T1557",
+            "T1574"
+        ],
+        "true labels": [],
+        "reasoning": "To determine the relevant attack techniques of type secondary_impact for the given vulnerability, we need to analyze the vulnerability description and identify the potential secondary impacts that an attacker could achieve by exploiting the vulnerability. The vulnerability description mentions that Confluence Server and Data Center had a path traversal vulnerability in the downloadallattachments resource, allowing a remote attacker who has permission to add attachments to pages and/or blogs or to create a new space or a personal space or who has 'Admin' permissions for a space to exploit this path traversal vulnerability to write files to arbitrary locations which can lead to remote code execution on systems that run a vulnerable version of Confluence Server or Data Center. \n\nGiven this information, we can infer that the exploitation of this vulnerability could lead to secondary impacts such as obtaining sensitive information, executing system commands, or gaining elevated privileges. Based on the provided data, the relevant secondary impact attack techniques for this vulnerability are likely to include obtaining sensitive information, executing system commands, or gaining elevated privileges."
+    }
+]

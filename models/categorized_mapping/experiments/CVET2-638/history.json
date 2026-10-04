@@ -1,0 +1,38 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1068",
+            "T1554",
+            "T1548",
+            "T1078",
+            "T1210",
+            "T1190",
+            "T1069",
+            "T1486",
+            "T1059",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The Windows DWM Core Library Elevation of Privilege Vulnerability suggests that an attacker could exploit this vulnerability to gain elevated privileges on a Windows system. The most relevant attack techniques for exploitation in this context would typically involve methods that allow for privilege escalation or exploitation of system components. Based on the provided attack techniques, the following techniques are most relevant:\n\n1. **T1068** - Exploitation for Privilege Escalation: This technique directly relates to exploiting vulnerabilities to gain higher privileges.\n2. **T1554** - Compromise Client Software Binary: This technique can be relevant if the attacker modifies or exploits client software to gain privileges.\n3. **T1548** - Abuse Elevation Control Mechanism: This technique is also relevant as it involves bypassing security controls to elevate privileges.\n4. **T1078** - Valid Accounts: If the attacker has valid credentials, they can exploit the vulnerability more effectively.\n5. **T1210** - Exploitation of Remote Services: If the vulnerability can be exploited remotely, this technique is applicable.\n6. **T1190** - Exploit Public-Facing Application: If the DWM vulnerability can be exploited through a public-facing application, this technique is relevant.\n7. **T1069** - Permission Groups Discovery: Understanding permission groups can help in exploiting the vulnerability.\n8. **T1486** - Data Encrypted for Impact: If the exploitation leads to data encryption as a form of impact, this technique may be relevant.\n9. **T1059** - Command and Scripting Interpreter: This technique is relevant for executing commands that could exploit the vulnerability.\n10. **None**: Since there may not be ten distinct techniques that apply directly, including a 'None' value is appropriate.\n\nThus, the final ranked list of techniques would be:\n['T1068', 'T1554', 'T1548', 'T1078', 'T1210', 'T1190', 'T1069', 'T1486', 'T1059', None]"
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1190",
+            "T1059",
+            "T1210",
+            "T1203",
+            "T1068",
+            "T1078",
+            "T1556",
+            "T1548",
+            "T1069",
+            null
+        ],
+        "true labels": [
+            "T1190"
+        ],
+        "reasoning": "The vulnerability described involves the XStream library, which is susceptible to remote command execution due to improper handling of input streams. This indicates that the exploitation technique primarily revolves around exploiting public-facing applications, as the attacker can manipulate the input to execute arbitrary commands on the host. Based on the context of the vulnerability and the provided attack techniques, the most relevant exploitation techniques are centered around exploiting public-facing applications and command execution. \n\nGiven the nature of the vulnerability, the following techniques are identified as relevant:\n1. T1190 - Exploit Public-Facing Application\n2. T1059 - Command and Scripting Interpreter\n3. T1210 - Exploitation of Remote Services\n4. T1203 - Exploitation for Client Execution\n5. T1068 - Exploitation for Privilege Escalation\n6. T1078 - Valid Accounts\n7. T1556 - Modify Authentication Process\n8. T1548 - Abuse Elevation Control Mechanism\n9. T1069 - Permission Groups Discovery\n10. None (indicating that there are no further relevant techniques)\n\nThe techniques are ranked based on their relevance to the vulnerability's exploitation method, with the most applicable techniques listed first."
+    }
+]

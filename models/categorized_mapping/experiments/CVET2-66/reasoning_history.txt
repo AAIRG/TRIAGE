@@ -1,0 +1,41 @@
+The vulnerability CVE-2018-15444 allows an authenticated, remote attacker to gain access to the system by exploiting an improper handling of XML External Entity (XXE) entries. The provided examples of attacks showcased mappings to various techniques, particularly those involving user execution and exploiting public-facing applications. Given that user interaction is required for exploitation (the attacker needs to convince a user to import a malicious XML file), techniques related to user execution and public-facing application exploitation are particularly relevant. 
+
+Looking at the attack techniques list, the following techniques can be mapped: 
+- **T1190** (Exploit Public-Facing Application) for an attack vector targeting the web interface.
+- **T1204.002** (User Execution: Malicious File) because the exploit relies on the user executing a file crafted by the attacker.
+
+Thus, the relevant attack techniques for the vulnerability CVE-2018-15444 are identified as ['T1190', 'T1204.002'].
+
+The analysis of CVE-2020-15183 reveals that it is related to Reflected Cross-Site Scripting (XSS) leading to Remote Code Execution (RCE). Since XSS vulnerabilities that allow for remote code execution or service manipulation are often tied to user interaction through malicious links or files, specific exploitation techniques apply. Given the characteristics of this CVE, it can be linked to:
+
+1. **User Execution: Malicious Link (T1204.001)** - Users must be tricked into clicking a malicious link.
+2. **Exploit Public-Facing Application (T1190)** - The vulnerability exploits a public-facing web application that can be accessed remotely.
+
+Given these facts, the relevant attack techniques for this vulnerability include the identified techniques related to public exploitation and social engineering tactics.
+
+The vulnerability described (CVE-2019-1831) relates to improper input validation in the email message scanning of Cisco AsyncOS Software, allowing an unauthenticated, remote attacker to bypass configured content filters. Given that it allows such access, this suggests techniques related to phishing or exploitation of public-facing applications could be relevant. 
+
+From the provided attack techniques, the following are particularly applicable:
+
+- **T1190** (Exploit Public-Facing Application): This vulnerability does allow for exploitation via a public-facing application, as it is part of a Cisco product exposed to the internet.
+- **T1566** (Phishing): As the CVE involves bypassing email content filters, it aligns with typical phishing attack methods, especially given the nature of sending crafted emails.
+- **T1566.001** (Phishing: Spearphishing Attachment): This is relevant as sending crafted emails could be a method of bypassing email filters.
+
+Thus, the relevant attack techniques for this vulnerability are **T1190**, **T1566**, and **T1566.001**.
+
+For CVE-2018-11088, the vulnerability pertains to a bug in Pivotal Applications Manager that allows privilege escalation for users with limited access. Specifically, a space developer could potentially access an artifact containing admin credentials and escalate their privileges to that of an administrator. Given the nature of this vulnerability, it involves weaknesses related to user permissions and accessing restricted content.
+
+Taking into consideration the attack techniques available in the provided CSV, the most relevant techniques include:
+- **T1078** (Valid Accounts): The exploitation allows a user to gain higher privileges that they should not possess, aligning with the concept of 'valid accounts' or authorized users elevating their privilege level.
+- **T1190** (Exploit Public-Facing Application): The bug allows inside users to exploit the application directly, which may reflect usage on public-facing interfaces.
+- **T1565.001** (Data Manipulation: Stored Data Manipulation): Given that a developer might be manipulating access to admin secrets, this could categorize under data manipulation techniques.
+
+Thus, the combined relevant attack techniques that can be derived from this context would be **T1078**, **T1190**, and **T1565.001**.
+
+Based on the context provided for CVE-2020-1569, the vulnerability involves remote code execution due to improper memory handling in Microsoft Edge. An attacker must entice a user to interact with a specially crafted website or email leading to this execution. The relevant attack techniques from the provided CSV that align with this vulnerability include:
+
+1. **T1190** - Exploit Public-Facing Application: This matches as the attacker must lure the victim to a website.
+2. **T1204.002** - User Execution: Malicious File: This applies since the attacker relies on user interaction to open a file that exploits the vulnerability.
+
+Hence the relevant attack techniques for this vulnerability are identified as T1190 and T1204.002.
+

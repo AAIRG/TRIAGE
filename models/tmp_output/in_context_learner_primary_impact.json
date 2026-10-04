@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1059",
+            "T1496",
+            "T1505",
+            "T1068",
+            "T1498",
+            "T1486",
+            "T1485",
+            "T1048",
+            "T1557",
+            null
+        ],
+        "true labels": [
+            "T1059"
+        ],
+        "reasoning": "For the vulnerability described (D-Link DIR-820L 1.05B03 remote command execution via HTTP POST), the primary impact techniques are focused on the immediate benefits gained from exploiting the vulnerability. The relevant attack techniques that correspond to the primary impact of remote command execution include:\n\n1. **T1059** - Command and Scripting Interpreter: This technique is directly related to executing commands on the system.\n2. **T1496** - Resource Hijacking: This technique can be relevant as the attacker may hijack system resources after gaining command execution.\n3. **T1505** - Server Software Component: This technique can apply as the attacker may manipulate server components post-exploitation.\n4. **T1068** - Exploitation for Privilege Escalation: This technique may be applicable if the attacker can escalate privileges after executing commands.\n5. **T1498** - Network Denial of Service: This technique may be relevant if the attacker uses the command execution to disrupt network services.\n6. **T1486** - Data Encrypted for Impact: This technique could apply if the attacker encrypts data to prevent recovery.\n7. **T1485** - Data Destruction: This technique may be relevant if the attacker chooses to destroy data after gaining access.\n8. **T1048** - Exfiltration Over Alternative Protocol: This technique could be relevant if the attacker exfiltrates data using alternative methods.\n9. **T1557** - Adversary-in-the-Middle: This technique may apply if the attacker positions themselves to intercept communications.\n10. **None**: Since there are multiple relevant techniques, the last position will be filled with 'None' to indicate that there are no additional techniques to list.\n\nThus, the top 10 techniques in descending order are: ['T1059', 'T1496', 'T1505', 'T1068', 'T1498', 'T1486', 'T1485', 'T1048', 'T1557', None]."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1059",
+            "T1068",
+            "T1505",
+            "T1136",
+            "T1210",
+            "T1078",
+            "T1548",
+            "T1552",
+            "T1592",
+            null
+        ],
+        "true labels": [
+            "T1202"
+        ],
+        "reasoning": "For the given vulnerability in Adobe ColdFusion, the primary impact is related to unauthorized access to restricted directories, which can lead to various attack techniques. Based on the context of the vulnerability and the provided attack techniques, the most relevant primary impact techniques include those that allow for command execution or unauthorized access. The techniques that align with this scenario are primarily focused on command execution and exploitation of public-facing applications. The following techniques are ranked based on their relevance to the described vulnerability: 'T1059' (Command and Scripting Interpreter), 'T1068' (Exploitation for Privilege Escalation), 'T1505' (Server Software Component), and others that may relate to the exploitation of the application. Given the context, the output will include these techniques in a ranked list."
+    }
+]

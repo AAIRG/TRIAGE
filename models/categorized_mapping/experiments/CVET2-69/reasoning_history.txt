@@ -1,0 +1,29 @@
+The vulnerability described by CVE-2018-15444 involves improper handling of XML External Entity (XXE) entries when parsing certain XML files. This can allow an authenticated attacker to gain read and write access to stored information by importing a crafted XML file with malicious entries. Based on the functionalities and methodologies described in the vulnerability's context, several attack techniques can be relevant:
+
+1. **T1210 - Exploitation of Remote Services**: This is relevant as attackers may exploit vulnerabilities to gain unauthorized access to internal systems, which aligns with the exploitation of the XXE vulnerability.
+2. **T1204.001 - User Execution: Malicious Link**: This technique relates to social engineering tactics where a user is manipulated into executing a malicious link or file, thus allowing exploitation.
+3. **T1565.001 - Data Manipulation: Stored Data Manipulation**: This technique applies because the attacker could insert or manipulate stored XML data through the exploited vulnerability.
+4. **T1566.001 - Phishing: Spearphishing Attachment**: If an attacker sends a crafted XML attachment to a user, this could lead to the user executing the exploitation.
+
+These techniques encapsulate the exploitation dynamic presented by the CVE, as they leverage user interaction and exploit vulnerabilities to manipulate data or gain unauthorized access.
+
+Given the context of the CVE-2020-15183 vulnerability, which involves Reflected Cross-Site Scripting (XSS) leading to Remote Code Execution (RCE), the relevant attack techniques are primarily tied to exploiting user actions and weaknesses in web applications. The techniques most applicable include:
+
+1. **User Execution**: The attacker relies on tricking the user (administrator in this context) to execute malicious code. This aligns with the use of a specially crafted webpage that the administrator is coerced into interacting with.
+
+2. **Exploitation for Client Execution**: This involves exploiting a vulnerability in client applications (like web browsers) when interacting with malicious content.
+
+3. **Spearphishing Link**: Since an attacker might use social engineering via a crafted link to get the administrator to visit the malicious page, this technique is relevant.
+
+4. **Command and Scripting Interpreter: JavaScript**: The exploitation via reflected XSS can leverage the JavaScript environment to execute commands, making this technique pertinent.
+
+Based on these considerations, the following attack techniques IDs are derived: ['T1204.001', 'T1203', 'T1566.002', 'T1059.007'].
+
+The vulnerability CVE-2019-1831 involves improper input validation related to email message scanning, which allows an attacker to potentially bypass content filters on the Cisco Email Security Appliance. This circumvention creates a pathway for exploit techniques that manipulate the intended process flow of email handling, potentially allowing malicious payloads to be processed without detection. Given this context, relevant attack techniques for exploitation include those that exploit application vulnerabilities and validation failures. The most applicable techniques from the provided list that align with the nature of the vulnerability are T1190 (Exploitation of Public-Facing Application) and T1210 (Exploitation for Remote Services). 
+
+Exploitation for credential access (T1212) might also be considered as it aligns with extracting useful information, although it isn’t directly related to bypassing the email filters specifically. However, the main focus should be on how to exploit the vulnerability itself, which is why the techniques centered around application and input validation exploitation are highlighted.
+
+The final relevant techniques identified and relevant to this vulnerability are:
+- T1190 - Exploit Public-Facing Application
+- T1210 - Exploitation for Remote Services
+

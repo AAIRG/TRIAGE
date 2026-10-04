@@ -1,0 +1,35 @@
+[
+    {
+        "target_cve": "CVE-2024-30051",
+        "predictions": [
+            "T1003",
+            "T1068",
+            "T1136",
+            "T1496",
+            "T1486",
+            "T1552",
+            "T1557",
+            "T1499",
+            "None",
+            "None"
+        ],
+        "true labels": [],
+        "reasoning": "For the vulnerability described as \"Windows DWM Core Library Elevation of Privilege Vulnerability,\" we need to identify the relevant secondary impact attack techniques. The secondary impacts typically involve actions that an attacker can take after successfully exploiting the vulnerability and gaining elevated privileges. \n\nBased on the provided data, I will analyze the existing secondary impact techniques from the examples and the attack techniques list. The most relevant secondary impacts for similar elevation of privilege vulnerabilities often include techniques related to credential dumping, account manipulation, and data exfiltration.\n\nAfter reviewing the available techniques, I will select the top 10 relevant secondary impact techniques, ensuring they are ranked appropriately. If there are fewer than 10 relevant techniques, I will include 'None' to fill the remaining spots."
+    },
+    {
+        "target_cve": "CVE-2021-39144",
+        "predictions": [
+            "T1003",
+            "T1486",
+            "T1496",
+            "T1059",
+            "T1136",
+            "T1489",
+            "T1070",
+            "T1005",
+            null
+        ],
+        "true labels": [],
+        "reasoning": "The vulnerability described involves the XStream library, which can allow remote command execution if exploited. Given the nature of this vulnerability, the secondary impacts could include various techniques that an attacker might use to further exploit the system after gaining initial access. Based on the context of similar vulnerabilities and the provided attack techniques, the following secondary impacts are relevant:\n\n1. **OS Credential Dumping (T1003)** - After gaining access, an attacker may attempt to extract credentials from the system.\n2. **Data Encrypted for Impact (T1486)** - An attacker might encrypt data to prevent access or to extort the victim.\n3. **Resource Hijacking (T1496)** - The attacker could use the compromised system resources for their own purposes.\n4. **Command and Scripting Interpreter (T1059)** - This technique allows for executing commands, which is likely to be a follow-up action after initial exploitation.\n5. **Create Account (T1136)** - An attacker may create new accounts to maintain access.\n6. **Service Stop (T1489)** - Stopping services could be a tactic to disrupt operations.\n7. **Indicator Removal (T1070)** - To cover their tracks, attackers often remove indicators of compromise.\n8. **Data from Local System (T1005)** - Gathering data from the local system is a common follow-up action.\n9. **None** - This is included to fulfill the requirement of having ten entries.\n\nBased on the analysis, the top 10 secondary impact techniques are ranked accordingly."
+    }
+]

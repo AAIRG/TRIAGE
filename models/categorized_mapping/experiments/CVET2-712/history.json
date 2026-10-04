@@ -1,0 +1,40 @@
+[
+    {
+        "target_cve": "CVE-2022-26258",
+        "predictions": [
+            "T1499",
+            "T1071",
+            "T1543",
+            "T1070",
+            "T1584",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "true labels": [
+            "T1499"
+        ],
+        "reasoning": "For the vulnerability described as \"D-Link DIR-820L 1.05B03 was discovered to contain remote command execution (RCE) vulnerability via HTTP POST to get set ccp,\" we need to identify the secondary impact techniques associated with this type of vulnerability. Given that remote command execution can lead to various secondary impacts, the relevant techniques typically include those that allow for further exploitation, data exfiltration, or system manipulation.\n\nBased on the provided data, the following secondary impact techniques are identified:\n1. 'T1499' - Endpoint Denial of Service\n2. 'T1071' - Application Layer Protocol\n3. 'T1543' - Create or Modify System Process\n4. 'T1070' - Indicator Removal\n5. 'T1584' - Compromise Infrastructure\n\nThese techniques are ranked based on their relevance to the potential actions an attacker could take after exploiting the RCE vulnerability. Since there are fewer than ten relevant techniques, we will include 'None' to fill the list to ten.\n\nThe final ranked list of secondary impact techniques is:\n1. 'T1499'\n2. 'T1071'\n3. 'T1543'\n4. 'T1070'\n5. 'T1584'\n6. 'None'\n7. 'None'\n8. 'None'\n9. 'None'\n10. 'None'\n\nThus, the output will reflect the most relevant techniques along with placeholders for the remaining slots."
+    },
+    {
+        "target_cve": "CVE-2013-0629",
+        "predictions": [
+            "T1005",
+            "T1068",
+            "T1078",
+            "T1486",
+            "T1496",
+            "T1499",
+            "T1552",
+            "T1557",
+            "T1554",
+            null
+        ],
+        "true labels": [
+            "T1005"
+        ],
+        "reasoning": "To identify the relevant secondary impact techniques for the described vulnerability in Adobe ColdFusion, we analyze the potential consequences of an attacker gaining access to restricted directories without proper authentication. The attacker could exploit this vulnerability to perform various actions, such as:\n\n1. **Data Exfiltration**: The attacker may access sensitive data stored in the directories.\n2. **Privilege Escalation**: If the attacker can manipulate files or configurations, they may escalate privileges.\n3. **Account Manipulation**: The attacker could create or modify accounts if they gain access to administrative interfaces.\n4. **Service Disruption**: The attacker could potentially stop services or manipulate server processes.\n\nBased on the context of the vulnerability and the attack techniques provided, the following secondary impact techniques are relevant:\n\n- **T1005**: Data from Local System\n- **T1068**: Exploitation for Privilege Escalation\n- **T1078**: Valid Accounts\n- **T1486**: Data Encrypted for Impact\n- **T1496**: Resource Hijacking\n- **T1499**: Endpoint Denial of Service\n- **T1552**: Unsecured Credentials\n- **T1557**: Adversary-in-the-Middle\n- **T1554**: Compromise Client Software Binary\n\nGiven the context, we can rank these techniques based on their relevance and potential impact. If there are fewer than ten techniques, we will include 'None' to fill the list.\n\nThe ranked list of secondary impact techniques is as follows:\n1. T1005\n2. T1068\n3. T1078\n4. T1486\n5. T1496\n6. T1499\n7. T1552\n8. T1557\n9. T1554\n10. None\n\nThus, the final output will be the list of these techniques."
+    }
+]

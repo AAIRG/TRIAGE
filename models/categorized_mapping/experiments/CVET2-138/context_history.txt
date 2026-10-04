@@ -1,0 +1,153 @@
+# Methodology Overview
+
+# **Introduction**
+
+[ATT&CK](https://attack.mitre.org/) tactics and techniques can be used as a set of standard terms to describe the
+exploitation process of a vulnerability. For example, to exploit a
+vulnerability where credentials are sent in clear text, the following
+steps could be used:
+
+1. Sniff the network [T1040](https://attack.mitre.org/techniques/T1040/)
+2. Which gets you the unsecured credentials [T1552](https://attack.mitre.org/techniques/T1552/)
+3. Which you can use to access a valid account [T1078](https://attack.mitre.org/techniques/T1078/)
+
+Once the attacker has access to the valid account, there are too many possible paths to list them all.
+
+When developing this mapping methodology, we found that three
+ steps of an associated attack were as many as could be reasonably
+described. We define these steps in the following way:
+
+1. **Exploitation Technique** - the method (technique) used to exploit the vulnerability (T1040 in the example).
+2. **Primary Impact** - the initial benefit (impact) gained through exploitation of the vulnerability (T1552 in the example).
+3. **Secondary Impact** - what the adversary can do by gaining the benefit of the primary impact (T1078 in the example).
+
+Using these three components, a vulnerability impact description template can be developed:
+
+The vulnerability allows the attacker to use *[EXPLOITATION TECHNIQUE]* to gain *[Primary Impact]*, which leads to *[Secondary Impact]*.
+
+It may not be possible to identify an ATT&CK technique for each step of an attack. ATT&CK techniques may be written at a level of abstraction that does not match that of the vulnerability. Also, ATT&CK techniques are based on real-world attacks and not theoretical concepts. For example, the primary impact of a vulnerability may be too low-level to include an ATT&CK technique. In which case, you can use the secondary impact in place of the primary or use one of the tactic-level techniques. Mappings with just one or two components can still be useful.
+
+# **Using the Methodology**
+
+This mapping methodology establishes a starting point for connecting
+threat actor behavior to the potential exploitation and impact of
+vulnerabilities. The methodology does not cover all the ways that
+systems are exploited.
+
+We defined three methods to map ATT&CK techniques to vulnerabilities:
+
+1. **Vulnerability Type** – This method groups vulnerabilities with common vulnerability types (e.g., cross-site
+scripting, SQL injection) with associated common technique mappings.
+Vulnerabilities of the same type will often have the same ATT&CK
+mapping.
+2. **Functionality** – This method groups
+common mappings based on the type of functionality the adversary gains
+access to by exploiting the vulnerability.
+3. **Exploit Technique** – This method groups
+common mappings depending on the technique used to exploit the
+vulnerability. Vulnerabilities of the same type can often be exploited
+in different ways; however, details of the vulnerability can lead to
+identification of a specific exploit method.
+
+Only the vulnerability type method has mappings for all three
+ categories. The functionality method has mappings for primary and
+secondary impacts. The exploit techniques method only has mappings for
+the exploitation technique categories.
+
+**Vulnerability Type Method**
+
+Vulnerabilities that have the same type often also have the
+same attack steps. This method maps ATT&CK techniques to some of the
+ more common vulnerability types. CWE-699 (Software Development) and
+CWE-1000 (Research Concepts) were used to select the vulnerability
+types, though the method sometimes creates its own high-level categories
+ for the sake of brevity.
+
+The vulnerability type mappings can include the following technique categories:
+
+1. Exploitation Technique
+2. Primary Impact
+3. Secondary Impact
+
+If one of these categories is not included in the mapping for
+ a particular vulnerability type, use one of the other methods to find
+the appropriate techniques.
+
+**Functionality Method**
+
+For a vulnerability to be useful, it needs to provide the
+adversary with a capability they did not have before. Adversaries are
+often trying to gain access to the same functionality and thus, many
+vulnerabilities can be grouped by functionality.
+
+This method includes the following technique categories:
+
+1. Primary Impact
+2. Secondary Impact
+
+To find the exploitation technique for a vulnerability, use one of the other two mapping methods in this document.
+
+**Exploit Technique Method**
+
+This method groups techniques by the common steps taken to
+exploit a vulnerability. Use this method when a vulnerability type has
+too many possible exploitation scenarios to list in the Vulnerability
+Type method.
+
+This method includes the following technique categories:
+
+1. Exploitation Technique
+
+We have a vulnerability called CVE-2018-15444
+The CVE has the following description: A vulnerability in the web-based user interface of Cisco Energy Management Suite Software could allow an authenticated, remote attacker to gain read and write access to information that is stored on an affected system. The vulnerability is due to improper handling of XML External Entity (XXE) entries when parsing certain XML files. An attacker could exploit this vulnerability by convincing a user of an affected system to import a crafted XML file with malicious entries, which could allow the attacker to read and write files within the affected application.
+The following CWE applies to this CVE: CWE-611: Improper Restriction of XML External Entity Reference
+The CVE was published at the time: 2018-11-08T18:29Z and last modified at the time: 2019-10-09T23:35Z
+The CVE has the following CVSS features:
+ - cvssV2.accessVector: NETWORK
+ - cvssV2.accessComplexity: MEDIUM
+ - cvssV2.authentication: SINGLE
+ - cvssV2.confidentialityImpact: PARTIAL
+ - cvssV2.integrityImpact: PARTIAL
+ - cvssV2.availabilityImpact: NONE
+ - cvssV2.baseScore: 4.9
+ - baseMetricV2.severity: MEDIUM
+ - baseMetricV2.exploitabilityScore: 6.8
+ - baseMetricV2.impactScore: 4.9
+ - baseMetricV2.obtainAllPrivilege: False
+ - baseMetricV2.obtainUserPrivilege: False
+ - baseMetricV2.obtainOtherPrivilege: False
+ - baseMetricV2.userInteractionRequired: True
+ - cvssV3.attackVector: NETWORK
+ - cvssV3.attackComplexity: LOW
+ - cvssV3.privilegesRequired: LOW
+ - cvssV3.userInteraction: REQUIRED
+ - cvssV3.scope: UNCHANGED
+ - cvssV3.confidentialityImpact: HIGH
+ - cvssV3.integrityImpact: HIGH
+ - cvssV3.availabilityImpact: NONE
+ - cvssV3.baseScore: 7.3
+ - cvssV3.baseSeverity: HIGH
+ - baseMetricV3.exploitabilityScore: 2.1
+ - baseMetricV3.impactScore: 5.2
+The vulnerability type XML External Entity (XXE) is associated with this vulnerability which can be mapped to
+- one primary_impact associated with an attack technique with id: T1059 and name Command and Scripting Interpreter
+- one secondary_impact associated with an attack technique with id: T1005 and name Data from Local System
+- one secondary_impact associated with an attack technique with id: T1046 and name Network Service Discovery
+The vulnerability has a functionality Write To Existing File, which can be mapped to
+- a primary_impact associated with an attack technique with id: T1565.001 and name Data Manipulation: Stored Data Manipulation
+- a secondary_impact associated with an attack technique with id: T1059 and name Command and Scripting Interpreter
+- a secondary_impact associated with an attack technique with id: T1574 and name Hijack Execution Flow
+- a secondary_impact associated with an attack technique with id: T1554 and name Compromise Client Software Binary
+We know that the following is relevant for the exploitation of the vulnerability:
+The user executes a malicious file coming from Other
+This exploitation is associated with
+ - One exploitation_technique associated with an attack technique with id: T1204.002, and name: User Execution: Malicious File
+The attacker exploits remote system application
+This exploitation is associated with
+ - One exploitation_technique associated with an attack technique with id: T1190, and name: Exploit Public-Facing Application
+The attacker uses valid/default credentials
+This exploitation is associated with
+ - One exploitation_technique associated with an attack technique with id: T1078, and name: Valid Accounts
+
+We find that the vulnerability is associated with the tactic Credential Access, this tactic is associated with an exploitation_technique with attack id: T1212 and attack name Exploitation for Credential Access
+

@@ -1,0 +1,32 @@
+For the vulnerability CVE-2018-15444, the relevant attack techniques can be derived from the description of the vulnerability and its exploitation method. This vulnerability involves an XML External Entity (XXE) injection which classified it under multiple attack techniques. 
+
+- The reference to an authenticated, remote attacker exploiting the vulnerability indicates that the attack is conducted over a network. Thus, **T1190 (Exploit Public-Facing Application)** is relevant as it mentions the exploitation of weaknesses in an Internet-facing host or system.
+- The requirement for user interaction to carry out the attack suggests **T1204.001 (User Execution: Malicious Link)**, where the attacker needs a victim to click a link to successfully execute the exploit.
+- Given the user interaction and potential social engineering aspects, techniques related to phishing can be inferred. Therefore, **T1566 (Phishing)** is also relevant since adversaries may send phishing messages to gain access to victim systems.
+
+Based on the context provided, the relevant attack techniques include:
+- T1190 (Exploit Public-Facing Application)
+- T1204.001 (User Execution: Malicious Link)
+- T1566 (Phishing) 
+
+Thus, the resulting list of attack IDs related to this CVE is constructed based on the characteristics of the vulnerability and how it would be exploited in a real-world scenario.
+
+The vulnerability CVE-2020-15183 involves a reflected cross-site scripting (XSS) issue that can lead to remote code execution (RCE). The description indicates that a remote attacker can exploit this vulnerability by tricking an administrator into accessing a malicious webpage, leading to unauthorized commands being executed. This points toward several attack techniques, including the exploitation of a public-facing application, as the vulnerability occurs in a web application context. 
+
+The relevant attack techniques that relate to this vulnerability are:
+- **T1204.002 (User Execution: Malicious File)**, as an administrator is tricked into executing malicious code via XSS.
+- **T1189 (Drive-by Compromise)**, because the exploitation occurs through the user visiting a malicious webpage.
+- **T1190 (Exploit Public-Facing Application)**, since the vulnerability targets an internet-accessible application.
+
+Given the characteristics of the attack and the nature of the vulnerability, these three techniques are the most relevant.
+
+The vulnerability CVE-2019-1831 allows an unauthenticated remote attacker to bypass content filters on the Cisco Email Security Appliance (ESA) by exploiting improper input validation in the email body. This vulnerability likely involves indirect user execution, as attackers could send crafted emails that evade filtering mechanisms. The techniques related to this include:
+
+- **T1566.001 (Phishing: Spearphishing Attachment)**: This captures the functionality of sending malicious attachments that, if opened by the victim, could lead to code execution.
+
+- **T1566.002 (Phishing: Spearphishing Link)**: This encompasses the concept of persuading users to click on links in the phishing emails, which could exploit further vulnerabilities.
+
+- **T1190 (Exploit Public-Facing Application)**: Since the vulnerability relates to web-based content scanning, it can also be categorized under exploitation of public-facing applications where the attack takes advantage of a weakness in the system.
+
+Given the nature of the identified vulnerabilities, these attack techniques represent relevant approaches that an adversary might employ.
+
