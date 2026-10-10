@@ -8,10 +8,11 @@ Steps
  3. Compare both against evaluation/paper_reference_metrics.json.
 Outputs go to /kaggle/working. Each step logs errors and the script continues.
 """
-import os, subprocess, sys, urllib.request, shutil
+import json, os, subprocess, sys, urllib.request, shutil
 
 WORK = "/kaggle/working"
-REPO = f"{WORK}/TRIAGE"
+TMP = "/kaggle/tmp"
+REPO = f"{TMP}/TRIAGE"
 VENV = f"{WORK}/smet_py39"
 PY39 = f"{VENV}/bin/python"
 results = {}
@@ -30,7 +31,9 @@ def sh(cmd, cwd=None, check=False):
 
 
 shutil.rmtree(REPO, ignore_errors=True)
+os.makedirs(TMP, exist_ok=True)
 sh(f"git clone --depth 1 https://github.com/AAIRG/TRIAGE {REPO}", check=True)
+sh(f"git -C {REPO} log --oneline -1 && ls {REPO}/models/uncategorized_mapping/SMET_output", check=False)
 urllib.request.urlretrieve("https://raw.githubusercontent.com/basel-a/SMET/main/funs.py",
                            f"{REPO}/SMET/funs.py")
 
@@ -55,6 +58,10 @@ else:
     print("Python 3.9 environment failed; fresh SMET run skipped.", flush=True)
 
 with open(f"{WORK}/run_status.json", "w") as f:
-    import json
     json.dump(results, f, indent=2)
 print("STATUS", results, flush=True)
+for name in ["scores_committed.json", "scores_fresh.json"]:
+    p = f"{WORK}/{name}"
+    if os.path.exists(p):
+        print(f"== {name}", flush=True)
+        print(open(p).read(), flush=True)
