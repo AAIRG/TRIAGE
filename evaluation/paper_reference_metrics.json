@@ -1,0 +1,57 @@
+{
+  "source": "Host, Lison, Moonen - A Systematic Approach to Predict the Impact of Cybersecurity Vulnerabilities Using LLMs (TRIAGE), arXiv:2508.18439, Table V and Table III (test split)",
+  "comparison_smet_vs_triage": {
+    "secondary_impacts_included": {
+      "SMET": {
+        "MAP": 0.2,
+        "R@10": 0.38,
+        "R@5": 0.24
+      },
+      "TRIAGE": {
+        "MAP": 0.57,
+        "R@10": 0.7,
+        "R@5": 0.62
+      },
+      "gain_TRIAGE_minus_SMET": {
+        "MAP": 0.37,
+        "R@10": 0.32,
+        "R@5": 0.38
+      }
+    },
+    "secondary_impacts_excluded": {
+      "SMET": {
+        "MAP": 0.21,
+        "R@10": 0.43,
+        "R@5": 0.28
+      },
+      "TRIAGE": {
+        "MAP": 0.6,
+        "R@10": 0.72,
+        "R@5": 0.7
+      },
+      "gain_TRIAGE_minus_SMET": {
+        "MAP": 0.39,
+        "R@10": 0.29,
+        "R@5": 0.42
+      }
+    }
+  },
+  "triage_per_mapping_type_gpt4o_mini_test": {
+    "exploitation_technique": {
+      "MAP": 0.65,
+      "R@10": 0.82,
+      "R@5": 0.73
+    },
+    "primary_impact": {
+      "MAP": 0.5,
+      "R@10": 0.77,
+      "R@5": 0.52
+    },
+    "secondary_impact": {
+      "MAP": 0.18,
+      "R@10": 0.8,
+      "R@5": 0.2
+    }
+  },
+  "notes": "Paper metrics: MAP = mean of per-CVE Average Precision; R@k = recall at top-k. Kaggle kernel nitaam/smet-run-b-c-rescore-on-triage uses different metrics (hit@k, micro/macro P/R/F1@k, parent-technique level, retrained BRON models) and is not directly comparable."
+}
