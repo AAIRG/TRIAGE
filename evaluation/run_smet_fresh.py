@@ -19,7 +19,14 @@ def main():
 
     import pandas as pd
     # Registers AllenNLP's 'srl' dataset reader; parse_class.py needs it but SMET does not import it.
-    import allennlp_models.syntax.srl  # noqa: F401
+    import importlib
+    for _mod in ["allennlp_models.structured_prediction", "allennlp_models.syntax.srl"]:
+        try:
+            importlib.import_module(_mod)
+            print("registered SRL reader via", _mod, flush=True)
+            break
+        except ImportError as e:
+            print("import failed:", _mod, e, flush=True)
     sys.path.insert(0, SMET_DIR)
     os.chdir(SMET_DIR)
     from SMET import map_text, get_clf_model, get_emb_model, get_attack_ids
