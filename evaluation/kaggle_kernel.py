@@ -13,7 +13,7 @@ import json, os, subprocess, sys, urllib.request, shutil
 WORK = "/kaggle/working"
 TMP = "/kaggle/tmp"
 REPO = f"{TMP}/TRIAGE"
-VENV = f"{WORK}/smet_py39"
+VENV = f"{TMP}/smet_py39"
 PY39 = f"{VENV}/bin/python"
 results = {}
 
@@ -43,8 +43,12 @@ rc = sh(f"python3 evaluation/score_smet.py --predictions models/uncategorized_ma
 results["committed"] = rc == 0
 
 # 2) Fresh SMET run in a Python 3.9 env
-env_ok = sh(f"pip install -q uv && uv python install 3.9 && uv venv -q -p 3.9 {VENV} && "
-            f"uv pip install -q --python {PY39} -r SMET/requirements.txt", cwd=REPO) == 0
+env_ok = sh(f"pip install -q uv && uv python install 3.9 && uv venv -q --seed -p 3.9 {VENV} && "
+            f"grep -v -i '^pattern' SMET/requirements.txt > {TMP}/smet_req.txt && "
+            f"uv pip install -q --python {PY39} -r {TMP}/smet_req.txt", cwd=REPO) == 0
+if env_ok:
+    # Pattern==3.6 does not resolve under uv; install it with pip (needed by nlp_general.py)
+    env_ok = sh(f"{PY39} -m pip install -q Pattern==3.6", cwd=REPO) == 0
 results["env_py39"] = env_ok
 if env_ok:
     sh(f"{PY39} -m nltk.downloader -q wordnet stopwords punkt", cwd=REPO)
