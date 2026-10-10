@@ -47,8 +47,16 @@ env_ok = sh(f"pip install -q uv && uv python install 3.9 && uv venv -q --seed -p
             f"grep -v -i '^pattern' SMET/requirements.txt > {TMP}/smet_req.txt && "
             f"uv pip install -q --python {PY39} -r {TMP}/smet_req.txt", cwd=REPO) == 0
 if env_ok:
-    # Pattern==3.6 does not resolve under uv; install it with pip (needed by nlp_general.py)
-    env_ok = sh(f"{PY39} -m pip install -q Pattern==3.6", cwd=REPO) == 0
+    # Pattern 3.6 is not installable here. nlp_general.py imports lexeme/pluralize from pattern.en
+    # on line 25 but never calls them, so a stub that raises if called is sufficient.
+    purelib = subprocess.run([PY39, "-c", "import sysconfig;print(sysconfig.get_paths()['purelib'])"],
+                             capture_output=True, text=True).stdout.strip()
+    os.makedirs(f"{purelib}/pattern/en", exist_ok=True)
+    open(f"{purelib}/pattern/__init__.py", "w").close()
+    with open(f"{purelib}/pattern/en/__init__.py", "w") as f:
+        f.write("def _unused(*a, **k):\n    raise NotImplementedError('pattern stub called')\n"
+                "lexeme = _unused\npluralize = _unused\n")
+    print("pattern.en stub written to", purelib, flush=True)
 results["env_py39"] = env_ok
 if env_ok:
     sh(f"{PY39} -m nltk.downloader -q wordnet stopwords punkt", cwd=REPO)
