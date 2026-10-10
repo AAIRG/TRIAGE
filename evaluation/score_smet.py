@@ -18,12 +18,15 @@ def load_test_cves(path):
         return [r["CVE ID"].strip() for r in csv.DictReader(f)]
 
 
-def load_labels(path):
+def load_labels(path, parent=False):
+    """parent=True maps sub-techniques (T1053.005) to their parent (T1053)."""
     labels = {}
     with open(path, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            labels.setdefault(r["CVE ID"].strip(), []).append(
-                (r["attack_id"].strip(), r["mapping_type"].strip()))
+            attack_id = r["attack_id"].strip()
+            if parent:
+                attack_id = attack_id.split(".")[0]
+            labels.setdefault(r["CVE ID"].strip(), []).append((attack_id, r["mapping_type"].strip()))
     return labels
 
 
@@ -137,31 +140,34 @@ def main():
     args = ap.parse_args()
 
     test_cves = load_test_cves(args.test_cves)
-    labels = load_labels(args.labels)
     preds = load_predictions(args.predictions)
     ref = paper_reference(args.reference)
 
-    result = {"source": args.label, "predictions_file": args.predictions, "settings": {}}
-    for setting, exclude in [("included", False), ("excluded", True)]:
-        entries = build_entries(test_cves, labels, preds, exclude)
-        s = score(entries)
-        paper = ref[setting]
-        result["settings"][setting] = {
-            "computed": {k: round(v, 4) if isinstance(v, float) else v for k, v in s.items()},
-            "paper": paper,
-            "diff_computed_minus_paper": {m: round(s[m] - paper[m], 4) for m in ["MAP", "R@5", "R@10"]},
-        }
+    result = {"source": args.label, "predictions_file": args.predictions, "variants": {}}
+    for mode, parent in [("exact_id", False), ("parent_id", True)]:
+        labels = load_labels(args.labels, parent=parent)
+        result["variants"][mode] = {}
+        for setting, exclude in [("included", False), ("excluded", True)]:
+            entries = build_entries(test_cves, labels, preds, exclude)
+            s = score(entries)
+            paper = ref[setting]
+            result["variants"][mode][setting] = {
+                "computed": {k: round(v, 4) if isinstance(v, float) else v for k, v in s.items()},
+                "paper": paper,
+                "diff_computed_minus_paper": {m: round(s[m] - paper[m], 4) for m in ["MAP", "R@5", "R@10"]},
+            }
 
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
     print(f"== {args.label}")
-    for setting in ["included", "excluded"]:
-        r = result["settings"][setting]
-        c, p = r["computed"], r["paper"]
-        print(f"  secondary {setting}: n={c['n_cves']}")
-        for m in ["MAP", "R@10", "R@5"]:
-            print(f"    {m:6s} computed={c[m]:.4f}  paper={p[m]:.2f}  diff={c[m]-p[m]:+.4f}")
+    for mode in result["variants"]:
+        for setting in ["included", "excluded"]:
+            r = result["variants"][mode][setting]
+            c, p = r["computed"], r["paper"]
+            print(f"  [{mode}] secondary {setting}: n={c['n_cves']}")
+            for m in ["MAP", "R@10", "R@5"]:
+                print(f"    {m:6s} computed={c[m]:.4f}  paper={p[m]:.2f}  diff={c[m]-p[m]:+.4f}")
 
 
 if __name__ == "__main__":
