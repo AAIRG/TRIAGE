@@ -18,6 +18,8 @@ def main():
     args = ap.parse_args()
 
     import pandas as pd
+    # Registers AllenNLP's 'srl' dataset reader; parse_class.py needs it but SMET does not import it.
+    import allennlp_models.syntax.srl  # noqa: F401
     sys.path.insert(0, SMET_DIR)
     os.chdir(SMET_DIR)
     from SMET import map_text, get_clf_model, get_emb_model, get_attack_ids
